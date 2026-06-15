@@ -1,0 +1,12 @@
+---
+title: "Teaching team"
+editor: 
+  mode: source
+---
+
+| Mug                       | Name          | Role          |
+|----------|--------------------------------|------------------------|
+| ![](images/lm.png){.circ} | Ma, Liane     | Instructor        | 
+| ![](images/cr.jpeg){.circ} | Ruffing, Cooper     | Instructor        |
+| ![](images/jz.jpg){.circ} | Zito, John    | Course Advisor & Instructor        |
+: {tbl-colwidths="[20,20,20,40]"}

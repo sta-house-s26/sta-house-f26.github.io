@@ -1,0 +1,62 @@
+---
+title: "Policies"
+editor: 
+  mode: source
+---
+
+## Collaboration
+
+You are *enthusiastically encouraged* to work together and help one another on assignments/discussions.
+However, you should not be crassly handing your solutions to others for them to brainlessly copy. This is plagiarism, and all involved will earn a zero on the assignment and be referred to the conduct office, both sharers and recipients alike. The write-up you submit must be your own work.
+
+## Use of outside resources, including AI
+
+There are at least two reasons you might seek outside resources:
+
+- *Extra practice/material or alternative instruction**: Go crazy. Knock yourself out. Have a ball. The internet is saturated with good (and horrible) resources for learning this material, so if you find something that really resonates with you, have at it;
+-  *Doing the work for you**: If you ask a language model to generate a summary, and you copy it down and submit it as your own work, that is plagiarism. If we detect it, you will earn a zero for that part of your write-up.
+
+"[Using ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way](https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art)." Furthermore, this course is a half-credit, pass-fail course purely for your own interest. As such, outsourcing all of your *thinking* to an AI will probably end in this entire enterprise being a complete waste of time and energy. To avoid this, we suggest you abstain from using language models to do the reading/thinking for you.
+
+## Communication
+
+If you wish to ask content-related questions in writing, please do not do so via e-mail. Instead, please use the course discussion forum [Ed Discussion](https://edstem.org/us/courses/89284/discussion). That way all members of the teaching team can see your question, and all students can benefit from the ensuing discussion. You are also encouraged to answer one another’s questions.
+
+If you have questions about personal matters that may not be appropriate for the public course forum (e.g. illness, accommodations, etc), then please e-mail the instructors directly (cooper.ruffing\@duke.edu & liane.ma\@duke.edu), and/or the course advisor (john.zito\@duke.edu).
+
+## Late work and extensions
+
+No late work will be accepted unless you request an extension in advance by e-mailing the instructors directly (cooper.ruffing\@duke.edu and liane.ma\@duke.edu. All reasonable requests will be entertained, but extensions will not be long.
+
+## Regrade requests
+
+If you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by emailing Dr. Zito, who is the sole reviewer of these. Note the following:
+
+-   You have one week after you receive a grade to submit a regrade request;
+-   You should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;
+-   Requests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;
+-   Requests to dispute the number of points deducted for an incorrect response will not be considered;
+-   **No grades will be changed after the final class period has been occurred on Monday, April 20**.
+
+## Attendance
+
+Duke requires students to attend at least 11 house course meetings. We hope you'll show up for all 14!
+
+## Accommodations
+
+If you need accommodations for this class, you will need to register with the Student Disability Access Office (SDAO) and provide them with documentation related to your needs. SDAO will work with you to determine what accommodations are appropriate for your situation. Please note that accommodations are not retroactive and disability accommodations cannot be provided until a Faculty Accommodation Letter has been given to me. Please contact SDAO for more information: `sdao@duke.edu` or `access.duke.edu`.
+
+## Duke Community Standard
+
+Duke University is a community dedicated to scholarship, leadership, and service and to the principles of honesty, fairness, respect, and accountability. Members of this community commit to reflect upon and uphold these principles in all academic and non-academic endeavors, and to protect and promote a culture of integrity.
+
+Duke University has high expectations for students’ scholarship and conduct. In accepting admission, students indicate their willingness to subscribe to and be governed by the rules and regulations of the university, which flow from the [Duke Community Standard (DCS)](https://dukecommunitystandard.students.duke.edu).
+
+Regardless of course delivery format, it is the responsibility of all students to understand and follow all Duke policies, including but not limited to the [academic integrity policy](https://dukecommunitystandard.students.duke.edu/policy/academic-dishonesty/) (e.g., completing one’s own work, following proper citation of sources, adhering to guidance around group work projects, and more). Ignoring these requirements is a violation of the DCS.
+
+Students can direct any questions or concerns regarding academic integrity to the Office of Student Conduct and Community Standards at `conduct@duke.edu` and can access the DCS guide at <https://dukecommunitystandard.students.duke.edu/>.
+
+In House Course 59-11 specifically...
+
+-   If a conduct violation results in a zero on an assignment/project, that zero will not be dropped;
+-   If we discover that students are sharing and copying assignment answers, all students involved will be penalized equally, the sharers the same as the recipients.
