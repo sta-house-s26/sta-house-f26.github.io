@@ -1,6 +1,6 @@
 ---
 title: "STA HOUSE Statistical Methods in Research"
-subtitle: "Duke University Spring 2026"
+subtitle: "Duke University Fall 2026"
 execute: 
   freeze: false
 editor_options: 
@@ -20,8 +20,8 @@ library(gt)
 library(tidyverse)
 library(stringr)
 gs4_deauth()
-d <- read_sheet("https://docs.google.com/spreadsheets/d/1jAZ7fE8jnHsIS247RuliSuOi6gVKBFTg0-UJ0lt6sRg/edit?usp=sharing")
-prepare_cutoff_date <- as.Date("2026-5-1")
+d <- read_sheet("https://docs.google.com/spreadsheets/d/1WkD0rywxNUx-EKYAVUVvUU1GAzXFhmQ9e4uz6Lc0lck/edit?usp=sharing")
+prepare_cutoff_date <- as.Date("2026-12-31")
 ```
 
 ```{r}

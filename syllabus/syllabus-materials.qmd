@@ -6,16 +6,15 @@ title: "Course materials"
 
 You are not required to purchase a textbook for this class. Who do we think we are?
 
-In the **PREPARE** column of the [course schedule](https://sta-house-s26.github.io/), we will note which papers are reading for next class.
+In the **PREPARE** column of the [course schedule](https://sta-house-f26.github.io/), we will note which papers are reading for next class.
 
 Note that [here]("https://docs.google.com/document/d/1lxk2NrPD5AfivDrVW5nmdcdM5A__l1a2ctiHb0u6CKw/edit?usp=sharing") is the signup sheet for the papers we will read each week. 
 
 ## Technology
 
-Tech will be used in most classes. In general, you will need access to a device with internet so that you can use the following:
+Technology use will be limited during class time to encourage active discussion and participation. However, you will need access to a device with internet so that you can use the following:
 
 -   [This course page](https://sta240-f25.github.io/) that you are on right now;
--   `R`/`RStudio` via the [Duke Container Manager](https://cmgr.oit.duke.edu/containers);
 -   [Canvas](https://go.canvas.duke.edu/), through which you can access...
     -   [Gradescope](https://www.gradescope.com/courses/1071176);
     -   [Ed Discussion](https://edstem.org/us/courses/80868/discussion);
