@@ -6,7 +6,7 @@ title: "Course materials"
 
 You are not required to purchase a textbook for this class. Who do we think we are?
 
-In the **PREPARE** column of the [course schedule](https://sta-house-f26.github.io/), we will note which papers are reading for next class.
+In the **PREPARE** column of the [course schedule](https://sta-house-s26.github.io/sta-house-f26.github.io/), we will note which papers are reading for next class.
 
 Note that [here]("https://docs.google.com/document/d/15E3fy6B_9gWY3mt9UxZHZESQ0JgNs_toBIIgD_6ZmTU/edit?usp=sharing") is the signup sheet for the student-led discussion sections.
 
