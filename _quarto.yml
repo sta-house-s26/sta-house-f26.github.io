@@ -4,8 +4,8 @@ project:
 website:
   page-navigation: true
   title: "STA HOUSE Spring 2026"
-  description: "Homepage for Statistical Methods in Research at Duke University, Spring 2026."
-  site-url: "https://sta-house-s26.github.io/"
+  description: "Homepage for Statistical Methods in Research at Duke University, Fall 2026."
+  site-url: "https://sta-house-s26.github.io/sta-house-f26.github.io/"
 
   open-graph: true
 
