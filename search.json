@@ -1,13 +1,68 @@
 [
   {
-    "objectID": "syllabus/syllabus-team.html",
-    "href": "syllabus/syllabus-team.html",
-    "title": "Teaching team",
+    "objectID": "lectures/lectures-lecture1.html",
+    "href": "lectures/lectures-lecture1.html",
+    "title": "Lecture 1",
     "section": "",
-    "text": "Mug\nName\nRole\n\n\n\n\n\nMa, Liane\nInstructor\n\n\n\nRuffing, Cooper\nInstructor\n\n\n\nZito, John\nCourse Advisor & Instructor",
+    "text": "Let’s consider a world where statistics doesn’t exist. What would it look like? People could make random claims without numerical evidence. Your feed would look like a random mess of videos constantly being posted. One could argue that we couldn’t count the number of people enrolled in this course.\nOkay, well that seemed pretty obvious. Of course, the reason for taking this course is likely some form of personal interest, as it’s a random half credit house course. Perhaps you’re a CS major who wants to learn some statistical algorithms to recreate Google’s (PageRank)[https://en.wikipedia.org/wiki/PageRank]. Maybe you’re a pre-med and hope to do a survival analysis to support your research interests. Finally, maybe you’re a sociologist and want to determine a population parameter for the use of AI in the classroom.\nLet’s reflect on what today’s world looks like. A reasonable statement would be: “Statistics exists. Some people know how to use statistics, some other people sort of know what statistics is, and a vast majority of people have heard of it.” The goal of this course is to move from the third group to the second group, in a way that could set you up for self learning to make it to the first group. We also hope that you’ll be able to critically evaluate the quality of a statistical analysis on a paper you’ve never seen before. There is much to learn!",
     "crumbs": [
-      "Syllabus",
-      "Teaching team"
+      "Lectures",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture1.html#motivating-this-course",
+    "href": "lectures/lectures-lecture1.html#motivating-this-course",
+    "title": "Lecture 1",
+    "section": "",
+    "text": "Let’s consider a world where statistics doesn’t exist. What would it look like? People could make random claims without numerical evidence. Your feed would look like a random mess of videos constantly being posted. One could argue that we couldn’t count the number of people enrolled in this course.\nOkay, well that seemed pretty obvious. Of course, the reason for taking this course is likely some form of personal interest, as it’s a random half credit house course. Perhaps you’re a CS major who wants to learn some statistical algorithms to recreate Google’s (PageRank)[https://en.wikipedia.org/wiki/PageRank]. Maybe you’re a pre-med and hope to do a survival analysis to support your research interests. Finally, maybe you’re a sociologist and want to determine a population parameter for the use of AI in the classroom.\nLet’s reflect on what today’s world looks like. A reasonable statement would be: “Statistics exists. Some people know how to use statistics, some other people sort of know what statistics is, and a vast majority of people have heard of it.” The goal of this course is to move from the third group to the second group, in a way that could set you up for self learning to make it to the first group. We also hope that you’ll be able to critically evaluate the quality of a statistical analysis on a paper you’ve never seen before. There is much to learn!",
+    "crumbs": [
+      "Lectures",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture1.html#what-is-statistics-what-is-a-statistic",
+    "href": "lectures/lectures-lecture1.html#what-is-statistics-what-is-a-statistic",
+    "title": "Lecture 1",
+    "section": "What is statistics? What is a statistic?",
+    "text": "What is statistics? What is a statistic?\nStatistics (the field) is a mathematical science pertaining to the collection, analysis, interpretation, and presentation of data.\nA statistic is any quantity computed from values in a sample. That is incredibly broad. During this course, we will primarily focus on two types of statistics (which are not mutually exclusive of one another): 1. Descriptive statistics, which summarize a sample of data 2. Test statistics, which is some number derived from the sample that would be selected or defined in a way that differentiates between the null and alternative hypothesis.\nThat’s a lot of jargon right there. No worries – we’ll break it down through this course!",
+    "crumbs": [
+      "Lectures",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture1.html#good-statistics-vs.-bad-statistics",
+    "href": "lectures/lectures-lecture1.html#good-statistics-vs.-bad-statistics",
+    "title": "Lecture 1",
+    "section": "“Good” statistics vs. “Bad” statistics",
+    "text": "“Good” statistics vs. “Bad” statistics",
+    "crumbs": [
+      "Lectures",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture1.html#research-101",
+    "href": "lectures/lectures-lecture1.html#research-101",
+    "title": "Lecture 1",
+    "section": "Research 101",
+    "text": "Research 101",
+    "crumbs": [
+      "Lectures",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture1.html#keshav-s.-how-to-read-a-paper",
+    "href": "lectures/lectures-lecture1.html#keshav-s.-how-to-read-a-paper",
+    "title": "Lecture 1",
+    "section": "Keshav, S. “How to Read a Paper”",
+    "text": "Keshav, S. “How to Read a Paper”",
+    "crumbs": [
+      "Lectures",
+      "Lecture 1"
     ]
   },
   {
@@ -15,7 +70,7 @@
     "href": "syllabus/syllabus-policies.html",
     "title": "Policies",
     "section": "",
-    "text": "You are enthusiastically encouraged to work together and help one another on assignments/discussions. However, you should not be crassly handing your solutions to others for them to brainlessly copy. This is plagiarism, and all involved will earn a zero on the assignment and be referred to the conduct office, both sharers and recipients alike. The write-up you submit must be your own work.",
+    "text": "You are enthusiastically encouraged to work together and help one another on assignments/discussions. However, you should not be crassly handing your solutions to others for them to brainlessly copy. This is plagiarism, and all involved will earn a zero on the assignment and be referred to the conduct office, both sharers and recipients alike. The assignments you submit must be your own work.",
     "crumbs": [
       "Syllabus",
       "Policies"
@@ -26,7 +81,7 @@
     "href": "syllabus/syllabus-policies.html#collaboration",
     "title": "Policies",
     "section": "",
-    "text": "You are enthusiastically encouraged to work together and help one another on assignments/discussions. However, you should not be crassly handing your solutions to others for them to brainlessly copy. This is plagiarism, and all involved will earn a zero on the assignment and be referred to the conduct office, both sharers and recipients alike. The write-up you submit must be your own work.",
+    "text": "You are enthusiastically encouraged to work together and help one another on assignments/discussions. However, you should not be crassly handing your solutions to others for them to brainlessly copy. This is plagiarism, and all involved will earn a zero on the assignment and be referred to the conduct office, both sharers and recipients alike. The assignments you submit must be your own work.",
     "crumbs": [
       "Syllabus",
       "Policies"
@@ -37,7 +92,7 @@
     "href": "syllabus/syllabus-policies.html#use-of-outside-resources-including-ai",
     "title": "Policies",
     "section": "Use of outside resources, including AI",
-    "text": "Use of outside resources, including AI\nThere are at least two reasons you might seek outside resources:\n\n*Extra practice/material or alternative instruction**: Go crazy. Knock yourself out. Have a ball. The internet is saturated with good (and horrible) resources for learning this material, so if you find something that really resonates with you, have at it;\n*Doing the work for you**: If you ask a language model to generate a summary, and you copy it down and submit it as your own work, that is plagiarism. If we detect it, you will earn a zero for that part of your write-up.\n\n“Using ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way.” Furthermore, this course is a half-credit, pass-fail course purely for your own interest. As such, outsourcing all of your thinking to an AI will probably end in this entire enterprise being a complete waste of time and energy. To avoid this, we suggest you abstain from using language models to do the reading/thinking for you.",
+    "text": "Use of outside resources, including AI\nThere are at least two reasons you might seek outside resources:\n\nExtra practice/material or alternative instruction: Go crazy. Knock yourself out. Have a ball. The internet is saturated with good (and horrible) resources for learning this material, so if you find something that really resonates with you, have at it;\nDoing the work for you: If you ask a language model to generate a summary, and you copy it down and submit it as your own work, that is plagiarism. If we detect it, you will earn a zero for that part of your write-up.\n\n“Using ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way.” Furthermore, this course is a half-credit, pass-fail course purely for your own interest. As such, outsourcing all of your thinking to an AI will probably end in this entire enterprise being a complete waste of time and energy. To avoid this, we suggest you abstain from using language models to do the reading/thinking for you.",
     "crumbs": [
       "Syllabus",
       "Policies"
@@ -70,7 +125,7 @@
     "href": "syllabus/syllabus-policies.html#regrade-requests",
     "title": "Policies",
     "section": "Regrade requests",
-    "text": "Regrade requests\nIf you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by emailing Dr. Zito, who is the sole reviewer of these. Note the following:\n\nYou have one week after you receive a grade to submit a regrade request;\nYou should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;\nRequests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;\nRequests to dispute the number of points deducted for an incorrect response will not be considered;\nNo grades will be changed after the final class period has been occurred on Monday, April 20.",
+    "text": "Regrade requests\nIf you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by emailing Dr. Zito, who is the sole reviewer of these. Note the following:\n\nYou have one week after you receive a grade to submit a regrade request;\nYou should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;\nRequests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;\nRequests to dispute the number of points deducted for an incorrect response will not be considered;\nNo grades will be changed after the final class period has been occurred on Monday, November 30.",
     "crumbs": [
       "Syllabus",
       "Policies"
@@ -81,7 +136,7 @@
     "href": "syllabus/syllabus-policies.html#attendance",
     "title": "Policies",
     "section": "Attendance",
-    "text": "Attendance\nDuke requires students to attend at least 11 house course meetings. We hope you’ll show up for all 14!",
+    "text": "Attendance\nDuke requires students to attend at least 11 class sessions. We hope you’ll show up for all 14!",
     "crumbs": [
       "Syllabus",
       "Policies"
@@ -110,11 +165,22 @@
     ]
   },
   {
+    "objectID": "syllabus/syllabus-team.html",
+    "href": "syllabus/syllabus-team.html",
+    "title": "Teaching team",
+    "section": "",
+    "text": "Mug\nName\nRole\n\n\n\n\n\nMa, Liane\nInstructor\n\n\n\nRuffing, Cooper\nInstructor\n\n\n\nZito, John\nCourse Advisor & Instructor",
+    "crumbs": [
+      "Syllabus",
+      "Teaching team"
+    ]
+  },
+  {
     "objectID": "syllabus/syllabus-materials.html",
     "href": "syllabus/syllabus-materials.html",
     "title": "Course materials",
     "section": "",
-    "text": "You are not required to purchase a textbook for this class. Who do we think we are?\nIn the PREPARE column of the course schedule, we will note which papers are reading for next class.\nNote that here is the signup sheet for the student-led discussion sections.",
+    "text": "You are not required to purchase a textbook for this class. Who do we think we are?\nIn the PREPARE column of the course schedule, we will note which papers are reading for next class.\nIn the Lectures tab on the right, we will provide typed copies of lecture notes. Note that the exact topics/discussion in class may deviate from these typed notes – email us if you’d like a better recap!\nNote that here is the signup sheet for the student-led discussion sections.",
     "crumbs": [
       "Syllabus",
       "Materials"
@@ -125,7 +191,7 @@
     "href": "syllabus/syllabus-materials.html#textbooks",
     "title": "Course materials",
     "section": "",
-    "text": "You are not required to purchase a textbook for this class. Who do we think we are?\nIn the PREPARE column of the course schedule, we will note which papers are reading for next class.\nNote that here is the signup sheet for the student-led discussion sections.",
+    "text": "You are not required to purchase a textbook for this class. Who do we think we are?\nIn the PREPARE column of the course schedule, we will note which papers are reading for next class.\nIn the Lectures tab on the right, we will provide typed copies of lecture notes. Note that the exact topics/discussion in class may deviate from these typed notes – email us if you’d like a better recap!\nNote that here is the signup sheet for the student-led discussion sections.",
     "crumbs": [
       "Syllabus",
       "Materials"
@@ -136,43 +202,10 @@
     "href": "syllabus/syllabus-materials.html#technology",
     "title": "Course materials",
     "section": "Technology",
-    "text": "Technology\nTechnology use will be limited during class time to encourage active discussion and participation. However, you will need access to a device with internet so that you can use the following:\n\nThis course page that you are on right now;\nCanvas, through which you can access…\n\nGradescope;\nEd Discussion;\n\nZoom (e.g. for remote office hours).\n\nIf access to technology becomes a concern for you during the semester, contact the instructors immediately to discuss options.",
+    "text": "Technology\nTechnology use will be limited during class time to encourage active discussion and participation. However, you will need access to a device with internet so that you can use the following:\n\nThis course page that you are on right now;\nCanvas, through which you can access…\n\nEd Discussion;\n\nZoom (e.g. for remote office hours).\n\nIf access to technology becomes a concern for you during the semester, contact the instructors immediately to discuss options.",
     "crumbs": [
       "Syllabus",
       "Materials"
-    ]
-  },
-  {
-    "objectID": "lectures/lectures-lecture1.html",
-    "href": "lectures/lectures-lecture1.html",
-    "title": "Lecture 1",
-    "section": "",
-    "text": "Let’s consider a world where statistics doesn’t exist. What would it look like? People could make random claims without numerical evidence. Your feed would look like a random mess of videos constantly being posted. One could argue that we couldn’t count the number of people enrolled in this course.\nOk, well that seemed pretty obvious. Of course, the reason for taking this course is likely some form of personal interest, as it’s a random half credit house course. Perhaps you’re a CS major who wants to learn some statistical algorithms to recreate Google’s PageRank. Maybe you’re a premed and hope to do a survival analysis to support your research interests. Finally, maybe you’re a sociologist and want to discover a population parameter about the use of AI in the classroom.\nLet’s reflect on what today’s world looks like. A reasonable statement would be: “Statistics exists. Some people know how to use statistics, some other people sort of know what statistics is, and a vast majority of people have heard of it.” The goal of this course is to move from the third group to the second group, in a way that could set you up for self learning to make it to the first group. We also hope that you’ll be able to critically evaluate the quality of a statistical analysis on a paper you’ve never seen before. There is much to learn!",
-    "crumbs": [
-      "Lectures",
-      "Lecture 1"
-    ]
-  },
-  {
-    "objectID": "lectures/lectures-lecture1.html#motivating-this-course",
-    "href": "lectures/lectures-lecture1.html#motivating-this-course",
-    "title": "Lecture 1",
-    "section": "",
-    "text": "Let’s consider a world where statistics doesn’t exist. What would it look like? People could make random claims without numerical evidence. Your feed would look like a random mess of videos constantly being posted. One could argue that we couldn’t count the number of people enrolled in this course.\nOk, well that seemed pretty obvious. Of course, the reason for taking this course is likely some form of personal interest, as it’s a random half credit house course. Perhaps you’re a CS major who wants to learn some statistical algorithms to recreate Google’s PageRank. Maybe you’re a premed and hope to do a survival analysis to support your research interests. Finally, maybe you’re a sociologist and want to discover a population parameter about the use of AI in the classroom.\nLet’s reflect on what today’s world looks like. A reasonable statement would be: “Statistics exists. Some people know how to use statistics, some other people sort of know what statistics is, and a vast majority of people have heard of it.” The goal of this course is to move from the third group to the second group, in a way that could set you up for self learning to make it to the first group. We also hope that you’ll be able to critically evaluate the quality of a statistical analysis on a paper you’ve never seen before. There is much to learn!",
-    "crumbs": [
-      "Lectures",
-      "Lecture 1"
-    ]
-  },
-  {
-    "objectID": "lectures/lectures-lecture1.html#what-is-statistics-what-is-a-statistic",
-    "href": "lectures/lectures-lecture1.html#what-is-statistics-what-is-a-statistic",
-    "title": "Lecture 1",
-    "section": "What is statistics? What is a statistic?",
-    "text": "What is statistics? What is a statistic?\nStatistics (the field) is a mathematical science pertaining to the collection, analysis, interpretation, and presentation of data.\nA statistic is any quantity computed from values in a sample. That is incredibly broad. During this course, we will primarily focus on two types of statistics (which are not mutually exclusive of one another): 1. Descriptive statistics, which summarize a sample of data 2. Test statistics, which is some number derived from the sample that would be selected or defined in a way that differentiates between the null and alternative hypothesis.",
-    "crumbs": [
-      "Lectures",
-      "Lecture 1"
     ]
   },
   {
@@ -228,50 +261,6 @@
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-overview.html",
-    "href": "syllabus/syllabus-overview.html",
-    "title": "Course overview",
-    "section": "",
-    "text": "In this course, students will explore the statistical fundamentals necessary for understanding and conducting research in a variety of fields. Students will engage with real-world research papers and datasets across disciplines, exploring how statistics are used (and sometimes misused) in published work. Instead of focusing solely on technical skills, this course emphasizes interpretation, critique, and application of basic statistical tools in research. From misused methods to research bias, Statistical Methods in Research aims to provide students with a deeper understanding of when, why, and how to best utilize statistical methods in their future storytelling. The course culminates in student-led discussion, applying concepts from class. No previous experience is required in statistical science or research.",
-    "crumbs": [
-      "Syllabus",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-overview.html#description",
-    "href": "syllabus/syllabus-overview.html#description",
-    "title": "Course overview",
-    "section": "",
-    "text": "In this course, students will explore the statistical fundamentals necessary for understanding and conducting research in a variety of fields. Students will engage with real-world research papers and datasets across disciplines, exploring how statistics are used (and sometimes misused) in published work. Instead of focusing solely on technical skills, this course emphasizes interpretation, critique, and application of basic statistical tools in research. From misused methods to research bias, Statistical Methods in Research aims to provide students with a deeper understanding of when, why, and how to best utilize statistical methods in their future storytelling. The course culminates in student-led discussion, applying concepts from class. No previous experience is required in statistical science or research.",
-    "crumbs": [
-      "Syllabus",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-overview.html#objectives",
-    "href": "syllabus/syllabus-overview.html#objectives",
-    "title": "Course overview",
-    "section": "Objectives",
-    "text": "Objectives\nIn this course, students will:\n\nCritically analyze and interpret statistical methods in peer-reviewed research papers\nExplore and apply foundational statistical concepts\nDifferentiate between statistical models and critically assess their validity\nExplore the roles of bias, ethics, and equity in research\nEvaluate the use of data visualizations to tell stories\nDesign and lead a research discussion about a specific research paper and its methods\n\nPrerequisites: A vested interest in getting better at critically analyzing papers and learning about statistics!",
-    "crumbs": [
-      "Syllabus",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-overview.html#meetings",
-    "href": "syllabus/syllabus-overview.html#meetings",
-    "title": "Course overview",
-    "section": "Meetings",
-    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLectures\nOld Chem 123\nMondays 7:00 PM - 8:30 PM\nLiane, Cooper, and sometimes Dr. Zito",
-    "crumbs": [
-      "Syllabus",
-      "Overview"
     ]
   },
   {
@@ -338,6 +327,50 @@
     "crumbs": [
       "Syllabus",
       "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-overview.html",
+    "href": "syllabus/syllabus-overview.html",
+    "title": "Course overview",
+    "section": "",
+    "text": "In this course, students will explore the statistical fundamentals necessary for understanding and conducting research in a variety of fields. Students will engage with real-world research papers and datasets across disciplines, exploring how statistics are used (and sometimes misused) in published work. Instead of focusing solely on technical skills, this course emphasizes interpretation, critique, and application of basic statistical tools in research. From misused methods to research bias, Statistical Methods in Research aims to provide students with a deeper understanding of when, why, and how to best utilize statistical methods in their future storytelling. The course culminates in student-led discussion, applying concepts from class. No previous experience is required in statistical science or research.",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-overview.html#description",
+    "href": "syllabus/syllabus-overview.html#description",
+    "title": "Course overview",
+    "section": "",
+    "text": "In this course, students will explore the statistical fundamentals necessary for understanding and conducting research in a variety of fields. Students will engage with real-world research papers and datasets across disciplines, exploring how statistics are used (and sometimes misused) in published work. Instead of focusing solely on technical skills, this course emphasizes interpretation, critique, and application of basic statistical tools in research. From misused methods to research bias, Statistical Methods in Research aims to provide students with a deeper understanding of when, why, and how to best utilize statistical methods in their future storytelling. The course culminates in student-led discussion, applying concepts from class. No previous experience is required in statistical science or research.",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-overview.html#objectives",
+    "href": "syllabus/syllabus-overview.html#objectives",
+    "title": "Course overview",
+    "section": "Objectives",
+    "text": "Objectives\nIn this course, students will:\n\nCritically analyze and interpret statistical methods in peer-reviewed research papers\nExplore and apply foundational statistical concepts\nDifferentiate between statistical models and critically assess their validity\nExplore the roles of bias, ethics, and equity in research\nEvaluate the use of data visualizations to tell stories\nDesign and lead a research discussion about a specific research paper and its methods\n\nPrerequisites: A vested interest in getting better at critically analyzing papers and learning about statistics!",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-overview.html#meetings",
+    "href": "syllabus/syllabus-overview.html#meetings",
+    "title": "Course overview",
+    "section": "Meetings",
+    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLectures\nOld Chem 123\nMondays 7:00 PM - 8:30 PM\nLiane, Cooper, and sometimes Dr. Zito",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
     ]
   }
 ]
