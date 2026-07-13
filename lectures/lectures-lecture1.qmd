@@ -16,13 +16,19 @@ Let's reflect on what today's world looks like. A reasonable statement would be:
 Statistics (the field) is a mathematical science pertaining to the collection, analysis, interpretation, and presentation of data.
 
 A statistic is any quantity computed from values in a sample. That is incredibly broad. During this course, we will primarily focus on two types of statistics (which are not mutually exclusive of one another):
-1. Descriptive statistics, which summarize a sample of data
-2. Test statistics, which is some number derived from the sample that would be selected or defined in a way that differentiates between the null and alternative hypothesis.
+<ol>
+  <li> Descriptive statistics, which summarize a sample of data </li>
+  <li> Test statistics, which is some number derived from the sample that would be selected or defined in a way that differentiates between the null and alternative hypothesis. </li>
 
 That's a lot of jargon right there. No worries -- we'll break it down through this course!
 
 ## "Good" statistics vs. "Bad" statistics 
 
+What is "good" statistics? In this case, we typically will mean rigorous, with clearly defined intentions, acknowledgement of shortcomings, and evaluation of its efficacy in practice. This would make a "good" statistic (singular) one that is appropriate to use in the given scenario. 
+
+A short example. Say you've got a bunch of categorical data, but then you create some model that only models continuous data. That's not good! You may even get a statistically significant result (we will learn what this really means). Say you even made it past the editors at a publishing house and got published, and some random news reporter picked it up and wrote an article on it. We will see later in this course that this actually happened.
+
+In this course, we will read some very good and very bad papers. Ideally, you'll be able to determine why they're bad, beyond simply "the journal retracted them."
 
 ## Research 101
 
