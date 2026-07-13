@@ -11,7 +11,7 @@ website:
 
   sidebar:
     background: "#FFFB71"
-    logo: "img/fake-logo.png"
+    logo: "img/realstahouse.png"
     pinned: true
     align: center
     tools:
