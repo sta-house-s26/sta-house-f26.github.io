@@ -8,16 +8,17 @@ You are not required to purchase a textbook for this class. Who do we think we a
 
 In the **PREPARE** column of the [course schedule](https://sta-house-s26.github.io/sta-house-f26.github.io/), we will note which papers are reading for next class.
 
+In the **Lectures** tab on the right, we will provide typed copies of lecture notes. Note that the exact topics/discussion in class may deviate from these typed notes -- email us if you'd like a better recap!
+
 Note that [here]("https://docs.google.com/document/d/15E3fy6B_9gWY3mt9UxZHZESQ0JgNs_toBIIgD_6ZmTU/edit?usp=sharing") is the signup sheet for the student-led discussion sections.
 
 ## Technology
 
 Technology use will be limited during class time to encourage active discussion and participation. However, you will need access to a device with internet so that you can use the following:
 
--   [This course page](https://sta240-f25.github.io/) that you are on right now;
+-   [This course page](https://sta-house-s26.github.io/sta-house-f26.github.io/) that you are on right now;
 -   [Canvas](https://go.canvas.duke.edu/), through which you can access...
-    -   [Gradescope](https://www.gradescope.com/courses/1071176);
-    -   [Ed Discussion](https://edstem.org/us/courses/80868/discussion);
+    -   [Ed Discussion](https://edstem.org/us/dashboard);
 -   [Zoom](https://duke.zoom.us/) (e.g. for remote office hours).
 
 If access to technology becomes a concern for you during the semester, contact the instructors immediately to discuss options.
