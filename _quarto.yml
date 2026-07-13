@@ -48,7 +48,7 @@ website:
       - section: "Lectures"
         contents:
           - href: lectures/lectures-lecture1.qmd
-            text: Overview
+            text: Lecture 1
             
   page-footer:
     right: 'This page is built with [Quarto](https://quarto.org/).'

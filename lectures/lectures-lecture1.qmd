@@ -1,5 +1,21 @@
 ---
-title: "Lectures"
+title: "Lecture 1"
 format: html
 ---
+
+## Motivating this Course
+
+Let's consider a world where statistics doesn't exist. What would it look like? People could make random claims without numerical evidence. Your feed would look like a random mess of videos constantly being posted. One could argue that we couldn't count the number of people enrolled in this course.
+
+Ok, well that seemed pretty obvious. Of course, the reason for taking this course is likely some form of personal interest, as it's a random half credit house course. Perhaps you're a CS major who wants to learn some statistical algorithms to recreate Google's PageRank. Maybe you're a premed and hope to do a survival analysis to support your research interests. Finally, maybe you're a sociologist and want to discover a population parameter about the use of AI in the classroom.
+
+Let's reflect on what today's world looks like. A reasonable statement would be: "Statistics exists. Some people know how to use statistics, some other people sort of know what statistics is, and a vast majority of people have heard of it." The goal of this course is to move from the third group to the second group, in a way that could set you up for self learning to make it to the first group. We also hope that you'll be able to critically evaluate the quality of a statistical analysis on a paper you've never seen before. There is much to learn! 
+
+## What is statistics? What is a statistic?
+
+Statistics (the field) is a mathematical science pertaining to the collection, analysis, interpretation, and presentation of data.
+
+A statistic is any quantity computed from values in a sample. That is incredibly broad. During this course, we will primarily focus on two types of statistics (which are not mutually exclusive of one another):
+1. Descriptive statistics, which summarize a sample of data
+2. Test statistics, which is some number derived from the sample that would be selected or defined in a way that differentiates between the null and alternative hypothesis.
 
