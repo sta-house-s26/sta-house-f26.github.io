@@ -11,7 +11,7 @@ website:
 
   sidebar:
     background: "#FFFB71"
-    logo: "img/realstahouse.png"
+    logo: "img/stahouse_hexagon.png"
     pinned: true
     align: center
     tools:
