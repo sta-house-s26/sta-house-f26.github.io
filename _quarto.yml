@@ -45,6 +45,10 @@ website:
             text: University resources
           - href: index.qmd
             text: Schedule
+      - section: "Lectures"
+        contents:
+          - href: lectures/lectures-lecture1.qmd
+            text: Overview
             
   page-footer:
     right: 'This page is built with [Quarto](https://quarto.org/).'
