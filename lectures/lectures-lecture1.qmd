@@ -3,6 +3,8 @@ title: "Lecture 1"
 format: html
 ---
 
+# 8/24 Lecture 1
+
 ## Motivating this Course
 
 Let's consider a world where statistics doesn't exist. What would it look like? People could make random claims without numerical evidence. Your feed would look like a random mess of videos constantly being posted. One could argue that we couldn't count the number of people enrolled in this course.

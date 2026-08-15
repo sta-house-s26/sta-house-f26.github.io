@@ -3,4 +3,42 @@ title: "lectures-lecture2"
 format: html
 ---
 
-# stay tuned! 
+# 8/31 Lecture 2
+
+## Study Design
+
+Today we're going to explore a few cases where real statistics were computed effectively and correctly on paper, yet completely failed their purpose. Statistics, as with most other things, depends heavily on *interpretation* – when the interpretation fails, our research is no longer sound.
+
+**Correlation vs. Causation**
+
+Let's think about a classic example. Ice cream sales and the number of shark attacks both increase in the summer. Does this mean that eating ice cream causes more people to get chased by sharks? Obviously, this is not what's going on here – the season itself is causing both of these events independently (more humans in the ocean in the summer = more shark injuries. hotter weather = a greater need for ice cream). Even though ice cream sales and shark attacks are *correlated* (move together), one does not necessarily *cause* the other.
+
+Keep this in mind as you dissect any research paper in the following weeks, and you'll easily find reason for skepticism everywhere.
+
+**Confounding Variables**
+
+In the case of the ice cream sales and shark attacks, there was a hidden, *confounding* third variable that influenced both variables of interest, making them seem related. As we explore these papers, think about what differs between the two groups examined, or other variables that might be at play.
+
+**Sample Size and Generalizability**
+
+Before we trust any findings, and thinking back to our discussion [last week](https://sta-house-s26.github.io/sta-house-f26.github.io/lectures/lectures-lecture1.html#good-statistics-vs.-bad-statistics), it's important to consider the *sample size* of the study. How many people did the survey ask? Which groups of people was this pattern found in? The original marshmallow study we're about to read was conducted on a small sample of children at a preschool on Stanford's campus. As you read, consider what impact this may have on the results.
+
+**Replication**
+
+Replication is basically redoing a study, ideally with a bigger, more representative sample. The goal of this is to see if the original result appears once again, to help validate or question the original study's results. One of today's readings is a replication attempt of the marshmallow test. Note what differs between replication attempts, not limited to the results! Did the replication increase sample size, or change the population experimented on? How might that impact our interpretations of both studies' findings?
+
+# [**The nature of adolescent competencies predicted by preschool delay of gratification.**](https://psycnet.apa.org/record/1988-19783-001)
+
+**Discussion Questions**
+
+1.  
+2.  
+3.  
+
+# [**Revisiting the Marshmallow Test: A Conceptual Replication Investigating Links Between Early Delay of Gratification and Later Outcomes**](https://pmc.ncbi.nlm.nih.gov/articles/PMC6050075/)
+
+**Discussion Questions**
+
+1.  
+2.  
+3.  
