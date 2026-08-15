@@ -7,33 +7,88 @@ format: html
 
 Let's consider a world where statistics doesn't exist. What would it look like? People could make random claims without numerical evidence. Your feed would look like a random mess of videos constantly being posted. One could argue that we couldn't count the number of people enrolled in this course.
 
-Okay, well that seemed pretty obvious. Of course, the reason for taking this course is likely some form of personal interest, as it's a random half credit house course. Perhaps you're a CS major who wants to learn some statistical algorithms to recreate Google's (PageRank)[https://en.wikipedia.org/wiki/PageRank]. Maybe you're a pre-med and hope to do a survival analysis to support your research interests. Finally, maybe you're a sociologist and want to determine a population parameter for the use of AI in the classroom.
+Okay, well that seemed pretty obvious. Of course, the reason for taking this course is likely some form of personal interest, as it's a random half credit house course. Perhaps you're a CS major who wants to learn some statistical algorithms to recreate Google's (PageRank)\[https://en.wikipedia.org/wiki/PageRank\]. Maybe you're a pre-med and hope to do a survival analysis to support your research interests. Finally, maybe you're a sociologist and want to determine a population parameter for the use of AI in the classroom.
 
-Let's reflect on what today's world looks like. A reasonable statement would be: "Statistics exists. Some people know how to use statistics, some other people sort of know what statistics is, and a vast majority of people have heard of it." The goal of this course is to move from the third group to the second group, in a way that could set you up for self learning to make it to the first group. We also hope that you'll be able to critically evaluate the quality of a statistical analysis on a paper you've never seen before. There is much to learn! 
+Let's reflect on what today's world looks like. A reasonable statement would be: "Statistics exists. Some people know how to use statistics, some other people sort of know what statistics is, and a vast majority of people have heard of it." The goal of this course is to move from the third group to the second group, in a way that could set you up for self learning to make it to the first group. We also hope that you'll be able to critically evaluate the quality of a statistical analysis on a paper you've never seen before. There is much to learn!
 
 ## What is statistics? What is a statistic?
 
 Statistics (the field) is a mathematical science pertaining to the collection, analysis, interpretation, and presentation of data.
 
 A statistic is any quantity computed from values in a sample. That is incredibly broad. During this course, we will primarily focus on two types of statistics (which are not mutually exclusive of one another):
+
 <ol>
-  <li> Descriptive statistics, which summarize a sample of data </li>
-  <li> Test statistics, which is some number derived from the sample that would be selected or defined in a way that differentiates between the null and alternative hypothesis. </li>
+
+<li>Descriptive statistics, which summarize a sample of data</li>
+
+<li>Test statistics, which is some number derived from the sample that would be selected or defined in a way that differentiates between the null and alternative hypothesis.</li>
 
 That's a lot of jargon right there. No worries -- we'll break it down through this course!
 
-## "Good" statistics vs. "Bad" statistics 
+## "Good" statistics vs. "Bad" statistics
 
-What is "good" statistics? In this case, we typically will mean rigorous, with clearly defined intentions, acknowledgement of shortcomings, and evaluation of its efficacy in practice. This would make a "good" statistic (singular) one that is appropriate to use in the given scenario. 
+What is "good" statistics? In this case, we typically will mean rigorous, with clearly defined intentions, acknowledgement of shortcomings, and evaluation of its efficacy in practice. This would make a "good" statistic (singular) one that is appropriate to use in the given scenario.
 
-A short example. Say you've got a bunch of categorical data, but then you create some model that only models continuous data. That's not good! You may even get a statistically significant result (we will learn what this really means). Say you even made it past the editors at a publishing house and got published, and some random news reporter picked it up and wrote an article on it. We will see later in this course that this actually happened.
+A short example. Say you've got a bunch of categorical data (ex: survey answers of Yes or No), but then you create some model that only models continuous data (ex: representing Yes as 1 and No as 0, and having statistics in between). That's not good! You may even get a statistically significant result (we will learn what this really means). Say you even made it past the editors at a publishing house and got published, and some random news reporter picked it up and wrote an article on it. We will see later in this course that this has actually happened many, many times.
 
 In this course, we will read some very good and very bad papers. Ideally, you'll be able to determine why they're bad, beyond simply "the journal retracted them."
 
+**What good statistics should do**
+
+- Make data more approachable. A statistic should be well-chosen summary that allows the audience to understand something about, for example, the opinions of 10,000 people without having to look at all 10,000 data points.
+
+- Support a claim. Statistics should typically have a goal/purpose that they are attempting to explain, or identify some specific finding.
+
+- Display relevant information. The statistic chosen should actually speak to the question being asked!
+
+- Communicate a story. At the end of the day, someone has to be able to view your analysis and understand what it conveys and its implications.
+
+**What bad statistics may do**
+
+- Use methods inappropriately. For example, applying a statistical technique to data it wasn't designed for. We'll explore lots of papers that do this!
+
+- Adding unnecessary complexity. Sometimes, complexity can obscure the true result. Often times, simple is best.
+
+- Cherry-picking or overgeneralizing. Selectively reporting the data points (or the one significant test out of twenty) that support your narrative, or taking a result from a small, biased, or narrow sample and claiming it holds for the larger group.
+
+**Why do we care?**
+
+You all have probably seen your fair share of misleading or crazy news headlines. From *Scientists Say Smelling Farts Might Prevent Cancer* to *Coffee Consumption May Raise Miscarriage Risk*, our world is full of bad statistics. Language like "might" or "may" largely obscure the actual scientific findings of correlation vs. causation.
+
+And beyond clickbait news articles and AI Instagram posts, bad statistics also show up in legitimate, peer-reviewed research. Consider [a study on physician age at death by specialty](https://onlinelibrary.wiley.com/doi/full/10.1002/lim2.23): emergency physicians were reported to have the youngest average age at death (58.7 years!) of any medical specialty. But this estimate was based on only *43* obituaries (compared to primary care physicians, whose average statistic was based on *2,508*). A mean built on 43 observations is going to be far noisier than one built on thousands, even though both are presented in the same table, in the same font, with the same weight. This is just one example of the importance of statistical literacy and thinking critically about research.
+
 ## Research 101
 
+Turning now to the second half of our course title, research – where does statistics play a role? How does the research process work?
 
-## Keshav, S. "*How to Read a Paper*"
+1.  **Understand the field:** Research usually starts with lots and lots of reading. We want to be able to know what's already been asked and what answers already exist before we can possibly understand what's missing.
+2.  **Find a new question:** A good question is specific, testable, and not already answered! This is where research truly starts.
+3.  **Find a way to test the question:** We usually want to design a study or analysis that could actually provide evidence for or against your question.
+4.  **Examine/analyze the results:** Running said test, computing the numbers, reporting findings.
+5.  and finally, **write about it and why it matters.**
 
+Step 4 is where most think statistics starts and ends.
 
+But really, it's active all the way back in Step 2, before any data has been manipulated. When we are finding our question, we need to define our variables, or subject(s) of interest. What exactly are we measuring? How are we measuring them? Vague variables lead to vague (or unanswerable) questions!
 
+In Step 3, when we're designing a study or analysis to test our question, that design may play a significant impact on the strength of the answer we will get. For example, our question may be about a **causal** relationship (does X cause Y?), but our study design may only be able to give us a **correlational** answer (X and Y are/are not related).
+
+It's also tempting to think that statistics ends when we've done the analysis, and all that's left is to write it out in nice sentences. But Step 5 is arguably the most important part. Communication of statistics is extremely important. Vocabulary such as "significant" means something very specific in a statistical context compared to colloquial usage. Additionally, we must make the conclusion as clear as possible to our audience, or else we might end up with a headline as striking as farts preventing cancer.
+
+## Keshav, S. "[*How to Read a Paper*](https://dl.acm.org/doi/10.1145/1273445.1273458)"
+
+Before diving headfirst into research papers (as we will in the rest of this course), it's important to know how to read one efficiently and effectively, especially if we don't know much about the topic. "Researchers spend a great deal reading research papers. However this skill is rarely taught, leading to much wasted effort," Keshav introduces. *How to Read a Paper* proposes a three-pass method for reading academic research papers:
+
+- The first pass: a quick skim of the title, abstract, introduction, section headings, and conclusions. The goal is to get a general gist of what the paper does, how it does it, and whether it's worth diving into.
+
+- The second pass: a more careful read, now looking into figures, diagrams, data, etc., but still not exploring too much detail. The goal is to understand the general content and be able to summarize it with some supporting evidence.
+
+- The third pass: a full read, where the goal is to "virtually re-implement" the paper, or be able to reconstruct its structure and challenge its assumptions, methods, and results.
+
+**Class Discussion Questions:**
+
+1.  
+2.  
+3.  
+4.  
+5.  
