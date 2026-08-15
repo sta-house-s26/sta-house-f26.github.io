@@ -236,17 +236,69 @@ ul.task-list li input[type="checkbox"] {
 <section id="what-is-statistics-what-is-a-statistic" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-statistics-what-is-a-statistic">What is statistics? What is a statistic?</h2>
 <p>Statistics (the field) is a mathematical science pertaining to the collection, analysis, interpretation, and presentation of data.</p>
-<p>A statistic is any quantity computed from values in a sample. That is incredibly broad. During this course, we will primarily focus on two types of statistics (which are not mutually exclusive of one another): 1. Descriptive statistics, which summarize a sample of data 2. Test statistics, which is some number derived from the sample that would be selected or defined in a way that differentiates between the null and alternative hypothesis.</p>
+<p>A statistic is any quantity computed from values in a sample. That is incredibly broad. During this course, we will primarily focus on two types of statistics (which are not mutually exclusive of one another):</p>
+<ol>
+<li>
+Descriptive statistics, which summarize a sample of data
+</li>
+<li>
+Test statistics, which is some number derived from the sample that would be selected or defined in a way that differentiates between the null and alternative hypothesis.
+</li>
 <p>That’s a lot of jargon right there. No worries – we’ll break it down through this course!</p>
-</section>
+</ol></section>
 <section id="good-statistics-vs.-bad-statistics" class="level2">
 <h2 class="anchored" data-anchor-id="good-statistics-vs.-bad-statistics">“Good” statistics vs.&nbsp;“Bad” statistics</h2>
+<p>What is “good” statistics? In this case, we typically will mean rigorous, with clearly defined intentions, acknowledgement of shortcomings, and evaluation of its efficacy in practice. This would make a “good” statistic (singular) one that is appropriate to use in the given scenario.</p>
+<p>A short example. Say you’ve got a bunch of categorical data (ex: survey answers of Yes or No), but then you create some model that only models continuous data (ex: representing Yes as 1 and No as 0, and having statistics in between). That’s not good! You may even get a statistically significant result (we will learn what this really means). Say you even made it past the editors at a publishing house and got published, and some random news reporter picked it up and wrote an article on it. We will see later in this course that this has actually happened many, many times.</p>
+<p>In this course, we will read some very good and very bad papers. Ideally, you’ll be able to determine why they’re bad, beyond simply “the journal retracted them.”</p>
+<p><strong>What good statistics should do</strong></p>
+<ul>
+<li><p>Make data more approachable. A statistic should be well-chosen summary that allows the audience to understand something about, for example, the opinions of 10,000 people without having to look at all 10,000 data points.</p></li>
+<li><p>Support a claim. Statistics should typically have a goal/purpose that they are attempting to explain, or identify some specific finding.</p></li>
+<li><p>Display relevant information. The statistic chosen should actually speak to the question being asked!</p></li>
+<li><p>Communicate a story. At the end of the day, someone has to be able to view your analysis and understand what it conveys and its implications.</p></li>
+</ul>
+<p><strong>What bad statistics may do</strong></p>
+<ul>
+<li><p>Use methods inappropriately. For example, applying a statistical technique to data it wasn’t designed for. We’ll explore lots of papers that do this!</p></li>
+<li><p>Adding unnecessary complexity. Sometimes, complexity can obscure the true result. Often times, simple is best.</p></li>
+<li><p>Cherry-picking or overgeneralizing. Selectively reporting the data points (or the one significant test out of twenty) that support your narrative, or taking a result from a small, biased, or narrow sample and claiming it holds for the larger group.</p></li>
+</ul>
+<p><strong>Why do we care?</strong></p>
+<p>You all have probably seen your fair share of misleading or crazy news headlines. From <em>Scientists Say Smelling Farts Might Prevent Cancer</em> to <em>Coffee Consumption May Raise Miscarriage Risk</em>, our world is full of bad statistics. Language like “might” or “may” largely obscure the actual scientific findings of correlation vs.&nbsp;causation.</p>
+<p>And beyond clickbait news articles and AI Instagram posts, bad statistics also show up in legitimate, peer-reviewed research. Consider <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/lim2.23">a study on physician age at death by specialty</a>: emergency physicians were reported to have the youngest average age at death (58.7 years!) of any medical specialty. But this estimate was based on only <em>43</em> obituaries (compared to primary care physicians, whose average statistic was based on <em>2,508</em>). A mean built on 43 observations is going to be far noisier than one built on thousands, even though both are presented in the same table, in the same font, with the same weight. This is just one example of the importance of statistical literacy and thinking critically about research.</p>
 </section>
 <section id="research-101" class="level2">
 <h2 class="anchored" data-anchor-id="research-101">Research 101</h2>
+<p>Turning now to the second half of our course title, research – where does statistics play a role? How does the research process work?</p>
+<ol type="1">
+<li><strong>Understand the field:</strong> Research usually starts with lots and lots of reading. We want to be able to know what’s already been asked and what answers already exist before we can possibly understand what’s missing.</li>
+<li><strong>Find a new question:</strong> A good question is specific, testable, and not already answered! This is where research truly starts.</li>
+<li><strong>Find a way to test the question:</strong> We usually want to design a study or analysis that could actually provide evidence for or against your question.</li>
+<li><strong>Examine/analyze the results:</strong> Running said test, computing the numbers, reporting findings.</li>
+<li>and finally, <strong>write about it and why it matters.</strong></li>
+</ol>
+<p>Step 4 is where most think statistics starts and ends.</p>
+<p>But really, it’s active all the way back in Step 2, before any data has been manipulated. When we are finding our question, we need to define our variables, or subject(s) of interest. What exactly are we measuring? How are we measuring them? Vague variables lead to vague (or unanswerable) questions!</p>
+<p>In Step 3, when we’re designing a study or analysis to test our question, that design may play a significant impact on the strength of the answer we will get. For example, our question may be about a <strong>causal</strong> relationship (does X cause Y?), but our study design may only be able to give us a <strong>correlational</strong> answer (X and Y are/are not related).</p>
+<p>It’s also tempting to think that statistics ends when we’ve done the analysis, and all that’s left is to write it out in nice sentences. But Step 5 is arguably the most important part. Communication of statistics is extremely important. Vocabulary such as “significant” means something very specific in a statistical context compared to colloquial usage. Additionally, we must make the conclusion as clear as possible to our audience, or else we might end up with a headline as striking as farts preventing cancer.</p>
 </section>
 <section id="keshav-s.-how-to-read-a-paper" class="level2">
-<h2 class="anchored" data-anchor-id="keshav-s.-how-to-read-a-paper">Keshav, S. “<em>How to Read a Paper</em>”</h2>
+<h2 class="anchored" data-anchor-id="keshav-s.-how-to-read-a-paper">Keshav, S. “<a href="https://dl.acm.org/doi/10.1145/1273445.1273458"><em>How to Read a Paper</em></a>”</h2>
+<p>Before diving headfirst into research papers (as we will in the rest of this course), it’s important to know how to read one efficiently and effectively, especially if we don’t know much about the topic. “Researchers spend a great deal reading research papers. However this skill is rarely taught, leading to much wasted effort,” Keshav introduces. <em>How to Read a Paper</em> proposes a three-pass method for reading academic research papers:</p>
+<ul>
+<li><p>The first pass: a quick skim of the title, abstract, introduction, section headings, and conclusions. The goal is to get a general gist of what the paper does, how it does it, and whether it’s worth diving into.</p></li>
+<li><p>The second pass: a more careful read, now looking into figures, diagrams, data, etc., but still not exploring too much detail. The goal is to understand the general content and be able to summarize it with some supporting evidence.</p></li>
+<li><p>The third pass: a full read, where the goal is to “virtually re-implement” the paper, or be able to reconstruct its structure and challenge its assumptions, methods, and results.</p></li>
+</ul>
+<p><strong>Class Discussion Questions:</strong></p>
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ol>
 
 
 </section>
