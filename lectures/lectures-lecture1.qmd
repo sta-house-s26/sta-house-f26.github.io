@@ -1,9 +1,7 @@
 ---
-title: "Lecture 1"
+title: "8/24 Lecture 1"
 format: html
 ---
-
-# 8/24 Lecture 1
 
 ## Motivating this Course
 

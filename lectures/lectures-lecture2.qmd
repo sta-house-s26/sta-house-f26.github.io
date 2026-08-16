@@ -1,9 +1,7 @@
 ---
-title: "lectures-lecture2"
+title: "8/31 Lecture 2"
 format: html
 ---
-
-# 8/31 Lecture 2
 
 ## Study Design
 
