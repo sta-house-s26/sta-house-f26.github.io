@@ -25,7 +25,7 @@ Before we trust any findings, and thinking back to our discussion [last week](ht
 
 Replication is basically redoing a study, ideally with a bigger, more representative sample. The goal of this is to see if the original result appears once again, to help validate or question the original study's results. One of today's readings is a replication attempt of the marshmallow test. Note what differs between replication attempts, not limited to the results! Did the replication increase sample size, or change the population experimented on? How might that impact our interpretations of both studies' findings?
 
-# [**The nature of adolescent competencies predicted by preschool delay of gratification.**](https://psycnet.apa.org/record/1988-19783-001)
+## [**The nature of adolescent competencies predicted by preschool delay of gratification.**](https://psycnet.apa.org/record/1988-19783-001)
 
 **Discussion Questions**
 
@@ -33,7 +33,7 @@ Replication is basically redoing a study, ideally with a bigger, more representa
 2.  
 3.  
 
-# [**Revisiting the Marshmallow Test: A Conceptual Replication Investigating Links Between Early Delay of Gratification and Later Outcomes**](https://pmc.ncbi.nlm.nih.gov/articles/PMC6050075/)
+## [**Revisiting the Marshmallow Test: A Conceptual Replication Investigating Links Between Early Delay of Gratification and Later Outcomes**](https://pmc.ncbi.nlm.nih.gov/articles/PMC6050075/)
 
 **Discussion Questions**
 
