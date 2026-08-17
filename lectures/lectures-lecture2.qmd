@@ -25,6 +25,81 @@ Before we trust any findings, and thinking back to our discussion [last week](ht
 
 Replication is basically redoing a study, ideally with a bigger, more representative sample. The goal of this is to see if the original result appears once again, to help validate or question the original study's results. One of today's readings is a replication attempt of the marshmallow test. Note what differs between replication attempts, not limited to the results! Did the replication increase sample size, or change the population experimented on? How might that impact our interpretations of both studies' findings?
 
+##Study Types
+
+Let's consider some types of studies. These all have their strengths and weaknesses, and although we won't go into too much depth in all of them, it is incredibly important that you do if you're planning your own study. Understanding the nature of why a study is strong and why it's weak can inform what statistics would be used.
+
+## Non-Experimental / Observational Studies
+
+In observational studies, the investigator does not control who is exposed to a risk factor or intervention. Instead, exposures occur naturally, and the researcher measures associations between exposure and outcome. These studies are further divided by their unit of analysis: **population-based** or **individual-based**.
+
+### Population-Based Studies
+
+These studies use aggregate, group-level data rather than data on individual subjects.
+
+#### Descriptive — Health Survey
+**Health Survey** 
+: Describes the distribution of health-related states or events in a population, typically in terms of person, place, and time (the "who, where, and when"). It does not test hypotheses about cause and effect — it simply characterizes the burden of disease or health status in a defined population at a point in time.
+
+#### Analytic — Ecological Study
+**Ecological Study**
+: Compares exposure and outcome data across groups or populations (e.g., countries, cities, or regions) rather than individuals. It looks for correlations between an exposure rate and a disease rate at the population level. While useful for generating hypotheses, ecological studies are vulnerable to the **ecological fallacy** — the risk of wrongly inferring individual-level relationships from group-level data.
+
+### Individual-Based Studies
+
+These studies collect and analyze data on individual subjects rather than groups.
+
+#### Descriptive — Case Reports and Case Series
+**Case Report** 
+: A detailed description of a single, often unusual or novel, clinical case.
+**Case Series** 
+: Describes a group of patients with a similar diagnosis or exposure, without a comparison group.
+
+Both are hypothesis-generating tools that document clinical observations but cannot establish causal relationships due to the absence of a control group.
+
+#### Analytic Studies
+Analytic studies test specific hypotheses about the relationship between an exposure and an outcome, typically using a comparison group. There are three main designs:
+
+**Cross-Sectional Study (Prevalence Study)**
+: Measures exposure and outcome simultaneously in a population at a single point in time. It estimates the **prevalence** of disease and can identify associations, but because exposure and outcome are measured at the same time, it cannot establish the temporal sequence needed to infer causation.
+
+**Case-Control Study (Case-Reference Study)**
+: Starts with subjects who already have the outcome of interest (**cases**) and compares them to those without it (**controls**), looking backward to assess prior exposure. This design is efficient for studying rare diseases and is retrospective in nature.
+
+**Cohort Study (Follow-Up Study)**
+: Begins with a group of exposed and unexposed individuals who are free of the outcome, then follows them forward in time to compare the **incidence** of disease between groups. Cohort studies can be prospective or retrospective and provide stronger evidence of temporal sequence than cross-sectional or case-control designs.
+
+---
+
+## Experimental / Interventional Studies
+
+In experimental studies, the investigator actively assigns the exposure or intervention, allowing for stronger causal inference than observational designs.
+
+### Randomized Control Trial (Clinical Trial)
+Participants are **randomly assigned** to receive either the intervention (e.g., a drug or treatment) or a control/placebo. Randomization balances known and unknown confounding factors between groups, making the RCT the **gold standard** for establishing causality. When conducted in a clinical setting, this is often called a **clinical trial**.
+
+### Non-Randomized (Quasi-Experimental) Studies
+When randomization is not feasible or ethical, researchers may use non-randomized designs:
+
+- **Quasi-Experimental Study**: An intervention is assigned without random allocation, often using pre-existing groups (e.g., comparing outcomes before and after a policy change).
+- **Field Trial**: The intervention is applied to healthy individuals in the community (rather than a clinical setting) who are at risk of developing a disease, often to test preventive measures like vaccines.
+- **Community Trial**: The unit of intervention and analysis is an entire **community or group**, rather than individuals — commonly used to evaluate public health interventions such as water fluoridation or health education campaigns.
+
+---
+
+## Summary Table
+
+| Study Type | Category | Key Feature |
+|---|---|---|
+| Health Survey | Observational — Population | Descriptive, group-level |
+| Ecological Study | Observational — Population | Analytic, group-level correlation |
+| Case Report / Case Series | Observational — Individual | Descriptive, no control group |
+| Cross-Sectional Study | Observational — Individual | Exposure & outcome measured simultaneously |
+| Case-Control Study | Observational — Individual | Starts with outcome, looks back at exposure |
+| Cohort Study | Observational — Individual | Starts with exposure, follows forward |
+| Randomized Control Trial | Experimental | Random assignment, gold standard |
+| Quasi-Experimental / Field / Community Trial | Experimental | Non-random assignment |
+
 ## [**The nature of adolescent competencies predicted by preschool delay of gratification.**](https://psycnet.apa.org/record/1988-19783-001)
 
 **Discussion Questions**
