@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -32,16 +32,17 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../lectures/lectures-lecture2.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cad2a2f8a56dfe71ee895a68e79c9b9a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-1a0c33c7c4b7c86ab1fa693019e66ccc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-bee3f57ef230264cb5270c97f1893b01.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -114,7 +115,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">9/7 Lecture 3</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lectures-lecture1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/lectures-lecture3.html">Lecture 3</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -200,13 +201,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Lectures</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lectures/lectures-lecture1.html" class="sidebar-item-text sidebar-link">
@@ -217,6 +218,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../lectures/lectures-lecture2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/lectures-lecture3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Lecture 3</span></a>
   </div>
 </li>
       </ul>
@@ -250,13 +257,19 @@ window.Quarto = {
   <li><a href="#the-intuition-first" id="toc-the-intuition-first" class="nav-link" data-scroll-target="#the-intuition-first">The Intuition First</a></li>
   <li><a href="#the-formula" id="toc-the-formula" class="nav-link" data-scroll-target="#the-formula">The Formula</a></li>
   </ul></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a>
+  <ul class="collapse">
+  <li><a href="#krithikadatta-j.-normal-distribution." id="toc-krithikadatta-j.-normal-distribution." class="nav-link" data-scroll-target="#krithikadatta-j.-normal-distribution.">Krithikadatta J. Normal distribution.</a></li>
+  <li><a href="#the-hot-invisible-hand-can-time-sequence-patterns-of-successfailure-in-sports-be-modeled-as-repeated-random-independent-trials" id="toc-the-hot-invisible-hand-can-time-sequence-patterns-of-successfailure-in-sports-be-modeled-as-repeated-random-independent-trials" class="nav-link" data-scroll-target="#the-hot-invisible-hand-can-time-sequence-patterns-of-successfailure-in-sports-be-modeled-as-repeated-random-independent-trials"><strong>The Hot (Invisible?) Hand: Can Time Sequence Patterns of Success/Failure in Sports Be Modeled as Repeated Random Independent Trials?</strong></a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lectures-lecture1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/lectures-lecture3.html">Lecture 3</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">9/7 Lecture 3</h1>
 </div>
@@ -444,6 +457,30 @@ window.Quarto = {
 </ul>
 <p>The notation <span class="math inline">\(P(A \mid B)\)</span> is read “the probability of <span class="math inline">\(A\)</span> <em>given</em> <span class="math inline">\(B\)</span>” — it’s how we write “conditional on already knowing <span class="math inline">\(B\)</span> happened, how likely is <span class="math inline">\(A\)</span>?” This is the central idea behind everything Bayes’ rule does: it converts between <span class="math inline">\(P(B \mid A)\)</span> (which is often what we can measure directly, like test accuracy) and <span class="math inline">\(P(A \mid B)\)</span> (which is usually what we actually want to know, like “does this patient have the disease?”). These two conditional probabilities are <em>not</em> the same thing, and confusing them is one of the most common reasoning errors in applied research — Bayes’ rule exists precisely to keep them straight.</p>
 <p>Bayes’ rule underlies an entire branch of statistical inference (Bayesian statistics), but even researchers working in the more traditional (“frequentist”) framework rely on this logic constantly — anytime you interpret a diagnostic test, a screening tool, or evidence of any kind, you are implicitly reasoning about priors, likelihoods, and posteriors, whether or not you write the formula down.</p>
+</section>
+</section>
+<section id="discussion" class="level1">
+<h1>Discussion</h1>
+<section id="krithikadatta-j.-normal-distribution." class="level2">
+<h2 class="anchored" data-anchor-id="krithikadatta-j.-normal-distribution."><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3915399/">Krithikadatta J. Normal distribution.</a></h2>
+<p><strong>Discussion Questions</strong></p>
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</section>
+<section id="the-hot-invisible-hand-can-time-sequence-patterns-of-successfailure-in-sports-be-modeled-as-repeated-random-independent-trials" class="level2">
+<h2 class="anchored" data-anchor-id="the-hot-invisible-hand-can-time-sequence-patterns-of-successfailure-in-sports-be-modeled-as-repeated-random-independent-trials"><a href="https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0024532&amp;type=printable"><strong>The Hot (Invisible?) Hand: Can Time Sequence Patterns of Success/Failure in Sports Be Modeled as Repeated Random Independent Trials?</strong></a></h2>
+<p><strong>Discussion Questions</strong></p>
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
 
 
 </section>
@@ -850,6 +887,15 @@ window.Quarto = {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../lectures/lectures-lecture2.html" class="pagination-link" aria-label="Lecture 2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lecture 2</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
