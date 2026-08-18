@@ -97,9 +97,7 @@ In practice, the negative binomial distribution is also widely used to model **o
 
 ### The Poisson Distribution: "How many events occur in a fixed window?"
 
-The Poisson distribution answers a different kind of question than the previous three. Instead of counting successes out of a known number of discrete trials, it counts the number of times a rare event happens over a continuous window of time, space, or exposure — where events could, in principle, happen at any moment, but tend to happen at some known average rate, denoted $\lambda$ ("lambda"). For example, the number of customer complaints a call center receives per hour.
-- Number of mutations observed per strand of DNA of a fixed length.
-- Number of earthquakes in a region per year.
+The Poisson distribution answers a different kind of question than the previous three. Instead of counting successes out of a known number of discrete trials, it counts the number of times a rare event happens over a continuous window of time, space, or exposure — where events could, in principle, happen at any moment, but tend to happen at some known average rate, denoted $\lambda$ ("lambda"). For example, the number of customer complaints a call center receives per hour. - Number of mutations observed per strand of DNA of a fixed length. - Number of earthquakes in a region per year.
 
 **Why it's different from the binomial:** notice there's no natural "$n$" here — no fixed number of trials. There's no ceiling on how many complaints a call center could receive in an hour. The Poisson distribution is actually what the binomial distribution turns into if you imagine $n$ (the number of "chances" for an event) growing towards infinity while $p$ (the chance of an event on any one of them) shrinks towards zero, in just the right balance that the average number of events, $np$, settles on a fixed value $\lambda$. This is a useful bridge to keep in mind: **Poisson is the limit of binomial when trials become so frequent and individually so unlikely that all that matters is the overall rate.**
 
@@ -161,3 +159,27 @@ Read the pieces one at a time:
 The notation $P(A \mid B)$ is read "the probability of $A$ *given* $B$" — it's how we write "conditional on already knowing $B$ happened, how likely is $A$?" This is the central idea behind everything Bayes' rule does: it converts between $P(B \mid A)$ (which is often what we can measure directly, like test accuracy) and $P(A \mid B)$ (which is usually what we actually want to know, like "does this patient have the disease?"). These two conditional probabilities are *not* the same thing, and confusing them is one of the most common reasoning errors in applied research — Bayes' rule exists precisely to keep them straight.
 
 Bayes' rule underlies an entire branch of statistical inference (Bayesian statistics), but even researchers working in the more traditional ("frequentist") framework rely on this logic constantly — anytime you interpret a diagnostic test, a screening tool, or evidence of any kind, you are implicitly reasoning about priors, likelihoods, and posteriors, whether or not you write the formula down.
+
+# Discussion
+
+## [Krithikadatta J. Normal distribution.](https://pmc.ncbi.nlm.nih.gov/articles/PMC3915399/)
+
+**Discussion Questions**
+
+1.  
+
+2.  
+
+3.  
+
+## [**The Hot (Invisible?) Hand: Can Time Sequence Patterns of Success/Failure in Sports Be Modeled as Repeated Random Independent Trials?**](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0024532&type=printable)
+
+**Discussion Questions**
+
+1.  
+
+2.  
+
+3.  
+
+## 

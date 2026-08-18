@@ -38,59 +38,71 @@ In observational studies, the investigator does not control who is exposed to a 
 These studies use aggregate, group-level data rather than data on individual subjects.
 
 #### Descriptive — Health Survey
-**Health Survey** 
-: Describes the distribution of health-related states or events in a population, typically in terms of person, place, and time (the "who, where, and when"). It does not test hypotheses about cause and effect — it simply characterizes the burden of disease or health status in a defined population at a point in time.
+
+**Health Survey**
+
+:   Describes the distribution of health-related states or events in a population, typically in terms of person, place, and time (the "who, where, and when"). It does not test hypotheses about cause and effect — it simply characterizes the burden of disease or health status in a defined population at a point in time.
 
 #### Analytic — Ecological Study
+
 **Ecological Study**
-: Compares exposure and outcome data across groups or populations (e.g., countries, cities, or regions) rather than individuals. It looks for correlations between an exposure rate and a disease rate at the population level. While useful for generating hypotheses, ecological studies are vulnerable to the **ecological fallacy** — the risk of wrongly inferring individual-level relationships from group-level data.
+
+:   Compares exposure and outcome data across groups or populations (e.g., countries, cities, or regions) rather than individuals. It looks for correlations between an exposure rate and a disease rate at the population level. While useful for generating hypotheses, ecological studies are vulnerable to the **ecological fallacy** — the risk of wrongly inferring individual-level relationships from group-level data.
 
 ### Individual-Based Studies
 
 These studies collect and analyze data on individual subjects rather than groups.
 
 #### Descriptive — Case Reports and Case Series
-**Case Report** 
-: A detailed description of a single, often unusual or novel, clinical case.
-**Case Series** 
-: Describes a group of patients with a similar diagnosis or exposure, without a comparison group.
+
+**Case Report**
+
+:   A detailed description of a single, often unusual or novel, clinical case. **Case Series**
+
+:   Describes a group of patients with a similar diagnosis or exposure, without a comparison group.
 
 Both are hypothesis-generating tools that document clinical observations but cannot establish causal relationships due to the absence of a control group.
 
 #### Analytic Studies
+
 Analytic studies test specific hypotheses about the relationship between an exposure and an outcome, typically using a comparison group. There are three main designs:
 
 **Cross-Sectional Study (Prevalence Study)**
-: Measures exposure and outcome simultaneously in a population at a single point in time. It estimates the **prevalence** of disease and can identify associations, but because exposure and outcome are measured at the same time, it cannot establish the temporal sequence needed to infer causation.
+
+:   Measures exposure and outcome simultaneously in a population at a single point in time. It estimates the **prevalence** of disease and can identify associations, but because exposure and outcome are measured at the same time, it cannot establish the temporal sequence needed to infer causation.
 
 **Case-Control Study (Case-Reference Study)**
-: Starts with subjects who already have the outcome of interest (**cases**) and compares them to those without it (**controls**), looking backward to assess prior exposure. This design is efficient for studying rare diseases and is retrospective in nature.
+
+:   Starts with subjects who already have the outcome of interest (**cases**) and compares them to those without it (**controls**), looking backward to assess prior exposure. This design is efficient for studying rare diseases and is retrospective in nature.
 
 **Cohort Study (Follow-Up Study)**
-: Begins with a group of exposed and unexposed individuals who are free of the outcome, then follows them forward in time to compare the **incidence** of disease between groups. Cohort studies can be prospective or retrospective and provide stronger evidence of temporal sequence than cross-sectional or case-control designs.
 
----
+:   Begins with a group of exposed and unexposed individuals who are free of the outcome, then follows them forward in time to compare the **incidence** of disease between groups. Cohort studies can be prospective or retrospective and provide stronger evidence of temporal sequence than cross-sectional or case-control designs.
+
+------------------------------------------------------------------------
 
 ## Experimental / Interventional Studies
 
 In experimental studies, the investigator actively assigns the exposure or intervention, allowing for stronger causal inference than observational designs.
 
 ### Randomized Control Trial (Clinical Trial)
+
 Participants are **randomly assigned** to receive either the intervention (e.g., a drug or treatment) or a control/placebo. Randomization balances known and unknown confounding factors between groups, making the RCT the **gold standard** for establishing causality. When conducted in a clinical setting, this is often called a **clinical trial**.
 
 ### Non-Randomized (Quasi-Experimental) Studies
+
 When randomization is not feasible or ethical, researchers may use non-randomized designs:
 
 - **Quasi-Experimental Study**: An intervention is assigned without random allocation, often using pre-existing groups (e.g., comparing outcomes before and after a policy change).
 - **Field Trial**: The intervention is applied to healthy individuals in the community (rather than a clinical setting) who are at risk of developing a disease, often to test preventive measures like vaccines.
 - **Community Trial**: The unit of intervention and analysis is an entire **community or group**, rather than individuals — commonly used to evaluate public health interventions such as water fluoridation or health education campaigns.
 
----
+------------------------------------------------------------------------
 
 ## Summary Table
 
 | Study Type | Category | Key Feature |
-|---|---|---|
+|------------------------|------------------------|------------------------|
 | Health Survey | Observational — Population | Descriptive, group-level |
 | Ecological Study | Observational — Population | Analytic, group-level correlation |
 | Case Report / Case Series | Observational — Individual | Descriptive, no control group |
@@ -100,18 +112,26 @@ When randomization is not feasible or ethical, researchers may use non-randomize
 | Randomized Control Trial | Experimental | Random assignment, gold standard |
 | Quasi-Experimental / Field / Community Trial | Experimental | Non-random assignment |
 
+# Discussion
+
 ## [**The nature of adolescent competencies predicted by preschool delay of gratification.**](https://psycnet.apa.org/record/1988-19783-001)
 
 **Discussion Questions**
 
-1.  
-2.  
-3.  
+1.  What kind of study is this, and where would you place this study in the summary table above?
+
+2.  What are some potential confounding variables in this study that could explain both their ability to delay gratification and later success?
+
+3.  Thinking back to the premise of the study – it was conducted on children at a preschool on Stanford's campus. What does this tell us about this particular sample? What implications might this have for the results?
 
 ## [**Revisiting the Marshmallow Test: A Conceptual Replication Investigating Links Between Early Delay of Gratification and Later Outcomes**](https://pmc.ncbi.nlm.nih.gov/articles/PMC6050075/)
 
 **Discussion Questions**
 
-1.  
-2.  
-3.  
+1.  What does it mean that this is a conceptual replication rather than an exact replication? What's the difference, and why might researchers choose one over the other?
+
+2.  How did the replication's sample differ from the original's, and how does that impact their findings?
+
+3.  Based on both papers, what would you say is the actual, defensible conclusion about delay of gratification and life outcomes?
+
+4.  If you were to conduct your own replication, how might you further improve on this study?

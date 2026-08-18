@@ -88,6 +88,7 @@ Before diving headfirst into research papers (as we will in the rest of this cou
 **Class Discussion Questions:**
 
 1.  What was your previous method of reading papers? How has this changed your perspective?
+    1.  Are there any helpful tips/tricks you've developed/found on your own when reading articles or papers?
 2.  Why does this method matter? Why should we deeply learn and understand a paper?
 3.  Why is point 3 ("Doing a Literature Survey") important in research?
 4.  How do you think point 4 ("Experience") develops?

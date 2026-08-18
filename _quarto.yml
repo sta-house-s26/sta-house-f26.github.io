@@ -51,6 +51,8 @@ website:
             text: Lecture 1
           - href: lectures/lectures-lecture2.qmd
             text: Lecture 2
+          - href: lectures/lectures-lecture3.qmd
+            text: Lecture 3
             
   page-footer:
     right: 'This page is built with [Quarto](https://quarto.org/).'
