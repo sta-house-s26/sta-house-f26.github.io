@@ -1,9 +1,9 @@
 ---
-title: "3/7 Lecture 3"
+title: "9/7 Lecture 3"
 format: html
 ---
 
-## Why Probability, and Why Now?
+## Why Probability?
 
 Before we can talk about hypothesis tests, confidence intervals, p-values, or any of the machinery of statistical inference, we need a shared vocabulary for describing uncertainty. Every measurement you will ever collect in research — a survey response, a lab reading, a reaction time, a clinical outcome — is, in some sense, the result of a random process. Probability is simply the mathematical language we use to describe how likely different outcomes of that random process are.
 
