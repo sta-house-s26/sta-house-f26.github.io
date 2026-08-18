@@ -1,225 +1,5 @@
 [
   {
-    "objectID": "lectures/lectures-lecture2.html",
-    "href": "lectures/lectures-lecture2.html",
-    "title": "lectures-lecture2",
-    "section": "",
-    "text": "Today we’re going to explore a few cases where real statistics were computed effectively and correctly on paper, yet completely failed their purpose. Statistics, as with most other things, depends heavily on interpretation – when the interpretation fails, our research is no longer sound.\nCorrelation vs. Causation\nLet’s think about a classic example. Ice cream sales and the number of shark attacks both increase in the summer. Does this mean that eating ice cream causes more people to get chased by sharks? Obviously, this is not what’s going on here – the season itself is causing both of these events independently (more humans in the ocean in the summer = more shark injuries. hotter weather = a greater need for ice cream). Even though ice cream sales and shark attacks are correlated (move together), one does not necessarily cause the other.\nKeep this in mind as you dissect any research paper in the following weeks, and you’ll easily find reason for skepticism everywhere.\nConfounding Variables\nIn the case of the ice cream sales and shark attacks, there was a hidden, confounding third variable that influenced both variables of interest, making them seem related. As we explore these papers, think about what differs between the two groups examined, or other variables that might be at play.\nSample Size and Generalizability\nBefore we trust any findings, and thinking back to our discussion last week, it’s important to consider the sample size of the study. How many people did the survey ask? Which groups of people was this pattern found in? The original marshmallow study we’re about to read was conducted on a small sample of children at a preschool on Stanford’s campus. As you read, consider what impact this may have on the results.\nReplication\nReplication is basically redoing a study, ideally with a bigger, more representative sample. The goal of this is to see if the original result appears once again, to help validate or question the original study’s results. One of today’s readings is a replication attempt of the marshmallow test. Note what differs between replication attempts, not limited to the results! Did the replication increase sample size, or change the population experimented on? How might that impact our interpretations of both studies’ findings?",
-    "crumbs": [
-      "Lectures",
-      "Lecture 2"
-    ]
-  },
-  {
-    "objectID": "lectures/lectures-lecture2.html#study-design",
-    "href": "lectures/lectures-lecture2.html#study-design",
-    "title": "lectures-lecture2",
-    "section": "",
-    "text": "Today we’re going to explore a few cases where real statistics were computed effectively and correctly on paper, yet completely failed their purpose. Statistics, as with most other things, depends heavily on interpretation – when the interpretation fails, our research is no longer sound.\nCorrelation vs. Causation\nLet’s think about a classic example. Ice cream sales and the number of shark attacks both increase in the summer. Does this mean that eating ice cream causes more people to get chased by sharks? Obviously, this is not what’s going on here – the season itself is causing both of these events independently (more humans in the ocean in the summer = more shark injuries. hotter weather = a greater need for ice cream). Even though ice cream sales and shark attacks are correlated (move together), one does not necessarily cause the other.\nKeep this in mind as you dissect any research paper in the following weeks, and you’ll easily find reason for skepticism everywhere.\nConfounding Variables\nIn the case of the ice cream sales and shark attacks, there was a hidden, confounding third variable that influenced both variables of interest, making them seem related. As we explore these papers, think about what differs between the two groups examined, or other variables that might be at play.\nSample Size and Generalizability\nBefore we trust any findings, and thinking back to our discussion last week, it’s important to consider the sample size of the study. How many people did the survey ask? Which groups of people was this pattern found in? The original marshmallow study we’re about to read was conducted on a small sample of children at a preschool on Stanford’s campus. As you read, consider what impact this may have on the results.\nReplication\nReplication is basically redoing a study, ideally with a bigger, more representative sample. The goal of this is to see if the original result appears once again, to help validate or question the original study’s results. One of today’s readings is a replication attempt of the marshmallow test. Note what differs between replication attempts, not limited to the results! Did the replication increase sample size, or change the population experimented on? How might that impact our interpretations of both studies’ findings?",
-    "crumbs": [
-      "Lectures",
-      "Lecture 2"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-overview.html",
-    "href": "syllabus/syllabus-overview.html",
-    "title": "Course overview",
-    "section": "",
-    "text": "In this course, students will explore the statistical fundamentals necessary for understanding and conducting research in a variety of fields. Students will engage with real-world research papers and datasets across disciplines, exploring how statistics are used (and sometimes misused) in published work. Instead of focusing solely on technical skills, this course emphasizes interpretation, critique, and application of basic statistical tools in research. From misused methods to research bias, Statistical Methods in Research aims to provide students with a deeper understanding of when, why, and how to best utilize statistical methods in their future storytelling. The course culminates in student-led discussion, applying concepts from class. No previous experience is required in statistical science or research.",
-    "crumbs": [
-      "Syllabus",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-overview.html#description",
-    "href": "syllabus/syllabus-overview.html#description",
-    "title": "Course overview",
-    "section": "",
-    "text": "In this course, students will explore the statistical fundamentals necessary for understanding and conducting research in a variety of fields. Students will engage with real-world research papers and datasets across disciplines, exploring how statistics are used (and sometimes misused) in published work. Instead of focusing solely on technical skills, this course emphasizes interpretation, critique, and application of basic statistical tools in research. From misused methods to research bias, Statistical Methods in Research aims to provide students with a deeper understanding of when, why, and how to best utilize statistical methods in their future storytelling. The course culminates in student-led discussion, applying concepts from class. No previous experience is required in statistical science or research.",
-    "crumbs": [
-      "Syllabus",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-overview.html#objectives",
-    "href": "syllabus/syllabus-overview.html#objectives",
-    "title": "Course overview",
-    "section": "Objectives",
-    "text": "Objectives\nIn this course, students will:\n\nCritically analyze and interpret statistical methods in peer-reviewed research papers\nExplore and apply foundational statistical concepts\nDifferentiate between statistical models and critically assess their validity\nExplore the roles of bias, ethics, and equity in research\nEvaluate the use of data visualizations to tell stories\nDesign and lead a research discussion about a specific research paper and its methods\n\nPrerequisites: A vested interest in getting better at critically analyzing papers and learning about statistics!",
-    "crumbs": [
-      "Syllabus",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-overview.html#meetings",
-    "href": "syllabus/syllabus-overview.html#meetings",
-    "title": "Course overview",
-    "section": "Meetings",
-    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLectures\nOld Chem 123\nMondays 7:00 PM - 8:30 PM\nLiane, Cooper, and sometimes Dr. Zito",
-    "crumbs": [
-      "Syllabus",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-resources.html",
-    "href": "syllabus/syllabus-resources.html",
-    "title": "University resources",
-    "section": "",
-    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-resources.html#course-costs",
-    "href": "syllabus/syllabus-resources.html#course-costs",
-    "title": "University resources",
-    "section": "",
-    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-resources.html#tech-support",
-    "href": "syllabus/syllabus-resources.html#tech-support",
-    "title": "University resources",
-    "section": "Tech support",
-    "text": "Tech support\nContact the Duke OIT Service Desk at oit.duke.edu/help.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-resources.html#academic-support",
-    "href": "syllabus/syllabus-resources.html#academic-support",
-    "title": "University resources",
-    "section": "Academic support",
-    "text": "Academic support\nThere are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (the ARC) offers services to support students academically during their undergraduate careers at Duke. The ARC can provide support with time management, academic skills and strategies, course-specific tutoring, and more. ARC services are available free to all Duke undergraduate student studying any discipline.\nYou can contact the Academic Resource Center by phone at (919) 684-5917, by email at theARC@duke.edu, or by visiting http://arc.duke.edu/.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-resources.html#accessibility",
-    "href": "syllabus/syllabus-resources.html#accessibility",
-    "title": "University resources",
-    "section": "Accessibility",
-    "text": "Accessibility\nIf any portion of the course is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.\nThe Student Disability Access Office (SDAO) is available to ensure that students can engage with their courses and related assignments. Students should contact the SDAO to request or update accommodations under these circumstances.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-resources.html#mental-health-and-well-being",
-    "href": "syllabus/syllabus-resources.html#mental-health-and-well-being",
-    "title": "University resources",
-    "section": "Mental health and well-being",
-    "text": "Mental health and well-being\nDuke is committed to holistic student wellbeing, which includes one’s mental, emotional, and physical health. The university offers resources to help students manage daily stress, to encourage intentional self-care, and to access just-in-time support. If you find you need support, your mental and/or emotional health concerns are impacting your day-to-day activities, your academic performance, or you need someone to talk to, the resources below are available to you:\n\nDukeReach: DukeReach provides comprehensive outreach services to support students in managing all aspects of wellbeing, including referrals and follow-up services for students who are experiencing significant challenges related to mental health, physical health, social adjustment, and/or a variety of other stressors. You can contact the DukeReach team at dukereach@duke.edu;\nCounseling and Psychological Services (CAPS): CAPS offers counseling services to Duke students including virtual appointments, and referrals in the community. You do not need an appointment for an initial assessment. You may walk in or call 919-660-1000 to get started. Hours: Monday-Friday 9:00am - 4:00pm. After hours counseling services are available at no additional cost to students, you can call: 919-660-1000 Option 2;\nTimelyCare: TimelyCare is an online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling;\nDuke Student Health: Student Health offers a wide range of healthcare services for all Duke students, many of which are covered by the student health fee. To make an appointment call (919) 681-9355. Hours: Monday - Friday, 8am - 4:30pm, Thursday 9am - 4:30pm. Closed from 12-12:30 each day.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html",
-    "href": "syllabus/syllabus-assignments.html",
-    "title": "Assignments and grading",
-    "section": "",
-    "text": "Your final course grade will be calculated as follows:\nThis course is a Satisfactory/Unsatisfactory course. An honest attempt at all assignments will result in a passing grade. Additionally, attendance in at least 12 out of 14 classes is required, as per Duke University House Courses.",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html#participation-30",
-    "href": "syllabus/syllabus-assignments.html#participation-30",
-    "title": "Assignments and grading",
-    "section": "Participation (30%)",
-    "text": "Participation (30%)\nEach class will involve discussion of several papers that have been selected for relevance/interest. Regular involvement in these discussions will result in a full score. If you need an exact number, try to speak out at least once each discussion. We want to hear your voice and about your interests!\n\n\n\n\n\n\nNoteFor clarification\n\n\n\nThis doesn’t mean that if you don’t speak every class you will get a 0. Non-zero variance is expected! (If you don’t know what that means, hopefully you’ll learn during this course.)",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html#midterm-paper-25",
-    "href": "syllabus/syllabus-assignments.html#midterm-paper-25",
-    "title": "Assignments and grading",
-    "section": "Midterm Paper (25%)",
-    "text": "Midterm Paper (25%)\nAt this point in the semester, we’ve reviewed many fundamental concepts and models in statistics. Although we still have more to cover, it’s important to reflect on and analyze some statistics on your own, and a write-up will help us accomplish this.\nThe prompt: PPlease describe the basic mechanics of any statistical method we have encountered so far, including a simple explanation of the method, various indicators for the method, and when it should be used. Then, examine the use of the method in a published research paper that we have not seen in class and that you are not leading your discussion on. This should entail a brief overview of the article (background, topic context, motivation, variables, etc.), why the method was used, and how it supports the article’s conclusion.\nRequirements:\n\n650 word minimum.\nMLA formatted citations.\nDue beginning of class Week 8 7:00PM Monday 10/19",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html#student-led-discussions-45",
-    "href": "syllabus/syllabus-assignments.html#student-led-discussions-45",
-    "title": "Assignments and grading",
-    "section": "Student-Led Discussions (45%)",
-    "text": "Student-Led Discussions (45%)\nThroughout the semester, you’ll be exposed to many different methods and models used in research. However, the most important part is being able to understand how others use (or misuse them) in real research.\nFor the last half of the semester 10/19 - 11/23, students will sign up to lead their own journal-club style discussions on a specific statistical topic. This will require several statistical papers, discussion questions, and an optional mini-lecture.\nThere are no limitations to what kind of paper is chosen – feel free to branch out and explore ideas we haven’t touched on or complex topics that are difficult to understand. However, the paper should be able to spark discussion/debate and should relate to your topic.\nPrepare 5-10 potential discussion questions, as well as your own “answers” to guide the class. Post your papers and discussion questions in the designated Canvas discussion one week before your discussion section by the previous Monday at 11:59 PM, so others will have time to review the material and read the paper.\nAdditionally, if you feel that it is necessary to do preliminary research on the topic in case your classmates have questions, or you’d like to provide a brief overview of a subject, that is an option. If you choose to explain a topic during class, you must make minimal use of electronic materials.\nDuring the actual discussion section, you are not expected to ask all the questions, and feel free to come up with questions or discussion points that you have not prepared during the section. These discussion sections will aim to be 45-60 minutes long, so prepare enough content for the time allotted! Our first half of the course should serve as a guide for what a discussion would look like.\n\n\n\n\n\n\nNoteDiscussion Section Sign-Up\n\n\n\nSign up to lead a discussion section here!",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "STA HOUSE Statistical Methods in Research",
-    "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nMon, Aug 24\nNone!\nIntroduction to Statistics in Research\nKeshav, S. “How to Read a Paper.” ACM SIGCOMM Computer Communication Review, 2007  In Class Reading Assignment\n\n\n\n\n2\nMon, Aug 31\n\n\nStudy Design\n\n\n\n\n\n\n3\nMon, Sep 7\n\n\nIntroduction to Probability\nClarke, R.D. (1946). “An Application of the Poisson Distribution.”  Krithikadatta J. (2014). Normal distribution.\n\n\n\n\n4\nMon, Sep 14\n\n\nHypothesis Testing\nBiau DJ, Jolles BM, Porcher R. P value and the theory of hypothesis testing: an explanation for new researchers.  CM Bennett, MB Miller, GL Wolford, Neural correlates of interspecies perspective taking in the post-mortem Atlantic Salmon: an argument for multiple comparisons correction.\n\n\n\n\n5\nMon, Sep 21\n\n\nConfidence Intervals, Effect Sizes, and Power\nBem DJ. Feeling the future: experimental evidence for anomalous retroactive influences on cognition and affect.  Francis et al. (1955), Evaluation of the 1954 Poliomyelitis Vaccine Trials\n\n\n\n\n6\nMon, Sep 28\n\n\nStatistical Methods for Group Comparisons\nC.A. Moss-Racusin, J.F. Dovidio, V.L. Brescoll, M.J. Graham, & J. Handelsman, Science faculty’s subtle gender biases favor male students.  Bertrand, M., & Mullainathan, S. (2004). Are Emily and Greg More Employable than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.\n\n\n\n\n7\nMon, Oct 5\n\n\nRegression\nB.N. Greenwood, R.R. Hardeman, L. Huang, & A. Sojourner, Physician–patient racial concordance and disparities in birthing mortality for newborns.  G.J. Borjas, & R. VerBruggen, Physician–patient racial concordance and newborn mortality.\nDiscussion Section 1 Papers & Questions\n\n\n8\nMon, Oct 19\n\n\nStudent-Led Discussion Section 1\n\n\nMid-Semester Paper Due 10/19 7:00 PM Discussion Section 2 Papers & Questions\n\n\n9\nMon, Oct 26\n\n\nStudent-Led Discussion Section 2\n\n\nDiscusson Section 3 Papers & Questions\n\n\n10\nMon, Nov 2\n\n\nStudent-Led Discussion Section 3\n\n\nDiscussion Section 4 Papers & Questions\n\n\n11\nMon, Nov 9\n\n\nStudent-Led Discussion Section 4\n\n\nDiscussion Section 5 Papers & Questions\n\n\n12\nMon, Nov 16\n\n\nStudent-Led Discussion Section 5\n\n\nDiscussion Section 6 Papers & Questions\n\n\n13\nMon, Nov 23\n\n\nStudent-Led Discussion Section 6\n\n\n\n\n\n\n14\nMon, Nov 30\nNone!\nWrap Up & Looking Back Potential Special Topic",
-    "crumbs": [
-      "Syllabus",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-materials.html",
-    "href": "syllabus/syllabus-materials.html",
-    "title": "Course materials",
-    "section": "",
-    "text": "You are not required to purchase a textbook for this class. Who do we think we are?\nIn the PREPARE column of the course schedule, we will note which papers are reading for next class.\nIn the Lectures tab on the right, we will provide typed copies of lecture notes. Note that the exact topics/discussion in class may deviate from these typed notes – email us if you’d like a better recap!\nNote that here is the signup sheet for the student-led discussion sections.",
-    "crumbs": [
-      "Syllabus",
-      "Materials"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-materials.html#textbooks",
-    "href": "syllabus/syllabus-materials.html#textbooks",
-    "title": "Course materials",
-    "section": "",
-    "text": "You are not required to purchase a textbook for this class. Who do we think we are?\nIn the PREPARE column of the course schedule, we will note which papers are reading for next class.\nIn the Lectures tab on the right, we will provide typed copies of lecture notes. Note that the exact topics/discussion in class may deviate from these typed notes – email us if you’d like a better recap!\nNote that here is the signup sheet for the student-led discussion sections.",
-    "crumbs": [
-      "Syllabus",
-      "Materials"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-materials.html#technology",
-    "href": "syllabus/syllabus-materials.html#technology",
-    "title": "Course materials",
-    "section": "Technology",
-    "text": "Technology\nTechnology use will be limited during class time to encourage active discussion and participation. However, you will need access to a device with internet so that you can use the following:\n\nThis course page that you are on right now;\nCanvas, through which you can access…\n\nEd Discussion;\n\nZoom (e.g. for remote office hours).\n\nIf access to technology becomes a concern for you during the semester, contact the instructors immediately to discuss options.",
-    "crumbs": [
-      "Syllabus",
-      "Materials"
-    ]
-  },
-  {
     "objectID": "syllabus/syllabus-team.html",
     "href": "syllabus/syllabus-team.html",
     "title": "Teaching team",
@@ -330,11 +110,114 @@
     ]
   },
   {
+    "objectID": "syllabus/syllabus-materials.html",
+    "href": "syllabus/syllabus-materials.html",
+    "title": "Course materials",
+    "section": "",
+    "text": "You are not required to purchase a textbook for this class. Who do we think we are?\nIn the PREPARE column of the course schedule, we will note which papers are reading for next class.\nIn the Lectures tab on the right, we will provide typed copies of lecture notes. Note that the exact topics/discussion in class may deviate from these typed notes – email us if you’d like a better recap!\nNote that here is the signup sheet for the student-led discussion sections.",
+    "crumbs": [
+      "Syllabus",
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-materials.html#textbooks",
+    "href": "syllabus/syllabus-materials.html#textbooks",
+    "title": "Course materials",
+    "section": "",
+    "text": "You are not required to purchase a textbook for this class. Who do we think we are?\nIn the PREPARE column of the course schedule, we will note which papers are reading for next class.\nIn the Lectures tab on the right, we will provide typed copies of lecture notes. Note that the exact topics/discussion in class may deviate from these typed notes – email us if you’d like a better recap!\nNote that here is the signup sheet for the student-led discussion sections.",
+    "crumbs": [
+      "Syllabus",
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-materials.html#technology",
+    "href": "syllabus/syllabus-materials.html#technology",
+    "title": "Course materials",
+    "section": "Technology",
+    "text": "Technology\nTechnology use will be limited during class time to encourage active discussion and participation. However, you will need access to a device with internet so that you can use the following:\n\nThis course page that you are on right now;\nCanvas, through which you can access…\n\nEd Discussion;\n\nZoom (e.g. for remote office hours).\n\nIf access to technology becomes a concern for you during the semester, contact the instructors immediately to discuss options.",
+    "crumbs": [
+      "Syllabus",
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture3.html",
+    "href": "lectures/lectures-lecture3.html",
+    "title": "3/7 Lecture 3",
+    "section": "",
+    "text": "Before we can talk about hypothesis tests, confidence intervals, p-values, or any of the machinery of statistical inference, we need a shared vocabulary for describing uncertainty. Every measurement you will ever collect in research — a survey response, a lab reading, a reaction time, a clinical outcome — is, in some sense, the result of a random process. Probability is simply the mathematical language we use to describe how likely different outcomes of that random process are.\nA probability distribution is just a complete description of “what can happen” and “how likely each thing is to happen.” Everything in this chapter is really just different flavors of that one idea, applied to different kinds of research questions."
+  },
+  {
+    "objectID": "lectures/lectures-lecture3.html#why-probability-and-why-now",
+    "href": "lectures/lectures-lecture3.html#why-probability-and-why-now",
+    "title": "3/7 Lecture 3",
+    "section": "",
+    "text": "Before we can talk about hypothesis tests, confidence intervals, p-values, or any of the machinery of statistical inference, we need a shared vocabulary for describing uncertainty. Every measurement you will ever collect in research — a survey response, a lab reading, a reaction time, a clinical outcome — is, in some sense, the result of a random process. Probability is simply the mathematical language we use to describe how likely different outcomes of that random process are.\nA probability distribution is just a complete description of “what can happen” and “how likely each thing is to happen.” Everything in this chapter is really just different flavors of that one idea, applied to different kinds of research questions."
+  },
+  {
+    "objectID": "lectures/lectures-lecture3.html#random-variables-naming-the-outcome",
+    "href": "lectures/lectures-lecture3.html#random-variables-naming-the-outcome",
+    "title": "3/7 Lecture 3",
+    "section": "Random Variables: Naming the Outcome",
+    "text": "Random Variables: Naming the Outcome\nA random variable is nothing more than a name we give to the outcome of some process we haven’t observed yet, or whose outcome varies from instance to instance.\n\nFlip a coin: let \\(X\\) = 1 if heads, 0 if tails.\nCount the number of patients who respond to a treatment out of 50 enrolled: let \\(X\\) = that count.\nMeasure a participant’s reaction time in milliseconds: let \\(X\\) = that time.\n\nNotice the first two examples can only take specific, countable values (0, 1, 2, 3, …). We call these discrete random variables. The third example, reaction time, could in principle take any value on a continuum (300.2 ms, 300.21 ms, 300.213 ms, …). We call these continuous random variables.\nThis distinction matters because it changes how we talk about probability:\n\nFor a discrete variable, we can ask directly: “what is the probability \\(X\\) equals exactly 3?”\nFor a continuous variable, asking for the probability of one exact value (like “reaction time equals exactly 300.213000… ms”) doesn’t really make sense — there are infinitely many possible values, so any single one has essentially zero probability. Instead, we ask about ranges: “what’s the probability the reaction time is between 290 and 310 ms?”\n\nBinomial, geometric, negative binomial, and Poisson are all discrete. Normal is continuous."
+  },
+  {
+    "objectID": "lectures/lectures-lecture3.html#counting-first-how-choose-works",
+    "href": "lectures/lectures-lecture3.html#counting-first-how-choose-works",
+    "title": "3/7 Lecture 3",
+    "section": "Counting First: How “Choose” Works",
+    "text": "Counting First: How “Choose” Works\nSeveral distributions below need us to count the number of ways something can happen, not just whether it happens. The classic example: if you flip a coin 4 times and want exactly 2 heads, there’s more than one way to arrange that — HHTT, HTHT, HTTH, THHT, THTH, TTHH. Six arrangements, all equally consistent with “2 heads out of 4 flips.”\nThis is where the choose operation comes in, written \\(\\binom{n}{k}\\) and read “n choose k.” It answers exactly one question:\n“Out of \\(n\\) total slots, in how many distinct ways can you pick \\(k\\) of them to be”successes” (without caring about the order you picked them in)?”\nYou don’t need to memorize the formula to use the intuition, but here it is for reference:\n\\[\\binom{n}{k} = \\frac{n!}{k!(n-k)!}\\]\nwhere \\(n! = n \\times (n-1) \\times (n-2) \\times \\cdots \\times 1\\) (“n factorial”) counts the number of ways to fully order \\(n\\) items.\nThink of \\(\\binom{n}{k}\\) as answering: “how many different-looking outcomes give me the same total count of successes?” This is exactly the gap between “the probability of one specific sequence” and “the probability of a certain number of successes, in any order.” The choose function bridges that gap by counting the arrangements. It shows up explicitly in the binomial and negative binomial distributions below, and implicitly everywhere we count “how many ways.”\nYou will almost never compute \\(\\binom{n}{k}\\) by hand in this course — software does it instantly (choose(n, k) in R, math.comb(n, k) in Python). What matters is recognizing when a problem is a counting problem in disguise."
+  },
+  {
+    "objectID": "lectures/lectures-lecture3.html#mean-and-variance-two-numbers-that-summarize-a-distribution",
+    "href": "lectures/lectures-lecture3.html#mean-and-variance-two-numbers-that-summarize-a-distribution",
+    "title": "3/7 Lecture 3",
+    "section": "Mean and Variance: Two Numbers That Summarize a Distribution",
+    "text": "Mean and Variance: Two Numbers That Summarize a Distribution\nBefore walking through specific distributions, it helps to fix ideas about the two numbers we’ll report for each one.\n\nThe mean (also called the expected value, written \\(E[X]\\)) is the long-run average outcome if you could repeat the random process infinitely many times. It is a measure of central tendency — where the distribution is “centered.”\nThe variance (written \\(\\text{Var}(X)\\)) measures how spread out the outcomes tend to be around that mean. A small variance means outcomes cluster tightly around the mean; a large variance means they’re scattered widely. The standard deviation is just the square root of the variance, and is often more interpretable because it’s back in the original units of \\(X\\) rather than squared units.\n\nIf mean is “where’s the center of the dartboard,” variance is “how tightly clustered are the darts around that center.” Two archers can have the exact same average hit location and wildly different consistency."
+  },
+  {
+    "objectID": "lectures/lectures-lecture3.html#discrete-distributions",
+    "href": "lectures/lectures-lecture3.html#discrete-distributions",
+    "title": "3/7 Lecture 3",
+    "section": "Discrete Distributions",
+    "text": "Discrete Distributions\nAll of the discrete distributions below are built out of the same atomic idea: a Bernoulli trial — a single yes/no, success/failure event with some fixed probability \\(p\\) of success. Think: one coin flip, one patient responding to treatment, one email being spam. Everything else in this section is a story about “repeating” or “waiting for” Bernoulli trials.\n\nThe Binomial Distribution: “How many successes in a fixed number of tries?”\nSay you run a fixed number of independent trials, \\(n\\), each with the same probability of success \\(p\\). You count the total number of successes, \\(X\\). That’s binomial. For example, out of 30 patients on a treatment, how many recover within a week?\nWhy “choose” shows up: To get exactly \\(k\\) successes out of \\(n\\) trials, you need (a) the probability of any one specific arrangement of \\(k\\) successes and \\(n-k\\) failures, which is \\(p^k (1-p)^{n-k}\\), times (b) the number of arrangements that produce that same count, which is \\(\\binom{n}{k}\\). Multiply those together and you get the binomial probability formula:\n\\[P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}\\]\nMean and variance:\n\\[E[X] = np \\qquad \\text{Var}(X) = np(1-p)\\]\nIntuition: if each of \\(n\\) trials has probability \\(p\\) of success, the average total is simply \\(n\\) times \\(p\\) — you’d expect 30% of 100 trials to succeed if \\(p = 0.3\\). The variance is largest when \\(p = 0.5\\) (maximum uncertainty about each individual trial) and shrinks as \\(p\\) moves toward 0 or 1 (each trial becomes more predictable).\n\n\nThe Geometric Distribution: “How long until the first success?”\nInstead of fixing the number of trials and counting successes, we now fix the goal (get one success) and count how many Bernoulli trials it takes to get there. For example, how many samples must a lab process before finding the first contaminated one?\nMean and variance:\n\\[E[X] = \\frac{1}{p} \\qquad \\text{Var}(X) = \\frac{1-p}{p^2}\\]\nIntuition: if success happens with probability \\(p\\) on each trial, you’d expect to wait about \\(1/p\\) trials for it to show up — a rare event (\\(p\\) small) takes a long average wait, a common event (\\(p\\) close to 1) resolves almost immediately. Note that unlike the binomial, there’s no upper limit to how many trials you might need — in principle you could wait forever, which is part of why the variance formula looks different.\n\n\nThe Negative Binomial Distribution: “How long until the r-th success?”\nThis is the natural generalization of the geometric distribution. Instead of waiting for the first success, we wait for the \\(r\\)-th success, for any fixed number \\(r\\).For example, how many patients must be screened before you’ve enrolled 20 eligible participants?\nJust like the binomial needed a “choose” term to count arrangements, the negative binomial needs one too — because the \\(r\\)-th success can be preceded by its \\(r-1\\) earlier successes landing in any order among the trials that came before it.\nMean and variance:\n\\[E[X] = \\frac{r}{p} \\qquad \\text{Var}(X) = \\frac{r(1-p)}{p^2}\\]\nIntuition: this is exactly \\(r\\) copies of the geometric distribution’s logic stacked together — if it takes \\(1/p\\) trials on average to get one success, it takes roughly \\(r\\) times that to get \\(r\\) of them. Set \\(r = 1\\) and these formulas collapse exactly to the geometric distribution’s formulas above — a good sanity check that the two distributions are genuinely nested inside one another.\nIn practice, the negative binomial distribution is also widely used to model overdispersed count data — count data (like the Poisson, below) but with more variability than a Poisson distribution allows. You’ll see this especially in count-based outcome models (e.g., number of hospital visits, number of citations) where a plain Poisson model underestimates the true spread of the data.\n\n\nThe Poisson Distribution: “How many events occur in a fixed window?”\nThe Poisson distribution answers a different kind of question than the previous three. Instead of counting successes out of a known number of discrete trials, it counts the number of times a rare event happens over a continuous window of time, space, or exposure — where events could, in principle, happen at any moment, but tend to happen at some known average rate, denoted \\(\\lambda\\) (“lambda”). For example, the number of customer complaints a call center receives per hour. - Number of mutations observed per strand of DNA of a fixed length. - Number of earthquakes in a region per year.\nWhy it’s different from the binomial: notice there’s no natural “\\(n\\)” here — no fixed number of trials. There’s no ceiling on how many complaints a call center could receive in an hour. The Poisson distribution is actually what the binomial distribution turns into if you imagine \\(n\\) (the number of “chances” for an event) growing towards infinity while \\(p\\) (the chance of an event on any one of them) shrinks towards zero, in just the right balance that the average number of events, \\(np\\), settles on a fixed value \\(\\lambda\\). This is a useful bridge to keep in mind: Poisson is the limit of binomial when trials become so frequent and individually so unlikely that all that matters is the overall rate.\nMean and variance:\n\\[E[X] = \\lambda \\qquad \\text{Var}(X) = \\lambda\\]\nIntuition: this is the single most distinctive feature of the Poisson distribution — the mean and variance are the same number. If a process averages 4 events per hour, its variance is also 4 (and so its standard deviation is 2, the square root of 4). This is a strong, testable assumption: real-world count data that is more variable than its own mean (“overdispersed”) is a signal that a plain Poisson model is too simple — which is exactly the situation where researchers often reach for the negative binomial instead."
+  },
+  {
+    "objectID": "lectures/lectures-lecture3.html#the-continuous-case-the-normal-distribution",
+    "href": "lectures/lectures-lecture3.html#the-continuous-case-the-normal-distribution",
+    "title": "3/7 Lecture 3",
+    "section": "The Continuous Case: The Normal Distribution",
+    "text": "The Continuous Case: The Normal Distribution\nEvery distribution so far counted something discrete. The normal distribution (also called the Gaussian, or “bell curve”) is the workhorse continuous distribution in research, used to model quantities that can vary smoothly: height, blood pressure, measurement error, standardized test scores, and — critically for later in this course — the sampling distributions of many statistics themselves (a preview of the Central Limit Theorem, which you’ll meet properly in the hypothesis testing unit).\nThe shape: symmetric, bell-shaped, single peak at the mean, tapering smoothly off to either side. It is described completely by just two numbers:\n\\[E[X] = \\mu \\qquad \\text{Var}(X) = \\sigma^2\\]\nwhere \\(\\mu\\) (“mu”) is the mean — the center and peak of the bell — and \\(\\sigma^2\\) (“sigma squared”) is the variance, controlling how wide or narrow the bell is. A small \\(\\sigma^2\\) produces a tall, narrow bell (values tightly clustered near \\(\\mu\\)); a large \\(\\sigma^2\\) produces a short, wide bell (values spread out)."
+  },
+  {
+    "objectID": "lectures/lectures-lecture3.html#the-689599.7-rule",
+    "href": "lectures/lectures-lecture3.html#the-689599.7-rule",
+    "title": "3/7 Lecture 3",
+    "section": "The 68–95–99.7 rule",
+    "text": "The 68–95–99.7 rule\nA useful heuristic you’ll use constantly: for a normal distribution, roughly 68% of values fall within 1 standard deviation of the mean, 95% fall within 2 standard deviations, and 99.7% fall within 3 standard deviations. This single rule of thumb will get you very far in reasoning about normal data without ever touching the underlying formula.\nUnlike the discrete distributions above, there’s no clean “story” of counting or waiting behind the normal distribution’s formula, and we won’t write that formula out here — for this course, what matters is the shape, the two parameters that control it, and the 68–95–99.7 rule for reasoning about spread. The formula becomes important later; the intuition is what carries you through most applied statistical reasoning."
+  },
+  {
+    "objectID": "lectures/lectures-lecture3.html#putting-it-together-a-quick-comparison",
+    "href": "lectures/lectures-lecture3.html#putting-it-together-a-quick-comparison",
+    "title": "3/7 Lecture 3",
+    "section": "Putting It Together: A Quick Comparison",
+    "text": "Putting It Together: A Quick Comparison\n\n\n\n\n\n\n\n\n\n\nDistribution\nQuestion it answers\nWhat varies\nMean\nVariance\n\n\n\n\nBinomial\nHow many successes in \\(n\\) fixed trials?\nCount of successes\n\\(np\\)\n\\(np(1-p)\\)\n\n\nGeometric\nHow many trials until the 1st success?\nWait time\n\\(1/p\\)\n\\((1-p)/p^2\\)\n\n\nNegative Binomial\nHow many trials until the \\(r\\)-th success?\nWait time\n\\(r/p\\)\n\\(r(1-p)/p^2\\)\n\n\nPoisson\nHow many events in a fixed window at rate \\(\\lambda\\)?\nCount of events\n\\(\\lambda\\)\n\\(\\lambda\\)\n\n\nNormal\nWhere does a continuous measurement fall?\nContinuous value\n\\(\\mu\\)\n\\(\\sigma^2\\)"
+  },
+  {
+    "objectID": "lectures/lectures-lecture3.html#bayes-rule-updating-beliefs-with-evidence",
+    "href": "lectures/lectures-lecture3.html#bayes-rule-updating-beliefs-with-evidence",
+    "title": "3/7 Lecture 3",
+    "section": "Bayes’ Rule: Updating Beliefs With Evidence",
+    "text": "Bayes’ Rule: Updating Beliefs With Evidence\nEverything so far described the probability of outcomes before we observe any data. But research is fundamentally about updating what we believe once evidence comes in. Bayes’ rule is the formal recipe for doing that update correctly.\n\nThe Intuition First\nSuppose you’re testing patients for a rare disease. A patient tests positive. What’s the probability they actually have the disease?\nYour instinct might be “well, the test is 99% accurate, so 99%.” But this ignores something crucial: how rare the disease is in the first place. If the disease is extremely rare, most positive tests will actually be false positives from the huge pool of healthy people, not true positives from the tiny pool of sick people. Bayes’ rule is the formal machinery for combining how rare the disease is (your belief before the test — the prior) with how reliable the test is (the new evidence) to get the correct updated belief (the posterior).\nBayes’ rule says: your updated belief about something should combine (1) how likely you thought it was before seeing the evidence, and (2) how surprising the evidence would be under each possible explanation. Evidence that would be very surprising if a hypothesis were false is strong evidence in favor of that hypothesis — but only relative to how believable the hypothesis was to begin with.\n\n\nThe Formula\n\\[P(A \\mid B) = \\frac{P(B \\mid A)\\, P(A)}{P(B)}\\]\nRead the pieces one at a time:\n\n\\(P(A)\\) — the prior: how likely \\(A\\) (e.g., “has the disease”) was before any evidence.\n\\(P(B \\mid A)\\) — the likelihood: how likely the evidence \\(B\\) (e.g., “tested positive”) is, assuming \\(A\\) is true.\n\\(P(B)\\) — the overall probability of seeing the evidence \\(B\\) at all, across every possible explanation (sick or healthy).\n\\(P(A \\mid B)\\) — the posterior: your updated belief about \\(A\\), now that you’ve seen \\(B\\).\n\nThe notation \\(P(A \\mid B)\\) is read “the probability of \\(A\\) given \\(B\\)” — it’s how we write “conditional on already knowing \\(B\\) happened, how likely is \\(A\\)?” This is the central idea behind everything Bayes’ rule does: it converts between \\(P(B \\mid A)\\) (which is often what we can measure directly, like test accuracy) and \\(P(A \\mid B)\\) (which is usually what we actually want to know, like “does this patient have the disease?”). These two conditional probabilities are not the same thing, and confusing them is one of the most common reasoning errors in applied research — Bayes’ rule exists precisely to keep them straight.\nBayes’ rule underlies an entire branch of statistical inference (Bayesian statistics), but even researchers working in the more traditional (“frequentist”) framework rely on this logic constantly — anytime you interpret a diagnostic test, a screening tool, or evidence of any kind, you are implicitly reasoning about priors, likelihoods, and posteriors, whether or not you write the formula down."
+  },
+  {
     "objectID": "lectures/lectures-lecture1.html",
     "href": "lectures/lectures-lecture1.html",
-    "title": "Lecture 1",
+    "title": "8/24 Lecture 1",
     "section": "",
-    "text": "Let’s consider a world where statistics doesn’t exist. What would it look like? People could make random claims without numerical evidence. Your feed would look like a random mess of videos constantly being posted. One could argue that we couldn’t count the number of people enrolled in this course.\nOkay, well that seemed pretty obvious. Of course, the reason for taking this course is likely some form of personal interest, as it’s a random half credit house course. Perhaps you’re a CS major who wants to learn some statistical algorithms to recreate Google’s (PageRank)[https://en.wikipedia.org/wiki/PageRank]. Maybe you’re a pre-med and hope to do a survival analysis to support your research interests. Finally, maybe you’re a sociologist and want to determine a population parameter for the use of AI in the classroom.\nLet’s reflect on what today’s world looks like. A reasonable statement would be: “Statistics exists. Some people know how to use statistics, some other people sort of know what statistics is, and a vast majority of people have heard of it.” The goal of this course is to move from the third group to the second group, in a way that could set you up for self learning to make it to the first group. We also hope that you’ll be able to critically evaluate the quality of a statistical analysis on a paper you’ve never seen before. There is much to learn!\n\n\n\nStatistics (the field) is a mathematical science pertaining to the collection, analysis, interpretation, and presentation of data.\nA statistic is any quantity computed from values in a sample. That is incredibly broad. During this course, we will primarily focus on two types of statistics (which are not mutually exclusive of one another):\n\n\nDescriptive statistics, which summarize a sample of data\n\n\nTest statistics, which is some number derived from the sample that would be selected or defined in a way that differentiates between the null and alternative hypothesis.\n\nThat’s a lot of jargon right there. No worries – we’ll break it down through this course!\n\n\n\nWhat is “good” statistics? In this case, we typically will mean rigorous, with clearly defined intentions, acknowledgement of shortcomings, and evaluation of its efficacy in practice. This would make a “good” statistic (singular) one that is appropriate to use in the given scenario.\nA short example. Say you’ve got a bunch of categorical data (ex: survey answers of Yes or No), but then you create some model that only models continuous data (ex: representing Yes as 1 and No as 0, and having statistics in between). That’s not good! You may even get a statistically significant result (we will learn what this really means). Say you even made it past the editors at a publishing house and got published, and some random news reporter picked it up and wrote an article on it. We will see later in this course that this has actually happened many, many times.\nIn this course, we will read some very good and very bad papers. Ideally, you’ll be able to determine why they’re bad, beyond simply “the journal retracted them.”\nWhat good statistics should do\n\nMake data more approachable. A statistic should be well-chosen summary that allows the audience to understand something about, for example, the opinions of 10,000 people without having to look at all 10,000 data points.\nSupport a claim. Statistics should typically have a goal/purpose that they are attempting to explain, or identify some specific finding.\nDisplay relevant information. The statistic chosen should actually speak to the question being asked!\nCommunicate a story. At the end of the day, someone has to be able to view your analysis and understand what it conveys and its implications.\n\nWhat bad statistics may do\n\nUse methods inappropriately. For example, applying a statistical technique to data it wasn’t designed for. We’ll explore lots of papers that do this!\nAdding unnecessary complexity. Sometimes, complexity can obscure the true result. Often times, simple is best.\nCherry-picking or overgeneralizing. Selectively reporting the data points (or the one significant test out of twenty) that support your narrative, or taking a result from a small, biased, or narrow sample and claiming it holds for the larger group.\n\nWhy do we care?\nYou all have probably seen your fair share of misleading or crazy news headlines. From Scientists Say Smelling Farts Might Prevent Cancer to Coffee Consumption May Raise Miscarriage Risk, our world is full of bad statistics. Language like “might” or “may” largely obscure the actual scientific findings of correlation vs. causation.\nAnd beyond clickbait news articles and AI Instagram posts, bad statistics also show up in legitimate, peer-reviewed research. Consider a study on physician age at death by specialty: emergency physicians were reported to have the youngest average age at death (58.7 years!) of any medical specialty. But this estimate was based on only 43 obituaries (compared to primary care physicians, whose average statistic was based on 2,508). A mean built on 43 observations is going to be far noisier than one built on thousands, even though both are presented in the same table, in the same font, with the same weight. This is just one example of the importance of statistical literacy and thinking critically about research.\n\n\n\nTurning now to the second half of our course title, research – where does statistics play a role? How does the research process work?\n\nUnderstand the field: Research usually starts with lots and lots of reading. We want to be able to know what’s already been asked and what answers already exist before we can possibly understand what’s missing.\nFind a new question: A good question is specific, testable, and not already answered! This is where research truly starts.\nFind a way to test the question: We usually want to design a study or analysis that could actually provide evidence for or against your question.\nExamine/analyze the results: Running said test, computing the numbers, reporting findings.\nand finally, write about it and why it matters.\n\nStep 4 is where most think statistics starts and ends.\nBut really, it’s active all the way back in Step 2, before any data has been manipulated. When we are finding our question, we need to define our variables, or subject(s) of interest. What exactly are we measuring? How are we measuring them? Vague variables lead to vague (or unanswerable) questions!\nIn Step 3, when we’re designing a study or analysis to test our question, that design may play a significant impact on the strength of the answer we will get. For example, our question may be about a causal relationship (does X cause Y?), but our study design may only be able to give us a correlational answer (X and Y are/are not related).\nIt’s also tempting to think that statistics ends when we’ve done the analysis, and all that’s left is to write it out in nice sentences. But Step 5 is arguably the most important part. Communication of statistics is extremely important. Vocabulary such as “significant” means something very specific in a statistical context compared to colloquial usage. Additionally, we must make the conclusion as clear as possible to our audience, or else we might end up with a headline as striking as farts preventing cancer.\n\n\n\nBefore diving headfirst into research papers (as we will in the rest of this course), it’s important to know how to read one efficiently and effectively, especially if we don’t know much about the topic. “Researchers spend a great deal reading research papers. However this skill is rarely taught, leading to much wasted effort,” Keshav introduces. How to Read a Paper proposes a three-pass method for reading academic research papers:\n\nThe first pass: a quick skim of the title, abstract, introduction, section headings, and conclusions. The goal is to get a general gist of what the paper does, how it does it, and whether it’s worth diving into.\nThe second pass: a more careful read, now looking into figures, diagrams, data, etc., but still not exploring too much detail. The goal is to understand the general content and be able to summarize it with some supporting evidence.\nThe third pass: a full read, where the goal is to “virtually re-implement” the paper, or be able to reconstruct its structure and challenge its assumptions, methods, and results.\n\nClass Discussion Questions:",
+    "text": "Let’s consider a world where statistics doesn’t exist. What would it look like? People could make random claims without numerical evidence. Your feed would look like a random mess of videos constantly being posted. One could argue that we couldn’t count the number of people enrolled in this course.\nOkay, well that seemed pretty obvious. Of course, the reason for taking this course is likely some form of personal interest, as it’s a random half credit house course. Perhaps you’re a CS major who wants to learn some statistical algorithms to recreate Google’s PageRank. Maybe you’re a pre-med and hope to do a survival analysis to support your research interests. Finally, maybe you’re a sociologist and want to determine a population parameter for the use of AI in the classroom.\nLet’s reflect on what today’s world looks like. A reasonable statement would be: “Statistics exists. Some people know how to use statistics, some other people sort of know what statistics is, and a vast majority of people have heard of it.” The goal of this course is to move from the third group to the second group, in a way that could set you up for self learning to make it to the first group. We also hope that you’ll be able to critically evaluate the quality of a statistical analysis on a paper you’ve never seen before. There is much to learn!",
     "crumbs": [
       "Lectures",
       "Lecture 1"
@@ -343,9 +226,9 @@
   {
     "objectID": "lectures/lectures-lecture1.html#motivating-this-course",
     "href": "lectures/lectures-lecture1.html#motivating-this-course",
-    "title": "Lecture 1",
+    "title": "8/24 Lecture 1",
     "section": "",
-    "text": "Let’s consider a world where statistics doesn’t exist. What would it look like? People could make random claims without numerical evidence. Your feed would look like a random mess of videos constantly being posted. One could argue that we couldn’t count the number of people enrolled in this course.\nOkay, well that seemed pretty obvious. Of course, the reason for taking this course is likely some form of personal interest, as it’s a random half credit house course. Perhaps you’re a CS major who wants to learn some statistical algorithms to recreate Google’s (PageRank)[https://en.wikipedia.org/wiki/PageRank]. Maybe you’re a pre-med and hope to do a survival analysis to support your research interests. Finally, maybe you’re a sociologist and want to determine a population parameter for the use of AI in the classroom.\nLet’s reflect on what today’s world looks like. A reasonable statement would be: “Statistics exists. Some people know how to use statistics, some other people sort of know what statistics is, and a vast majority of people have heard of it.” The goal of this course is to move from the third group to the second group, in a way that could set you up for self learning to make it to the first group. We also hope that you’ll be able to critically evaluate the quality of a statistical analysis on a paper you’ve never seen before. There is much to learn!",
+    "text": "Let’s consider a world where statistics doesn’t exist. What would it look like? People could make random claims without numerical evidence. Your feed would look like a random mess of videos constantly being posted. One could argue that we couldn’t count the number of people enrolled in this course.\nOkay, well that seemed pretty obvious. Of course, the reason for taking this course is likely some form of personal interest, as it’s a random half credit house course. Perhaps you’re a CS major who wants to learn some statistical algorithms to recreate Google’s PageRank. Maybe you’re a pre-med and hope to do a survival analysis to support your research interests. Finally, maybe you’re a sociologist and want to determine a population parameter for the use of AI in the classroom.\nLet’s reflect on what today’s world looks like. A reasonable statement would be: “Statistics exists. Some people know how to use statistics, some other people sort of know what statistics is, and a vast majority of people have heard of it.” The goal of this course is to move from the third group to the second group, in a way that could set you up for self learning to make it to the first group. We also hope that you’ll be able to critically evaluate the quality of a statistical analysis on a paper you’ve never seen before. There is much to learn!",
     "crumbs": [
       "Lectures",
       "Lecture 1"
@@ -354,9 +237,9 @@
   {
     "objectID": "lectures/lectures-lecture1.html#what-is-statistics-what-is-a-statistic",
     "href": "lectures/lectures-lecture1.html#what-is-statistics-what-is-a-statistic",
-    "title": "Lecture 1",
-    "section": "",
-    "text": "Statistics (the field) is a mathematical science pertaining to the collection, analysis, interpretation, and presentation of data.\nA statistic is any quantity computed from values in a sample. That is incredibly broad. During this course, we will primarily focus on two types of statistics (which are not mutually exclusive of one another):\n\n\nDescriptive statistics, which summarize a sample of data\n\n\nTest statistics, which is some number derived from the sample that would be selected or defined in a way that differentiates between the null and alternative hypothesis.\n\nThat’s a lot of jargon right there. No worries – we’ll break it down through this course!",
+    "title": "8/24 Lecture 1",
+    "section": "What is statistics? What is a statistic?",
+    "text": "What is statistics? What is a statistic?\nStatistics (the field) is a mathematical science pertaining to the collection, analysis, interpretation, and presentation of data.\nA statistic is any quantity computed from values in a sample. That is incredibly broad. During this course, we will primarily focus on two types of statistics (which are not mutually exclusive of one another):\n\n\nDescriptive statistics, which summarize a sample of data\n\n\nTest statistics, which is some number derived from the sample that would be selected or defined in a way that differentiates between the null and alternative hypothesis.\n\nThat’s a lot of jargon right there. No worries – we’ll break it down through this course!",
     "crumbs": [
       "Lectures",
       "Lecture 1"
@@ -365,9 +248,9 @@
   {
     "objectID": "lectures/lectures-lecture1.html#good-statistics-vs.-bad-statistics",
     "href": "lectures/lectures-lecture1.html#good-statistics-vs.-bad-statistics",
-    "title": "Lecture 1",
-    "section": "",
-    "text": "What is “good” statistics? In this case, we typically will mean rigorous, with clearly defined intentions, acknowledgement of shortcomings, and evaluation of its efficacy in practice. This would make a “good” statistic (singular) one that is appropriate to use in the given scenario.\nA short example. Say you’ve got a bunch of categorical data (ex: survey answers of Yes or No), but then you create some model that only models continuous data (ex: representing Yes as 1 and No as 0, and having statistics in between). That’s not good! You may even get a statistically significant result (we will learn what this really means). Say you even made it past the editors at a publishing house and got published, and some random news reporter picked it up and wrote an article on it. We will see later in this course that this has actually happened many, many times.\nIn this course, we will read some very good and very bad papers. Ideally, you’ll be able to determine why they’re bad, beyond simply “the journal retracted them.”\nWhat good statistics should do\n\nMake data more approachable. A statistic should be well-chosen summary that allows the audience to understand something about, for example, the opinions of 10,000 people without having to look at all 10,000 data points.\nSupport a claim. Statistics should typically have a goal/purpose that they are attempting to explain, or identify some specific finding.\nDisplay relevant information. The statistic chosen should actually speak to the question being asked!\nCommunicate a story. At the end of the day, someone has to be able to view your analysis and understand what it conveys and its implications.\n\nWhat bad statistics may do\n\nUse methods inappropriately. For example, applying a statistical technique to data it wasn’t designed for. We’ll explore lots of papers that do this!\nAdding unnecessary complexity. Sometimes, complexity can obscure the true result. Often times, simple is best.\nCherry-picking or overgeneralizing. Selectively reporting the data points (or the one significant test out of twenty) that support your narrative, or taking a result from a small, biased, or narrow sample and claiming it holds for the larger group.\n\nWhy do we care?\nYou all have probably seen your fair share of misleading or crazy news headlines. From Scientists Say Smelling Farts Might Prevent Cancer to Coffee Consumption May Raise Miscarriage Risk, our world is full of bad statistics. Language like “might” or “may” largely obscure the actual scientific findings of correlation vs. causation.\nAnd beyond clickbait news articles and AI Instagram posts, bad statistics also show up in legitimate, peer-reviewed research. Consider a study on physician age at death by specialty: emergency physicians were reported to have the youngest average age at death (58.7 years!) of any medical specialty. But this estimate was based on only 43 obituaries (compared to primary care physicians, whose average statistic was based on 2,508). A mean built on 43 observations is going to be far noisier than one built on thousands, even though both are presented in the same table, in the same font, with the same weight. This is just one example of the importance of statistical literacy and thinking critically about research.",
+    "title": "8/24 Lecture 1",
+    "section": "“Good” statistics vs. “Bad” statistics",
+    "text": "“Good” statistics vs. “Bad” statistics\nWhat is “good” statistics? In this case, we typically will mean rigorous, with clearly defined intentions, acknowledgement of shortcomings, and evaluation of its efficacy in practice. This would make a “good” statistic (singular) one that is appropriate to use in the given scenario.\nA short example. Say you’ve got a bunch of categorical data (ex: survey answers of Yes or No), but then you create some model that only models continuous data (ex: representing Yes as 1 and No as 0, and having statistics in between). That’s not good! You may even get a statistically significant result (we will learn what this really means). Say you even made it past the editors at a publishing house and got published, and some random news reporter picked it up and wrote an article on it. We will see later in this course that this has actually happened many, many times.\nIn this course, we will read some very good and very bad papers. Ideally, you’ll be able to determine why they’re bad, beyond simply “the journal retracted them.”\nWhat good statistics should do\n\nMake data more approachable. A statistic should be well-chosen summary that allows the audience to understand something about, for example, the opinions of 10,000 people without having to look at all 10,000 data points.\nSupport a claim. Statistics should typically have a goal/purpose that they are attempting to explain, or identify some specific finding.\nDisplay relevant information. The statistic chosen should actually speak to the question being asked!\nCommunicate a story. At the end of the day, someone has to be able to view your analysis and understand what it conveys and its implications.\n\nWhat bad statistics may do\n\nUse methods inappropriately. For example, applying a statistical technique to data it wasn’t designed for. We’ll explore lots of papers that do this!\nAdding unnecessary complexity. Sometimes, complexity can obscure the true result. Often times, simple is best.\nCherry-picking or overgeneralizing. Selectively reporting the data points (or the one significant test out of twenty) that support your narrative, or taking a result from a small, biased, or narrow sample and claiming it holds for the larger group.\n\nWhy do we care?\nYou all have probably seen your fair share of misleading or crazy news headlines. From Scientists Say Smelling Farts Might Prevent Cancer to Coffee Consumption May Raise Miscarriage Risk, our world is full of bad statistics. Language like “might” or “may” largely obscure the actual scientific findings of correlation vs. causation.\nAnd beyond clickbait news articles and AI Instagram posts, bad statistics also show up in legitimate, peer-reviewed research. Consider a study on physician age at death by specialty: emergency physicians were reported to have the youngest average age at death (58.7 years!) of any medical specialty. But this estimate was based on only 43 obituaries (compared to primary care physicians, whose average statistic was based on 2,508). A mean built on 43 observations is going to be far noisier than one built on thousands, even though both are presented in the same table, in the same font, with the same weight. This is just one example of the importance of statistical literacy and thinking critically about research.",
     "crumbs": [
       "Lectures",
       "Lecture 1"
@@ -376,9 +259,9 @@
   {
     "objectID": "lectures/lectures-lecture1.html#research-101",
     "href": "lectures/lectures-lecture1.html#research-101",
-    "title": "Lecture 1",
-    "section": "",
-    "text": "Turning now to the second half of our course title, research – where does statistics play a role? How does the research process work?\n\nUnderstand the field: Research usually starts with lots and lots of reading. We want to be able to know what’s already been asked and what answers already exist before we can possibly understand what’s missing.\nFind a new question: A good question is specific, testable, and not already answered! This is where research truly starts.\nFind a way to test the question: We usually want to design a study or analysis that could actually provide evidence for or against your question.\nExamine/analyze the results: Running said test, computing the numbers, reporting findings.\nand finally, write about it and why it matters.\n\nStep 4 is where most think statistics starts and ends.\nBut really, it’s active all the way back in Step 2, before any data has been manipulated. When we are finding our question, we need to define our variables, or subject(s) of interest. What exactly are we measuring? How are we measuring them? Vague variables lead to vague (or unanswerable) questions!\nIn Step 3, when we’re designing a study or analysis to test our question, that design may play a significant impact on the strength of the answer we will get. For example, our question may be about a causal relationship (does X cause Y?), but our study design may only be able to give us a correlational answer (X and Y are/are not related).\nIt’s also tempting to think that statistics ends when we’ve done the analysis, and all that’s left is to write it out in nice sentences. But Step 5 is arguably the most important part. Communication of statistics is extremely important. Vocabulary such as “significant” means something very specific in a statistical context compared to colloquial usage. Additionally, we must make the conclusion as clear as possible to our audience, or else we might end up with a headline as striking as farts preventing cancer.",
+    "title": "8/24 Lecture 1",
+    "section": "Research 101",
+    "text": "Research 101\nTurning now to the second half of our course title, research – where does statistics play a role? How does the research process work?\n\nUnderstand the field: Research usually starts with lots and lots of reading. We want to be able to know what’s already been asked and what answers already exist before we can possibly understand what’s missing.\nFind a new question: A good question is specific, testable, and not already answered! This is where research truly starts.\nFind a way to test the question: We usually want to design a study or analysis that could actually provide evidence for or against your question.\nExamine/analyze the results: Running said test, computing the numbers, reporting findings.\nand finally, write about it and why it matters.\n\nStep 4 is where most think statistics starts and ends.\nBut really, it’s active all the way back in Step 2, before any data has been manipulated. When we are finding our question, we need to define our variables, or subject(s) of interest. What exactly are we measuring? How are we measuring them? Vague variables lead to vague (or unanswerable) questions!\nIn Step 3, when we’re designing a study or analysis to test our question, that design may play a significant impact on the strength of the answer we will get. For example, our question may be about a causal relationship (does X cause Y?), but our study design may only be able to give us a correlational answer (X and Y are/are not related).\nIt’s also tempting to think that statistics ends when we’ve done the analysis, and all that’s left is to write it out in nice sentences. But Step 5 is arguably the most important part. Communication of statistics is extremely important. Vocabulary such as “significant” means something very specific in a statistical context compared to colloquial usage. Additionally, we must make the conclusion as clear as possible to our audience, or else we might end up with a headline as striking as farts preventing cancer.",
     "crumbs": [
       "Lectures",
       "Lecture 1"
@@ -387,12 +270,254 @@
   {
     "objectID": "lectures/lectures-lecture1.html#keshav-s.-how-to-read-a-paper",
     "href": "lectures/lectures-lecture1.html#keshav-s.-how-to-read-a-paper",
-    "title": "Lecture 1",
-    "section": "",
-    "text": "Before diving headfirst into research papers (as we will in the rest of this course), it’s important to know how to read one efficiently and effectively, especially if we don’t know much about the topic. “Researchers spend a great deal reading research papers. However this skill is rarely taught, leading to much wasted effort,” Keshav introduces. How to Read a Paper proposes a three-pass method for reading academic research papers:\n\nThe first pass: a quick skim of the title, abstract, introduction, section headings, and conclusions. The goal is to get a general gist of what the paper does, how it does it, and whether it’s worth diving into.\nThe second pass: a more careful read, now looking into figures, diagrams, data, etc., but still not exploring too much detail. The goal is to understand the general content and be able to summarize it with some supporting evidence.\nThe third pass: a full read, where the goal is to “virtually re-implement” the paper, or be able to reconstruct its structure and challenge its assumptions, methods, and results.\n\nClass Discussion Questions:",
+    "title": "8/24 Lecture 1",
+    "section": "Keshav, S. “How to Read a Paper”",
+    "text": "Keshav, S. “How to Read a Paper”\nBefore diving headfirst into research papers (as we will in the rest of this course), it’s important to know how to read one efficiently and effectively, especially if we don’t know much about the topic. “Researchers spend a great deal reading research papers. However this skill is rarely taught, leading to much wasted effort,” Keshav introduces. How to Read a Paper proposes a three-pass method for reading academic research papers:\n\nThe first pass: a quick skim of the title, abstract, introduction, section headings, and conclusions. The goal is to get a general gist of what the paper does, how it does it, and whether it’s worth diving into.\nThe second pass: a more careful read, now looking into figures, diagrams, data, etc., but still not exploring too much detail. The goal is to understand the general content and be able to summarize it with some supporting evidence.\nThe third pass: a full read, where the goal is to “virtually re-implement” the paper, or be able to reconstruct its structure and challenge its assumptions, methods, and results.\n\nClass Discussion Questions:\n\nWhat was your previous method of reading papers? How has this changed your perspective?\nWhy does this method matter? Why should we deeply learn and understand a paper?\nWhy is point 3 (“Doing a Literature Survey”) important in research?\nHow do you think point 4 (“Experience”) develops?",
     "crumbs": [
       "Lectures",
       "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STA HOUSE Statistical Methods in Research",
+    "section": "",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nMon, Aug 24\nNone!\nIntroduction to Statistics in Research\nKeshav, S. “How to Read a Paper.” ACM SIGCOMM Computer Communication Review, 2007  In Class Reading Assignment\n\n\n\n\n2\nMon, Aug 31\n\n\nStudy Design\n\n\n\n\n\n\n3\nMon, Sep 7\n\n\nIntroduction to Probability\nYaari, G., Eisenmann, S. (2011). “The Hot (Invisible?) Hand: Can Time Sequence Patterns of Success/Failure in Sports Be Modeled as Repeated Random Independent Trials?.”  Krithikadatta J. (2014). Normal distribution.\n\n\n\n\n4\nMon, Sep 14\n\n\nHypothesis Testing\nBiau DJ, Jolles BM, Porcher R. P value and the theory of hypothesis testing: an explanation for new researchers.  CM Bennett, MB Miller, GL Wolford, Neural correlates of interspecies perspective taking in the post-mortem Atlantic Salmon: an argument for multiple comparisons correction.\n\n\n\n\n5\nMon, Sep 21\n\n\nConfidence Intervals, Effect Sizes, and Power\nBem DJ. Feeling the future: experimental evidence for anomalous retroactive influences on cognition and affect.  Francis et al. (1955), Evaluation of the 1954 Poliomyelitis Vaccine Trials\n\n\n\n\n6\nMon, Sep 28\n\n\nStatistical Methods for Group Comparisons\nC.A. Moss-Racusin, J.F. Dovidio, V.L. Brescoll, M.J. Graham, & J. Handelsman, Science faculty’s subtle gender biases favor male students.  Bertrand, M., & Mullainathan, S. (2004). Are Emily and Greg More Employable than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.\n\n\n\n\n7\nMon, Oct 5\n\n\nRegression\nB.N. Greenwood, R.R. Hardeman, L. Huang, & A. Sojourner, Physician–patient racial concordance and disparities in birthing mortality for newborns.  G.J. Borjas, & R. VerBruggen, Physician–patient racial concordance and newborn mortality.\nDiscussion Section 1 Papers & Questions\n\n\n8\nMon, Oct 19\n\n\nStudent-Led Discussion Section 1\n\n\nMid-Semester Paper Due 10/19 7:00 PM Discussion Section 2 Papers & Questions\n\n\n9\nMon, Oct 26\n\n\nStudent-Led Discussion Section 2\n\n\nDiscusson Section 3 Papers & Questions\n\n\n10\nMon, Nov 2\n\n\nStudent-Led Discussion Section 3\n\n\nDiscussion Section 4 Papers & Questions\n\n\n11\nMon, Nov 9\n\n\nStudent-Led Discussion Section 4\n\n\nDiscussion Section 5 Papers & Questions\n\n\n12\nMon, Nov 16\n\n\nStudent-Led Discussion Section 5\n\n\nDiscussion Section 6 Papers & Questions\n\n\n13\nMon, Nov 23\n\n\nStudent-Led Discussion Section 6\n\n\n\n\n\n\n14\nMon, Nov 30\nNone!\nWrap Up & Looking Back Potential Special Topic",
+    "crumbs": [
+      "Syllabus",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture2.html",
+    "href": "lectures/lectures-lecture2.html",
+    "title": "8/31 Lecture 2",
+    "section": "",
+    "text": "Today we’re going to explore a few cases where real statistics were computed effectively and correctly on paper, yet completely failed their purpose. Statistics, as with most other things, depends heavily on interpretation – when the interpretation fails, our research is no longer sound.\nCorrelation vs. Causation\nLet’s think about a classic example. Ice cream sales and the number of shark attacks both increase in the summer. Does this mean that eating ice cream causes more people to get chased by sharks? Obviously, this is not what’s going on here – the season itself is causing both of these events independently (more humans in the ocean in the summer = more shark injuries. hotter weather = a greater need for ice cream). Even though ice cream sales and shark attacks are correlated (move together), one does not necessarily cause the other.\nKeep this in mind as you dissect any research paper in the following weeks, and you’ll easily find reason for skepticism everywhere.\nConfounding Variables\nIn the case of the ice cream sales and shark attacks, there was a hidden, confounding third variable that influenced both variables of interest, making them seem related. As we explore these papers, think about what differs between the two groups examined, or other variables that might be at play.\nSample Size and Generalizability\nBefore we trust any findings, and thinking back to our discussion last week, it’s important to consider the sample size of the study. How many people did the survey ask? Which groups of people was this pattern found in? The original marshmallow study we’re about to read was conducted on a small sample of children at a preschool on Stanford’s campus. As you read, consider what impact this may have on the results.\nReplication\nReplication is basically redoing a study, ideally with a bigger, more representative sample. The goal of this is to see if the original result appears once again, to help validate or question the original study’s results. One of today’s readings is a replication attempt of the marshmallow test. Note what differs between replication attempts, not limited to the results! Did the replication increase sample size, or change the population experimented on? How might that impact our interpretations of both studies’ findings?\n##Study Types\nLet’s consider some types of studies. These all have their strengths and weaknesses, and although we won’t go into too much depth in all of them, it is incredibly important that you do if you’re planning your own study. Understanding the nature of why a study is strong and why it’s weak can inform what statistics would be used.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture2.html#study-design",
+    "href": "lectures/lectures-lecture2.html#study-design",
+    "title": "8/31 Lecture 2",
+    "section": "",
+    "text": "Today we’re going to explore a few cases where real statistics were computed effectively and correctly on paper, yet completely failed their purpose. Statistics, as with most other things, depends heavily on interpretation – when the interpretation fails, our research is no longer sound.\nCorrelation vs. Causation\nLet’s think about a classic example. Ice cream sales and the number of shark attacks both increase in the summer. Does this mean that eating ice cream causes more people to get chased by sharks? Obviously, this is not what’s going on here – the season itself is causing both of these events independently (more humans in the ocean in the summer = more shark injuries. hotter weather = a greater need for ice cream). Even though ice cream sales and shark attacks are correlated (move together), one does not necessarily cause the other.\nKeep this in mind as you dissect any research paper in the following weeks, and you’ll easily find reason for skepticism everywhere.\nConfounding Variables\nIn the case of the ice cream sales and shark attacks, there was a hidden, confounding third variable that influenced both variables of interest, making them seem related. As we explore these papers, think about what differs between the two groups examined, or other variables that might be at play.\nSample Size and Generalizability\nBefore we trust any findings, and thinking back to our discussion last week, it’s important to consider the sample size of the study. How many people did the survey ask? Which groups of people was this pattern found in? The original marshmallow study we’re about to read was conducted on a small sample of children at a preschool on Stanford’s campus. As you read, consider what impact this may have on the results.\nReplication\nReplication is basically redoing a study, ideally with a bigger, more representative sample. The goal of this is to see if the original result appears once again, to help validate or question the original study’s results. One of today’s readings is a replication attempt of the marshmallow test. Note what differs between replication attempts, not limited to the results! Did the replication increase sample size, or change the population experimented on? How might that impact our interpretations of both studies’ findings?\n##Study Types\nLet’s consider some types of studies. These all have their strengths and weaknesses, and although we won’t go into too much depth in all of them, it is incredibly important that you do if you’re planning your own study. Understanding the nature of why a study is strong and why it’s weak can inform what statistics would be used.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture2.html#non-experimental-observational-studies",
+    "href": "lectures/lectures-lecture2.html#non-experimental-observational-studies",
+    "title": "8/31 Lecture 2",
+    "section": "Non-Experimental / Observational Studies",
+    "text": "Non-Experimental / Observational Studies\nIn observational studies, the investigator does not control who is exposed to a risk factor or intervention. Instead, exposures occur naturally, and the researcher measures associations between exposure and outcome. These studies are further divided by their unit of analysis: population-based or individual-based.\n\nPopulation-Based Studies\nThese studies use aggregate, group-level data rather than data on individual subjects.\n\nDescriptive — Health Survey\n\nHealth Survey\n\nDescribes the distribution of health-related states or events in a population, typically in terms of person, place, and time (the “who, where, and when”). It does not test hypotheses about cause and effect — it simply characterizes the burden of disease or health status in a defined population at a point in time.\n\n\n\n\nAnalytic — Ecological Study\n\nEcological Study\n\nCompares exposure and outcome data across groups or populations (e.g., countries, cities, or regions) rather than individuals. It looks for correlations between an exposure rate and a disease rate at the population level. While useful for generating hypotheses, ecological studies are vulnerable to the ecological fallacy — the risk of wrongly inferring individual-level relationships from group-level data.\n\n\n\n\n\nIndividual-Based Studies\nThese studies collect and analyze data on individual subjects rather than groups.\n\nDescriptive — Case Reports and Case Series\n\nCase Report\n\nA detailed description of a single, often unusual or novel, clinical case. Case Series\n\n\nDescribes a group of patients with a similar diagnosis or exposure, without a comparison group.\n\n\nBoth are hypothesis-generating tools that document clinical observations but cannot establish causal relationships due to the absence of a control group.\n\n\nAnalytic Studies\nAnalytic studies test specific hypotheses about the relationship between an exposure and an outcome, typically using a comparison group. There are three main designs:\n\nCross-Sectional Study (Prevalence Study)\n\nMeasures exposure and outcome simultaneously in a population at a single point in time. It estimates the prevalence of disease and can identify associations, but because exposure and outcome are measured at the same time, it cannot establish the temporal sequence needed to infer causation.\n\nCase-Control Study (Case-Reference Study)\n\nStarts with subjects who already have the outcome of interest (cases) and compares them to those without it (controls), looking backward to assess prior exposure. This design is efficient for studying rare diseases and is retrospective in nature.\n\nCohort Study (Follow-Up Study)\n\nBegins with a group of exposed and unexposed individuals who are free of the outcome, then follows them forward in time to compare the incidence of disease between groups. Cohort studies can be prospective or retrospective and provide stronger evidence of temporal sequence than cross-sectional or case-control designs.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture2.html#experimental-interventional-studies",
+    "href": "lectures/lectures-lecture2.html#experimental-interventional-studies",
+    "title": "8/31 Lecture 2",
+    "section": "Experimental / Interventional Studies",
+    "text": "Experimental / Interventional Studies\nIn experimental studies, the investigator actively assigns the exposure or intervention, allowing for stronger causal inference than observational designs.\n\nRandomized Control Trial (Clinical Trial)\nParticipants are randomly assigned to receive either the intervention (e.g., a drug or treatment) or a control/placebo. Randomization balances known and unknown confounding factors between groups, making the RCT the gold standard for establishing causality. When conducted in a clinical setting, this is often called a clinical trial.\n\n\nNon-Randomized (Quasi-Experimental) Studies\nWhen randomization is not feasible or ethical, researchers may use non-randomized designs:\n\nQuasi-Experimental Study: An intervention is assigned without random allocation, often using pre-existing groups (e.g., comparing outcomes before and after a policy change).\nField Trial: The intervention is applied to healthy individuals in the community (rather than a clinical setting) who are at risk of developing a disease, often to test preventive measures like vaccines.\nCommunity Trial: The unit of intervention and analysis is an entire community or group, rather than individuals — commonly used to evaluate public health interventions such as water fluoridation or health education campaigns.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture2.html#summary-table",
+    "href": "lectures/lectures-lecture2.html#summary-table",
+    "title": "8/31 Lecture 2",
+    "section": "Summary Table",
+    "text": "Summary Table\n\n\n\n\n\n\n\n\nStudy Type\nCategory\nKey Feature\n\n\n\n\nHealth Survey\nObservational — Population\nDescriptive, group-level\n\n\nEcological Study\nObservational — Population\nAnalytic, group-level correlation\n\n\nCase Report / Case Series\nObservational — Individual\nDescriptive, no control group\n\n\nCross-Sectional Study\nObservational — Individual\nExposure & outcome measured simultaneously\n\n\nCase-Control Study\nObservational — Individual\nStarts with outcome, looks back at exposure\n\n\nCohort Study\nObservational — Individual\nStarts with exposure, follows forward\n\n\nRandomized Control Trial\nExperimental\nRandom assignment, gold standard\n\n\nQuasi-Experimental / Field / Community Trial\nExperimental\nNon-random assignment",
+    "crumbs": [
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture2.html#the-nature-of-adolescent-competencies-predicted-by-preschool-delay-of-gratification.",
+    "href": "lectures/lectures-lecture2.html#the-nature-of-adolescent-competencies-predicted-by-preschool-delay-of-gratification.",
+    "title": "8/31 Lecture 2",
+    "section": "The nature of adolescent competencies predicted by preschool delay of gratification.",
+    "text": "The nature of adolescent competencies predicted by preschool delay of gratification.\nDiscussion Questions",
+    "crumbs": [
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture2.html#revisiting-the-marshmallow-test-a-conceptual-replication-investigating-links-between-early-delay-of-gratification-and-later-outcomes",
+    "href": "lectures/lectures-lecture2.html#revisiting-the-marshmallow-test-a-conceptual-replication-investigating-links-between-early-delay-of-gratification-and-later-outcomes",
+    "title": "8/31 Lecture 2",
+    "section": "Revisiting the Marshmallow Test: A Conceptual Replication Investigating Links Between Early Delay of Gratification and Later Outcomes",
+    "text": "Revisiting the Marshmallow Test: A Conceptual Replication Investigating Links Between Early Delay of Gratification and Later Outcomes\nDiscussion Questions",
+    "crumbs": [
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html",
+    "href": "syllabus/syllabus-assignments.html",
+    "title": "Assignments and grading",
+    "section": "",
+    "text": "Your final course grade will be calculated as follows:\nThis course is a Satisfactory/Unsatisfactory course. An honest attempt at all assignments will result in a passing grade. Additionally, attendance in at least 12 out of 14 classes is required, as per Duke University House Courses.",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html#participation-30",
+    "href": "syllabus/syllabus-assignments.html#participation-30",
+    "title": "Assignments and grading",
+    "section": "Participation (30%)",
+    "text": "Participation (30%)\nEach class will involve discussion of several papers that have been selected for relevance/interest. Regular involvement in these discussions will result in a full score. If you need an exact number, try to speak out at least once each discussion. We want to hear your voice and about your interests!\n\n\n\n\n\n\nNoteFor clarification\n\n\n\nThis doesn’t mean that if you don’t speak every class you will get a 0. Non-zero variance is expected! (If you don’t know what that means, hopefully you’ll learn during this course.)",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html#midterm-paper-25",
+    "href": "syllabus/syllabus-assignments.html#midterm-paper-25",
+    "title": "Assignments and grading",
+    "section": "Midterm Paper (25%)",
+    "text": "Midterm Paper (25%)\nAt this point in the semester, we’ve reviewed many fundamental concepts and models in statistics. Although we still have more to cover, it’s important to reflect on and analyze some statistics on your own, and a write-up will help us accomplish this.\nThe prompt: PPlease describe the basic mechanics of any statistical method we have encountered so far, including a simple explanation of the method, various indicators for the method, and when it should be used. Then, examine the use of the method in a published research paper that we have not seen in class and that you are not leading your discussion on. This should entail a brief overview of the article (background, topic context, motivation, variables, etc.), why the method was used, and how it supports the article’s conclusion.\nRequirements:\n\n650 word minimum.\nMLA formatted citations.\nDue beginning of class Week 8 7:00PM Monday 10/19",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html#student-led-discussions-45",
+    "href": "syllabus/syllabus-assignments.html#student-led-discussions-45",
+    "title": "Assignments and grading",
+    "section": "Student-Led Discussions (45%)",
+    "text": "Student-Led Discussions (45%)\nThroughout the semester, you’ll be exposed to many different methods and models used in research. However, the most important part is being able to understand how others use (or misuse them) in real research.\nFor the last half of the semester 10/19 - 11/23, students will sign up to lead their own journal-club style discussions on a specific statistical topic. This will require several statistical papers, discussion questions, and an optional mini-lecture.\nThere are no limitations to what kind of paper is chosen – feel free to branch out and explore ideas we haven’t touched on or complex topics that are difficult to understand. However, the paper should be able to spark discussion/debate and should relate to your topic.\nPrepare 5-10 potential discussion questions, as well as your own “answers” to guide the class. Post your papers and discussion questions in the designated Canvas discussion one week before your discussion section by the previous Monday at 11:59 PM, so others will have time to review the material and read the paper.\nAdditionally, if you feel that it is necessary to do preliminary research on the topic in case your classmates have questions, or you’d like to provide a brief overview of a subject, that is an option. If you choose to explain a topic during class, you must make minimal use of electronic materials.\nDuring the actual discussion section, you are not expected to ask all the questions, and feel free to come up with questions or discussion points that you have not prepared during the section. These discussion sections will aim to be 45-60 minutes long, so prepare enough content for the time allotted! Our first half of the course should serve as a guide for what a discussion would look like.\n\n\n\n\n\n\nNoteDiscussion Section Sign-Up\n\n\n\nSign up to lead a discussion section here!",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-overview.html",
+    "href": "syllabus/syllabus-overview.html",
+    "title": "Course overview",
+    "section": "",
+    "text": "In this course, students will explore the statistical fundamentals necessary for understanding and conducting research in a variety of fields. Students will engage with real-world research papers and datasets across disciplines, exploring how statistics are used (and sometimes misused) in published work. Instead of focusing solely on technical skills, this course emphasizes interpretation, critique, and application of basic statistical tools in research. From misused methods to research bias, Statistical Methods in Research aims to provide students with a deeper understanding of when, why, and how to best utilize statistical methods in their future storytelling. The course culminates in student-led discussion, applying concepts from class. No previous experience is required in statistical science or research.",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-overview.html#description",
+    "href": "syllabus/syllabus-overview.html#description",
+    "title": "Course overview",
+    "section": "",
+    "text": "In this course, students will explore the statistical fundamentals necessary for understanding and conducting research in a variety of fields. Students will engage with real-world research papers and datasets across disciplines, exploring how statistics are used (and sometimes misused) in published work. Instead of focusing solely on technical skills, this course emphasizes interpretation, critique, and application of basic statistical tools in research. From misused methods to research bias, Statistical Methods in Research aims to provide students with a deeper understanding of when, why, and how to best utilize statistical methods in their future storytelling. The course culminates in student-led discussion, applying concepts from class. No previous experience is required in statistical science or research.",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-overview.html#objectives",
+    "href": "syllabus/syllabus-overview.html#objectives",
+    "title": "Course overview",
+    "section": "Objectives",
+    "text": "Objectives\nIn this course, students will:\n\nCritically analyze and interpret statistical methods in peer-reviewed research papers\nExplore and apply foundational statistical concepts\nDifferentiate between statistical models and critically assess their validity\nExplore the roles of bias, ethics, and equity in research\nEvaluate the use of data visualizations to tell stories\nDesign and lead a research discussion about a specific research paper and its methods\n\nPrerequisites: A vested interest in getting better at critically analyzing papers and learning about statistics!",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-overview.html#meetings",
+    "href": "syllabus/syllabus-overview.html#meetings",
+    "title": "Course overview",
+    "section": "Meetings",
+    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLectures\nOld Chem 123\nMondays 7:00 PM - 8:30 PM\nLiane, Cooper, and sometimes Dr. Zito",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-resources.html",
+    "href": "syllabus/syllabus-resources.html",
+    "title": "University resources",
+    "section": "",
+    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-resources.html#course-costs",
+    "href": "syllabus/syllabus-resources.html#course-costs",
+    "title": "University resources",
+    "section": "",
+    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-resources.html#tech-support",
+    "href": "syllabus/syllabus-resources.html#tech-support",
+    "title": "University resources",
+    "section": "Tech support",
+    "text": "Tech support\nContact the Duke OIT Service Desk at oit.duke.edu/help.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-resources.html#academic-support",
+    "href": "syllabus/syllabus-resources.html#academic-support",
+    "title": "University resources",
+    "section": "Academic support",
+    "text": "Academic support\nThere are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (the ARC) offers services to support students academically during their undergraduate careers at Duke. The ARC can provide support with time management, academic skills and strategies, course-specific tutoring, and more. ARC services are available free to all Duke undergraduate student studying any discipline.\nYou can contact the Academic Resource Center by phone at (919) 684-5917, by email at theARC@duke.edu, or by visiting http://arc.duke.edu/.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-resources.html#accessibility",
+    "href": "syllabus/syllabus-resources.html#accessibility",
+    "title": "University resources",
+    "section": "Accessibility",
+    "text": "Accessibility\nIf any portion of the course is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.\nThe Student Disability Access Office (SDAO) is available to ensure that students can engage with their courses and related assignments. Students should contact the SDAO to request or update accommodations under these circumstances.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-resources.html#mental-health-and-well-being",
+    "href": "syllabus/syllabus-resources.html#mental-health-and-well-being",
+    "title": "University resources",
+    "section": "Mental health and well-being",
+    "text": "Mental health and well-being\nDuke is committed to holistic student wellbeing, which includes one’s mental, emotional, and physical health. The university offers resources to help students manage daily stress, to encourage intentional self-care, and to access just-in-time support. If you find you need support, your mental and/or emotional health concerns are impacting your day-to-day activities, your academic performance, or you need someone to talk to, the resources below are available to you:\n\nDukeReach: DukeReach provides comprehensive outreach services to support students in managing all aspects of wellbeing, including referrals and follow-up services for students who are experiencing significant challenges related to mental health, physical health, social adjustment, and/or a variety of other stressors. You can contact the DukeReach team at dukereach@duke.edu;\nCounseling and Psychological Services (CAPS): CAPS offers counseling services to Duke students including virtual appointments, and referrals in the community. You do not need an appointment for an initial assessment. You may walk in or call 919-660-1000 to get started. Hours: Monday-Friday 9:00am - 4:00pm. After hours counseling services are available at no additional cost to students, you can call: 919-660-1000 Option 2;\nTimelyCare: TimelyCare is an online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling;\nDuke Student Health: Student Health offers a wide range of healthcare services for all Duke students, many of which are covered by the student health fee. To make an appointment call (919) 681-9355. Hours: Monday - Friday, 8am - 4:30pm, Thursday 9am - 4:30pm. Closed from 12-12:30 each day.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
     ]
   }
 ]
