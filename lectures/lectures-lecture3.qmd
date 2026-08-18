@@ -3,3 +3,161 @@ title: "3/7 Lecture 3"
 format: html
 ---
 
+## Why Probability, and Why Now?
+
+Before we can talk about hypothesis tests, confidence intervals, p-values, or any of the machinery of statistical inference, we need a shared vocabulary for describing uncertainty. Every measurement you will ever collect in research — a survey response, a lab reading, a reaction time, a clinical outcome — is, in some sense, the result of a random process. Probability is simply the mathematical language we use to describe how likely different outcomes of that random process are.
+
+A **probability distribution** is just a complete description of "what can happen" and "how likely each thing is to happen." Everything in this chapter is really just different flavors of that one idea, applied to different kinds of research questions.
+
+## Random Variables: Naming the Outcome
+
+A **random variable** is nothing more than a name we give to the outcome of some process we haven't observed yet, or whose outcome varies from instance to instance.
+
+- Flip a coin: let $X$ = 1 if heads, 0 if tails.
+- Count the number of patients who respond to a treatment out of 50 enrolled: let $X$ = that count.
+- Measure a participant's reaction time in milliseconds: let $X$ = that time.
+
+Notice the first two examples can only take specific, countable values (0, 1, 2, 3, ...). We call these **discrete** random variables. The third example, reaction time, could in principle take any value on a continuum (300.2 ms, 300.21 ms, 300.213 ms, ...). We call these **continuous** random variables.
+
+This distinction matters because it changes how we talk about probability:
+
+- For a discrete variable, we can ask directly: "what is the probability $X$ equals exactly 3?"
+- For a continuous variable, asking for the probability of one exact value (like "reaction time equals exactly 300.213000... ms") doesn't really make sense — there are infinitely many possible values, so any single one has essentially zero probability. Instead, we ask about *ranges*: "what's the probability the reaction time is between 290 and 310 ms?"
+
+Binomial, geometric, negative binomial, and Poisson are all discrete. Normal is continuous.
+
+## Counting First: How "Choose" Works
+
+Several distributions below need us to count the number of ways something can happen, not just whether it happens. The classic example: if you flip a coin 4 times and want exactly 2 heads, there's more than one way to arrange that — HHTT, HTHT, HTTH, THHT, THTH, TTHH. Six arrangements, all equally consistent with "2 heads out of 4 flips."
+
+This is where the **choose** operation comes in, written $\binom{n}{k}$ and read "n choose k." It answers exactly one question:
+
+"Out of $n$ total slots, in how many distinct ways can you pick $k$ of them to be "successes" (without caring about the order you picked them in)?"
+
+You don't need to memorize the formula to use the intuition, but here it is for reference:
+
+$$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
+
+where $n! = n \times (n-1) \times (n-2) \times \cdots \times 1$ ("n factorial") counts the number of ways to *fully order* $n$ items.
+
+Think of $\binom{n}{k}$ as answering: "how many different-looking outcomes give me the same *total count* of successes?" This is exactly the gap between "the probability of one specific sequence" and "the probability of a certain number of successes, in any order." The choose function bridges that gap by counting the arrangements. It shows up explicitly in the binomial and negative binomial distributions below, and implicitly everywhere we count "how many ways."
+
+You will almost never compute $\binom{n}{k}$ by hand in this course — software does it instantly (`choose(n, k)` in R, `math.comb(n, k)` in Python). What matters is recognizing *when* a problem is a counting problem in disguise.
+
+## Mean and Variance: Two Numbers That Summarize a Distribution
+
+Before walking through specific distributions, it helps to fix ideas about the two numbers we'll report for each one.
+
+- The **mean** (also called the expected value, written $E[X]$) is the long-run average outcome if you could repeat the random process infinitely many times. It is a measure of **central tendency** — where the distribution is "centered."
+- The **variance** (written $\text{Var}(X)$) measures how spread out the outcomes tend to be around that mean. A small variance means outcomes cluster tightly around the mean; a large variance means they're scattered widely. The **standard deviation** is just the square root of the variance, and is often more interpretable because it's back in the original units of $X$ rather than squared units.
+
+If mean is "where's the center of the dartboard," variance is "how tightly clustered are the darts around that center." Two archers can have the exact same average hit location and wildly different consistency.
+
+## Discrete Distributions
+
+All of the discrete distributions below are built out of the same atomic idea: a **Bernoulli trial** — a single yes/no, success/failure event with some fixed probability $p$ of success. Think: one coin flip, one patient responding to treatment, one email being spam. Everything else in this section is a story about "repeating" or "waiting for" Bernoulli trials.
+
+### The Binomial Distribution: "How many successes in a fixed number of tries?"
+
+Say you run a fixed number of independent trials, $n$, each with the same probability of success $p$. You count the total number of successes, $X$. That's binomial. For example, out of 30 patients on a treatment, how many recover within a week?
+
+**Why "choose" shows up:** To get exactly $k$ successes out of $n$ trials, you need (a) the probability of any one specific arrangement of $k$ successes and $n-k$ failures, which is $p^k (1-p)^{n-k}$, times (b) the number of arrangements that produce that same count, which is $\binom{n}{k}$. Multiply those together and you get the binomial probability formula:
+
+$$P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}$$
+
+**Mean and variance:**
+
+$$E[X] = np \qquad \text{Var}(X) = np(1-p)$$
+
+Intuition: if each of $n$ trials has probability $p$ of success, the average total is simply $n$ times $p$ — you'd expect 30% of 100 trials to succeed if $p = 0.3$. The variance is largest when $p = 0.5$ (maximum uncertainty about each individual trial) and shrinks as $p$ moves toward 0 or 1 (each trial becomes more predictable).
+
+### The Geometric Distribution: "How long until the first success?"
+
+Instead of fixing the number of trials and counting successes, we now fix the goal (get one success) and count how many Bernoulli trials it takes to get there. For example, how many samples must a lab process before finding the first contaminated one?
+
+**Mean and variance:**
+
+$$E[X] = \frac{1}{p} \qquad \text{Var}(X) = \frac{1-p}{p^2}$$
+
+*Intuition:* if success happens with probability $p$ on each trial, you'd expect to wait about $1/p$ trials for it to show up — a rare event ($p$ small) takes a long average wait, a common event ($p$ close to 1) resolves almost immediately. Note that unlike the binomial, there's no upper limit to how many trials you might need — in principle you could wait forever, which is part of why the variance formula looks different.
+
+### The Negative Binomial Distribution: "How long until the *r*-th success?"
+
+This is the natural generalization of the geometric distribution. Instead of waiting for the *first* success, we wait for the $r$-th success, for any fixed number $r$.For example, how many patients must be screened before you've enrolled 20 eligible participants?
+
+Just like the binomial needed a "choose" term to count arrangements, the negative binomial needs one too — because the $r$-th success can be preceded by its $r-1$ earlier successes landing in any order among the trials that came before it.
+
+**Mean and variance:**
+
+$$E[X] = \frac{r}{p} \qquad \text{Var}(X) = \frac{r(1-p)}{p^2}$$
+
+*Intuition:* this is exactly $r$ copies of the geometric distribution's logic stacked together — if it takes $1/p$ trials on average to get *one* success, it takes roughly $r$ times that to get $r$ of them. Set $r = 1$ and these formulas collapse exactly to the geometric distribution's formulas above — a good sanity check that the two distributions are genuinely nested inside one another.
+
+In practice, the negative binomial distribution is also widely used to model **overdispersed count data** — count data (like the Poisson, below) but with more variability than a Poisson distribution allows. You'll see this especially in count-based outcome models (e.g., number of hospital visits, number of citations) where a plain Poisson model underestimates the true spread of the data.
+
+### The Poisson Distribution: "How many events occur in a fixed window?"
+
+The Poisson distribution answers a different kind of question than the previous three. Instead of counting successes out of a known number of discrete trials, it counts the number of times a rare event happens over a continuous window of time, space, or exposure — where events could, in principle, happen at any moment, but tend to happen at some known average rate, denoted $\lambda$ ("lambda"). For example, the number of customer complaints a call center receives per hour.
+- Number of mutations observed per strand of DNA of a fixed length.
+- Number of earthquakes in a region per year.
+
+**Why it's different from the binomial:** notice there's no natural "$n$" here — no fixed number of trials. There's no ceiling on how many complaints a call center could receive in an hour. The Poisson distribution is actually what the binomial distribution turns into if you imagine $n$ (the number of "chances" for an event) growing towards infinity while $p$ (the chance of an event on any one of them) shrinks towards zero, in just the right balance that the average number of events, $np$, settles on a fixed value $\lambda$. This is a useful bridge to keep in mind: **Poisson is the limit of binomial when trials become so frequent and individually so unlikely that all that matters is the overall rate.**
+
+**Mean and variance:**
+
+$$E[X] = \lambda \qquad \text{Var}(X) = \lambda$$
+
+*Intuition:* this is the single most distinctive feature of the Poisson distribution — the mean and variance are *the same number*. If a process averages 4 events per hour, its variance is also 4 (and so its standard deviation is 2, the square root of 4). This is a strong, testable assumption: real-world count data that is more variable than its own mean ("overdispersed") is a signal that a plain Poisson model is too simple — which is exactly the situation where researchers often reach for the negative binomial instead.
+
+## The Continuous Case: The Normal Distribution
+
+Every distribution so far counted something discrete. The **normal distribution** (also called the Gaussian, or "bell curve") is the workhorse continuous distribution in research, used to model quantities that can vary smoothly: height, blood pressure, measurement error, standardized test scores, and — critically for later in this course — the sampling distributions of many statistics themselves (a preview of the Central Limit Theorem, which you'll meet properly in the hypothesis testing unit).
+
+**The shape:** symmetric, bell-shaped, single peak at the mean, tapering smoothly off to either side. It is described completely by just two numbers:
+
+$$E[X] = \mu \qquad \text{Var}(X) = \sigma^2$$
+
+where $\mu$ ("mu") is the mean — the center and peak of the bell — and $\sigma^2$ ("sigma squared") is the variance, controlling how wide or narrow the bell is. A small $\sigma^2$ produces a tall, narrow bell (values tightly clustered near $\mu$); a large $\sigma^2$ produces a short, wide bell (values spread out).
+
+## The 68–95–99.7 rule
+
+A useful heuristic you'll use constantly: for a normal distribution, roughly **68%** of values fall within 1 standard deviation of the mean, **95%** fall within 2 standard deviations, and **99.7%** fall within 3 standard deviations. This single rule of thumb will get you very far in reasoning about normal data without ever touching the underlying formula.
+
+Unlike the discrete distributions above, there's no clean "story" of counting or waiting behind the normal distribution's formula, and we won't write that formula out here — for this course, what matters is the shape, the two parameters that control it, and the 68–95–99.7 rule for reasoning about spread. The formula becomes important later; the intuition is what carries you through most applied statistical reasoning.
+
+## Putting It Together: A Quick Comparison
+
+| Distribution | Question it answers | What varies | Mean | Variance |
+|---------------|---------------|---------------|---------------|---------------|
+| Binomial | How many successes in $n$ fixed trials? | Count of successes | $np$ | $np(1-p)$ |
+| Geometric | How many trials until the 1st success? | Wait time | $1/p$ | $(1-p)/p^2$ |
+| Negative Binomial | How many trials until the $r$-th success? | Wait time | $r/p$ | $r(1-p)/p^2$ |
+| Poisson | How many events in a fixed window at rate $\lambda$? | Count of events | $\lambda$ | $\lambda$ |
+| Normal | Where does a continuous measurement fall? | Continuous value | $\mu$ | $\sigma^2$ |
+
+## Bayes' Rule: Updating Beliefs With Evidence
+
+Everything so far described the probability of outcomes before we observe any data. But research is fundamentally about updating what we believe once evidence comes in. **Bayes' rule** is the formal recipe for doing that update correctly.
+
+### The Intuition First
+
+Suppose you're testing patients for a rare disease. A patient tests positive. What's the probability they actually *have* the disease?
+
+Your instinct might be "well, the test is 99% accurate, so 99%." But this ignores something crucial: how rare the disease is in the first place. If the disease is extremely rare, most positive tests will actually be false positives from the huge pool of healthy people, not true positives from the tiny pool of sick people. Bayes' rule is the formal machinery for combining **how rare the disease is** (your belief *before* the test — the **prior**) with **how reliable the test is** (the new evidence) to get the correct updated belief (the **posterior**).
+
+Bayes' rule says: your *updated* belief about something should combine (1) how likely you thought it was *before* seeing the evidence, and (2) how *surprising* the evidence would be under each possible explanation. Evidence that would be very surprising if a hypothesis were false is strong evidence in favor of that hypothesis — but only relative to how believable the hypothesis was to begin with.
+
+### The Formula
+
+$$P(A \mid B) = \frac{P(B \mid A)\, P(A)}{P(B)}$$
+
+Read the pieces one at a time:
+
+- $P(A)$ — the **prior**: how likely $A$ (e.g., "has the disease") was *before* any evidence.
+- $P(B \mid A)$ — the **likelihood**: how likely the evidence $B$ (e.g., "tested positive") is, *assuming* $A$ is true.
+- $P(B)$ — the overall probability of seeing the evidence $B$ at all, across every possible explanation (sick or healthy).
+- $P(A \mid B)$ — the **posterior**: your updated belief about $A$, now that you've seen $B$.
+
+The notation $P(A \mid B)$ is read "the probability of $A$ *given* $B$" — it's how we write "conditional on already knowing $B$ happened, how likely is $A$?" This is the central idea behind everything Bayes' rule does: it converts between $P(B \mid A)$ (which is often what we can measure directly, like test accuracy) and $P(A \mid B)$ (which is usually what we actually want to know, like "does this patient have the disease?"). These two conditional probabilities are *not* the same thing, and confusing them is one of the most common reasoning errors in applied research — Bayes' rule exists precisely to keep them straight.
+
+Bayes' rule underlies an entire branch of statistical inference (Bayesian statistics), but even researchers working in the more traditional ("frequentist") framework rely on this logic constantly — anytime you interpret a diagnostic test, a screening tool, or evidence of any kind, you are implicitly reasoning about priors, likelihoods, and posteriors, whether or not you write the formula down.
