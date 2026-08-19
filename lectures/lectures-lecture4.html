@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8/31 Lecture 2 – STA HOUSE Spring 2026</title>
+<title>lectures-lecture4 – STA HOUSE Spring 2026</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -32,8 +32,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lectures/lectures-lecture3.html" rel="next">
-<link href="../lectures/lectures-lecture1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -72,8 +70,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="8/31 Lecture 2 – STA HOUSE Spring 2026">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="lectures-lecture4 – STA HOUSE Spring 2026">
 <meta property="og:description" content="Homepage for Statistical Methods in Research at Duke University, Fall 2026.">
 <meta property="og:site_name" content="STA HOUSE Spring 2026">
 </head>
@@ -87,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lectures-lecture1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/lectures-lecture2.html">Lecture 2</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">lectures-lecture4</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -173,13 +200,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Lectures</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lectures/lectures-lecture1.html" class="sidebar-item-text sidebar-link">
@@ -188,7 +215,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lectures/lectures-lecture2.html" class="sidebar-item-text sidebar-link active">
+  <a href="../lectures/lectures-lecture2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 2</span></a>
   </div>
 </li>
@@ -210,32 +237,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#study-design" id="toc-study-design" class="nav-link active" data-scroll-target="#study-design">Study Design</a></li>
-  <li><a href="#non-experimental-observational-studies" id="toc-non-experimental-observational-studies" class="nav-link" data-scroll-target="#non-experimental-observational-studies">Non-Experimental / Observational Studies</a>
+  <li><a href="#why-hypothesis-testing-exists" id="toc-why-hypothesis-testing-exists" class="nav-link active" data-scroll-target="#why-hypothesis-testing-exists">Why hypothesis testing exists</a>
   <ul class="collapse">
-  <li><a href="#population-based-studies" id="toc-population-based-studies" class="nav-link" data-scroll-target="#population-based-studies">Population-Based Studies</a></li>
-  <li><a href="#individual-based-studies" id="toc-individual-based-studies" class="nav-link" data-scroll-target="#individual-based-studies">Individual-Based Studies</a></li>
+  <li><a href="#the-two-ways-to-be-wrong" id="toc-the-two-ways-to-be-wrong" class="nav-link" data-scroll-target="#the-two-ways-to-be-wrong">The two ways to be wrong</a></li>
   </ul></li>
-  <li><a href="#experimental-interventional-studies" id="toc-experimental-interventional-studies" class="nav-link" data-scroll-target="#experimental-interventional-studies">Experimental / Interventional Studies</a>
+  <li><a href="#how-much-can-the-data-even-tell-you-fisher-information" id="toc-how-much-can-the-data-even-tell-you-fisher-information" class="nav-link" data-scroll-target="#how-much-can-the-data-even-tell-you-fisher-information">How much can the data even tell you? — Fisher information</a></li>
+  <li><a href="#what-makes-a-test-best-power" id="toc-what-makes-a-test-best-power" class="nav-link" data-scroll-target="#what-makes-a-test-best-power">What makes a test “best”? — Power</a></li>
+  <li><a href="#a-metal-detector-analogy" id="toc-a-metal-detector-analogy" class="nav-link" data-scroll-target="#a-metal-detector-analogy">A metal-detector analogy</a>
   <ul class="collapse">
-  <li><a href="#randomized-control-trial-clinical-trial" id="toc-randomized-control-trial-clinical-trial" class="nav-link" data-scroll-target="#randomized-control-trial-clinical-trial">Randomized Control Trial (Clinical Trial)</a></li>
-  <li><a href="#non-randomized-quasi-experimental-studies" id="toc-non-randomized-quasi-experimental-studies" class="nav-link" data-scroll-target="#non-randomized-quasi-experimental-studies">Non-Randomized (Quasi-Experimental) Studies</a></li>
+  <li><a href="#uniformly-most-powerful-ump-tests" id="toc-uniformly-most-powerful-ump-tests" class="nav-link" data-scroll-target="#uniformly-most-powerful-ump-tests">Uniformly Most Powerful (UMP) tests</a></li>
   </ul></li>
-  <li><a href="#summary-table" id="toc-summary-table" class="nav-link" data-scroll-target="#summary-table">Summary Table</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a>
-  <ul class="collapse">
-  <li><a href="#the-nature-of-adolescent-competencies-predicted-by-preschool-delay-of-gratification." id="toc-the-nature-of-adolescent-competencies-predicted-by-preschool-delay-of-gratification." class="nav-link" data-scroll-target="#the-nature-of-adolescent-competencies-predicted-by-preschool-delay-of-gratification."><strong>The nature of adolescent competencies predicted by preschool delay of gratification.</strong></a></li>
-  <li><a href="#revisiting-the-marshmallow-test-a-conceptual-replication-investigating-links-between-early-delay-of-gratification-and-later-outcomes" id="toc-revisiting-the-marshmallow-test-a-conceptual-replication-investigating-links-between-early-delay-of-gratification-and-later-outcomes" class="nav-link" data-scroll-target="#revisiting-the-marshmallow-test-a-conceptual-replication-investigating-links-between-early-delay-of-gratification-and-later-outcomes"><strong>Revisiting the Marshmallow Test: A Conceptual Replication Investigating Links Between Early Delay of Gratification and Later Outcomes</strong></a></li>
-  </ul></li>
+  <li><a href="#the-neymanpearson-lemma-heuristically" id="toc-the-neymanpearson-lemma-heuristically" class="nav-link" data-scroll-target="#the-neymanpearson-lemma-heuristically">The Neyman–Pearson Lemma (heuristically)</a></li>
+  <li><a href="#putting-it-all-together" id="toc-putting-it-all-together" class="nav-link" data-scroll-target="#putting-it-all-together">Putting it all together</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lectures-lecture1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/lectures-lecture2.html">Lecture 2</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">8/31 Lecture 2</h1>
+<h1 class="title">lectures-lecture4</h1>
 </div>
 
 
@@ -252,103 +274,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="study-design" class="level2">
-<h2 class="anchored" data-anchor-id="study-design">Study Design</h2>
-<p>Today we’re going to explore a few cases where real statistics were computed effectively and correctly on paper, yet completely failed their purpose. Statistics, as with most other things, depends heavily on <em>interpretation</em> – when the interpretation fails, our research is no longer sound.</p>
-<p><strong>Correlation vs.&nbsp;Causation</strong></p>
-<p>Let’s think about a classic example. Ice cream sales and the number of shark attacks both increase in the summer. Does this mean that eating ice cream causes more people to get chased by sharks? Obviously, this is not what’s going on here – the season itself is causing both of these events independently (more humans in the ocean in the summer = more shark injuries. hotter weather = a greater need for ice cream). Even though ice cream sales and shark attacks are <em>correlated</em> (move together), one does not necessarily <em>cause</em> the other.</p>
-<p>Keep this in mind as you dissect any research paper in the following weeks, and you’ll easily find reason for skepticism everywhere.</p>
-<p><strong>Confounding Variables</strong></p>
-<p>In the case of the ice cream sales and shark attacks, there was a hidden, <em>confounding</em> third variable that influenced both variables of interest, making them seem related. As we explore these papers, think about what differs between the two groups examined, or other variables that might be at play.</p>
-<p><strong>Sample Size and Generalizability</strong></p>
-<p>Before we trust any findings, and thinking back to our discussion <a href="https://sta-house-s26.github.io/sta-house-f26.github.io/lectures/lectures-lecture1.html#good-statistics-vs.-bad-statistics">last week</a>, it’s important to consider the <em>sample size</em> of the study. How many people did the survey ask? Which groups of people was this pattern found in? The original marshmallow study we’re about to read was conducted on a small sample of children at a preschool on Stanford’s campus. As you read, consider what impact this may have on the results.</p>
-<p><strong>Replication</strong></p>
-<p>Replication is basically redoing a study, ideally with a bigger, more representative sample. The goal of this is to see if the original result appears once again, to help validate or question the original study’s results. One of today’s readings is a replication attempt of the marshmallow test. Note what differs between replication attempts, not limited to the results! Did the replication increase sample size, or change the population experimented on? How might that impact our interpretations of both studies’ findings?</p>
-<p>##Study Types</p>
-<p>Let’s consider some types of studies. These all have their strengths and weaknesses, and although we won’t go into too much depth in all of them, it is incredibly important that you do if you’re planning your own study. Understanding the nature of why a study is strong and why it’s weak can inform what statistics would be used.</p>
-</section>
-<section id="non-experimental-observational-studies" class="level2">
-<h2 class="anchored" data-anchor-id="non-experimental-observational-studies">Non-Experimental / Observational Studies</h2>
-<p>In observational studies, the investigator does not control who is exposed to a risk factor or intervention. Instead, exposures occur naturally, and the researcher measures associations between exposure and outcome. These studies are further divided by their unit of analysis: <strong>population-based</strong> or <strong>individual-based</strong>.</p>
-<section id="population-based-studies" class="level3">
-<h3 class="anchored" data-anchor-id="population-based-studies">Population-Based Studies</h3>
-<p>These studies use aggregate, group-level data rather than data on individual subjects.</p>
-<section id="descriptive-health-survey" class="level4">
-<h4 class="anchored" data-anchor-id="descriptive-health-survey">Descriptive — Health Survey</h4>
-<dl>
-<dt><strong>Health Survey</strong></dt>
-<dd>
-<p>Describes the distribution of health-related states or events in a population, typically in terms of person, place, and time (the “who, where, and when”). It does not test hypotheses about cause and effect — it simply characterizes the burden of disease or health status in a defined population at a point in time.</p>
-</dd>
-</dl>
-</section>
-<section id="analytic-ecological-study" class="level4">
-<h4 class="anchored" data-anchor-id="analytic-ecological-study">Analytic — Ecological Study</h4>
-<dl>
-<dt><strong>Ecological Study</strong></dt>
-<dd>
-<p>Compares exposure and outcome data across groups or populations (e.g., countries, cities, or regions) rather than individuals. It looks for correlations between an exposure rate and a disease rate at the population level. While useful for generating hypotheses, ecological studies are vulnerable to the <strong>ecological fallacy</strong> — the risk of wrongly inferring individual-level relationships from group-level data.</p>
-</dd>
-</dl>
-</section>
-</section>
-<section id="individual-based-studies" class="level3">
-<h3 class="anchored" data-anchor-id="individual-based-studies">Individual-Based Studies</h3>
-<p>These studies collect and analyze data on individual subjects rather than groups.</p>
-<section id="descriptive-case-reports-and-case-series" class="level4">
-<h4 class="anchored" data-anchor-id="descriptive-case-reports-and-case-series">Descriptive — Case Reports and Case Series</h4>
-<dl>
-<dt><strong>Case Report</strong></dt>
-<dd>
-<p>A detailed description of a single, often unusual or novel, clinical case. <strong>Case Series</strong></p>
-</dd>
-<dd>
-<p>Describes a group of patients with a similar diagnosis or exposure, without a comparison group.</p>
-</dd>
-</dl>
-<p>Both are hypothesis-generating tools that document clinical observations but cannot establish causal relationships due to the absence of a control group.</p>
-</section>
-<section id="analytic-studies" class="level4">
-<h4 class="anchored" data-anchor-id="analytic-studies">Analytic Studies</h4>
-<p>Analytic studies test specific hypotheses about the relationship between an exposure and an outcome, typically using a comparison group. There are three main designs:</p>
-<dl>
-<dt><strong>Cross-Sectional Study (Prevalence Study)</strong></dt>
-<dd>
-<p>Measures exposure and outcome simultaneously in a population at a single point in time. It estimates the <strong>prevalence</strong> of disease and can identify associations, but because exposure and outcome are measured at the same time, it cannot establish the temporal sequence needed to infer causation.</p>
-</dd>
-<dt><strong>Case-Control Study (Case-Reference Study)</strong></dt>
-<dd>
-<p>Starts with subjects who already have the outcome of interest (<strong>cases</strong>) and compares them to those without it (<strong>controls</strong>), looking backward to assess prior exposure. This design is efficient for studying rare diseases and is retrospective in nature.</p>
-</dd>
-<dt><strong>Cohort Study (Follow-Up Study)</strong></dt>
-<dd>
-<p>Begins with a group of exposed and unexposed individuals who are free of the outcome, then follows them forward in time to compare the <strong>incidence</strong> of disease between groups. Cohort studies can be prospective or retrospective and provide stronger evidence of temporal sequence than cross-sectional or case-control designs.</p>
-</dd>
-</dl>
-<hr>
-</section>
-</section>
-</section>
-<section id="experimental-interventional-studies" class="level2">
-<h2 class="anchored" data-anchor-id="experimental-interventional-studies">Experimental / Interventional Studies</h2>
-<p>In experimental studies, the investigator actively assigns the exposure or intervention, allowing for stronger causal inference than observational designs.</p>
-<section id="randomized-control-trial-clinical-trial" class="level3">
-<h3 class="anchored" data-anchor-id="randomized-control-trial-clinical-trial">Randomized Control Trial (Clinical Trial)</h3>
-<p>Participants are <strong>randomly assigned</strong> to receive either the intervention (e.g., a drug or treatment) or a control/placebo. Randomization balances known and unknown confounding factors between groups, making the RCT the <strong>gold standard</strong> for establishing causality. When conducted in a clinical setting, this is often called a <strong>clinical trial</strong>.</p>
-</section>
-<section id="non-randomized-quasi-experimental-studies" class="level3">
-<h3 class="anchored" data-anchor-id="non-randomized-quasi-experimental-studies">Non-Randomized (Quasi-Experimental) Studies</h3>
-<p>When randomization is not feasible or ethical, researchers may use non-randomized designs:</p>
-<ul>
-<li><strong>Quasi-Experimental Study</strong>: An intervention is assigned without random allocation, often using pre-existing groups (e.g., comparing outcomes before and after a policy change).</li>
-<li><strong>Field Trial</strong>: The intervention is applied to healthy individuals in the community (rather than a clinical setting) who are at risk of developing a disease, often to test preventive measures like vaccines.</li>
-<li><strong>Community Trial</strong>: The unit of intervention and analysis is an entire <strong>community or group</strong>, rather than individuals — commonly used to evaluate public health interventions such as water fluoridation or health education campaigns.</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="summary-table" class="level2">
-<h2 class="anchored" data-anchor-id="summary-table">Summary Table</h2>
+<section id="why-hypothesis-testing-exists" class="level2">
+<h2 class="anchored" data-anchor-id="why-hypothesis-testing-exists">Why hypothesis testing exists</h2>
+<p>Imagine you run a coffee shop and someone tells you, “the new espresso machine makes better lattes.” You can’t just take their word for it — but you also can’t test every possible latte forever. You need a disciplined way to look at a limited amount of evidence and decide whether it’s convincing enough to change your mind about the world.</p>
+<p>That, in one sentence, is what hypothesis testing is: <strong>a structured procedure for deciding whether the evidence you observed is surprising enough, under a specific “boring” explanation, to abandon that boring explanation.</strong></p>
+<p>The “boring” explanation has a name: the <strong>null hypothesis</strong>, usually written <span class="math inline">\(H_0\)</span>. It’s the default, skeptical, nothing-interesting-is-happening claim — “the new machine is no better than the old one.” The competing, more interesting claim is the <strong>alternative hypothesis</strong>, <span class="math inline">\(H_1\)</span> (or <span class="math inline">\(H_A\)</span>) — “the new machine really is better.”</p>
+<section id="the-two-ways-to-be-wrong" class="level3">
+<h3 class="anchored" data-anchor-id="the-two-ways-to-be-wrong">The two ways to be wrong</h3>
+<p>Because we’re making a decision under uncertainty, there are two distinct ways things can go wrong:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -357,78 +290,88 @@ ul.task-list li input[type="checkbox"] {
 </colgroup>
 <thead>
 <tr class="header">
-<th>Study Type</th>
-<th>Category</th>
-<th>Key Feature</th>
+<th></th>
+<th><span class="math inline">\(H_0\)</span> is actually true</th>
+<th><span class="math inline">\(H_0\)</span> is actually false</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Health Survey</td>
-<td>Observational — Population</td>
-<td>Descriptive, group-level</td>
+<td><strong>We reject <span class="math inline">\(H_0\)</span></strong></td>
+<td>Type I error (false alarm)</td>
+<td>Correct decision (a “hit”)</td>
 </tr>
 <tr class="even">
-<td>Ecological Study</td>
-<td>Observational — Population</td>
-<td>Analytic, group-level correlation</td>
-</tr>
-<tr class="odd">
-<td>Case Report / Case Series</td>
-<td>Observational — Individual</td>
-<td>Descriptive, no control group</td>
-</tr>
-<tr class="even">
-<td>Cross-Sectional Study</td>
-<td>Observational — Individual</td>
-<td>Exposure &amp; outcome measured simultaneously</td>
-</tr>
-<tr class="odd">
-<td>Case-Control Study</td>
-<td>Observational — Individual</td>
-<td>Starts with outcome, looks back at exposure</td>
-</tr>
-<tr class="even">
-<td>Cohort Study</td>
-<td>Observational — Individual</td>
-<td>Starts with exposure, follows forward</td>
-</tr>
-<tr class="odd">
-<td>Randomized Control Trial</td>
-<td>Experimental</td>
-<td>Random assignment, gold standard</td>
-</tr>
-<tr class="even">
-<td>Quasi-Experimental / Field / Community Trial</td>
-<td>Experimental</td>
-<td>Non-random assignment</td>
+<td><strong>We fail to reject <span class="math inline">\(H_0\)</span></strong></td>
+<td>Correct decision</td>
+<td>Type II error (a miss)</td>
 </tr>
 </tbody>
 </table>
+<ul>
+<li>A <strong>Type I error</strong> is convicting an innocent person — crying wolf.</li>
+<li>A <strong>Type II error</strong> is letting a guilty person go — missing a real effect.</li>
+</ul>
+<p>There is an unavoidable tension here: if you make it harder to convict (to protect innocent people), you will also let more guilty people go free. You cannot drive both error rates to zero at once with a fixed amount of evidence. Every hypothesis test is, in some sense, a negotiation between these two risks.</p>
+<p>We give the Type I error rate a special name and treat it as something we control in advance: the <strong>significance level</strong>, <span class="math inline">\(\alpha\)</span>. Setting <span class="math inline">\(\alpha = 0.05\)</span> is a promise: “if the null hypothesis is really true, I’m only willing to falsely reject it 5% of the time, in the long run, across many hypothetical repetitions of this study.”</p>
+<p>The <strong>p-value</strong> is the probability, assuming <span class="math inline">\(H_0\)</span> is true, of seeing evidence at least as extreme as what we actually observed. A small p-value means “this would have been a weird thing to see if nothing interesting were going on” — which is evidence (not proof) against <span class="math inline">\(H_0\)</span>. The p-value is <strong>not</strong> the probability that <span class="math inline">\(H_0\)</span> is true. It’s the probability of the <em>data</em> (or more extreme data), computed by <em>assuming</em> <span class="math inline">\(H_0\)</span> is true. These sound similar but are logically very different quantities — mixing them up is one of the most common errors in applied statistics.</p>
 </section>
-<section id="discussion" class="level1">
-<h1>Discussion</h1>
-<section id="the-nature-of-adolescent-competencies-predicted-by-preschool-delay-of-gratification." class="level2">
-<h2 class="anchored" data-anchor-id="the-nature-of-adolescent-competencies-predicted-by-preschool-delay-of-gratification."><a href="https://psycnet.apa.org/record/1988-19783-001"><strong>The nature of adolescent competencies predicted by preschool delay of gratification.</strong></a></h2>
-<p><strong>Discussion Questions</strong></p>
-<ol type="1">
-<li><p>What kind of study is this, and where would you place this study in the summary table above?</p></li>
-<li><p>What are some potential confounding variables in this study that could explain both their ability to delay gratification and later success?</p></li>
-<li><p>Thinking back to the premise of the study – it was conducted on children at a preschool on Stanford’s campus. What does this tell us about this particular sample? What implications might this have for the results?</p></li>
-</ol>
 </section>
-<section id="revisiting-the-marshmallow-test-a-conceptual-replication-investigating-links-between-early-delay-of-gratification-and-later-outcomes" class="level2">
-<h2 class="anchored" data-anchor-id="revisiting-the-marshmallow-test-a-conceptual-replication-investigating-links-between-early-delay-of-gratification-and-later-outcomes"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6050075/"><strong>Revisiting the Marshmallow Test: A Conceptual Replication Investigating Links Between Early Delay of Gratification and Later Outcomes</strong></a></h2>
-<p><strong>Discussion Questions</strong></p>
-<ol type="1">
-<li><p>What does it mean that this is a conceptual replication rather than an exact replication? What’s the difference, and why might researchers choose one over the other?</p></li>
-<li><p>How did the replication’s sample differ from the original’s, and how does that impact their findings?</p></li>
-<li><p>Based on both papers, what would you say is the actual, defensible conclusion about delay of gratification and life outcomes?</p></li>
-<li><p>If you were to conduct your own replication, how might you further improve on this study?</p></li>
-</ol>
+<section id="how-much-can-the-data-even-tell-you-fisher-information" class="level2">
+<h2 class="anchored" data-anchor-id="how-much-can-the-data-even-tell-you-fisher-information">How much can the data even tell you? — Fisher information</h2>
+<p>Before we can talk about good tests, it helps to have a sense of how much a dataset can possibly tell you about an unknown quantity. This is the intuitive role of <strong>Fisher information</strong>.</p>
+<p>Think of it this way: suppose you’re trying to estimate some unknown parameter <span class="math inline">\(\theta\)</span>. As <span class="math inline">\(\theta\)</span> changes, the probability of seeing your particular data changes too. Fisher information measures how sharply the probability of your data changes as you nudge <span class="math inline">\(\theta\)</span> around its true value.</p>
+<p>For example, imagine you’re tuning an old analog radio dial to find a station. Fisher information is like the sharpness of the signal peak: - If the station comes in crystal-clear at exactly one dial position and turns to static the instant you move the dial even slightly, the peak is very sharp. It’s easy to pin down the right setting precisely — this corresponds to <strong>high Fisher information</strong>. - If the station sounds almost equally decent across a wide range of dial positions, the peak is flat. You could be off by a lot and barely notice — this corresponds to <strong>low Fisher information</strong>.</p>
+<p>A few consequences fall out of this picture almost for free, without needing formulas:</p>
+<ul>
+<li><strong>More data generally means more (sharper) information.</strong></li>
+<li><strong>High Fisher information means your best possible estimate of <span class="math inline">\(\theta\)</span> will be precise</strong> (a low-variance estimator is achievable). Low Fisher information means even your best estimator will be noisy. This relationship — more information caps how much uncertainty you’re stuck with — is formalized by a result called the <strong>Cramer–Rao bound</strong>.</li>
+<li><strong>Fisher information also drives how good a hypothesis test can be.</strong> A test is really just a decision built on top of an estimate. If the data barely distinguishes nearby values of <span class="math inline">\(\theta\)</span> (low information), it will also barely distinguish <span class="math inline">\(H_0\)</span> from a nearby <span class="math inline">\(H_1\)</span>, and no clever test design can fix that — it’s a property of the data-generating process itself, not of your method.</li>
+</ul>
+<p>You don’t need the formula to use this intuition, but for completeness: Fisher information is formally defined as the expected curvature (technically, the negative expected second derivative) of the log-likelihood function around the true parameter value.</p>
+</section>
+<section id="what-makes-a-test-best-power" class="level2">
+<h2 class="anchored" data-anchor-id="what-makes-a-test-best-power">What makes a test “best”? — Power</h2>
+<p>If we fix how many false alarms we’re willing to tolerate (<span class="math inline">\(\alpha\)</span>), the natural next question is: <strong>among all tests with that same false-alarm rate, which one is best at catching real effects when they exist?</strong></p>
+<p>The probability that a test correctly rejects <span class="math inline">\(H_0\)</span> when <span class="math inline">\(H_1\)</span> is actually true is called the test’s <strong>power</strong>. Power isn’t a single number — it typically depends on how far the truth is from <span class="math inline">\(H_0\)</span>. A test might have great power for detecting a huge effect but poor power for detecting a subtle one. This is usually visualized with a <strong>power curve</strong>: power on the vertical axis, “true distance from <span class="math inline">\(H_0\)</span>” on the horizontal axis.</p>
+</section>
+<section id="a-metal-detector-analogy" class="level2">
+<h2 class="anchored" data-anchor-id="a-metal-detector-analogy">A metal-detector analogy</h2>
+<p>Think of power like a metal detector at the beach.</p>
+<ul>
+<li><span class="math inline">\(\alpha\)</span> is how sensitive you’ve set the machine to beep on plain sand (false alarms you’ve agreed to tolerate).</li>
+<li>Power is the probability it beeps when there really is a coin buried at some depth.</li>
+<li>A shallow coin (a big, obvious effect) is easy to detect — power near 1.</li>
+<li>A deeply buried coin (a tiny, subtle effect) is hard to detect — power might be low even with a good machine.</li>
+<li>A bigger, more sensitive metal detector (more data, or less noisy measurements — i.e., <strong>higher Fisher information</strong>) raises the whole power curve.</li>
+</ul>
+<section id="uniformly-most-powerful-ump-tests" class="level3">
+<h3 class="anchored" data-anchor-id="uniformly-most-powerful-ump-tests">Uniformly Most Powerful (UMP) tests</h3>
+<p>A test is called <strong>Uniformly Most Powerful (UMP)</strong> at level <span class="math inline">\(\alpha\)</span> if it has the highest possible power against <em>every single</em> alternative value of <span class="math inline">\(\theta\)</span> simultaneously, among all tests with that same <span class="math inline">\(\alpha\)</span>.</p>
+<p>The word “uniformly” is doing real work here — it means “no matter which specific alternative you check against, this test wins (or ties).” That’s a very strong requirement:</p>
+<p>A UMP test is is a remarkable, somewhat rare situation. It tends to happen only in “nice,” simple settings. A good example is when when you’re comparing one specific value of <span class="math inline">\(\theta\)</span> against alternatives that all sit on one side of it (a <strong>one-sided test</strong>, e.g., <span class="math inline">\(H_0: \theta \le \theta_0\)</span> vs.&nbsp;<span class="math inline">\(H_1: \theta &gt; \theta_0\)</span>), in models with a well-behaved structure (a <strong>monotone likelihood ratio</strong>).</p>
+<p>When alternatives sit on both sides (a <strong>two-sided test</strong>, <span class="math inline">\(H_1: \theta \ne \theta_0\)</span>), a single test almost never dominates every alternative in both directions at once. UMP tests generally fail to exist in the two-sided case, which is why two-sided testing usually settles for a good, sensible compromise test rather than a provably-best one.</p>
+</section>
+</section>
+<section id="the-neymanpearson-lemma-heuristically" class="level2">
+<h2 class="anchored" data-anchor-id="the-neymanpearson-lemma-heuristically">The Neyman–Pearson Lemma (heuristically)</h2>
+<p>So how do you actually <em>build</em> a most-powerful test, at least when comparing one simple hypothesis to another? This is exactly what the <strong>Neyman–Pearson Lemma</strong> answers.</p>
+<p>Suppose you must choose between exactly two fully specified possibilities: <span class="math inline">\(H_0: \theta = \theta_0\)</span> versus <span class="math inline">\(H_1: \theta = \theta_1\)</span>. For any dataset you might observe, you can ask: “how much more likely is this data under <span class="math inline">\(H_1\)</span> than under <span class="math inline">\(H_0\)</span>?” That ratio is called the <strong>likelihood ratio</strong>.</p>
+<p>The Neyman–Pearson lemma says: <strong>the best possible test is the one that rejects <span class="math inline">\(H_0\)</span> exactly when the evidence favors <span class="math inline">\(H_1\)</span> over <span class="math inline">\(H_0\)</span> by more than some cutoff</strong> — i.e., rank every possible dataset by “how much more <span class="math inline">\(H_1\)</span>-like than <span class="math inline">\(H_0\)</span>-like is it,” and reject <span class="math inline">\(H_0\)</span> for the most extreme, most <span class="math inline">\(H_1\)</span>-favoring outcomes, until you’ve used up your allotted false-alarm budget <span class="math inline">\(\alpha\)</span>.</p>
+<p>Why is this optimal, intuitively? Because you’re spending your fixed “false alarm budget” (<span class="math inline">\(\alpha\)</span>) exactly where it buys the most power — on the outcomes that are most diagnostic of <span class="math inline">\(H_1\)</span> over <span class="math inline">\(H_0\)</span>. Any other rule for deciding when to reject would, for the same <span class="math inline">\(\alpha\)</span>, end up flagging some outcomes that are less diagnostic while ignoring others that are more diagnostic — leaving power on the table. It’s the statistical version of “spend your limited budget on the highest-value evidence first.”</p>
+<p>This simple-versus-simple result is also the conceptual seed of UMP tests: when a UMP test does exist (as in the one-sided, well-behaved cases described above), it’s usually because the likelihood-ratio test from the Neyman–Pearson lemma turns out to be the same test, no matter which specific alternative <span class="math inline">\(\theta_1\)</span> you plug in — so the one test that’s best against one alternative happens to be best against all of them simultaneously.</p>
+</section>
+<section id="putting-it-all-together" class="level2">
+<h2 class="anchored" data-anchor-id="putting-it-all-together">Putting it all together</h2>
+<p>The throughline connecting all of this is worth stating plainly:</p>
+<ul>
+<li><strong>Fisher information</strong> tells you the fundamental ceiling on how precisely your data can pin down an unknown parameter — the sharpness of the radio dial’s peak.</li>
+<li><strong>Power</strong> tells you how good a <em>specific test</em> is at detecting real effects, given that ceiling — how good your metal detector is at any given burial depth.</li>
+<li><strong>UMP tests</strong> are the (rare, special-case) tests that are simultaneously the best metal detector at every possible depth.</li>
+<li><strong>The Neyman–Pearson lemma</strong> tells you exactly how to build the best possible test when comparing two fully specified hypotheses — rank evidence by how much more it favors <span class="math inline">\(H_1\)</span> over <span class="math inline">\(H_0\)</span>, and reject in the most favoring cases — and this same likelihood-ratio logic is the reason UMP tests exist at all in the one-sided cases where they do.</li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -832,18 +775,6 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../lectures/lectures-lecture1.html" class="pagination-link" aria-label="Lecture 1">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lecture 1</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../lectures/lectures-lecture3.html" class="pagination-link" aria-label="Lecture 3">
-        <span class="nav-page-text">Lecture 3</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

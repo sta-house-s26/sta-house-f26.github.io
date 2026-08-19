@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,10 +39,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cad2a2f8a56dfe71ee895a68e79c9b9a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-bee3f57ef230264cb5270c97f1893b01.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1a0c33c7c4b7c86ab1fa693019e66ccc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -441,21 +441,21 @@ window.Quarto = {
 <p>Everything so far described the probability of outcomes before we observe any data. But research is fundamentally about updating what we believe once evidence comes in. <strong>Bayes’ rule</strong> is the formal recipe for doing that update correctly.</p>
 <section id="the-intuition-first" class="level3">
 <h3 class="anchored" data-anchor-id="the-intuition-first">The Intuition First</h3>
-<p>Suppose you’re testing patients for a rare disease. A patient tests positive. What’s the probability they actually <em>have</em> the disease?</p>
-<p>Your instinct might be “well, the test is 99% accurate, so 99%.” But this ignores something crucial: how rare the disease is in the first place. If the disease is extremely rare, most positive tests will actually be false positives from the huge pool of healthy people, not true positives from the tiny pool of sick people. Bayes’ rule is the formal machinery for combining <strong>how rare the disease is</strong> (your belief <em>before</em> the test — the <strong>prior</strong>) with <strong>how reliable the test is</strong> (the new evidence) to get the correct updated belief (the <strong>posterior</strong>).</p>
-<p>Bayes’ rule says: your <em>updated</em> belief about something should combine (1) how likely you thought it was <em>before</em> seeing the evidence, and (2) how <em>surprising</em> the evidence would be under each possible explanation. Evidence that would be very surprising if a hypothesis were false is strong evidence in favor of that hypothesis — but only relative to how believable the hypothesis was to begin with.</p>
+<p>Suppose you’re testing patients for a rare disease. A patient tests positive. What’s the probability they actually have the disease?</p>
+<p>Your instinct might be “well, the test is 99% accurate, so 99%.” But this ignores something crucial: how rare the disease is in the first place. If the disease is extremely rare, most positive tests will actually be false positives from the huge pool of healthy people, not true positives from the tiny pool of sick people. Bayes’ rule is the formal machinery for combining <strong>how rare the disease is</strong> (your belief before the test — the <strong>prior</strong>) with <strong>how reliable the test is</strong> (the new evidence) to get the correct updated belief (the <strong>posterior</strong>).</p>
+<p>Bayes’ rule says: your updated belief about something should combine (1) how likely you thought it was before seeing the evidence, and (2) how surprising the evidence would be under each possible explanation. Evidence that would be very surprising if a hypothesis were false is strong evidence in favor of that hypothesis — but only relative to how believable the hypothesis was to begin with.</p>
 </section>
 <section id="the-formula" class="level3">
 <h3 class="anchored" data-anchor-id="the-formula">The Formula</h3>
 <p><span class="math display">\[P(A \mid B) = \frac{P(B \mid A)\, P(A)}{P(B)}\]</span></p>
 <p>Read the pieces one at a time:</p>
 <ul>
-<li><span class="math inline">\(P(A)\)</span> — the <strong>prior</strong>: how likely <span class="math inline">\(A\)</span> (e.g., “has the disease”) was <em>before</em> any evidence.</li>
-<li><span class="math inline">\(P(B \mid A)\)</span> — the <strong>likelihood</strong>: how likely the evidence <span class="math inline">\(B\)</span> (e.g., “tested positive”) is, <em>assuming</em> <span class="math inline">\(A\)</span> is true.</li>
+<li><span class="math inline">\(P(A)\)</span> — the <strong>prior</strong>: how likely <span class="math inline">\(A\)</span> (e.g., “has the disease”) was before any evidence.</li>
+<li><span class="math inline">\(P(B \mid A)\)</span> — the <strong>likelihood</strong>: how likely the evidence <span class="math inline">\(B\)</span> (e.g., “tested positive”) is, assuming <span class="math inline">\(A\)</span> is true.</li>
 <li><span class="math inline">\(P(B)\)</span> — the overall probability of seeing the evidence <span class="math inline">\(B\)</span> at all, across every possible explanation (sick or healthy).</li>
 <li><span class="math inline">\(P(A \mid B)\)</span> — the <strong>posterior</strong>: your updated belief about <span class="math inline">\(A\)</span>, now that you’ve seen <span class="math inline">\(B\)</span>.</li>
 </ul>
-<p>The notation <span class="math inline">\(P(A \mid B)\)</span> is read “the probability of <span class="math inline">\(A\)</span> <em>given</em> <span class="math inline">\(B\)</span>” — it’s how we write “conditional on already knowing <span class="math inline">\(B\)</span> happened, how likely is <span class="math inline">\(A\)</span>?” This is the central idea behind everything Bayes’ rule does: it converts between <span class="math inline">\(P(B \mid A)\)</span> (which is often what we can measure directly, like test accuracy) and <span class="math inline">\(P(A \mid B)\)</span> (which is usually what we actually want to know, like “does this patient have the disease?”). These two conditional probabilities are <em>not</em> the same thing, and confusing them is one of the most common reasoning errors in applied research — Bayes’ rule exists precisely to keep them straight.</p>
+<p>The notation <span class="math inline">\(P(A \mid B)\)</span> is read “the probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span>” — it’s how we write “conditional on already knowing <span class="math inline">\(B\)</span> happened, how likely is <span class="math inline">\(A\)</span>?” This is the central idea behind everything Bayes’ rule does: it converts between <span class="math inline">\(P(B \mid A)\)</span> (which is often what we can measure directly, like test accuracy) and <span class="math inline">\(P(A \mid B)\)</span> (which is usually what we actually want to know, like “does this patient have the disease?”). These two conditional probabilities are not the same thing, and confusing them is one of the most common reasoning errors in applied research — Bayes’ rule exists precisely to keep them straight.</p>
 <p>Bayes’ rule underlies an entire branch of statistical inference (Bayesian statistics), but even researchers working in the more traditional (“frequentist”) framework rely on this logic constantly — anytime you interpret a diagnostic test, a screening tool, or evidence of any kind, you are implicitly reasoning about priors, likelihoods, and posteriors, whether or not you write the formula down.</p>
 </section>
 </section>
