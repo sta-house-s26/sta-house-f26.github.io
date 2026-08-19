@@ -139,11 +139,11 @@ Everything so far described the probability of outcomes before we observe any da
 
 ### The Intuition First
 
-Suppose you're testing patients for a rare disease. A patient tests positive. What's the probability they actually *have* the disease?
+Suppose you're testing patients for a rare disease. A patient tests positive. What's the probability they actually have the disease?
 
-Your instinct might be "well, the test is 99% accurate, so 99%." But this ignores something crucial: how rare the disease is in the first place. If the disease is extremely rare, most positive tests will actually be false positives from the huge pool of healthy people, not true positives from the tiny pool of sick people. Bayes' rule is the formal machinery for combining **how rare the disease is** (your belief *before* the test — the **prior**) with **how reliable the test is** (the new evidence) to get the correct updated belief (the **posterior**).
+Your instinct might be "well, the test is 99% accurate, so 99%." But this ignores something crucial: how rare the disease is in the first place. If the disease is extremely rare, most positive tests will actually be false positives from the huge pool of healthy people, not true positives from the tiny pool of sick people. Bayes' rule is the formal machinery for combining **how rare the disease is** (your belief before the test — the **prior**) with **how reliable the test is** (the new evidence) to get the correct updated belief (the **posterior**).
 
-Bayes' rule says: your *updated* belief about something should combine (1) how likely you thought it was *before* seeing the evidence, and (2) how *surprising* the evidence would be under each possible explanation. Evidence that would be very surprising if a hypothesis were false is strong evidence in favor of that hypothesis — but only relative to how believable the hypothesis was to begin with.
+Bayes' rule says: your updated belief about something should combine (1) how likely you thought it was before seeing the evidence, and (2) how surprising the evidence would be under each possible explanation. Evidence that would be very surprising if a hypothesis were false is strong evidence in favor of that hypothesis — but only relative to how believable the hypothesis was to begin with.
 
 ### The Formula
 
@@ -151,12 +151,12 @@ $$P(A \mid B) = \frac{P(B \mid A)\, P(A)}{P(B)}$$
 
 Read the pieces one at a time:
 
-- $P(A)$ — the **prior**: how likely $A$ (e.g., "has the disease") was *before* any evidence.
-- $P(B \mid A)$ — the **likelihood**: how likely the evidence $B$ (e.g., "tested positive") is, *assuming* $A$ is true.
+- $P(A)$ — the **prior**: how likely $A$ (e.g., "has the disease") was before any evidence.
+- $P(B \mid A)$ — the **likelihood**: how likely the evidence $B$ (e.g., "tested positive") is, assuming $A$ is true.
 - $P(B)$ — the overall probability of seeing the evidence $B$ at all, across every possible explanation (sick or healthy).
 - $P(A \mid B)$ — the **posterior**: your updated belief about $A$, now that you've seen $B$.
 
-The notation $P(A \mid B)$ is read "the probability of $A$ *given* $B$" — it's how we write "conditional on already knowing $B$ happened, how likely is $A$?" This is the central idea behind everything Bayes' rule does: it converts between $P(B \mid A)$ (which is often what we can measure directly, like test accuracy) and $P(A \mid B)$ (which is usually what we actually want to know, like "does this patient have the disease?"). These two conditional probabilities are *not* the same thing, and confusing them is one of the most common reasoning errors in applied research — Bayes' rule exists precisely to keep them straight.
+The notation $P(A \mid B)$ is read "the probability of $A$ given $B$" — it's how we write "conditional on already knowing $B$ happened, how likely is $A$?" This is the central idea behind everything Bayes' rule does: it converts between $P(B \mid A)$ (which is often what we can measure directly, like test accuracy) and $P(A \mid B)$ (which is usually what we actually want to know, like "does this patient have the disease?"). These two conditional probabilities are not the same thing, and confusing them is one of the most common reasoning errors in applied research — Bayes' rule exists precisely to keep them straight.
 
 Bayes' rule underlies an entire branch of statistical inference (Bayesian statistics), but even researchers working in the more traditional ("frequentist") framework rely on this logic constantly — anytime you interpret a diagnostic test, a screening tool, or evidence of any kind, you are implicitly reasoning about priors, likelihoods, and posteriors, whether or not you write the formula down.
 

@@ -1,0 +1,94 @@
+---
+title: "lectures-lecture4"
+format: html
+---
+
+## Why hypothesis testing exists
+
+Imagine you run a coffee shop and someone tells you, "the new espresso machine makes better lattes." You can't just take their word for it — but you also can't test every possible latte forever. You need a disciplined way to look at a limited amount of evidence and decide whether it's convincing enough to change your mind about the world.
+
+That, in one sentence, is what hypothesis testing is: **a structured procedure for deciding whether the evidence you observed is surprising enough, under a specific "boring" explanation, to abandon that boring explanation.**
+
+The "boring" explanation has a name: the **null hypothesis**, usually written $H_0$. It's the default, skeptical, nothing-interesting-is-happening claim — "the new machine is no better than the old one." The competing, more interesting claim is the **alternative hypothesis**, $H_1$ (or $H_A$) — "the new machine really is better."
+
+### The two ways to be wrong
+
+Because we're making a decision under uncertainty, there are two distinct ways things can go wrong:
+
+| | $H_0$ is actually true | $H_0$ is actually false |
+|---|---|---|
+| **We reject $H_0$** | Type I error (false alarm) | Correct decision (a "hit") |
+| **We fail to reject $H_0$** | Correct decision | Type II error (a miss) |
+
+- A **Type I error** is convicting an innocent person — crying wolf.
+- A **Type II error** is letting a guilty person go — missing a real effect.
+
+There is an unavoidable tension here: if you make it harder to convict (to protect innocent people), you will also let more guilty people go free. You cannot drive both error rates to zero at once with a fixed amount of evidence. Every hypothesis test is, in some sense, a negotiation between these two risks.
+
+We give the Type I error rate a special name and treat it as something we control in advance: the **significance level**, $\alpha$. Setting $\alpha = 0.05$ is a promise: "if the null hypothesis is really true, I'm only willing to falsely reject it 5% of the time, in the long run, across many hypothetical repetitions of this study."
+
+The **p-value** is the probability, assuming $H_0$ is true, of seeing evidence at least as extreme as what we actually observed. A small p-value means "this would have been a weird thing to see if nothing interesting were going on" — which is evidence (not proof) against $H_0$. The p-value is **not** the probability that $H_0$ is true. It's the probability of the *data* (or more extreme data), computed by *assuming* $H_0$ is true. These sound similar but are logically very different quantities — mixing them up is one of the most common errors in applied statistics.
+
+## How much can the data even tell you? — Fisher information
+
+Before we can talk about good tests, it helps to have a sense of how much a dataset can possibly tell you about an unknown quantity. This is the intuitive role of **Fisher information**.
+
+Think of it this way: suppose you're trying to estimate some unknown parameter $\theta$. As $\theta$ changes, the probability of seeing your particular data changes too. Fisher information measures how sharply the probability of your data changes as you nudge $\theta$ around its true value.
+
+For example, imagine you're tuning an old analog radio dial to find a station. Fisher information is like the sharpness of the signal peak:
+- If the station comes in crystal-clear at exactly one dial position and turns to static the instant you move the dial even slightly, the peak is very sharp. It's easy to pin down the right setting precisely — this corresponds to **high Fisher information**.
+- If the station sounds almost equally decent across a wide range of dial positions, the peak is flat. You could be off by a lot and barely notice — this corresponds to **low Fisher information**.
+
+A few consequences fall out of this picture almost for free, without needing formulas:
+
+- **More data generally means more (sharper) information.**
+- **High Fisher information means your best possible estimate of $\theta$ will be precise** (a low-variance estimator is achievable). Low Fisher information means even your best estimator will be noisy. This relationship — more information caps how much uncertainty you're stuck with — is formalized by a result called the **Cramer–Rao bound**.
+- **Fisher information also drives how good a hypothesis test can be.** A test is really just a decision built on top of an estimate. If the data barely distinguishes nearby values of $\theta$ (low information), it will also barely distinguish $H_0$ from a nearby $H_1$, and no clever test design can fix that — it's a property of the data-generating process itself, not of your method.
+
+You don't need the formula to use this intuition, but for completeness: Fisher information is formally defined as the expected curvature (technically, the negative expected second derivative) of the log-likelihood function around the true parameter value.
+
+## What makes a test "best"? — Power
+
+If we fix how many false alarms we're willing to tolerate ($\alpha$), the natural next question is: **among all tests with that same false-alarm rate, which one is best at catching real effects when they exist?**
+
+The probability that a test correctly rejects $H_0$ when $H_1$ is actually true is called the test's **power**. Power isn't a single number — it typically depends on how far the truth is from $H_0$. A test might have great power for detecting a huge effect but poor power for detecting a subtle one. This is usually visualized with a **power curve**: power on the vertical axis, "true distance from $H_0$" on the horizontal axis.
+
+## A metal-detector analogy
+Think of power like a metal detector at the beach.
+
+- $\alpha$ is how sensitive you've set the machine to beep on plain sand (false alarms you've agreed to tolerate).
+- Power is the probability it beeps when there really is a coin buried at some depth.
+- A shallow coin (a big, obvious effect) is easy to detect — power near 1.
+- A deeply buried coin (a tiny, subtle effect) is hard to detect — power might be low even with a good machine.
+- A bigger, more sensitive metal detector (more data, or less noisy measurements — i.e., **higher Fisher information**) raises the whole power curve.
+
+### Uniformly Most Powerful (UMP) tests
+
+A test is called **Uniformly Most Powerful (UMP)** at level $\alpha$ if it has the highest possible power against *every single* alternative value of $\theta$ simultaneously, among all tests with that same $\alpha$.
+
+The word "uniformly" is doing real work here — it means "no matter which specific alternative you check against, this test wins (or ties)." That's a very strong requirement:
+
+A UMP test is is a remarkable, somewhat rare situation. It tends to happen only in "nice," simple settings. A good example is when when you're comparing one specific value of $\theta$ against alternatives that all sit on one side of it (a **one-sided test**, e.g., $H_0: \theta \le \theta_0$ vs. $H_1: \theta > \theta_0$), in models with a well-behaved structure (a **monotone likelihood ratio**).
+
+When alternatives sit on both sides (a **two-sided test**, $H_1: \theta \ne \theta_0$), a single test almost never dominates every alternative in both directions at once. UMP tests generally fail to exist in the two-sided case, which is why two-sided testing usually settles for a good, sensible compromise test rather than a provably-best one.
+
+## The Neyman–Pearson Lemma (heuristically)
+
+So how do you actually *build* a most-powerful test, at least when comparing one simple hypothesis to another? This is exactly what the **Neyman–Pearson Lemma** answers.
+
+Suppose you must choose between exactly two fully specified possibilities: $H_0: \theta = \theta_0$ versus $H_1: \theta = \theta_1$. For any dataset you might observe, you can ask: "how much more likely is this data under $H_1$ than under $H_0$?" That ratio is called the **likelihood ratio**.
+
+The Neyman–Pearson lemma says: **the best possible test is the one that rejects $H_0$ exactly when the evidence favors $H_1$ over $H_0$ by more than some cutoff** — i.e., rank every possible dataset by "how much more $H_1$-like than $H_0$-like is it," and reject $H_0$ for the most extreme, most $H_1$-favoring outcomes, until you've used up your allotted false-alarm budget $\alpha$.
+
+Why is this optimal, intuitively? Because you're spending your fixed "false alarm budget" ($\alpha$) exactly where it buys the most power — on the outcomes that are most diagnostic of $H_1$ over $H_0$. Any other rule for deciding when to reject would, for the same $\alpha$, end up flagging some outcomes that are less diagnostic while ignoring others that are more diagnostic — leaving power on the table. It's the statistical version of "spend your limited budget on the highest-value evidence first."
+
+This simple-versus-simple result is also the conceptual seed of UMP tests: when a UMP test does exist (as in the one-sided, well-behaved cases described above), it's usually because the likelihood-ratio test from the Neyman–Pearson lemma turns out to be the same test, no matter which specific alternative $\theta_1$ you plug in — so the one test that's best against one alternative happens to be best against all of them simultaneously.
+
+## Putting it all together
+
+The throughline connecting all of this is worth stating plainly:
+
+- **Fisher information** tells you the fundamental ceiling on how precisely your data can pin down an unknown parameter — the sharpness of the radio dial's peak.
+- **Power** tells you how good a *specific test* is at detecting real effects, given that ceiling — how good your metal detector is at any given burial depth.
+- **UMP tests** are the (rare, special-case) tests that are simultaneously the best metal detector at every possible depth.
+- **The Neyman–Pearson lemma** tells you exactly how to build the best possible test when comparing two fully specified hypotheses — rank evidence by how much more it favors $H_1$ over $H_0$, and reject in the most favoring cases — and this same likelihood-ratio logic is the reason UMP tests exist at all in the one-sided cases where they do.
