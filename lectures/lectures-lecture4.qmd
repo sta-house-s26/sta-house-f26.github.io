@@ -74,7 +74,7 @@ When alternatives sit on both sides (a **two-sided test**, $H_1: \theta \ne \the
 
 ## The Neyman–Pearson Lemma (heuristically)
 
-So how do you actually *build* a most-powerful test, at least when comparing one simple hypothesis to another? This is exactly what the **Neyman–Pearson Lemma** answers.
+So how do you actually build a most-powerful test, at least when comparing one simple hypothesis to another? This is exactly what the **Neyman–Pearson Lemma** answers.
 
 Suppose you must choose between exactly two fully specified possibilities: $H_0: \theta = \theta_0$ versus $H_1: \theta = \theta_1$. For any dataset you might observe, you can ask: "how much more likely is this data under $H_1$ than under $H_0$?" That ratio is called the **likelihood ratio**.
 
