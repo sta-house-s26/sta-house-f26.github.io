@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>lectures-lecture5 – STA HOUSE Spring 2026</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1a0c33c7c4b7c86ab1fa693019e66ccc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="lectures-lecture5 – STA HOUSE Spring 2026">
+<meta property="og:description" content="Homepage for Statistical Methods in Research at Duke University, Fall 2026.">
+<meta property="og:site_name" content="STA HOUSE Spring 2026">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">lectures-lecture5</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../img/stahouse_hexagon.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../img/stahouse_hexagon.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
+    <a href="https://go.canvas.duke.edu/" title="Canvas" class="quarto-navigation-tool px-1" aria-label="Canvas"><i class="bi bi-megaphone"></i></a>
+    <a href="https://edstem.org/us/courses/89284/discussion" title="Ed Discussion" class="quarto-navigation-tool px-1" aria-label="Ed Discussion"><i class="bi bi-people"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Syllabus</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-team.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teaching team</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-materials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Materials</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-assignments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignments and grading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-policies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Policies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">University resources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lectures</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/lectures-lecture1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/lectures-lecture2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/lectures-lecture3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 3</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#recap-where-we-left-off" id="toc-recap-where-we-left-off" class="nav-link active" data-scroll-target="#recap-where-we-left-off">Recap: where we left off</a></li>
+  <li><a href="#the-big-picture-a-map-of-the-territory" id="toc-the-big-picture-a-map-of-the-territory" class="nav-link" data-scroll-target="#the-big-picture-a-map-of-the-territory">The big picture: a map of the territory</a></li>
+  <li><a href="#comparing-two-groups-on-a-continuous-outcome" id="toc-comparing-two-groups-on-a-continuous-outcome" class="nav-link" data-scroll-target="#comparing-two-groups-on-a-continuous-outcome">Comparing two groups on a continuous outcome</a>
+  <ul class="collapse">
+  <li><a href="#the-independent-samples-t-test" id="toc-the-independent-samples-t-test" class="nav-link" data-scroll-target="#the-independent-samples-t-test">The independent-samples t-test</a></li>
+  </ul></li>
+  <li><a href="#the-intuition-signal-versus-noise" id="toc-the-intuition-signal-versus-noise" class="nav-link" data-scroll-target="#the-intuition-signal-versus-noise">The intuition: signal versus noise</a></li>
+  <li><a href="#what-the-t-test-assumes" id="toc-what-the-t-test-assumes" class="nav-link" data-scroll-target="#what-the-t-test-assumes">What the t-test assumes</a>
+  <ul class="collapse">
+  <li><a href="#the-paired-t-test" id="toc-the-paired-t-test" class="nav-link" data-scroll-target="#the-paired-t-test">The paired t-test</a></li>
+  </ul></li>
+  <li><a href="#the-intuition-cancel-out-what-you-cant-control-for" id="toc-the-intuition-cancel-out-what-you-cant-control-for" class="nav-link" data-scroll-target="#the-intuition-cancel-out-what-you-cant-control-for">The intuition: cancel out what you can’t control for</a>
+  <ul class="collapse">
+  <li><a href="#mann-whitney-u-test-wilcoxon-rank-sum-test" id="toc-mann-whitney-u-test-wilcoxon-rank-sum-test" class="nav-link" data-scroll-target="#mann-whitney-u-test-wilcoxon-rank-sum-test">Mann-Whitney U test (Wilcoxon rank-sum test)</a></li>
+  </ul></li>
+  <li><a href="#the-intuition-forget-the-exact-numbers-just-look-at-the-ranking" id="toc-the-intuition-forget-the-exact-numbers-just-look-at-the-ranking" class="nav-link" data-scroll-target="#the-intuition-forget-the-exact-numbers-just-look-at-the-ranking">The intuition: forget the exact numbers, just look at the ranking</a>
+  <ul class="collapse">
+  <li><a href="#wilcoxon-signed-rank-test" id="toc-wilcoxon-signed-rank-test" class="nav-link" data-scroll-target="#wilcoxon-signed-rank-test">Wilcoxon signed-rank test</a></li>
+  </ul></li>
+  <li><a href="#comparing-three-or-more-groups-on-a-continuous-outcome" id="toc-comparing-three-or-more-groups-on-a-continuous-outcome" class="nav-link" data-scroll-target="#comparing-three-or-more-groups-on-a-continuous-outcome">Comparing three or more groups on a continuous outcome</a>
+  <ul class="collapse">
+  <li><a href="#one-way-anova-analysis-of-variance" id="toc-one-way-anova-analysis-of-variance" class="nav-link" data-scroll-target="#one-way-anova-analysis-of-variance">One-way ANOVA (Analysis of Variance)</a></li>
+  </ul></li>
+  <li><a href="#why-not-just-run-lots-of-t-tests-the-multiple-comparisons-problem" id="toc-why-not-just-run-lots-of-t-tests-the-multiple-comparisons-problem" class="nav-link" data-scroll-target="#why-not-just-run-lots-of-t-tests-the-multiple-comparisons-problem">Why not just run lots of t-tests? The multiple-comparisons problem</a></li>
+  <li><a href="#the-intuition-comparing-two-kinds-of-spread" id="toc-the-intuition-comparing-two-kinds-of-spread" class="nav-link" data-scroll-target="#the-intuition-comparing-two-kinds-of-spread">The intuition: comparing two kinds of “spread”</a></li>
+  <li><a href="#anova-only-tells-you-that-something-differs-not-what" id="toc-anova-only-tells-you-that-something-differs-not-what" class="nav-link" data-scroll-target="#anova-only-tells-you-that-something-differs-not-what">ANOVA only tells you that something differs, not what</a>
+  <ul class="collapse">
+  <li><a href="#kruskal-wallis-test" id="toc-kruskal-wallis-test" class="nav-link" data-scroll-target="#kruskal-wallis-test">Kruskal-Wallis test</a></li>
+  </ul></li>
+  <li><a href="#comparing-categorical-outcomes" id="toc-comparing-categorical-outcomes" class="nav-link" data-scroll-target="#comparing-categorical-outcomes">Comparing categorical outcomes</a>
+  <ul class="collapse">
+  <li><a href="#chi-square-test-two-flavors" id="toc-chi-square-test-two-flavors" class="nav-link" data-scroll-target="#chi-square-test-two-flavors">Chi-square test (two flavors)</a></li>
+  </ul></li>
+  <li><a href="#the-intuition-compare-what-you-counted-to-what-you-expected" id="toc-the-intuition-compare-what-you-counted-to-what-you-expected" class="nav-link" data-scroll-target="#the-intuition-compare-what-you-counted-to-what-you-expected">The intuition: compare what you counted to what you expected</a></li>
+  <li><a href="#when-the-chi-square-test-breaks-down" id="toc-when-the-chi-square-test-breaks-down" class="nav-link" data-scroll-target="#when-the-chi-square-test-breaks-down">When the chi-square test breaks down</a>
+  <ul class="collapse">
+  <li><a href="#fishers-exact-test" id="toc-fishers-exact-test" class="nav-link" data-scroll-target="#fishers-exact-test">Fisher’s exact test</a></li>
+  </ul></li>
+  <li><a href="#the-intuition-count-every-possible-table-exactly" id="toc-the-intuition-count-every-possible-table-exactly" class="nav-link" data-scroll-target="#the-intuition-count-every-possible-table-exactly">The intuition: count every possible table, exactly</a></li>
+  <li><a href="#putting-it-all-together-a-decision-checklist" id="toc-putting-it-all-together-a-decision-checklist" class="nav-link" data-scroll-target="#putting-it-all-together-a-decision-checklist">Putting it all together: a decision checklist</a></li>
+  <li><a href="#how-this-connects-to-hypothesis-testing" id="toc-how-this-connects-to-hypothesis-testing" class="nav-link" data-scroll-target="#how-this-connects-to-hypothesis-testing">How this connects to Hypothesis Testing</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">lectures-lecture5</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="recap-where-we-left-off" class="level2">
+<h2 class="anchored" data-anchor-id="recap-where-we-left-off">Recap: where we left off</h2>
+<p>We have the machinery of hypothesis testing — <span class="math inline">\(H_0\)</span>, <span class="math inline">\(H_1\)</span>, Type I/II errors, p-values, power, and the Neyman–Pearson logic for building a good test. Lecture 2 added confidence intervals, effect sizes, and a design-stage view of power, and showed how all of it traces back to Fisher information.</p>
+<p>Today’s lecture is about <strong>applying</strong> that machinery to one of the most common jobs in applied statistics: <strong>comparing groups.</strong> Is Drug A better than Drug B? Do three different teaching methods produce different test scores? Is a coin-flip outcome associated with which treatment a patient received?</p>
+<p>The punchline to keep in your back pocket: <strong>every test in this lecture is still just a hypothesis test</strong>, in the exact sense of Lecture 4 — a null hypothesis, a test statistic, a null distribution, a p-value. What changes from test to test is only: what kind of outcome data you have, and what structural assumptions you’re willing to make. Once you see that, the whole zoo of named tests stops looking like a pile of unrelated recipes and starts looking like one recipe with a few swappable ingredients.</p>
+<p>Before picking a test, ask: <strong>“is my outcome variable continuous (like a measurement) or categorical (like a label)?”</strong> This single fork explains most of the test names you’ll see below. A secondary question — “how many groups am I comparing, and are the groups independent or matched/paired?” — determines the rest.</p>
+</section>
+<section id="the-big-picture-a-map-of-the-territory" class="level2">
+<h2 class="anchored" data-anchor-id="the-big-picture-a-map-of-the-territory">The big picture: a map of the territory</h2>
+<p>Here is the decision structure we’ll build up over the rest of the lecture. It’s worth previewing it now so each test has a “home” as we meet it.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[What kind of outcome?] --&gt;|Continuous / numeric| B{How many groups?}
+    A --&gt;|Categorical / counts| F{Comparing what?}
+
+    B --&gt;|2 groups| C{Independent or paired?}
+    B --&gt;|3+ groups| D{Assumptions met?}
+
+    C --&gt;|Independent| C1["Assumptions OK: Independent t-test&lt;br/&gt;Violated: Mann-Whitney U"]
+    C --&gt;|Paired| C2["Assumptions OK: Paired t-test&lt;br/&gt;Violated: Wilcoxon signed-rank"]
+
+    D --&gt;|Normal-ish, equal variance| D1[One-way ANOVA]
+    D --&gt;|Violated| D2[Kruskal-Wallis]
+
+    F --&gt;|Distribution vs. expected shape| F1[Chi-square goodness-of-fit]
+    F --&gt;|Association between two categorical variables| F2{Expected cell counts large?}
+    F2 --&gt;|Yes, generally all &gt;= 5| F3[Chi-square test of independence]
+    F2 --&gt;|No, small samples/sparse table| F4["Fisher's exact test"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>We’ll now walk through each branch, always asking the same two questions: <strong>what is this test actually measuring</strong>, and <strong>what is it silently assuming?</strong></p>
+</section>
+<section id="comparing-two-groups-on-a-continuous-outcome" class="level2">
+<h2 class="anchored" data-anchor-id="comparing-two-groups-on-a-continuous-outcome">Comparing two groups on a continuous outcome</h2>
+<section id="the-independent-samples-t-test" class="level3">
+<h3 class="anchored" data-anchor-id="the-independent-samples-t-test">The independent-samples t-test</h3>
+<p><strong>Setting:</strong> You have a continuous outcome (heights, test scores, reaction times) measured on two separate, unrelated groups — e.g., a treatment group and a control group, where each subject belongs to only one group.</p>
+</section>
+</section>
+<section id="the-intuition-signal-versus-noise" class="level2">
+<h2 class="anchored" data-anchor-id="the-intuition-signal-versus-noise">The intuition: signal versus noise</h2>
+<p>The t-test is built on one core idea: <strong>is the difference between the two group averages large relative to how much the data naturally jitters around within each group?</strong></p>
+<p>Imagine comparing the average height of two basketball teams. If every player on Team A is close to 6’8” and every player on Team B is close to 6’2”, a small sample is enough to convince you the teams really differ — the “noise” (within-group spread) is small relative to the “signal” (between-group gap). But if heights within each team already range wildly from 5’10” to 7’0”, the same 6-inch gap between team averages is much less convincing — it could easily be due to who happened to get measured.</p>
+<p>This ratio-of-signal-to-noise idea is captured, with only a little math, by the t-statistic:</p>
+<p><span class="math display">\[t = \frac{\bar{x}_1 - \bar{x}_2}{\text{standard error of that difference}}\]</span></p>
+<p>The numerator is the signal (how far apart the group averages are); the denominator is essentially the noise, scaled by how much data you have. A t-statistic far from zero means the signal comfortably outpaces the noise.</p>
+</section>
+<section id="what-the-t-test-assumes" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-t-test-assumes">What the t-test assumes</h2>
+<ul>
+<li><strong>Independence</strong>: each observation doesn’t influence any other (no repeated measurements on the same subject across groups).</li>
+<li><strong>Approximate normality</strong> of the outcome within each group (or a large enough sample size that the Central Limit Theorem bails you out).</li>
+<li><strong>Equal variances</strong> across the two groups, in the classic (“Student’s”) version. In practice, most software now defaults to <strong>Welch’s t-test</strong>, a small modification that doesn’t require equal variances — a strictly safer default with almost no downside, so there’s rarely a reason not to use it.</li>
+</ul>
+<section id="the-paired-t-test" class="level3">
+<h3 class="anchored" data-anchor-id="the-paired-t-test">The paired t-test</h3>
+<p><strong>Setting:</strong> The same continuous outcome, but now the two measurements are linked — before/after measurements on the same subjects, or matched pairs (twins, matched patients).</p>
+</section>
+</section>
+<section id="the-intuition-cancel-out-what-you-cant-control-for" class="level2">
+<h2 class="anchored" data-anchor-id="the-intuition-cancel-out-what-you-cant-control-for">The intuition: cancel out what you can’t control for</h2>
+<p>If you measure the same 20 people’s blood pressure before and after a new medication, each person is their own built-in control — a naturally high-blood-pressure person will likely still be somewhat high after treatment, regardless of whether the drug worked. The <strong>paired t-test</strong> exploits this by working with the 20 within-person differences rather than the raw before/after numbers, which cancels out person-to-person variability that has nothing to do with the treatment.</p>
+<p>This is why pairing (when available) is so powerful: it strips out a whole source of noise before the comparison even starts, which — recalling Lecture 1’s Fisher information idea — effectively sharpens the “signal peak” the test has to work with.</p>
+<p>Mechanically, a paired t-test is just a one-sample t-test performed on the differences, testing whether the average difference is zero.</p>
+<section id="mann-whitney-u-test-wilcoxon-rank-sum-test" class="level3">
+<h3 class="anchored" data-anchor-id="mann-whitney-u-test-wilcoxon-rank-sum-test">Mann-Whitney U test (Wilcoxon rank-sum test)</h3>
+<p><strong>Setting:</strong> Same two-independent-groups situation as the independent t-test — but you’re worried the normality assumption is badly violated (e.g., strongly skewed data, obvious outliers, or an outcome that’s only ordinal — ranked categories like “mild / moderate / severe” rather than a true continuous measurement).</p>
+</section>
+</section>
+<section id="the-intuition-forget-the-exact-numbers-just-look-at-the-ranking" class="level2">
+<h2 class="anchored" data-anchor-id="the-intuition-forget-the-exact-numbers-just-look-at-the-ranking">The intuition: forget the exact numbers, just look at the ranking</h2>
+<p>Instead of comparing averages, the Mann-Whitney U test throws all the data (both groups combined) into one pile, <strong>ranks every observation from smallest to largest</strong>, and then asks: “if I hadn’t looked at group labels, would the ranks from Group A tend to be systematically higher or lower than the ranks from Group B?”</p>
+<p>Concretely: pick one random observation from Group A and one from Group B — what’s the probability the one from Group A is larger? Under <span class="math inline">\(H_0\)</span> (no difference), that probability should be exactly 50/50, like a fair coin flip. The Mann-Whitney U statistic essentially counts, across every possible A-vs-B pairing, how often A “wins,” and checks whether that win rate is suspiciously far from 50%.</p>
+<p>Because this test only uses the ordering of the data, not the exact numeric gaps, it’s far less sensitive to outliers or skewed distributions than the t-test — you’re trading a little bit of statistical power (when the t-test’s assumptions genuinely hold) for a lot of robustness (when they don’t). It also formally tests a slightly different, more general hypothesis than the t-test — roughly “are the two distributions shifted relative to one another?” rather than specifically “do the two means differ?” — which is part of why it works even for ordinal (ranked) rather than truly numeric data.</p>
+<section id="wilcoxon-signed-rank-test" class="level3">
+<h3 class="anchored" data-anchor-id="wilcoxon-signed-rank-test">Wilcoxon signed-rank test</h3>
+<p>The nonparametric counterpart to the paired t-test: instead of averaging the raw within-pair differences, it ranks the absolute sizes of the differences, re-attaches the original + / − signs, and asks whether the positive-ranked and negative-ranked differences are roughly balanced (as they should be under <span class="math inline">\(H_0\)</span>: no systematic before/after change) or lopsided.</p>
+</section>
+</section>
+<section id="comparing-three-or-more-groups-on-a-continuous-outcome" class="level2">
+<h2 class="anchored" data-anchor-id="comparing-three-or-more-groups-on-a-continuous-outcome">Comparing three or more groups on a continuous outcome</h2>
+<section id="one-way-anova-analysis-of-variance" class="level3">
+<h3 class="anchored" data-anchor-id="one-way-anova-analysis-of-variance">One-way ANOVA (Analysis of Variance)</h3>
+<p><strong>Setting:</strong> A continuous outcome, three or more independent groups — e.g., comparing test scores across three different teaching methods.</p>
+<p>You might reasonably ask: “why not just run a t-test on every pair of groups?” The answer is one of the most important intuitions in this lecture.</p>
+</section>
+</section>
+<section id="why-not-just-run-lots-of-t-tests-the-multiple-comparisons-problem" class="level2">
+<h2 class="anchored" data-anchor-id="why-not-just-run-lots-of-t-tests-the-multiple-comparisons-problem">Why not just run lots of t-tests? The multiple-comparisons problem</h2>
+<p>Every individual t-test carries some false-alarm risk (<span class="math inline">\(\alpha\)</span>, say 5%). If you compare 3 groups pairwise, that’s 3 separate tests; with 10 groups, it’s 45 tests. Even if no real differences exist anywhere, running enough separate 5%-risk tests makes it increasingly likely that at least one of them will show “significance” purely by chance — like rolling enough dice that someone eventually rolls a run of sixes.</p>
+<p><strong>ANOVA solves this by asking one single, combined question first</strong> — “is there evidence that any of the group means differ, considered all at once?” — controlling the overall false-alarm rate at your chosen <span class="math inline">\(\alpha\)</span> for that one big question, rather than letting it balloon across many small ones.</p>
+</section>
+<section id="the-intuition-comparing-two-kinds-of-spread" class="level2">
+<h2 class="anchored" data-anchor-id="the-intuition-comparing-two-kinds-of-spread">The intuition: comparing two kinds of “spread”</h2>
+<p>ANOVA’s core trick is right there in the name: it works by comparing two different ways of measuring variance in the data.</p>
+<ul>
+<li><strong>Between-group variance</strong>: how much do the group averages differ from the overall grand average? (If the teaching methods really matter, group averages should scatter widely around the overall mean.)</li>
+<li><strong>Within-group variance</strong>: how much do individual data points differ from their own group’s average? (This is just natural noise/spread that exists no matter what.)</li>
+</ul>
+<p>If the groups are truly different, the between-group variance should be large relative to the within-group variance — the group averages should stand out clearly above the background noise. If the groups don’t really differ, both kinds of variance should be roughly comparable, because any apparent differences between group averages are just what you’d expect from random noise alone.</p>
+<p>This ratio is the <strong>F-statistic</strong>:</p>
+<p><span class="math display">\[F = \frac{\text{between-group variance}}{\text{within-group variance}}\]</span></p>
+<p>An F-statistic much larger than 1 says “the groups are more spread out from each other than random noise alone would explain” — evidence against <span class="math inline">\(H_0\)</span> (all group means equal).</p>
+</section>
+<section id="anova-only-tells-you-that-something-differs-not-what" class="level2">
+<h2 class="anchored" data-anchor-id="anova-only-tells-you-that-something-differs-not-what">ANOVA only tells you that something differs, not what</h2>
+<p>A significant ANOVA result means “not all group means are equal” — full stop. It doesn’t say which group(s) differ from which. Follow-up <strong>post-hoc tests</strong> (which we won’t be covering) are then used to compare specific pairs of groups, while still controlling the overall false-alarm rate across all those follow-up comparisons — same multiple-comparisons logic as above, just applied one level down.</p>
+<p>ANOVA carries the same core assumptions as the t-test (normality within groups, roughly equal variances across groups, independence) — which should feel natural, since a two-group ANOVA and an independent t-test are actually mathematically equivalent (in that special case, <span class="math inline">\(F = t^2\)</span>).</p>
+<section id="kruskal-wallis-test" class="level3">
+<h3 class="anchored" data-anchor-id="kruskal-wallis-test">Kruskal-Wallis test</h3>
+<p>The natural extension of the Mann-Whitney U idea to three-or-more groups, and the nonparametric counterpart to one-way ANOVA: pool all observations across every group, rank them, and ask whether the average rank differs suspiciously across groups — without requiring normality or equal variances. Use it exactly when you’d want ANOVA but its assumptions are badly violated.</p>
+</section>
+</section>
+<section id="comparing-categorical-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="comparing-categorical-outcomes">Comparing categorical outcomes</h2>
+<p>So far, every test has assumed a continuous (or at least ordered) outcome. Now suppose your outcome is a category with no natural numeric scale — recovered/not recovered, voted yes/no/abstain, defective/not defective.</p>
+<section id="chi-square-test-two-flavors" class="level3">
+<h3 class="anchored" data-anchor-id="chi-square-test-two-flavors">Chi-square test (two flavors)</h3>
+<p>The chi-square test is really a single unifying idea used to answer two different-sounding questions.</p>
+</section>
+</section>
+<section id="the-intuition-compare-what-you-counted-to-what-you-expected" class="level2">
+<h2 class="anchored" data-anchor-id="the-intuition-compare-what-you-counted-to-what-you-expected">The intuition: compare what you counted to what you expected</h2>
+<p>In both flavors, the logic is the same: <strong>compute how many observations you’d expect to see in each category if <span class="math inline">\(H_0\)</span> were exactly true, then compare that to what you actually counted.</strong> Cells where the observed count is way off from the expected count contribute a lot of “surprise”; cells that land close to expectations contribute little. Add up the surprise, cell by cell, and you get the chi-square statistic:</p>
+<p><span class="math display">\[\chi^2 = \sum \frac{(\text{observed} - \text{expected})^2}{\text{expected}}\]</span></p>
+<p>Squaring the gaps means both “way more than expected” and “way less than expected” count as equally surprising, and dividing by the expected count keeps a given raw gap from mattering more just because that cell happened to have a bigger expected count to begin with.</p>
+<p><strong>Type 1 — goodness-of-fit:</strong> does a single categorical variable follow some hypothesized distribution? (E.g., “are these dice fair?” — expecting roughly 1/6 of rolls in each face.)</p>
+<p><strong>Type 2 — test of independence (or association):</strong> are two categorical variables related, or independent of one another? (E.g., “is smoking status associated with disease outcome?”) Here, the “expected counts” are calculated as if the two variables had no relationship at all (using each variable’s own marginal totals), and the test asks whether the actual cross-tabulated counts deviate from that no-relationship baseline.</p>
+</section>
+<section id="when-the-chi-square-test-breaks-down" class="level2">
+<h2 class="anchored" data-anchor-id="when-the-chi-square-test-breaks-down">When the chi-square test breaks down</h2>
+<p>The chi-square statistic’s connection to a clean reference (chi-square) distribution is itself only an <em>approximation</em>, and that approximation gets shaky when <strong>expected cell counts are small</strong> — a common rule of thumb is that it becomes unreliable if any expected count drops below about 5. This is precisely the gap that Fisher’s exact test fills.</p>
+<section id="fishers-exact-test" class="level3">
+<h3 class="anchored" data-anchor-id="fishers-exact-test">Fisher’s exact test</h3>
+<p><strong>Setting:</strong> Comparing two categorical variables (most commonly summarized in a 2×2 table), especially with a small sample size or sparse cells — exactly the situation where the chi-square approximation gets shaky.</p>
+</section>
+</section>
+<section id="the-intuition-count-every-possible-table-exactly" class="level2">
+<h2 class="anchored" data-anchor-id="the-intuition-count-every-possible-table-exactly">The intuition: count every possible table, exactly</h2>
+<p>Rather than relying on a large-sample approximation, Fisher’s exact test does something wonderfully literal: <strong>holding the row and column totals fixed at what you actually observed</strong>, it enumerates every single possible 2×2 table consistent with those totals, computes the exact probability of each one occurring by chance alone (using combinatorics — literally counting arrangements, the way you’d count hands of cards), and then adds up the probabilities of your observed table and every table at least as extreme.</p>
+<p>This is the same “counting arrangements” logic behind the classic motivating story for the test — the “Lady Tasting Tea” experiment, where Ronald Fisher tested whether a woman could really distinguish, by taste, whether milk or tea was poured into the cup first, by working out the exact probability of her getting her observed number of correct guesses purely by chance.</p>
+<p>Because it computes an exact probability rather than leaning on a large-sample approximation, Fisher’s exact test remains valid even with tiny samples or sparse tables — the cost is that it’s more computationally intensive (historically a real constraint, though a non-issue for modern software) and, with very small samples, can be somewhat conservative (less powerful than you might hope, since only a limited number of “at least as extreme” tables are even possible to compare against).</p>
+</section>
+<section id="putting-it-all-together-a-decision-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="putting-it-all-together-a-decision-checklist">Putting it all together: a decision checklist</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Question to ask</th>
+<th>If yes →</th>
+<th>If no →</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Is the outcome continuous/numeric?</td>
+<td>Go to the t-test / ANOVA family</td>
+<td>Go to the chi-square / Fisher’s family</td>
+</tr>
+<tr class="even">
+<td>(Continuous) Exactly 2 groups?</td>
+<td>t-test family</td>
+<td>ANOVA family</td>
+</tr>
+<tr class="odd">
+<td>(Continuous, 2 groups) Are the groups paired/matched?</td>
+<td>Paired t-test (or Wilcoxon signed-rank)</td>
+<td>Independent t-test (or Mann-Whitney U)</td>
+</tr>
+<tr class="even">
+<td>(Continuous) Is normality/equal-variance reasonable (or n large)?</td>
+<td>Use the parametric test (t-test / ANOVA)</td>
+<td>Use the rank-based alternative (Mann-Whitney U / Kruskal-Wallis)</td>
+</tr>
+<tr class="odd">
+<td>(Categorical) Testing one variable against a hypothesized distribution?</td>
+<td>Chi-square goodness-of-fit</td>
+<td>Go to the next row</td>
+</tr>
+<tr class="even">
+<td>(Categorical) Testing association between two variables, with reasonably large expected cell counts (generally ≳5)?</td>
+<td>Chi-square test of independence</td>
+<td>Fisher’s exact test</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="how-this-connects-to-hypothesis-testing" class="level2">
+<h2 class="anchored" data-anchor-id="how-this-connects-to-hypothesis-testing">How this connects to Hypothesis Testing</h2>
+<p>It’s worth being explicit that nothing new is philosophically happening here — we’re just plugging different data structures into the same engine:</p>
+<ul>
+<li><strong>Every test above still produces a p-value</strong>, interpreted exactly as in Lecture 1: “how surprising would this data be if <span class="math inline">\(H_0\)</span> (no group difference / no association) were true?”</li>
+<li><strong>Every test above has a matching effect size</strong>, and reporting it is just as important here as it was in Lecture 2: Cohen’s <span class="math inline">\(d\)</span> for t-tests, <span class="math inline">\(\eta^2\)</span> (eta-squared) for ANOVA, and <strong>Cramér’s V</strong> or an <strong>odds ratio</strong> for chi-square/Fisher’s tables. A “highly significant” chi-square result from a huge sample can still reflect a trivially small association — the same lesson from Lecture 2, just wearing a categorical-data costume.</li>
+<li><strong>Power analysis still applies to every test here</strong> — before running a study, you’d still ask “given my expected effect size and my planned sample size, is my chosen test even likely to detect a real difference if one exists?” The four-dial power picture from Lecture 2 (sample size, effect size, <span class="math inline">\(\alpha\)</span>, noise) governs a chi-square test or an ANOVA exactly as much as it governs a simple two-sample t-test.</li>
+<li><strong>The parametric/nonparametric split you saw today (t-test vs.&nbsp;Mann-Whitney, ANOVA vs.&nbsp;Kruskal-Wallis) is really a Fisher-information trade-off</strong>: parametric tests squeeze out more information — and thus more power — if their assumptions hold, because they use the full numeric structure of the data rather than just its ranks. Nonparametric tests deliberately throw away some of that structure (keeping only the ranks) in exchange for working correctly under a much wider range of real-world conditions.</li>
+</ul>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<ul>
+<li>The single biggest fork in choosing a group-comparison test is <strong>continuous vs.&nbsp;categorical outcome</strong> — that decision alone points you toward the t-test/ANOVA family or the chi-square/Fisher’s family.</li>
+<li>Within the continuous-outcome family, further ask <strong>how many groups</strong>, <strong>paired or independent</strong>, and <strong>are parametric assumptions reasonable</strong> — these three answers select among t-test, paired t-test, ANOVA, Mann-Whitney U, Wilcoxon signed-rank, and Kruskal-Wallis.</li>
+<li>Within the categorical-outcome family, ask <strong>one variable against a hypothesized shape, or association between two variables</strong> — and if the latter, whether your <strong>expected cell counts are large enough</strong> to trust the chi-square approximation, or small enough that you need Fisher’s exact test instead.</li>
+<li>All of these are hypothesis tests in the Lecture 1 sense, all deserve an accompanying effect size as in Lecture 2, and all are subject to the same power-analysis logic — the “zoo” of named tests is really one underlying idea, repeatedly adapted to different data shapes.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/sta-house-s26\.github\.io\/sta-house-f26\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2025 Liane Ma, Cooper Ruffing, John Zito</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
