@@ -3,7 +3,7 @@ title: "8/31 Lecture 2"
 format: html
 ---
 
-## Study Design
+# Study Design
 
 Today we're going to explore a few cases where real statistics were computed effectively and correctly on paper, yet completely failed their purpose. Statistics, as with most other things, depends heavily on *interpretation* – when the interpretation fails, our research is no longer sound.
 
@@ -25,7 +25,7 @@ Before we trust any findings, and thinking back to our discussion [last week](ht
 
 Replication is basically redoing a study, ideally with a bigger, more representative sample. The goal of this is to see if the original result appears once again, to help validate or question the original study's results. One of today's readings is a replication attempt of the marshmallow test. Note what differs between replication attempts, not limited to the results! Did the replication increase sample size, or change the population experimented on? How might that impact our interpretations of both studies' findings?
 
-##Study Types
+# Study Types
 
 Let's consider some types of studies. These all have their strengths and weaknesses, and although we won't go into too much depth in all of them, it is incredibly important that you do if you're planning your own study. Understanding the nature of why a study is strong and why it's weak can inform what statistics would be used.
 
