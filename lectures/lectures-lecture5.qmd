@@ -1,0 +1,183 @@
+---
+title: "lectures-lecture5"
+format: html
+---
+
+## Recap: where we left off
+We have the machinery of hypothesis testing — $H_0$, $H_1$, Type I/II errors, p-values, power, and the Neyman–Pearson logic for building a good test. Lecture 2 added confidence intervals, effect sizes, and a design-stage view of power, and showed how all of it traces back to Fisher information.
+
+Today's lecture is about **applying** that machinery to one of the most common jobs in applied statistics: **comparing groups.** Is Drug A better than Drug B? Do three different teaching methods produce different test scores? Is a coin-flip outcome associated with which treatment a patient received?
+
+The punchline to keep in your back pocket: **every test in this lecture is still just a hypothesis test**, in the exact sense of Lecture 4 — a null hypothesis, a test statistic, a null distribution, a p-value. What changes from test to test is only: what kind of outcome data you have, and what structural assumptions you're willing to make. Once you see that, the whole zoo of named tests stops looking like a pile of unrelated recipes and starts looking like one recipe with a few swappable ingredients.
+
+Before picking a test, ask: **"is my outcome variable continuous (like a measurement) or categorical (like a label)?"** This single fork explains most of the test names you'll see below. A secondary question — "how many groups am I comparing, and are the groups independent or matched/paired?" — determines the rest.
+
+## The big picture: a map of the territory
+
+Here is the decision structure we'll build up over the rest of the lecture. It's worth previewing it now so each test has a "home" as we meet it.
+
+```{mermaid}
+flowchart TD
+    A[What kind of outcome?] -->|Continuous / numeric| B{How many groups?}
+    A -->|Categorical / counts| F{Comparing what?}
+
+    B -->|2 groups| C{Independent or paired?}
+    B -->|3+ groups| D{Assumptions met?}
+
+    C -->|Independent| C1["Assumptions OK: Independent t-test<br/>Violated: Mann-Whitney U"]
+    C -->|Paired| C2["Assumptions OK: Paired t-test<br/>Violated: Wilcoxon signed-rank"]
+
+    D -->|Normal-ish, equal variance| D1[One-way ANOVA]
+    D -->|Violated| D2[Kruskal-Wallis]
+
+    F -->|Distribution vs. expected shape| F1[Chi-square goodness-of-fit]
+    F -->|Association between two categorical variables| F2{Expected cell counts large?}
+    F2 -->|Yes, generally all >= 5| F3[Chi-square test of independence]
+    F2 -->|No, small samples/sparse table| F4["Fisher's exact test"]
+```
+
+We'll now walk through each branch, always asking the same two questions: **what is this test actually measuring**, and **what is it silently assuming?**
+
+## Comparing two groups on a continuous outcome
+
+### The independent-samples t-test
+
+**Setting:** You have a continuous outcome (heights, test scores, reaction times) measured on two separate, unrelated groups — e.g., a treatment group and a control group, where each subject belongs to only one group.
+
+## The intuition: signal versus noise
+The t-test is built on one core idea: **is the difference between the two group averages large relative to how much the data naturally jitters around within each group?**
+
+Imagine comparing the average height of two basketball teams. If every player on Team A is close to 6'8" and every player on Team B is close to 6'2", a small sample is enough to convince you the teams really differ — the "noise" (within-group spread) is small relative to the "signal" (between-group gap). But if heights within each team already range wildly from 5'10" to 7'0", the same 6-inch gap between team averages is much less convincing — it could easily be due to who happened to get measured.
+
+This ratio-of-signal-to-noise idea is captured, with only a little math, by the t-statistic:
+
+$$t = \frac{\bar{x}_1 - \bar{x}_2}{\text{standard error of that difference}}$$
+
+The numerator is the signal (how far apart the group averages are); the denominator is essentially the noise, scaled by how much data you have. A t-statistic far from zero means the signal comfortably outpaces the noise.
+
+## What the t-test assumes
+- **Independence**: each observation doesn't influence any other (no repeated measurements on the same subject across groups).
+- **Approximate normality** of the outcome within each group (or a large enough sample size that the Central Limit Theorem bails you out).
+- **Equal variances** across the two groups, in the classic ("Student's") version. In practice, most software now defaults to **Welch's t-test**, a small modification that doesn't require equal variances — a strictly safer default with almost no downside, so there's rarely a reason not to use it.
+
+### The paired t-test
+
+**Setting:** The same continuous outcome, but now the two measurements are linked — before/after measurements on the same subjects, or matched pairs (twins, matched patients).
+
+## The intuition: cancel out what you can't control for
+If you measure the same 20 people's blood pressure before and after a new medication, each person is their own built-in control — a naturally high-blood-pressure person will likely still be somewhat high after treatment, regardless of whether the drug worked. The **paired t-test** exploits this by working with the 20 within-person differences rather than the raw before/after numbers, which cancels out person-to-person variability that has nothing to do with the treatment.
+
+This is why pairing (when available) is so powerful: it strips out a whole source of noise before the comparison even starts, which — recalling Lecture 1's Fisher information idea — effectively sharpens the "signal peak" the test has to work with.
+
+Mechanically, a paired t-test is just a one-sample t-test performed on the differences, testing whether the average difference is zero.
+
+### Mann-Whitney U test (Wilcoxon rank-sum test)
+
+**Setting:** Same two-independent-groups situation as the independent t-test — but you're worried the normality assumption is badly violated (e.g., strongly skewed data, obvious outliers, or an outcome that's only ordinal — ranked categories like "mild / moderate / severe" rather than a true continuous measurement).
+
+## The intuition: forget the exact numbers, just look at the ranking
+Instead of comparing averages, the Mann-Whitney U test throws all the data (both groups combined) into one pile, **ranks every observation from smallest to largest**, and then asks: "if I hadn't looked at group labels, would the ranks from Group A tend to be systematically higher or lower than the ranks from Group B?"
+
+Concretely: pick one random observation from Group A and one from Group B — what's the probability the one from Group A is larger? Under $H_0$ (no difference), that probability should be exactly 50/50, like a fair coin flip. The Mann-Whitney U statistic essentially counts, across every possible A-vs-B pairing, how often A "wins," and checks whether that win rate is suspiciously far from 50%.
+
+Because this test only uses the ordering of the data, not the exact numeric gaps, it's far less sensitive to outliers or skewed distributions than the t-test — you're trading a little bit of statistical power (when the t-test's assumptions genuinely hold) for a lot of robustness (when they don't). It also formally tests a slightly different, more general hypothesis than the t-test — roughly "are the two distributions shifted relative to one another?" rather than specifically "do the two means differ?" — which is part of why it works even for ordinal (ranked) rather than truly numeric data.
+
+### Wilcoxon signed-rank test
+
+The nonparametric counterpart to the paired t-test: instead of averaging the raw within-pair differences, it ranks the absolute sizes of the differences, re-attaches the original + / − signs, and asks whether the positive-ranked and negative-ranked differences are roughly balanced (as they should be under $H_0$: no systematic before/after change) or lopsided.
+
+## Comparing three or more groups on a continuous outcome
+
+### One-way ANOVA (Analysis of Variance)
+
+**Setting:** A continuous outcome, three or more independent groups — e.g., comparing test scores across three different teaching methods.
+
+You might reasonably ask: "why not just run a t-test on every pair of groups?" The answer is one of the most important intuitions in this lecture.
+
+## Why not just run lots of t-tests? The multiple-comparisons problem
+Every individual t-test carries some false-alarm risk ($\alpha$, say 5%). If you compare 3 groups pairwise, that's 3 separate tests; with 10 groups, it's 45 tests. Even if no real differences exist anywhere, running enough separate 5%-risk tests makes it increasingly likely that at least one of them will show "significance" purely by chance — like rolling enough dice that someone eventually rolls a run of sixes.
+
+**ANOVA solves this by asking one single, combined question first** — "is there evidence that any of the group means differ, considered all at once?" — controlling the overall false-alarm rate at your chosen $\alpha$ for that one big question, rather than letting it balloon across many small ones.
+
+## The intuition: comparing two kinds of "spread"
+ANOVA's core trick is right there in the name: it works by comparing two different ways of measuring variance in the data.
+
+- **Between-group variance**: how much do the group averages differ from the overall grand average? (If the teaching methods really matter, group averages should scatter widely around the overall mean.)
+- **Within-group variance**: how much do individual data points differ from their own group's average? (This is just natural noise/spread that exists no matter what.)
+
+If the groups are truly different, the between-group variance should be large relative to the within-group variance — the group averages should stand out clearly above the background noise. If the groups don't really differ, both kinds of variance should be roughly comparable, because any apparent differences between group averages are just what you'd expect from random noise alone.
+
+This ratio is the **F-statistic**:
+
+$$F = \frac{\text{between-group variance}}{\text{within-group variance}}$$
+
+An F-statistic much larger than 1 says "the groups are more spread out from each other than random noise alone would explain" — evidence against $H_0$ (all group means equal).
+
+## ANOVA only tells you that something differs, not what
+A significant ANOVA result means "not all group means are equal" — full stop. It doesn't say which group(s) differ from which. Follow-up **post-hoc tests** (which we won't be covering) are then used to compare specific pairs of groups, while still controlling the overall false-alarm rate across all those follow-up comparisons — same multiple-comparisons logic as above, just applied one level down.
+
+ANOVA carries the same core assumptions as the t-test (normality within groups, roughly equal variances across groups, independence) — which should feel natural, since a two-group ANOVA and an independent t-test are actually mathematically equivalent (in that special case, $F = t^2$).
+
+### Kruskal-Wallis test
+
+The natural extension of the Mann-Whitney U idea to three-or-more groups, and the nonparametric counterpart to one-way ANOVA: pool all observations across every group, rank them, and ask whether the average rank differs suspiciously across groups — without requiring normality or equal variances. Use it exactly when you'd want ANOVA but its assumptions are badly violated.
+
+## Comparing categorical outcomes
+
+So far, every test has assumed a continuous (or at least ordered) outcome. Now suppose your outcome is a category with no natural numeric scale — recovered/not recovered, voted yes/no/abstain, defective/not defective.
+
+### Chi-square test (two flavors)
+
+The chi-square test is really a single unifying idea used to answer two different-sounding questions.
+
+## The intuition: compare what you counted to what you expected
+In both flavors, the logic is the same: **compute how many observations you'd expect to see in each category if $H_0$ were exactly true, then compare that to what you actually counted.** Cells where the observed count is way off from the expected count contribute a lot of "surprise"; cells that land close to expectations contribute little. Add up the surprise, cell by cell, and you get the chi-square statistic:
+
+$$\chi^2 = \sum \frac{(\text{observed} - \text{expected})^2}{\text{expected}}$$
+
+Squaring the gaps means both "way more than expected" and "way less than expected" count as equally surprising, and dividing by the expected count keeps a given raw gap from mattering more just because that cell happened to have a bigger expected count to begin with.
+
+**Type  1 — goodness-of-fit:** does a single categorical variable follow some hypothesized distribution? (E.g., "are these dice fair?" — expecting roughly 1/6 of rolls in each face.)
+
+**Type 2 — test of independence (or association):** are two categorical variables related, or independent of one another? (E.g., "is smoking status associated with disease outcome?") Here, the "expected counts" are calculated as if the two variables had no relationship at all (using each variable's own marginal totals), and the test asks whether the actual cross-tabulated counts deviate from that no-relationship baseline.
+
+## When the chi-square test breaks down
+The chi-square statistic's connection to a clean reference (chi-square) distribution is itself only an *approximation*, and that approximation gets shaky when **expected cell counts are small** — a common rule of thumb is that it becomes unreliable if any expected count drops below about 5. This is precisely the gap that Fisher's exact test fills.
+
+### Fisher's exact test
+
+**Setting:** Comparing two categorical variables (most commonly summarized in a 2×2 table), especially with a small sample size or sparse cells — exactly the situation where the chi-square approximation gets shaky.
+
+## The intuition: count every possible table, exactly
+Rather than relying on a large-sample approximation, Fisher's exact test does something wonderfully literal: **holding the row and column totals fixed at what you actually observed**, it enumerates every single possible 2×2 table consistent with those totals, computes the exact probability of each one occurring by chance alone (using combinatorics — literally counting arrangements, the way you'd count hands of cards), and then adds up the probabilities of your observed table and every table at least as extreme.
+
+This is the same "counting arrangements" logic behind the classic motivating story for the test — the "Lady Tasting Tea" experiment, where Ronald Fisher tested whether a woman could really distinguish, by taste, whether milk or tea was poured into the cup first, by working out the exact probability of her getting her observed number of correct guesses purely by chance.
+
+Because it computes an exact probability rather than leaning on a large-sample approximation, Fisher's exact test remains valid even with tiny samples or sparse tables — the cost is that it's more computationally intensive (historically a real constraint, though a non-issue for modern software) and, with very small samples, can be somewhat conservative (less powerful than you might hope, since only a limited number of "at least as extreme" tables are even possible to compare against).
+
+## Putting it all together: a decision checklist
+
+| Question to ask | If yes → | If no → |
+|---|---|---|
+| Is the outcome continuous/numeric? | Go to the t-test / ANOVA family | Go to the chi-square / Fisher's family |
+| (Continuous) Exactly 2 groups? | t-test family | ANOVA family |
+| (Continuous, 2 groups) Are the groups paired/matched? | Paired t-test (or Wilcoxon signed-rank) | Independent t-test (or Mann-Whitney U) |
+| (Continuous) Is normality/equal-variance reasonable (or n large)? | Use the parametric test (t-test / ANOVA) | Use the rank-based alternative (Mann-Whitney U / Kruskal-Wallis) |
+| (Categorical) Testing one variable against a hypothesized distribution? | Chi-square goodness-of-fit | Go to the next row |
+| (Categorical) Testing association between two variables, with reasonably large expected cell counts (generally ≳5)? | Chi-square test of independence | Fisher's exact test |
+
+## How this connects to Hypothesis Testing
+
+It's worth being explicit that nothing new is philosophically happening here — we're just plugging different data structures into the same engine:
+
+- **Every test above still produces a p-value**, interpreted exactly as in Lecture 1: "how surprising would this data be if $H_0$ (no group difference / no association) were true?"
+- **Every test above has a matching effect size**, and reporting it is just as important here as it was in Lecture 2: Cohen's $d$ for t-tests, $\eta^2$ (eta-squared) for ANOVA, and **Cramér's V** or an **odds ratio** for chi-square/Fisher's tables. A "highly significant" chi-square result from a huge sample can still reflect a trivially small association — the same lesson from Lecture 2, just wearing a categorical-data costume.
+- **Power analysis still applies to every test here** — before running a study, you'd still ask "given my expected effect size and my planned sample size, is my chosen test even likely to detect a real difference if one exists?" The four-dial power picture from Lecture 2 (sample size, effect size, $\alpha$, noise) governs a chi-square test or an ANOVA exactly as much as it governs a simple two-sample t-test.
+- **The parametric/nonparametric split you saw today (t-test vs. Mann-Whitney, ANOVA vs. Kruskal-Wallis) is really a Fisher-information trade-off**: parametric tests squeeze out more information — and thus more power — if their assumptions hold, because they use the full numeric structure of the data rather than just its ranks. Nonparametric tests deliberately throw away some of that structure (keeping only the ranks) in exchange for working correctly under a much wider range of real-world conditions.
+
+## Summary
+
+- The single biggest fork in choosing a group-comparison test is **continuous vs. categorical outcome** — that decision alone points you toward the t-test/ANOVA family or the chi-square/Fisher's family.
+- Within the continuous-outcome family, further ask **how many groups**, **paired or independent**, and **are parametric assumptions reasonable** — these three answers select among t-test, paired t-test, ANOVA, Mann-Whitney U, Wilcoxon signed-rank, and Kruskal-Wallis.
+- Within the categorical-outcome family, ask **one variable against a hypothesized shape, or association between two variables** — and if the latter, whether your **expected cell counts are large enough** to trust the chi-square approximation, or small enough that you need Fisher's exact test instead.
+- All of these are hypothesis tests in the Lecture 1 sense, all deserve an accompanying effect size as in Lecture 2, and all are subject to the same power-analysis logic — the "zoo" of named tests is really one underlying idea, repeatedly adapted to different data shapes.
