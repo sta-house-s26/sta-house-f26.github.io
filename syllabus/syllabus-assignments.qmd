@@ -7,10 +7,10 @@ editor:
 Your final course grade will be calculated as follows:
 
 ::: center-table
-| Category      | Percentage |
-|---------------|------------|
-| Participation | 30%        |
-| Midterm Paper | 25%        |
+| Category               | Percentage |
+|------------------------|------------|
+| Participation          | 30%        |
+| Midterm Paper          | 25%        |
 | Student-Led Discussion | 45%        |
 :::
 
@@ -37,28 +37,37 @@ Each class will involve discussion of several papers that have been selected for
 This doesn't mean that if you don't speak every class you will get a 0. Non-zero variance is expected! (If you don't know what that means, hopefully you'll learn during this course.)
 :::
 
-## Midterm Paper (25%)
+## Midterm Paper (25%) – Referee Report
 
-At this point in the semester, we’ve reviewed many fundamental concepts and models in statistics. Although we still have more to cover, it’s important to reflect on and analyze some statistics on your own, and a write-up will help us accomplish this. 
+At this point in the semester, we’ve reviewed many fundamental concepts and models in statistics. Although we still have more to cover, it’s important to reflect on and analyze some statistics on your own, and a write-up will help us accomplish this.
 
-*The prompt*: 
-PPlease describe the basic mechanics of any statistical method we have encountered so far, including a simple explanation of the method, various indicators for the method, and when it should be used. Then, examine the use of the method in a published research paper that we have not seen in class and that you are not leading your discussion on. This should entail a brief overview of the article (background, topic context, motivation, variables, etc.), why the method was used, and how it supports the article’s conclusion.
+*Paper*: [Sport and longevity: an observational study of international athletes](https://link.springer.com/article/10.1007/s11357-024-01307-9)
+
+*Prompt:* Write a referee report evaluating a paper's use of statistics, as if you were a peer reviewer assessing it for a journal. You may either use the above paper, or choose a different peer-reviewed scientific paper that we have not seen in class and that you are not leading your discussion on. 
+
+::: callout-note
+## How to Write a Referee Report
+
+We recommend following this structure: [Harvard/Passalacqua guidelines for how to write a referee report](https://www.apassalacqua.net/teaching-material/guidelines-on-how-to-write-a-referee-report/)
+
+(Disregard the page count recommendations though!)
+:::
 
 Requirements:
 
--   650 word minimum.
+- 650 word minimum.
 
--   MLA formatted citations.
+- MLA formatted citations.
 
--   Due beginning of class Week 8 *7:00PM Monday 10/19*
+- Due beginning of class Week 8 *7:00PM Monday 10/19*
 
 ## Student-Led Discussions (45%)
 
-Throughout the semester, you’ll be exposed to many different methods and models used in research. However, the most important part is being able to understand how others use (or misuse them) in real research. 
+Throughout the semester, you’ll be exposed to many different methods and models used in research. However, the most important part is being able to understand how others use (or misuse them) in real research.
 
 For the last half of the semester *10/19 - 11/23*, students will sign up to lead their own journal-club style discussions on a specific statistical topic. This will require several statistical papers, discussion questions, and an optional mini-lecture.
 
-There are no limitations to what kind of paper is chosen – feel free to branch out and explore ideas we haven’t touched on or complex topics that are difficult to understand. However, the paper should be able to spark discussion/debate and should relate to your topic. 
+There are no limitations to what kind of paper is chosen – feel free to branch out and explore ideas we haven’t touched on or complex topics that are difficult to understand. However, the paper should be able to spark discussion/debate and should relate to your topic.
 
 *Prepare 5-10 potential discussion questions*, as well as your own “answers” to guide the class. Post your papers and discussion questions in the designated Canvas discussion one week before your discussion section by the *previous Monday at 11:59 PM*, so others will have time to review the material and read the paper.
 
@@ -69,5 +78,5 @@ During the actual discussion section, you are not expected to ask all the questi
 ::: callout-note
 ## Discussion Section Sign-Up
 
-Sign up to lead a discussion section [here]("https://docs.google.com/document/d/15E3fy6B_9gWY3mt9UxZHZESQ0JgNs_toBIIgD_6ZmTU/edit?usp=sharing")!
+Sign up to lead a discussion section [here](%22https://docs.google.com/document/d/15E3fy6B_9gWY3mt9UxZHZESQ0JgNs_toBIIgD_6ZmTU/edit?usp=sharing%22)!
 :::
