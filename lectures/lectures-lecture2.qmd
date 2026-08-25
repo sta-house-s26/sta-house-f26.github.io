@@ -63,7 +63,7 @@ These studies collect and analyze data on individual subjects rather than groups
 
 Both are hypothesis-generating tools that document clinical observations but cannot establish causal relationships due to the absence of a control group.
 
-#### Analytic Studies
+#### Analytic Studies - hi
 
 Analytic studies test specific hypotheses about the relationship between an exposure and an outcome, typically using a comparison group. There are three main designs:
 
