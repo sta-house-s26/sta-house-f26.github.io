@@ -102,7 +102,7 @@ When randomization is not feasible or ethical, researchers may use non-randomize
 ## Summary Table
 
 | Study Type | Category | Key Feature |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | Health Survey | Observational — Population | Descriptive, group-level |
 | Ecological Study | Observational — Population | Analytic, group-level correlation |
 | Case Report / Case Series | Observational — Individual | Descriptive, no control group |
