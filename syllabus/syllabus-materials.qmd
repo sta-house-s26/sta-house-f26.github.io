@@ -18,7 +18,6 @@ Technology use will be limited during class time to encourage active discussion 
 
 -   [This course page](https://sta-house-s26.github.io/sta-house-f26.github.io/) that you are on right now;
 -   [Canvas](https://go.canvas.duke.edu/), through which you can access...
-    -   [Ed Discussion](https://edstem.org/us/dashboard);
--   [Zoom](https://duke.zoom.us/) (e.g. for remote office hours).
+-   [Zoom](https://duke.zoom.us/) (e.g. for remote office hours as needed).
 
 If access to technology becomes a concern for you during the semester, contact the instructors immediately to discuss options.

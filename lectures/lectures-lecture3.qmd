@@ -13,7 +13,7 @@ A **probability distribution** is just a complete description of "what can happe
 
 A **random variable** is nothing more than a name we give to the outcome of some process we haven't observed yet, or whose outcome varies from instance to instance.
 
-- Flip a coin: let $X$ = 1 if heads, 0 if tails.
+- Flip a coin: let $X = 1$ if heads, 0 if tails.
 - Count the number of patients who respond to a treatment out of 50 enrolled: let $X$ = that count.
 - Measure a participant's reaction time in milliseconds: let $X$ = that time.
 
