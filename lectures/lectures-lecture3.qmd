@@ -145,6 +145,7 @@ Unlike the discrete distributions above, there's no clean "story" of counting or
 | Geometric | How many trials until the 1st success? | Wait time | $1/p$ | $(1-p)/p^2$ |
 | Negative Binomial | How many trials until the $r$-th success? | Wait time | $r/p$ | $r(1-p)/p^2$ |
 | Poisson | How many events in a fixed window at rate $\lambda$? | Count of events | $\lambda$ | $\lambda$ |
+| Hypergeometric | How many successes in $n$ draws *without replacement* from a finite population? | Count of successes | $n\frac{K}{N}$ | $n\frac{K}{N}\frac{N-K}{N}\frac{N-n}{N-1}$ |
 | Normal | Where does a continuous measurement fall? | Continuous value | $\mu$ | $\sigma^2$ |
 
 ## Bayes' Rule: Updating Beliefs With Evidence
