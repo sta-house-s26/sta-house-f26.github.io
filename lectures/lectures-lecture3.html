@@ -32,7 +32,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lectures/lectures-lecture2.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -115,7 +114,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lectures-lecture1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/lectures-lecture3.html">Lecture 3</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">9/7 Lecture 3</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -201,13 +200,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Lectures</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lectures/lectures-lecture1.html" class="sidebar-item-text sidebar-link">
@@ -218,12 +217,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../lectures/lectures-lecture2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 2</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lectures/lectures-lecture3.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Lecture 3</span></a>
   </div>
 </li>
       </ul>
@@ -248,6 +241,7 @@ window.Quarto = {
   <li><a href="#the-geometric-distribution-how-long-until-the-first-success" id="toc-the-geometric-distribution-how-long-until-the-first-success" class="nav-link" data-scroll-target="#the-geometric-distribution-how-long-until-the-first-success">The Geometric Distribution: “How long until the first success?”</a></li>
   <li><a href="#the-negative-binomial-distribution-how-long-until-the-r-th-success" id="toc-the-negative-binomial-distribution-how-long-until-the-r-th-success" class="nav-link" data-scroll-target="#the-negative-binomial-distribution-how-long-until-the-r-th-success">The Negative Binomial Distribution: “How long until the <em>r</em>-th success?”</a></li>
   <li><a href="#the-poisson-distribution-how-many-events-occur-in-a-fixed-window" id="toc-the-poisson-distribution-how-many-events-occur-in-a-fixed-window" class="nav-link" data-scroll-target="#the-poisson-distribution-how-many-events-occur-in-a-fixed-window">The Poisson Distribution: “How many events occur in a fixed window?”</a></li>
+  <li><a href="#the-hypergeometric-distribution-how-many-successes-when-sampling-without-replacement" id="toc-the-hypergeometric-distribution-how-many-successes-when-sampling-without-replacement" class="nav-link" data-scroll-target="#the-hypergeometric-distribution-how-many-successes-when-sampling-without-replacement">The Hypergeometric Distribution: “How many successes when sampling <em>without replacement</em>?”</a></li>
   </ul></li>
   <li><a href="#the-continuous-case-the-normal-distribution" id="toc-the-continuous-case-the-normal-distribution" class="nav-link" data-scroll-target="#the-continuous-case-the-normal-distribution">The Continuous Case: The Normal Distribution</a></li>
   <li><a href="#the-689599.7-rule" id="toc-the-689599.7-rule" class="nav-link" data-scroll-target="#the-689599.7-rule">The 68–95–99.7 rule</a></li>
@@ -268,7 +262,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lectures-lecture1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/lectures-lecture3.html">Lecture 3</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">9/7 Lecture 3</h1>
 </div>
@@ -296,7 +290,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="random-variables-naming-the-outcome">Random Variables: Naming the Outcome</h2>
 <p>A <strong>random variable</strong> is nothing more than a name we give to the outcome of some process we haven’t observed yet, or whose outcome varies from instance to instance.</p>
 <ul>
-<li>Flip a coin: let <span class="math inline">\(X\)</span> = 1 if heads, 0 if tails.</li>
+<li>Flip a coin: let <span class="math inline">\(X = 1\)</span> if heads, 0 if tails.</li>
 <li>Count the number of patients who respond to a treatment out of 50 enrolled: let <span class="math inline">\(X\)</span> = that count.</li>
 <li>Measure a participant’s reaction time in milliseconds: let <span class="math inline">\(X\)</span> = that time.</li>
 </ul>
@@ -362,6 +356,16 @@ window.Quarto = {
 <p><strong>Mean and variance:</strong></p>
 <p><span class="math display">\[E[X] = \lambda \qquad \text{Var}(X) = \lambda\]</span></p>
 <p><em>Intuition:</em> this is the single most distinctive feature of the Poisson distribution — the mean and variance are <em>the same number</em>. If a process averages 4 events per hour, its variance is also 4 (and so its standard deviation is 2, the square root of 4). This is a strong, testable assumption: real-world count data that is more variable than its own mean (“overdispersed”) is a signal that a plain Poisson model is too simple — which is exactly the situation where researchers often reach for the negative binomial instead.</p>
+</section>
+<section id="the-hypergeometric-distribution-how-many-successes-when-sampling-without-replacement" class="level3">
+<h3 class="anchored" data-anchor-id="the-hypergeometric-distribution-how-many-successes-when-sampling-without-replacement">The Hypergeometric Distribution: “How many successes when sampling <em>without replacement</em>?”</h3>
+<p>Every discrete distribution so far assumed independent trials — each draw doesn’t change the odds for the next one. The hypergeometric distribution is what happens when that assumption breaks: you’re drawing from a <strong>finite population without replacement</strong>, so each draw actually changes the composition of what’s left.</p>
+<p>Setup: you have a population of size <span class="math inline">\(N\)</span>, of which <span class="math inline">\(K\)</span> are “successes” (and <span class="math inline">\(N - K\)</span> are “failures”). You draw a sample of size <span class="math inline">\(n\)</span> <em>without replacement</em>, and <span class="math inline">\(X\)</span> counts how many successes end up in your sample.</p>
+<p><strong>Why “choose” shows up here too:</strong> the number of ways to get exactly <span class="math inline">\(k\)</span> successes is the number of ways to choose <span class="math inline">\(k\)</span> from the <span class="math inline">\(K\)</span> successes, <span class="math inline">\(\binom{K}{k}\)</span>, times the number of ways to choose the remaining <span class="math inline">\(n-k\)</span> draws from the <span class="math inline">\(N-K\)</span> failures, <span class="math inline">\(\binom{N-K}{n-k}\)</span>. Divide by the total number of ways to draw any <span class="math inline">\(n\)</span> items from the population, <span class="math inline">\(\binom{N}{n}\)</span>, and you get:</p>
+<p><span class="math display">\[P(X = k) = \frac{\binom{K}{k}\binom{N-K}{n-k}}{\binom{N}{n}}\]</span></p>
+<p><strong>Mean and variance:</strong></p>
+<p><span class="math display">\[E[X] = n\frac{K}{N} \qquad \text{Var}(X) = n\frac{K}{N}\cdot\frac{N-K}{N}\cdot\frac{N-n}{N-1}\]</span></p>
+<p><em>Intuition:</em> the mean looks exactly like the binomial’s (<span class="math inline">\(n\)</span> times a success proportion), because on average, sampling without replacement still centers on the same proportion of successes in the population. The variance, though, picks up an extra term, <span class="math inline">\(\frac{N-n}{N-1}\)</span>, called the <strong>finite population correction factor</strong>. It’s always less than 1, which means the hypergeometric distribution is always <em>less</em> variable than a binomial with the same <span class="math inline">\(n\)</span> and <span class="math inline">\(p = K/N\)</span>. Once you’ve drawn a few successes, there are fewer of them left to draw, which mechanically reduces uncertainty about the draws that remain. As <span class="math inline">\(N\)</span> grows very large relative to <span class="math inline">\(n\)</span> (population much bigger than sample), this correction factor approaches 1 and the hypergeometric distribution converges to the binomial, and removing one item barely changes the remaining proportions, so “without replacement” stops mattering in practice.</p>
 </section>
 </section>
 <section id="the-continuous-case-the-normal-distribution" class="level2">
@@ -881,20 +885,11 @@ window.Quarto = {
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../lectures/lectures-lecture2.html" class="pagination-link" aria-label="Lecture 2">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lecture 2</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© Copyright 2025 Liane Ma, Cooper Ruffing, John Zito</p>
+<p>© Copyright 2026 Liane Ma, Cooper Ruffing, John Zito</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

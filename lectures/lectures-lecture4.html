@@ -219,12 +219,6 @@ window.Quarto = {
  <span class="menu-text">Lecture 2</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lectures/lectures-lecture3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 3</span></a>
-  </div>
-</li>
       </ul>
   </li>
     </ul>
@@ -249,6 +243,10 @@ window.Quarto = {
   </ul></li>
   <li><a href="#the-neymanpearson-lemma-heuristically" id="toc-the-neymanpearson-lemma-heuristically" class="nav-link" data-scroll-target="#the-neymanpearson-lemma-heuristically">The Neyman–Pearson Lemma (heuristically)</a></li>
   <li><a href="#putting-it-all-together" id="toc-putting-it-all-together" class="nav-link" data-scroll-target="#putting-it-all-together">Putting it all together</a></li>
+  <li><a href="#the-problem-with-asking-too-many-questions" id="toc-the-problem-with-asking-too-many-questions" class="nav-link" data-scroll-target="#the-problem-with-asking-too-many-questions">The problem with asking too many questions</a></li>
+  <li><a href="#researcher-degrees-of-freedom" id="toc-researcher-degrees-of-freedom" class="nav-link" data-scroll-target="#researcher-degrees-of-freedom">Researcher degrees of freedom</a></li>
+  <li><a href="#significant-doesnt-mean-big-or-important" id="toc-significant-doesnt-mean-big-or-important" class="nav-link" data-scroll-target="#significant-doesnt-mean-big-or-important">“Significant” doesn’t mean “big” or “important”</a></li>
+  <li><a href="#why-one-significant-result-isnt-the-end-of-the-story" id="toc-why-one-significant-result-isnt-the-end-of-the-story" class="nav-link" data-scroll-target="#why-one-significant-result-isnt-the-end-of-the-story">Why one significant result isn’t the end of the story</a></li>
   </ul>
 </nav>
     </div>
@@ -363,13 +361,50 @@ window.Quarto = {
 </section>
 <section id="putting-it-all-together" class="level2">
 <h2 class="anchored" data-anchor-id="putting-it-all-together">Putting it all together</h2>
-<p>The throughline connecting all of this is worth stating plainly:</p>
+<p>In simple terms, here’s what we’ve talked about today:</p>
 <ul>
 <li><strong>Fisher information</strong> tells you the fundamental ceiling on how precisely your data can pin down an unknown parameter — the sharpness of the radio dial’s peak.</li>
 <li><strong>Power</strong> tells you how good a <em>specific test</em> is at detecting real effects, given that ceiling — how good your metal detector is at any given burial depth.</li>
 <li><strong>UMP tests</strong> are the (rare, special-case) tests that are simultaneously the best metal detector at every possible depth.</li>
 <li><strong>The Neyman–Pearson lemma</strong> tells you exactly how to build the best possible test when comparing two fully specified hypotheses — rank evidence by how much more it favors <span class="math inline">\(H_1\)</span> over <span class="math inline">\(H_0\)</span>, and reject in the most favoring cases — and this same likelihood-ratio logic is the reason UMP tests exist at all in the one-sided cases where they do.</li>
 </ul>
+<p>Everything so far has assumed that we get <strong>one guess, made in advance, checked once.</strong> That’s a much bigger assumption than it sounds like. The rest of this lecture is about what happens when that assumption breaks — which, in real research, is most of the time.</p>
+</section>
+<section id="the-problem-with-asking-too-many-questions" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-with-asking-too-many-questions">The problem with asking too many questions</h2>
+<p>Let’s say I hand you a coin and ask you to flip it 5 times. If it comes up heads all 5 times, you win. Pretty unlikely — about a 3% chance.</p>
+<p>Now here’s a different game. I hand you 20 different coins, and you get to flip each one 5 times. If <em>any single coin</em> comes up heads all 5 times, you win. Suddenly your odds of winning are much better — not because any one coin got luckier, but because you gave luck 20 chances to show up instead of one.</p>
+<p>This is the whole idea behind the <strong>multiple comparisons problem</strong>, and it’s one of the most important ideas in this class: <strong>the more things you check, the more likely you are to stumble onto something that looks meaningful purely by accident — even when nothing real is going on at all.</strong></p>
+<p>In research terms, a “5% chance of a false alarm” (that’s what <span class="math inline">\(\alpha = 0.05\)</span> means) sounds small and safe — for <em>one</em> test. But if a study quietly runs 20 different tests and only publishes the one that “worked,” you’re not looking at a 5%-risk finding anymore. You’re looking at something much closer to a coin flip’s worth of risk that it’s a fluke, written out to look like a rare and exciting result.</p>
+<p><strong>Why this matters in practice:</strong> any time a study measures a <em>lot</em> of things — dozens of outcomes, thousands of tiny regions of the brain, hundreds of genes — and only reports the ones that “came out significant,” you should immediately ask: how many things did they check in total, and did they account for that?</p>
+<p><strong>How researchers try to fix it</strong> — you don’t need the formulas, just the idea: - One approach is to say: “we want to be very sure we don’t get <em>even one</em> false alarm across the whole batch of tests” — and so we make each individual test much stricter to compensate. This is like raising the bar so high on every coin that beating it by luck alone becomes rare even with 20 coins in play. - A different, more relaxed approach is to say: “we’re going to run a lot of tests, and we accept that some fraction of our ‘hits’ will turn out to be false alarms — we just want to know roughly what that fraction is, so we’re not fooling ourselves.” This is common when you’re deliberately doing a big fishing expedition (like scanning thousands of genes) and a few false leads are an acceptable cost of casting a wide net.</p>
+</section>
+<section id="researcher-degrees-of-freedom" class="level2">
+<h2 class="anchored" data-anchor-id="researcher-degrees-of-freedom">Researcher degrees of freedom</h2>
+<p>Here’s the twist that trips people up: you don’t need to literally run 20 separate, clearly-labeled tests to fall into this trap. It can happen invisibly, inside what looks like a single, honest study.</p>
+<p>Imagine a researcher collects data and now has to make a bunch of small decisions before they get their final result:</p>
+<ul>
+<li>Which of the several things they measured should they report as “the” outcome?</li>
+<li>Should they throw out a few weird data points, and by what rule?</li>
+<li>Should they check men and women separately? Younger and older participants separately?</li>
+<li>Should they keep collecting more data and peek at the result every few days, stopping as soon as it looks good?</li>
+</ul>
+<p>None of these choices is dishonest on its own — they can all sound like completely reasonable judgment calls. But each decision point is secretly another coin flip. If the researcher (even without meaning to) tends to make whichever choice makes the result look a little more exciting, they’ve quietly run something like 20 hidden tests and just shown you the one that worked — without ever calling it “20 tests.”</p>
+<p><strong>The fix</strong>, in plain terms: decide your whole plan — what you’re measuring, how many people you’ll test, which rules you’ll use to exclude data — <em>before</em> you ever look at the results, and then don’t deviate. Write it down publicly in advance (this is called <strong>pre-registration</strong>). It’s the equivalent of picking your path through the maze with a blindfold on, before you can see which way looks shiny.</p>
+</section>
+<section id="significant-doesnt-mean-big-or-important" class="level2">
+<h2 class="anchored" data-anchor-id="significant-doesnt-mean-big-or-important">“Significant” doesn’t mean “big” or “important”</h2>
+<p>Statistical significance and practical importance are two different questions, and a p-value only answers the first one. The p-value tells you how surprising your data would be <em>if</em> <span class="math inline">\(H_0\)</span> were exactly true. It says nothing about the magnitude of the effect itself.</p>
+<p>The reason these come apart is sample size. A test statistic (like a t-statistic) is roughly: <strong>(observed effect) / (standard error of that effect)</strong>. Standard error shrinks as sample size grows — usually proportional to <span class="math inline">\(1/\sqrt{n}\)</span>. That means as <span class="math inline">\(n\)</span> increases, the denominator keeps getting smaller, so even a fixed, tiny true effect will eventually push the test statistic large enough to cross your significance threshold. With enough data, you can get a significant result for an effect too small to matter in any practical sense. Conversely, with a small <span class="math inline">\(n\)</span>, standard error is large, and even a substantial true effect can fail to produce a significant result — a Type II error driven by low power, not by the absence of a real effect.</p>
+<p>This is why researchers report <strong>effect size</strong> alongside significance — a standardized measure of <em>how large</em> the effect actually is, independent of sample size. Common ones: - <strong>Cohen’s <span class="math inline">\(d\)</span></strong>: the difference between two group means, expressed in standard deviation units. A <span class="math inline">\(d\)</span> of 0.2 is conventionally “small,” 0.5 “medium,” 0.8 “large” — though these benchmarks are field-dependent and shouldn’t be applied blindly. - <strong><span class="math inline">\(r\)</span> or <span class="math inline">\(R^2\)</span></strong>: for correlational or regression results, how much of the variance is actually being explained.</p>
+<p>A <strong>confidence interval (CI)</strong> carries more information than either a p-value or a point estimate of effect size alone: it’s a range of values, computed from the data, such that (under repeated sampling) the procedure would capture the true parameter a specified percentage of the time — typically 95%. A narrow CI reflects a precise estimate; a wide one reflects genuine uncertainty about the effect’s magnitude, even if the interval excludes zero. Two studies can report identical p-values with very different CI widths, and the CI is usually the more informative number of the two, since it directly conveys both the estimated magnitude and the precision of that estimate.</p>
+</section>
+<section id="why-one-significant-result-isnt-the-end-of-the-story" class="level2">
+<h2 class="anchored" data-anchor-id="why-one-significant-result-isnt-the-end-of-the-story">Why one significant result isn’t the end of the story</h2>
+<p>A single significant finding is not, on its own, strong evidence of a real effect, for the reasons already covered: it might be one significant result out of many silently-run tests (multiple comparisons), the one path through many researcher degrees of freedom, or a real but practically negligible effect inflated in apparent importance by a large <span class="math inline">\(n\)</span>.</p>
+<p><strong>Replication</strong> is the mechanism the field relies on to sort signal from noise. If an independent team, using a pre-registered design and new data, reproduces a similar effect size and direction, that’s substantially stronger evidence than the original p-value alone — because replication is largely immune to the failure modes above. A fluke from multiple testing or a favorable path through researcher degrees of freedom is very unlikely to reproduce consistently across independent labs; a real effect, even a modest one, tends to.</p>
+<p>A closely related issue is <strong>publication bias</strong>: significant, novel findings are systematically more likely to be published than null results, which biases the <em>visible</em> literature toward overestimating both the prevalence and size of real effects. This is sometimes called the <strong>file-drawer problem</strong> — the unpublished non-significant studies sit in a file drawer rather than in a journal. Meta-analyses that aggregate results across many studies attempt to correct for this (e.g., by testing for <strong>funnel plot asymmetry</strong>, a signature that small non-significant studies are systematically missing from the published record), but the underlying incentive — journals and researchers both favoring exciting, significant results — remains a structural distortion in how evidence accumulates.</p>
+<p><strong>Takeaway:</strong> a p-value alone is a thin basis for belief. A fuller picture requires knowing how many hypotheses were tested, how much analytic flexibility went into the result, the effect size and its confidence interval, and — ideally — whether the finding has been independently replicated.</p>
 
 
 </section>
@@ -779,7 +814,7 @@ window.Quarto = {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© Copyright 2025 Liane Ma, Cooper Ruffing, John Zito</p>
+<p>© Copyright 2026 Liane Ma, Cooper Ruffing, John Zito</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
