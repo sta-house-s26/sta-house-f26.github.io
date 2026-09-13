@@ -42,8 +42,6 @@ where $n! = n \times (n-1) \times (n-2) \times \cdots \times 1$ ("n factorial") 
 
 Think of $\binom{n}{k}$ as answering: "how many different-looking outcomes give me the same *total count* of successes?" This is exactly the gap between "the probability of one specific sequence" and "the probability of a certain number of successes, in any order." The choose function bridges that gap by counting the arrangements. It shows up explicitly in the binomial and negative binomial distributions below, and implicitly everywhere we count "how many ways."
 
-You will almost never compute $\binom{n}{k}$ by hand in this course — software does it instantly (`choose(n, k)` in R, `math.comb(n, k)` in Python). What matters is recognizing *when* a problem is a counting problem in disguise.
-
 ## Mean and Variance: Two Numbers That Summarize a Distribution
 
 Before walking through specific distributions, it helps to fix ideas about the two numbers we'll report for each one.
@@ -107,6 +105,22 @@ $$E[X] = \lambda \qquad \text{Var}(X) = \lambda$$
 
 *Intuition:* this is the single most distinctive feature of the Poisson distribution — the mean and variance are *the same number*. If a process averages 4 events per hour, its variance is also 4 (and so its standard deviation is 2, the square root of 4). This is a strong, testable assumption: real-world count data that is more variable than its own mean ("overdispersed") is a signal that a plain Poisson model is too simple — which is exactly the situation where researchers often reach for the negative binomial instead.
 
+### The Hypergeometric Distribution: "How many successes when sampling *without replacement*?"
+
+Every discrete distribution so far assumed independent trials — each draw doesn't change the odds for the next one. The hypergeometric distribution is what happens when that assumption breaks: you're drawing from a **finite population without replacement**, so each draw actually changes the composition of what's left.
+
+Setup: you have a population of size $N$, of which $K$ are "successes" (and $N - K$ are "failures"). You draw a sample of size $n$ *without replacement*, and $X$ counts how many successes end up in your sample.
+
+**Why "choose" shows up here too:** the number of ways to get exactly $k$ successes is the number of ways to choose $k$ from the $K$ successes, $\binom{K}{k}$, times the number of ways to choose the remaining $n-k$ draws from the $N-K$ failures, $\binom{N-K}{n-k}$. Divide by the total number of ways to draw any $n$ items from the population, $\binom{N}{n}$, and you get:
+
+$$P(X = k) = \frac{\binom{K}{k}\binom{N-K}{n-k}}{\binom{N}{n}}$$
+
+**Mean and variance:**
+
+$$E[X] = n\frac{K}{N} \qquad \text{Var}(X) = n\frac{K}{N}\cdot\frac{N-K}{N}\cdot\frac{N-n}{N-1}$$
+
+*Intuition:* the mean looks exactly like the binomial's ($n$ times a success proportion), because on average, sampling without replacement still centers on the same proportion of successes in the population. The variance, though, picks up an extra term, $\frac{N-n}{N-1}$, called the **finite population correction factor**. It's always less than 1, which means the hypergeometric distribution is always *less* variable than a binomial with the same $n$ and $p = K/N$. Once you've drawn a few successes, there are fewer of them left to draw, which mechanically reduces uncertainty about the draws that remain. As $N$ grows very large relative to $n$ (population much bigger than sample), this correction factor approaches 1 and the hypergeometric distribution converges to the binomial, and removing one item barely changes the remaining proportions, so "without replacement" stops mattering in practice.
+
 ## The Continuous Case: The Normal Distribution
 
 Every distribution so far counted something discrete. The **normal distribution** (also called the Gaussian, or "bell curve") is the workhorse continuous distribution in research, used to model quantities that can vary smoothly: height, blood pressure, measurement error, standardized test scores, and — critically for later in this course — the sampling distributions of many statistics themselves (a preview of the Central Limit Theorem, which you'll meet properly in the hypothesis testing unit).
@@ -166,20 +180,17 @@ Bayes' rule underlies an entire branch of statistical inference (Bayesian statis
 
 **Discussion Questions**
 
-1.  
+1.  What is the significance of the normal distribution? 
 
-2.  
-
-3.  
+2.  What do we need to do before deciding on a distribution?
 
 ## [**The Hot (Invisible?) Hand: Can Time Sequence Patterns of Success/Failure in Sports Be Modeled as Repeated Random Independent Trials?**](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0024532&type=printable)
 
 **Discussion Questions**
 
-1.  
+1.  Describe non-stationarity versus conditional probability. Why is non-stationarity essential to this paper?
 
-2.  
+2.  Describe the effect that Kevin Martin and Dwight Howard have when aggregated versus separate. Why is this, and how do the authors work around it?
 
-3.  
+3.  What sorts of distributions are used? Why are they selected?
 
-## 
