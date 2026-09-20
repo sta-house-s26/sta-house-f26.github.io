@@ -243,12 +243,8 @@ window.Quarto = {
   </ul></li>
   <li><a href="#how-much-can-the-data-even-tell-you-fisher-information" id="toc-how-much-can-the-data-even-tell-you-fisher-information" class="nav-link" data-scroll-target="#how-much-can-the-data-even-tell-you-fisher-information">How much can the data even tell you? — Fisher information</a></li>
   <li><a href="#what-makes-a-test-best-power" id="toc-what-makes-a-test-best-power" class="nav-link" data-scroll-target="#what-makes-a-test-best-power">What makes a test “best”? — Power</a></li>
-  <li><a href="#a-metal-detector-analogy" id="toc-a-metal-detector-analogy" class="nav-link" data-scroll-target="#a-metal-detector-analogy">A metal-detector analogy</a>
-  <ul class="collapse">
-  <li><a href="#uniformly-most-powerful-ump-tests" id="toc-uniformly-most-powerful-ump-tests" class="nav-link" data-scroll-target="#uniformly-most-powerful-ump-tests">Uniformly Most Powerful (UMP) tests</a></li>
-  </ul></li>
-  <li><a href="#the-neymanpearson-lemma-heuristically" id="toc-the-neymanpearson-lemma-heuristically" class="nav-link" data-scroll-target="#the-neymanpearson-lemma-heuristically">The Neyman–Pearson Lemma (heuristically)</a></li>
-  <li><a href="#putting-it-all-together" id="toc-putting-it-all-together" class="nav-link" data-scroll-target="#putting-it-all-together">Putting it all together</a></li>
+  <li><a href="#a-metal-detector-analogy" id="toc-a-metal-detector-analogy" class="nav-link" data-scroll-target="#a-metal-detector-analogy">A metal-detector analogy</a></li>
+  <li><a href="#a-summary" id="toc-a-summary" class="nav-link" data-scroll-target="#a-summary">A summary!</a></li>
   <li><a href="#the-problem-with-asking-too-many-questions" id="toc-the-problem-with-asking-too-many-questions" class="nav-link" data-scroll-target="#the-problem-with-asking-too-many-questions">The problem with asking too many questions</a></li>
   <li><a href="#researcher-degrees-of-freedom" id="toc-researcher-degrees-of-freedom" class="nav-link" data-scroll-target="#researcher-degrees-of-freedom">Researcher degrees of freedom</a></li>
   <li><a href="#significant-doesnt-mean-big-or-important" id="toc-significant-doesnt-mean-big-or-important" class="nav-link" data-scroll-target="#significant-doesnt-mean-big-or-important">“Significant” doesn’t mean “big” or “important”</a></li>
@@ -285,8 +281,8 @@ window.Quarto = {
 
 <section id="why-hypothesis-testing-exists" class="level2">
 <h2 class="anchored" data-anchor-id="why-hypothesis-testing-exists">Why hypothesis testing exists</h2>
-<p>Imagine you run a coffee shop and someone tells you, “the new espresso machine makes better lattes.” You can’t just take their word for it — but you also can’t test every possible latte forever. You need a disciplined way to look at a limited amount of evidence and decide whether it’s convincing enough to change your mind about the world.</p>
-<p>That, in one sentence, is what hypothesis testing is: <strong>a structured procedure for deciding whether the evidence you observed is surprising enough, under a specific “boring” explanation, to abandon that boring explanation.</strong></p>
+<p>Imagine you run a coffee shop and someone tells you, “the new espresso machine makes better lattes.” You can’t just take their word for it — but you also can’t test every possible latte. You need a methodological way to look at a limited amount of evidence and decide whether it’s convincing enough to change your mind about the world.</p>
+<p>That is what <strong>hypothesis testing</strong> is: a structured procedure for deciding whether the evidence you observed is surprising enough, under a specific “boring” explanation, to abandon that boring explanation.</p>
 <p>The “boring” explanation has a name: the <strong>null hypothesis</strong>, usually written <span class="math inline">\(H_0\)</span>. It’s the default, skeptical, nothing-interesting-is-happening claim — “the new machine is no better than the old one.” The competing, more interesting claim is the <strong>alternative hypothesis</strong>, <span class="math inline">\(H_1\)</span> (or <span class="math inline">\(H_A\)</span>) — “the new machine really is better.”</p>
 <section id="the-two-ways-to-be-wrong" class="level3">
 <h3 class="anchored" data-anchor-id="the-two-ways-to-be-wrong">The two ways to be wrong</h3>
@@ -318,7 +314,7 @@ window.Quarto = {
 </tbody>
 </table>
 <ul>
-<li>A <strong>Type I error</strong> is convicting an innocent person — crying wolf.</li>
+<li>A <strong>Type I error</strong> is convicting an innocent person — the boy who cried wolf.</li>
 <li>A <strong>Type II error</strong> is letting a guilty person go — missing a real effect.</li>
 </ul>
 <p>There is an unavoidable tension here: if you make it harder to convict (to protect innocent people), you will also let more guilty people go free. You cannot drive both error rates to zero at once with a fixed amount of evidence. Every hypothesis test is, in some sense, a negotiation between these two risks.</p>
@@ -357,30 +353,13 @@ window.Quarto = {
 <li>A deeply buried coin (a tiny, subtle effect) is hard to detect — power might be low even with a good machine.</li>
 <li>A bigger, more sensitive metal detector (more data, or less noisy measurements — i.e., <strong>higher Fisher information</strong>) raises the whole power curve.</li>
 </ul>
-<section id="uniformly-most-powerful-ump-tests" class="level3">
-<h3 class="anchored" data-anchor-id="uniformly-most-powerful-ump-tests">Uniformly Most Powerful (UMP) tests</h3>
-<p>A test is called <strong>Uniformly Most Powerful (UMP)</strong> at level <span class="math inline">\(\alpha\)</span> if it has the highest possible power against <em>every single</em> alternative value of <span class="math inline">\(\theta\)</span> simultaneously, among all tests with that same <span class="math inline">\(\alpha\)</span>.</p>
-<p>The word “uniformly” is doing real work here — it means “no matter which specific alternative you check against, this test wins (or ties).” That’s a very strong requirement:</p>
-<p>A UMP test is is a remarkable, somewhat rare situation. It tends to happen only in “nice,” simple settings. A good example is when when you’re comparing one specific value of <span class="math inline">\(\theta\)</span> against alternatives that all sit on one side of it (a <strong>one-sided test</strong>, e.g., <span class="math inline">\(H_0: \theta \le \theta_0\)</span> vs.&nbsp;<span class="math inline">\(H_1: \theta &gt; \theta_0\)</span>), in models with a well-behaved structure (a <strong>monotone likelihood ratio</strong>).</p>
-<p>When alternatives sit on both sides (a <strong>two-sided test</strong>, <span class="math inline">\(H_1: \theta \ne \theta_0\)</span>), a single test almost never dominates every alternative in both directions at once. UMP tests generally fail to exist in the two-sided case, which is why two-sided testing usually settles for a good, sensible compromise test rather than a provably-best one.</p>
 </section>
-</section>
-<section id="the-neymanpearson-lemma-heuristically" class="level2">
-<h2 class="anchored" data-anchor-id="the-neymanpearson-lemma-heuristically">The Neyman–Pearson Lemma (heuristically)</h2>
-<p>So how do you actually build a most-powerful test, at least when comparing one simple hypothesis to another? This is exactly what the <strong>Neyman–Pearson Lemma</strong> answers.</p>
-<p>Suppose you must choose between exactly two fully specified possibilities: <span class="math inline">\(H_0: \theta = \theta_0\)</span> versus <span class="math inline">\(H_1: \theta = \theta_1\)</span>. For any dataset you might observe, you can ask: “how much more likely is this data under <span class="math inline">\(H_1\)</span> than under <span class="math inline">\(H_0\)</span>?” That ratio is called the <strong>likelihood ratio</strong>.</p>
-<p>The Neyman–Pearson lemma says: <strong>the best possible test is the one that rejects</strong> <span class="math inline">\(H_0\)</span> exactly when the evidence favors <span class="math inline">\(H_1\)</span> over <span class="math inline">\(H_0\)</span> by more than some cutoff — i.e., rank every possible dataset by “how much more <span class="math inline">\(H_1\)</span>-like than <span class="math inline">\(H_0\)</span>-like is it,” and reject <span class="math inline">\(H_0\)</span> for the most extreme, most <span class="math inline">\(H_1\)</span>-favoring outcomes, until you’ve used up your allotted false-alarm budget <span class="math inline">\(\alpha\)</span>.</p>
-<p>Why is this optimal, intuitively? Because you’re spending your fixed “false alarm budget” (<span class="math inline">\(\alpha\)</span>) exactly where it buys the most power — on the outcomes that are most diagnostic of <span class="math inline">\(H_1\)</span> over <span class="math inline">\(H_0\)</span>. Any other rule for deciding when to reject would, for the same <span class="math inline">\(\alpha\)</span>, end up flagging some outcomes that are less diagnostic while ignoring others that are more diagnostic — leaving power on the table. It’s the statistical version of “spend your limited budget on the highest-value evidence first.”</p>
-<p>This simple-versus-simple result is also the conceptual seed of UMP tests: when a UMP test does exist (as in the one-sided, well-behaved cases described above), it’s usually because the likelihood-ratio test from the Neyman–Pearson lemma turns out to be the same test, no matter which specific alternative <span class="math inline">\(\theta_1\)</span> you plug in — so the one test that’s best against one alternative happens to be best against all of them simultaneously.</p>
-</section>
-<section id="putting-it-all-together" class="level2">
-<h2 class="anchored" data-anchor-id="putting-it-all-together">Putting it all together</h2>
+<section id="a-summary" class="level2">
+<h2 class="anchored" data-anchor-id="a-summary">A summary!</h2>
 <p>In simple terms, here’s what we’ve talked about today:</p>
 <ul>
 <li><strong>Fisher information</strong> tells you the fundamental ceiling on how precisely your data can pin down an unknown parameter — the sharpness of the radio dial’s peak.</li>
 <li><strong>Power</strong> tells you how good a <em>specific test</em> is at detecting real effects, given that ceiling — how good your metal detector is at any given burial depth.</li>
-<li><strong>UMP tests</strong> are the (rare, special-case) tests that are simultaneously the best metal detector at every possible depth.</li>
-<li><strong>The Neyman–Pearson lemma</strong> tells you exactly how to build the best possible test when comparing two fully specified hypotheses — rank evidence by how much more it favors <span class="math inline">\(H_1\)</span> over <span class="math inline">\(H_0\)</span>, and reject in the most favoring cases — and this same likelihood-ratio logic is the reason UMP tests exist at all in the one-sided cases where they do.</li>
 </ul>
 <p>Everything so far has assumed that we get <strong>one guess, made in advance, checked once.</strong> That’s a much bigger assumption than it sounds like. The rest of this lecture is about what happens when that assumption breaks — which, in real research, is most of the time.</p>
 </section>
@@ -392,6 +371,7 @@ window.Quarto = {
 <p>In research terms, a “5% chance of a false alarm” (that’s what <span class="math inline">\(\alpha = 0.05\)</span> means) sounds small and safe — for <em>one</em> test. But if a study quietly runs 20 different tests and only publishes the one that “worked,” you’re not looking at a 5%-risk finding anymore. You’re looking at something much closer to a coin flip’s worth of risk that it’s a fluke, written out to look like a rare and exciting result.</p>
 <p><strong>Why this matters in practice:</strong> any time a study measures a <em>lot</em> of things — dozens of outcomes, thousands of tiny regions of the brain, hundreds of genes — and only reports the ones that “came out significant,” you should immediately ask: how many things did they check in total, and did they account for that?</p>
 <p><strong>How researchers try to fix it</strong> — you don’t need the formulas, just the idea: - One approach is to say: “we want to be very sure we don’t get <em>even one</em> false alarm across the whole batch of tests” — and so we make each individual test much stricter to compensate. This is like raising the bar so high on every coin that beating it by luck alone becomes rare even with 20 coins in play. - A different, more relaxed approach is to say: “we’re going to run a lot of tests, and we accept that some fraction of our ‘hits’ will turn out to be false alarms — we just want to know roughly what that fraction is, so we’re not fooling ourselves.” This is common when you’re deliberately doing a big fishing expedition (like scanning thousands of genes) and a few false leads are an acceptable cost of casting a wide net.</p>
+<p><strong>Side note: P-hacking</strong> is what happens when a researcher runs many different tests, subgroups, or analysis choices and reports only the ones that cross the p &lt; 0.05 line, which is the 20-coin game played in secret. Because the study’s true false-alarm risk is much higher than the advertised 5%, the “significant” result is often just luck that got 20 chances to show up, so you should always ask how many things were checked in total.</p>
 </section>
 <section id="researcher-degrees-of-freedom" class="level2">
 <h2 class="anchored" data-anchor-id="researcher-degrees-of-freedom">Researcher degrees of freedom</h2>
@@ -417,7 +397,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="why-one-significant-result-isnt-the-end-of-the-story">Why one significant result isn’t the end of the story</h2>
 <p>A single significant finding is not, on its own, strong evidence of a real effect, for the reasons already covered: it might be one significant result out of many silently-run tests (multiple comparisons), the one path through many researcher degrees of freedom, or a real but practically negligible effect inflated in apparent importance by a large <span class="math inline">\(n\)</span>.</p>
 <p><strong>Replication</strong> is the mechanism the field relies on to sort signal from noise. If an independent team, using a pre-registered design and new data, reproduces a similar effect size and direction, that’s substantially stronger evidence than the original p-value alone — because replication is largely immune to the failure modes above. A fluke from multiple testing or a favorable path through researcher degrees of freedom is very unlikely to reproduce consistently across independent labs; a real effect, even a modest one, tends to.</p>
-<p>A closely related issue is <strong>publication bias</strong>: significant, novel findings are systematically more likely to be published than null results, which biases the <em>visible</em> literature toward overestimating both the prevalence and size of real effects. This is sometimes called the <strong>file-drawer problem</strong> — the unpublished non-significant studies sit in a file drawer rather than in a journal. Meta-analyses that aggregate results across many studies attempt to correct for this (e.g., by testing for <strong>funnel plot asymmetry</strong>, a signature that small non-significant studies are systematically missing from the published record), but the underlying incentive — journals and researchers both favoring exciting, significant results — remains a structural distortion in how evidence accumulates.</p>
+<p>A closely related issue is <strong>publication bias</strong>: significant, novel findings are systematically more likely to be published than null results, which biases the <em>visible</em> literature toward overestimating both the prevalence and size of real effects. This is sometimes called the <strong>file-drawer problem</strong> — the unpublished non-significant studies sit in a file drawer rather than in a journal. Meta-analyses that aggregate results across many studies attempt to correct for this (e.g., by testing for funnel plot asymmetry, a signature that small non-significant studies are systematically missing from the published record), but the underlying incentive — journals and researchers both favoring exciting, significant results — remains a structural distortion in how evidence accumulates.</p>
 <p><strong>Takeaway:</strong> a p-value alone is a thin basis for belief. A fuller picture requires knowing how many hypotheses were tested, how much analytic flexibility went into the result, the effect size and its confidence interval, and — ideally — whether the finding has been independently replicated.</p>
 </section>
 <section id="discussion" class="level1">
