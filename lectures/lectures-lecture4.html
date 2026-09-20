@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -38,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cad2a2f8a56dfe71ee895a68e79c9b9a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-1a0c33c7c4b7c86ab1fa693019e66ccc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-bee3f57ef230264cb5270c97f1893b01.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -219,6 +219,12 @@ window.Quarto = {
  <span class="menu-text">Lecture 2</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/lectures-lecture3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 3</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -247,6 +253,11 @@ window.Quarto = {
   <li><a href="#researcher-degrees-of-freedom" id="toc-researcher-degrees-of-freedom" class="nav-link" data-scroll-target="#researcher-degrees-of-freedom">Researcher degrees of freedom</a></li>
   <li><a href="#significant-doesnt-mean-big-or-important" id="toc-significant-doesnt-mean-big-or-important" class="nav-link" data-scroll-target="#significant-doesnt-mean-big-or-important">“Significant” doesn’t mean “big” or “important”</a></li>
   <li><a href="#why-one-significant-result-isnt-the-end-of-the-story" id="toc-why-one-significant-result-isnt-the-end-of-the-story" class="nav-link" data-scroll-target="#why-one-significant-result-isnt-the-end-of-the-story">Why one significant result isn’t the end of the story</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a>
+  <ul class="collapse">
+  <li><a href="#cm-bennett-mb-miller-gl-wolford-neural-correlates-of-interspecies-perspective-taking-in-the-post-mortem-atlantic-salmon-an-argument-for-multiple-comparisons-correction." id="toc-cm-bennett-mb-miller-gl-wolford-neural-correlates-of-interspecies-perspective-taking-in-the-post-mortem-atlantic-salmon-an-argument-for-multiple-comparisons-correction." class="nav-link" data-scroll-target="#cm-bennett-mb-miller-gl-wolford-neural-correlates-of-interspecies-perspective-taking-in-the-post-mortem-atlantic-salmon-an-argument-for-multiple-comparisons-correction.">CM Bennett, MB Miller, GL Wolford, Neural correlates of interspecies perspective taking in the post-mortem Atlantic Salmon: an argument for multiple comparisons correction.</a></li>
+  <li><a href="#bem-dj.-feeling-the-future-experimental-evidence-for-anomalous-retroactive-influences-on-cognition-and-affect." id="toc-bem-dj.-feeling-the-future-experimental-evidence-for-anomalous-retroactive-influences-on-cognition-and-affect." class="nav-link" data-scroll-target="#bem-dj.-feeling-the-future-experimental-evidence-for-anomalous-retroactive-influences-on-cognition-and-affect.">Bem DJ. Feeling the future: experimental evidence for anomalous retroactive influences on cognition and affect.</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -295,12 +306,12 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>We reject <span class="math inline">\(H_0\)</span></strong></td>
+<td><strong>We reject</strong> <span class="math inline">\(H_0\)</span></td>
 <td>Type I error (false alarm)</td>
 <td>Correct decision (a “hit”)</td>
 </tr>
 <tr class="even">
-<td><strong>We fail to reject <span class="math inline">\(H_0\)</span></strong></td>
+<td><strong>We fail to reject</strong> <span class="math inline">\(H_0\)</span></td>
 <td>Correct decision</td>
 <td>Type II error (a miss)</td>
 </tr>
@@ -323,7 +334,7 @@ window.Quarto = {
 <p>A few consequences fall out of this picture almost for free, without needing formulas:</p>
 <ul>
 <li><strong>More data generally means more (sharper) information.</strong></li>
-<li><strong>High Fisher information means your best possible estimate of <span class="math inline">\(\theta\)</span> will be precise</strong> (a low-variance estimator is achievable). Low Fisher information means even your best estimator will be noisy. This relationship — more information caps how much uncertainty you’re stuck with — is formalized by a result called the <strong>Cramer–Rao bound</strong>.</li>
+<li><strong>High Fisher information means your best possible estimate of</strong> <span class="math inline">\(\theta\)</span> will be precise (a low-variance estimator is achievable). Low Fisher information means even your best estimator will be noisy. This relationship — more information caps how much uncertainty you’re stuck with — is formalized by a result called the <strong>Cramer–Rao bound</strong>.</li>
 <li><strong>Fisher information also drives how good a hypothesis test can be.</strong> A test is really just a decision built on top of an estimate. If the data barely distinguishes nearby values of <span class="math inline">\(\theta\)</span> (low information), it will also barely distinguish <span class="math inline">\(H_0\)</span> from a nearby <span class="math inline">\(H_1\)</span>, and no clever test design can fix that — it’s a property of the data-generating process itself, not of your method.</li>
 </ul>
 <p>You don’t need the formula to use this intuition, but for completeness: Fisher information is formally defined as the expected curvature (technically, the negative expected second derivative) of the log-likelihood function around the true parameter value.</p>
@@ -339,7 +350,10 @@ window.Quarto = {
 <ul>
 <li><span class="math inline">\(\alpha\)</span> is how sensitive you’ve set the machine to beep on plain sand (false alarms you’ve agreed to tolerate).</li>
 <li>Power is the probability it beeps when there really is a coin buried at some depth.</li>
-<li>A shallow coin (a big, obvious effect) is easy to detect — power near 1.</li>
+<li>A shallow coin (a big, obvious effect) is easy to detect — power near
+<ol type="1">
+<li></li>
+</ol></li>
 <li>A deeply buried coin (a tiny, subtle effect) is hard to detect — power might be low even with a good machine.</li>
 <li>A bigger, more sensitive metal detector (more data, or less noisy measurements — i.e., <strong>higher Fisher information</strong>) raises the whole power curve.</li>
 </ul>
@@ -355,7 +369,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="the-neymanpearson-lemma-heuristically">The Neyman–Pearson Lemma (heuristically)</h2>
 <p>So how do you actually build a most-powerful test, at least when comparing one simple hypothesis to another? This is exactly what the <strong>Neyman–Pearson Lemma</strong> answers.</p>
 <p>Suppose you must choose between exactly two fully specified possibilities: <span class="math inline">\(H_0: \theta = \theta_0\)</span> versus <span class="math inline">\(H_1: \theta = \theta_1\)</span>. For any dataset you might observe, you can ask: “how much more likely is this data under <span class="math inline">\(H_1\)</span> than under <span class="math inline">\(H_0\)</span>?” That ratio is called the <strong>likelihood ratio</strong>.</p>
-<p>The Neyman–Pearson lemma says: <strong>the best possible test is the one that rejects <span class="math inline">\(H_0\)</span> exactly when the evidence favors <span class="math inline">\(H_1\)</span> over <span class="math inline">\(H_0\)</span> by more than some cutoff</strong> — i.e., rank every possible dataset by “how much more <span class="math inline">\(H_1\)</span>-like than <span class="math inline">\(H_0\)</span>-like is it,” and reject <span class="math inline">\(H_0\)</span> for the most extreme, most <span class="math inline">\(H_1\)</span>-favoring outcomes, until you’ve used up your allotted false-alarm budget <span class="math inline">\(\alpha\)</span>.</p>
+<p>The Neyman–Pearson lemma says: <strong>the best possible test is the one that rejects</strong> <span class="math inline">\(H_0\)</span> exactly when the evidence favors <span class="math inline">\(H_1\)</span> over <span class="math inline">\(H_0\)</span> by more than some cutoff — i.e., rank every possible dataset by “how much more <span class="math inline">\(H_1\)</span>-like than <span class="math inline">\(H_0\)</span>-like is it,” and reject <span class="math inline">\(H_0\)</span> for the most extreme, most <span class="math inline">\(H_1\)</span>-favoring outcomes, until you’ve used up your allotted false-alarm budget <span class="math inline">\(\alpha\)</span>.</p>
 <p>Why is this optimal, intuitively? Because you’re spending your fixed “false alarm budget” (<span class="math inline">\(\alpha\)</span>) exactly where it buys the most power — on the outcomes that are most diagnostic of <span class="math inline">\(H_1\)</span> over <span class="math inline">\(H_0\)</span>. Any other rule for deciding when to reject would, for the same <span class="math inline">\(\alpha\)</span>, end up flagging some outcomes that are less diagnostic while ignoring others that are more diagnostic — leaving power on the table. It’s the statistical version of “spend your limited budget on the highest-value evidence first.”</p>
 <p>This simple-versus-simple result is also the conceptual seed of UMP tests: when a UMP test does exist (as in the one-sided, well-behaved cases described above), it’s usually because the likelihood-ratio test from the Neyman–Pearson lemma turns out to be the same test, no matter which specific alternative <span class="math inline">\(\theta_1\)</span> you plug in — so the one test that’s best against one alternative happens to be best against all of them simultaneously.</p>
 </section>
@@ -396,7 +410,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="significant-doesnt-mean-big-or-important">“Significant” doesn’t mean “big” or “important”</h2>
 <p>Statistical significance and practical importance are two different questions, and a p-value only answers the first one. The p-value tells you how surprising your data would be <em>if</em> <span class="math inline">\(H_0\)</span> were exactly true. It says nothing about the magnitude of the effect itself.</p>
 <p>The reason these come apart is sample size. A test statistic (like a t-statistic) is roughly: <strong>(observed effect) / (standard error of that effect)</strong>. Standard error shrinks as sample size grows — usually proportional to <span class="math inline">\(1/\sqrt{n}\)</span>. That means as <span class="math inline">\(n\)</span> increases, the denominator keeps getting smaller, so even a fixed, tiny true effect will eventually push the test statistic large enough to cross your significance threshold. With enough data, you can get a significant result for an effect too small to matter in any practical sense. Conversely, with a small <span class="math inline">\(n\)</span>, standard error is large, and even a substantial true effect can fail to produce a significant result — a Type II error driven by low power, not by the absence of a real effect.</p>
-<p>This is why researchers report <strong>effect size</strong> alongside significance — a standardized measure of <em>how large</em> the effect actually is, independent of sample size. Common ones: - <strong>Cohen’s <span class="math inline">\(d\)</span></strong>: the difference between two group means, expressed in standard deviation units. A <span class="math inline">\(d\)</span> of 0.2 is conventionally “small,” 0.5 “medium,” 0.8 “large” — though these benchmarks are field-dependent and shouldn’t be applied blindly. - <strong><span class="math inline">\(r\)</span> or <span class="math inline">\(R^2\)</span></strong>: for correlational or regression results, how much of the variance is actually being explained.</p>
+<p>This is why researchers report <strong>effect size</strong> alongside significance — a standardized measure of <em>how large</em> the effect actually is, independent of sample size. Common ones: - <strong>Cohen’s</strong> <span class="math inline">\(d\)</span>: the difference between two group means, expressed in standard deviation units. A <span class="math inline">\(d\)</span> of 0.2 is conventionally “small,” 0.5 “medium,” 0.8 “large” — though these benchmarks are field-dependent and shouldn’t be applied blindly. - <span class="math inline">\(r\)</span> or <span class="math inline">\(R^2\)</span>: for correlational or regression results, how much of the variance is actually being explained.</p>
 <p>A <strong>confidence interval (CI)</strong> carries more information than either a p-value or a point estimate of effect size alone: it’s a range of values, computed from the data, such that (under repeated sampling) the procedure would capture the true parameter a specified percentage of the time — typically 95%. A narrow CI reflects a precise estimate; a wide one reflects genuine uncertainty about the effect’s magnitude, even if the interval excludes zero. Two studies can report identical p-values with very different CI widths, and the CI is usually the more informative number of the two, since it directly conveys both the estimated magnitude and the precision of that estimate.</p>
 </section>
 <section id="why-one-significant-result-isnt-the-end-of-the-story" class="level2">
@@ -405,8 +419,29 @@ window.Quarto = {
 <p><strong>Replication</strong> is the mechanism the field relies on to sort signal from noise. If an independent team, using a pre-registered design and new data, reproduces a similar effect size and direction, that’s substantially stronger evidence than the original p-value alone — because replication is largely immune to the failure modes above. A fluke from multiple testing or a favorable path through researcher degrees of freedom is very unlikely to reproduce consistently across independent labs; a real effect, even a modest one, tends to.</p>
 <p>A closely related issue is <strong>publication bias</strong>: significant, novel findings are systematically more likely to be published than null results, which biases the <em>visible</em> literature toward overestimating both the prevalence and size of real effects. This is sometimes called the <strong>file-drawer problem</strong> — the unpublished non-significant studies sit in a file drawer rather than in a journal. Meta-analyses that aggregate results across many studies attempt to correct for this (e.g., by testing for <strong>funnel plot asymmetry</strong>, a signature that small non-significant studies are systematically missing from the published record), but the underlying incentive — journals and researchers both favoring exciting, significant results — remains a structural distortion in how evidence accumulates.</p>
 <p><strong>Takeaway:</strong> a p-value alone is a thin basis for belief. A fuller picture requires knowing how many hypotheses were tested, how much analytic flexibility went into the result, the effect size and its confidence interval, and — ideally — whether the finding has been independently replicated.</p>
+</section>
+<section id="discussion" class="level1">
+<h1>Discussion</h1>
+<section id="cm-bennett-mb-miller-gl-wolford-neural-correlates-of-interspecies-perspective-taking-in-the-post-mortem-atlantic-salmon-an-argument-for-multiple-comparisons-correction." class="level2">
+<h2 class="anchored" data-anchor-id="cm-bennett-mb-miller-gl-wolford-neural-correlates-of-interspecies-perspective-taking-in-the-post-mortem-atlantic-salmon-an-argument-for-multiple-comparisons-correction."><a href="https://doi.org/10.1016/S1053-8119(09)71202-9">CM Bennett, MB Miller, GL Wolford, Neural correlates of interspecies perspective taking in the post-mortem Atlantic Salmon: an argument for multiple comparisons correction.</a></h2>
+<p><strong>Discussion Questions:</strong></p>
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</section>
+<section id="bem-dj.-feeling-the-future-experimental-evidence-for-anomalous-retroactive-influences-on-cognition-and-affect." class="level2">
+<h2 class="anchored" data-anchor-id="bem-dj.-feeling-the-future-experimental-evidence-for-anomalous-retroactive-influences-on-cognition-and-affect."><a href="https://pubmed.ncbi.nlm.nih.gov/21280961/">Bem DJ. Feeling the future: experimental evidence for anomalous retroactive influences on cognition and affect.</a></h2>
+<p><strong>Discussion Questions:</strong></p>
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
