@@ -10,14 +10,13 @@ editor:
 
 Imagine you run a coffee shop and someone tells you, "the new espresso
 machine makes better lattes." You can't just take their word for it —
-but you also can't test every possible latte forever. You need a
-disciplined way to look at a limited amount of evidence and decide
-whether it's convincing enough to change your mind about the world.
+but you also can't test every possible latte. You need a methodological
+way to look at a limited amount of evidence and decide whether it's
+convincing enough to change your mind about the world.
 
-That, in one sentence, is what hypothesis testing is: **a structured
-procedure for deciding whether the evidence you observed is surprising
-enough, under a specific "boring" explanation, to abandon that boring
-explanation.**
+That is what **hypothesis testing** is: a structured procedure for
+deciding whether the evidence you observed is surprising enough, under a
+specific "boring" explanation, to abandon that boring explanation.
 
 The "boring" explanation has a name: the **null hypothesis**, usually
 written $H_0$. It's the default, skeptical,
@@ -36,7 +35,8 @@ distinct ways things can go wrong:
 | **We reject** $H_0$ | Type I error (false alarm) | Correct decision (a "hit") |
 | **We fail to reject** $H_0$ | Correct decision | Type II error (a miss) |
 
-- A **Type I error** is convicting an innocent person — crying wolf.
+- A **Type I error** is convicting an innocent person — the boy who
+  cried wolf.
 - A **Type II error** is letting a guilty person go — missing a real
   effect.
 
@@ -136,68 +136,7 @@ Think of power like a metal detector at the beach.
   measurements — i.e., **higher Fisher information**) raises the whole
   power curve.
 
-### Uniformly Most Powerful (UMP) tests
-
-A test is called **Uniformly Most Powerful (UMP)** at level $\alpha$ if
-it has the highest possible power against *every single* alternative
-value of $\theta$ simultaneously, among all tests with that same
-$\alpha$.
-
-The word "uniformly" is doing real work here — it means "no matter which
-specific alternative you check against, this test wins (or ties)."
-That's a very strong requirement:
-
-A UMP test is is a remarkable, somewhat rare situation. It tends to
-happen only in "nice," simple settings. A good example is when when
-you're comparing one specific value of $\theta$ against alternatives
-that all sit on one side of it (a **one-sided test**, e.g.,
-$H_0: \theta \le \theta_0$ vs. $H_1: \theta > \theta_0$), in models with
-a well-behaved structure (a **monotone likelihood ratio**).
-
-When alternatives sit on both sides (a **two-sided test**,
-$H_1: \theta \ne \theta_0$), a single test almost never dominates every
-alternative in both directions at once. UMP tests generally fail to
-exist in the two-sided case, which is why two-sided testing usually
-settles for a good, sensible compromise test rather than a provably-best
-one.
-
-## The Neyman–Pearson Lemma (heuristically)
-
-So how do you actually build a most-powerful test, at least when
-comparing one simple hypothesis to another? This is exactly what the
-**Neyman–Pearson Lemma** answers.
-
-Suppose you must choose between exactly two fully specified
-possibilities: $H_0: \theta = \theta_0$ versus $H_1: \theta = \theta_1$.
-For any dataset you might observe, you can ask: "how much more likely is
-this data under $H_1$ than under $H_0$?" That ratio is called the
-**likelihood ratio**.
-
-The Neyman–Pearson lemma says: **the best possible test is the one that
-rejects** $H_0$ exactly when the evidence favors $H_1$ over $H_0$ by
-more than some cutoff — i.e., rank every possible dataset by "how much
-more $H_1$-like than $H_0$-like is it," and reject $H_0$ for the most
-extreme, most $H_1$-favoring outcomes, until you've used up your
-allotted false-alarm budget $\alpha$.
-
-Why is this optimal, intuitively? Because you're spending your fixed
-"false alarm budget" ($\alpha$) exactly where it buys the most power —
-on the outcomes that are most diagnostic of $H_1$ over $H_0$. Any other
-rule for deciding when to reject would, for the same $\alpha$, end up
-flagging some outcomes that are less diagnostic while ignoring others
-that are more diagnostic — leaving power on the table. It's the
-statistical version of "spend your limited budget on the highest-value
-evidence first."
-
-This simple-versus-simple result is also the conceptual seed of UMP
-tests: when a UMP test does exist (as in the one-sided, well-behaved
-cases described above), it's usually because the likelihood-ratio test
-from the Neyman–Pearson lemma turns out to be the same test, no matter
-which specific alternative $\theta_1$ you plug in — so the one test
-that's best against one alternative happens to be best against all of
-them simultaneously.
-
-## Putting it all together
+## A summary!
 
 In simple terms, here's what we've talked about today:
 
@@ -207,13 +146,6 @@ In simple terms, here's what we've talked about today:
 - **Power** tells you how good a *specific test* is at detecting real
   effects, given that ceiling — how good your metal detector is at any
   given burial depth.
-- **UMP tests** are the (rare, special-case) tests that are
-  simultaneously the best metal detector at every possible depth.
-- **The Neyman–Pearson lemma** tells you exactly how to build the best
-  possible test when comparing two fully specified hypotheses — rank
-  evidence by how much more it favors $H_1$ over $H_0$, and reject in
-  the most favoring cases — and this same likelihood-ratio logic is the
-  reason UMP tests exist at all in the one-sided cases where they do.
 
 Everything so far has assumed that we get **one guess, made in advance,
 checked once.** That's a much bigger assumption than it sounds like. The
@@ -262,6 +194,14 @@ just want to know roughly what that fraction is, so we're not fooling
 ourselves." This is common when you're deliberately doing a big fishing
 expedition (like scanning thousands of genes) and a few false leads are
 an acceptable cost of casting a wide net.
+
+**Side note: P-hacking** is what happens when a researcher runs many
+different tests, subgroups, or analysis choices and reports only the
+ones that cross the p \< 0.05 line, which is the 20-coin game played in
+secret. Because the study's true false-alarm risk is much higher than
+the advertised 5%, the "significant" result is often just luck that got
+20 chances to show up, so you should always ask how many things were
+checked in total.
 
 ## Researcher degrees of freedom
 
@@ -358,7 +298,7 @@ both the prevalence and size of real effects. This is sometimes called
 the **file-drawer problem** — the unpublished non-significant studies
 sit in a file drawer rather than in a journal. Meta-analyses that
 aggregate results across many studies attempt to correct for this (e.g.,
-by testing for **funnel plot asymmetry**, a signature that small
+by testing for funnel plot asymmetry, a signature that small
 non-significant studies are systematically missing from the published
 record), but the underlying incentive — journals and researchers both
 favoring exciting, significant results — remains a structural distortion
