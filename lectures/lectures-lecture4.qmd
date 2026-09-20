@@ -1,149 +1,389 @@
 ---
 title: "lectures-lecture4"
 format: html
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
 ## Why hypothesis testing exists
 
-Imagine you run a coffee shop and someone tells you, "the new espresso machine makes better lattes." You can't just take their word for it — but you also can't test every possible latte forever. You need a disciplined way to look at a limited amount of evidence and decide whether it's convincing enough to change your mind about the world.
+Imagine you run a coffee shop and someone tells you, "the new espresso
+machine makes better lattes." You can't just take their word for it —
+but you also can't test every possible latte forever. You need a
+disciplined way to look at a limited amount of evidence and decide
+whether it's convincing enough to change your mind about the world.
 
-That, in one sentence, is what hypothesis testing is: **a structured procedure for deciding whether the evidence you observed is surprising enough, under a specific "boring" explanation, to abandon that boring explanation.**
+That, in one sentence, is what hypothesis testing is: **a structured
+procedure for deciding whether the evidence you observed is surprising
+enough, under a specific "boring" explanation, to abandon that boring
+explanation.**
 
-The "boring" explanation has a name: the **null hypothesis**, usually written $H_0$. It's the default, skeptical, nothing-interesting-is-happening claim — "the new machine is no better than the old one." The competing, more interesting claim is the **alternative hypothesis**, $H_1$ (or $H_A$) — "the new machine really is better."
+The "boring" explanation has a name: the **null hypothesis**, usually
+written $H_0$. It's the default, skeptical,
+nothing-interesting-is-happening claim — "the new machine is no better
+than the old one." The competing, more interesting claim is the
+**alternative hypothesis**, $H_1$ (or $H_A$) — "the new machine really
+is better."
 
 ### The two ways to be wrong
 
-Because we're making a decision under uncertainty, there are two distinct ways things can go wrong:
+Because we're making a decision under uncertainty, there are two
+distinct ways things can go wrong:
 
-| | $H_0$ is actually true | $H_0$ is actually false |
-|---|---|---|
-| **We reject $H_0$** | Type I error (false alarm) | Correct decision (a "hit") |
-| **We fail to reject $H_0$** | Correct decision | Type II error (a miss) |
+|   | $H_0$ is actually true | $H_0$ is actually false |
+|------------------------|------------------------|------------------------|
+| **We reject** $H_0$ | Type I error (false alarm) | Correct decision (a "hit") |
+| **We fail to reject** $H_0$ | Correct decision | Type II error (a miss) |
 
 - A **Type I error** is convicting an innocent person — crying wolf.
-- A **Type II error** is letting a guilty person go — missing a real effect.
+- A **Type II error** is letting a guilty person go — missing a real
+  effect.
 
-There is an unavoidable tension here: if you make it harder to convict (to protect innocent people), you will also let more guilty people go free. You cannot drive both error rates to zero at once with a fixed amount of evidence. Every hypothesis test is, in some sense, a negotiation between these two risks.
+There is an unavoidable tension here: if you make it harder to convict
+(to protect innocent people), you will also let more guilty people go
+free. You cannot drive both error rates to zero at once with a fixed
+amount of evidence. Every hypothesis test is, in some sense, a
+negotiation between these two risks.
 
-We give the Type I error rate a special name and treat it as something we control in advance: the **significance level**, $\alpha$. Setting $\alpha = 0.05$ is a promise: "if the null hypothesis is really true, I'm only willing to falsely reject it 5% of the time, in the long run, across many hypothetical repetitions of this study."
+We give the Type I error rate a special name and treat it as something
+we control in advance: the **significance level**, $\alpha$. Setting
+$\alpha = 0.05$ is a promise: "if the null hypothesis is really true,
+I'm only willing to falsely reject it 5% of the time, in the long run,
+across many hypothetical repetitions of this study."
 
-The **p-value** is the probability, assuming $H_0$ is true, of seeing evidence at least as extreme as what we actually observed. A small p-value means "this would have been a weird thing to see if nothing interesting were going on" — which is evidence (not proof) against $H_0$. The p-value is **not** the probability that $H_0$ is true. It's the probability of the *data* (or more extreme data), computed by *assuming* $H_0$ is true. These sound similar but are logically very different quantities — mixing them up is one of the most common errors in applied statistics.
+The **p-value** is the probability, assuming $H_0$ is true, of seeing
+evidence at least as extreme as what we actually observed. A small
+p-value means "this would have been a weird thing to see if nothing
+interesting were going on" — which is evidence (not proof) against
+$H_0$. The p-value is **not** the probability that $H_0$ is true. It's
+the probability of the *data* (or more extreme data), computed by
+*assuming* $H_0$ is true. These sound similar but are logically very
+different quantities — mixing them up is one of the most common errors
+in applied statistics.
 
 ## How much can the data even tell you? — Fisher information
 
-Before we can talk about good tests, it helps to have a sense of how much a dataset can possibly tell you about an unknown quantity. This is the intuitive role of **Fisher information**.
+Before we can talk about good tests, it helps to have a sense of how
+much a dataset can possibly tell you about an unknown quantity. This is
+the intuitive role of **Fisher information**.
 
-Think of it this way: suppose you're trying to estimate some unknown parameter $\theta$. As $\theta$ changes, the probability of seeing your particular data changes too. Fisher information measures how sharply the probability of your data changes as you nudge $\theta$ around its true value.
+Think of it this way: suppose you're trying to estimate some unknown
+parameter $\theta$. As $\theta$ changes, the probability of seeing your
+particular data changes too. Fisher information measures how sharply the
+probability of your data changes as you nudge $\theta$ around its true
+value.
 
-For example, imagine you're tuning an old analog radio dial to find a station. Fisher information is like the sharpness of the signal peak:
-- If the station comes in crystal-clear at exactly one dial position and turns to static the instant you move the dial even slightly, the peak is very sharp. It's easy to pin down the right setting precisely — this corresponds to **high Fisher information**.
-- If the station sounds almost equally decent across a wide range of dial positions, the peak is flat. You could be off by a lot and barely notice — this corresponds to **low Fisher information**.
+For example, imagine you're tuning an old analog radio dial to find a
+station. Fisher information is like the sharpness of the signal peak: -
+If the station comes in crystal-clear at exactly one dial position and
+turns to static the instant you move the dial even slightly, the peak is
+very sharp. It's easy to pin down the right setting precisely — this
+corresponds to **high Fisher information**. - If the station sounds
+almost equally decent across a wide range of dial positions, the peak is
+flat. You could be off by a lot and barely notice — this corresponds to
+**low Fisher information**.
 
-A few consequences fall out of this picture almost for free, without needing formulas:
+A few consequences fall out of this picture almost for free, without
+needing formulas:
 
 - **More data generally means more (sharper) information.**
-- **High Fisher information means your best possible estimate of $\theta$ will be precise** (a low-variance estimator is achievable). Low Fisher information means even your best estimator will be noisy. This relationship — more information caps how much uncertainty you're stuck with — is formalized by a result called the **Cramer–Rao bound**.
-- **Fisher information also drives how good a hypothesis test can be.** A test is really just a decision built on top of an estimate. If the data barely distinguishes nearby values of $\theta$ (low information), it will also barely distinguish $H_0$ from a nearby $H_1$, and no clever test design can fix that — it's a property of the data-generating process itself, not of your method.
+- **High Fisher information means your best possible estimate of**
+  $\theta$ will be precise (a low-variance estimator is achievable). Low
+  Fisher information means even your best estimator will be noisy. This
+  relationship — more information caps how much uncertainty you're stuck
+  with — is formalized by a result called the **Cramer–Rao bound**.
+- **Fisher information also drives how good a hypothesis test can be.**
+  A test is really just a decision built on top of an estimate. If the
+  data barely distinguishes nearby values of $\theta$ (low information),
+  it will also barely distinguish $H_0$ from a nearby $H_1$, and no
+  clever test design can fix that — it's a property of the
+  data-generating process itself, not of your method.
 
-You don't need the formula to use this intuition, but for completeness: Fisher information is formally defined as the expected curvature (technically, the negative expected second derivative) of the log-likelihood function around the true parameter value.
+You don't need the formula to use this intuition, but for completeness:
+Fisher information is formally defined as the expected curvature
+(technically, the negative expected second derivative) of the
+log-likelihood function around the true parameter value.
 
 ## What makes a test "best"? — Power
 
-If we fix how many false alarms we're willing to tolerate ($\alpha$), the natural next question is: **among all tests with that same false-alarm rate, which one is best at catching real effects when they exist?**
+If we fix how many false alarms we're willing to tolerate ($\alpha$),
+the natural next question is: **among all tests with that same
+false-alarm rate, which one is best at catching real effects when they
+exist?**
 
-The probability that a test correctly rejects $H_0$ when $H_1$ is actually true is called the test's **power**. Power isn't a single number — it typically depends on how far the truth is from $H_0$. A test might have great power for detecting a huge effect but poor power for detecting a subtle one. This is usually visualized with a **power curve**: power on the vertical axis, "true distance from $H_0$" on the horizontal axis.
+The probability that a test correctly rejects $H_0$ when $H_1$ is
+actually true is called the test's **power**. Power isn't a single
+number — it typically depends on how far the truth is from $H_0$. A test
+might have great power for detecting a huge effect but poor power for
+detecting a subtle one. This is usually visualized with a **power
+curve**: power on the vertical axis, "true distance from $H_0$" on the
+horizontal axis.
 
 ## A metal-detector analogy
+
 Think of power like a metal detector at the beach.
 
-- $\alpha$ is how sensitive you've set the machine to beep on plain sand (false alarms you've agreed to tolerate).
-- Power is the probability it beeps when there really is a coin buried at some depth.
-- A shallow coin (a big, obvious effect) is easy to detect — power near 1.
-- A deeply buried coin (a tiny, subtle effect) is hard to detect — power might be low even with a good machine.
-- A bigger, more sensitive metal detector (more data, or less noisy measurements — i.e., **higher Fisher information**) raises the whole power curve.
+- $\alpha$ is how sensitive you've set the machine to beep on plain sand
+  (false alarms you've agreed to tolerate).
+- Power is the probability it beeps when there really is a coin buried
+  at some depth.
+- A shallow coin (a big, obvious effect) is easy to detect — power near
+  1.
+- A deeply buried coin (a tiny, subtle effect) is hard to detect — power
+  might be low even with a good machine.
+- A bigger, more sensitive metal detector (more data, or less noisy
+  measurements — i.e., **higher Fisher information**) raises the whole
+  power curve.
 
 ### Uniformly Most Powerful (UMP) tests
 
-A test is called **Uniformly Most Powerful (UMP)** at level $\alpha$ if it has the highest possible power against *every single* alternative value of $\theta$ simultaneously, among all tests with that same $\alpha$.
+A test is called **Uniformly Most Powerful (UMP)** at level $\alpha$ if
+it has the highest possible power against *every single* alternative
+value of $\theta$ simultaneously, among all tests with that same
+$\alpha$.
 
-The word "uniformly" is doing real work here — it means "no matter which specific alternative you check against, this test wins (or ties)." That's a very strong requirement:
+The word "uniformly" is doing real work here — it means "no matter which
+specific alternative you check against, this test wins (or ties)."
+That's a very strong requirement:
 
-A UMP test is is a remarkable, somewhat rare situation. It tends to happen only in "nice," simple settings. A good example is when when you're comparing one specific value of $\theta$ against alternatives that all sit on one side of it (a **one-sided test**, e.g., $H_0: \theta \le \theta_0$ vs. $H_1: \theta > \theta_0$), in models with a well-behaved structure (a **monotone likelihood ratio**).
+A UMP test is is a remarkable, somewhat rare situation. It tends to
+happen only in "nice," simple settings. A good example is when when
+you're comparing one specific value of $\theta$ against alternatives
+that all sit on one side of it (a **one-sided test**, e.g.,
+$H_0: \theta \le \theta_0$ vs. $H_1: \theta > \theta_0$), in models with
+a well-behaved structure (a **monotone likelihood ratio**).
 
-When alternatives sit on both sides (a **two-sided test**, $H_1: \theta \ne \theta_0$), a single test almost never dominates every alternative in both directions at once. UMP tests generally fail to exist in the two-sided case, which is why two-sided testing usually settles for a good, sensible compromise test rather than a provably-best one.
+When alternatives sit on both sides (a **two-sided test**,
+$H_1: \theta \ne \theta_0$), a single test almost never dominates every
+alternative in both directions at once. UMP tests generally fail to
+exist in the two-sided case, which is why two-sided testing usually
+settles for a good, sensible compromise test rather than a provably-best
+one.
 
 ## The Neyman–Pearson Lemma (heuristically)
 
-So how do you actually build a most-powerful test, at least when comparing one simple hypothesis to another? This is exactly what the **Neyman–Pearson Lemma** answers.
+So how do you actually build a most-powerful test, at least when
+comparing one simple hypothesis to another? This is exactly what the
+**Neyman–Pearson Lemma** answers.
 
-Suppose you must choose between exactly two fully specified possibilities: $H_0: \theta = \theta_0$ versus $H_1: \theta = \theta_1$. For any dataset you might observe, you can ask: "how much more likely is this data under $H_1$ than under $H_0$?" That ratio is called the **likelihood ratio**.
+Suppose you must choose between exactly two fully specified
+possibilities: $H_0: \theta = \theta_0$ versus $H_1: \theta = \theta_1$.
+For any dataset you might observe, you can ask: "how much more likely is
+this data under $H_1$ than under $H_0$?" That ratio is called the
+**likelihood ratio**.
 
-The Neyman–Pearson lemma says: **the best possible test is the one that rejects $H_0$ exactly when the evidence favors $H_1$ over $H_0$ by more than some cutoff** — i.e., rank every possible dataset by "how much more $H_1$-like than $H_0$-like is it," and reject $H_0$ for the most extreme, most $H_1$-favoring outcomes, until you've used up your allotted false-alarm budget $\alpha$.
+The Neyman–Pearson lemma says: **the best possible test is the one that
+rejects** $H_0$ exactly when the evidence favors $H_1$ over $H_0$ by
+more than some cutoff — i.e., rank every possible dataset by "how much
+more $H_1$-like than $H_0$-like is it," and reject $H_0$ for the most
+extreme, most $H_1$-favoring outcomes, until you've used up your
+allotted false-alarm budget $\alpha$.
 
-Why is this optimal, intuitively? Because you're spending your fixed "false alarm budget" ($\alpha$) exactly where it buys the most power — on the outcomes that are most diagnostic of $H_1$ over $H_0$. Any other rule for deciding when to reject would, for the same $\alpha$, end up flagging some outcomes that are less diagnostic while ignoring others that are more diagnostic — leaving power on the table. It's the statistical version of "spend your limited budget on the highest-value evidence first."
+Why is this optimal, intuitively? Because you're spending your fixed
+"false alarm budget" ($\alpha$) exactly where it buys the most power —
+on the outcomes that are most diagnostic of $H_1$ over $H_0$. Any other
+rule for deciding when to reject would, for the same $\alpha$, end up
+flagging some outcomes that are less diagnostic while ignoring others
+that are more diagnostic — leaving power on the table. It's the
+statistical version of "spend your limited budget on the highest-value
+evidence first."
 
-This simple-versus-simple result is also the conceptual seed of UMP tests: when a UMP test does exist (as in the one-sided, well-behaved cases described above), it's usually because the likelihood-ratio test from the Neyman–Pearson lemma turns out to be the same test, no matter which specific alternative $\theta_1$ you plug in — so the one test that's best against one alternative happens to be best against all of them simultaneously.
+This simple-versus-simple result is also the conceptual seed of UMP
+tests: when a UMP test does exist (as in the one-sided, well-behaved
+cases described above), it's usually because the likelihood-ratio test
+from the Neyman–Pearson lemma turns out to be the same test, no matter
+which specific alternative $\theta_1$ you plug in — so the one test
+that's best against one alternative happens to be best against all of
+them simultaneously.
 
 ## Putting it all together
 
-In simple terms, here's what we've talked about today: 
+In simple terms, here's what we've talked about today:
 
-- **Fisher information** tells you the fundamental ceiling on how precisely your data can pin down an unknown parameter — the sharpness of the radio dial's peak.
-- **Power** tells you how good a *specific test* is at detecting real effects, given that ceiling — how good your metal detector is at any given burial depth.
-- **UMP tests** are the (rare, special-case) tests that are simultaneously the best metal detector at every possible depth.
-- **The Neyman–Pearson lemma** tells you exactly how to build the best possible test when comparing two fully specified hypotheses — rank evidence by how much more it favors $H_1$ over $H_0$, and reject in the most favoring cases — and this same likelihood-ratio logic is the reason UMP tests exist at all in the one-sided cases where they do.
+- **Fisher information** tells you the fundamental ceiling on how
+  precisely your data can pin down an unknown parameter — the sharpness
+  of the radio dial's peak.
+- **Power** tells you how good a *specific test* is at detecting real
+  effects, given that ceiling — how good your metal detector is at any
+  given burial depth.
+- **UMP tests** are the (rare, special-case) tests that are
+  simultaneously the best metal detector at every possible depth.
+- **The Neyman–Pearson lemma** tells you exactly how to build the best
+  possible test when comparing two fully specified hypotheses — rank
+  evidence by how much more it favors $H_1$ over $H_0$, and reject in
+  the most favoring cases — and this same likelihood-ratio logic is the
+  reason UMP tests exist at all in the one-sided cases where they do.
 
-Everything so far has assumed that we get **one guess, made in advance, checked once.** That's a much bigger assumption than it sounds like. The rest of this lecture is about what happens when that assumption breaks — which, in real research, is most of the time.
+Everything so far has assumed that we get **one guess, made in advance,
+checked once.** That's a much bigger assumption than it sounds like. The
+rest of this lecture is about what happens when that assumption breaks —
+which, in real research, is most of the time.
 
 ## The problem with asking too many questions
 
-Let's say I hand you a coin and ask you to flip it 5 times. If it comes up heads all 5 times, you win. Pretty unlikely — about a 3% chance.
+Let's say I hand you a coin and ask you to flip it 5 times. If it comes
+up heads all 5 times, you win. Pretty unlikely — about a 3% chance.
 
-Now here's a different game. I hand you 20 different coins, and you get to flip each one 5 times. If *any single coin* comes up heads all 5 times, you win. Suddenly your odds of winning are much better — not because any one coin got luckier, but because you gave luck 20 chances to show up instead of one.
+Now here's a different game. I hand you 20 different coins, and you get
+to flip each one 5 times. If *any single coin* comes up heads all 5
+times, you win. Suddenly your odds of winning are much better — not
+because any one coin got luckier, but because you gave luck 20 chances
+to show up instead of one.
 
-This is the whole idea behind the **multiple comparisons problem**, and it's one of the most important ideas in this class: **the more things you check, the more likely you are to stumble onto something that looks meaningful purely by accident — even when nothing real is going on at all.**
+This is the whole idea behind the **multiple comparisons problem**, and
+it's one of the most important ideas in this class: **the more things
+you check, the more likely you are to stumble onto something that looks
+meaningful purely by accident — even when nothing real is going on at
+all.**
 
-In research terms, a "5% chance of a false alarm" (that's what $\alpha = 0.05$ means) sounds small and safe — for *one* test. But if a study quietly runs 20 different tests and only publishes the one that "worked," you're not looking at a 5%-risk finding anymore. You're looking at something much closer to a coin flip's worth of risk that it's a fluke, written out to look like a rare and exciting result.
+In research terms, a "5% chance of a false alarm" (that's what
+$\alpha = 0.05$ means) sounds small and safe — for *one* test. But if a
+study quietly runs 20 different tests and only publishes the one that
+"worked," you're not looking at a 5%-risk finding anymore. You're
+looking at something much closer to a coin flip's worth of risk that
+it's a fluke, written out to look like a rare and exciting result.
 
-**Why this matters in practice:** any time a study measures a *lot* of things — dozens of outcomes, thousands of tiny regions of the brain, hundreds of genes — and only reports the ones that "came out significant," you should immediately ask: how many things did they check in total, and did they account for that?
+**Why this matters in practice:** any time a study measures a *lot* of
+things — dozens of outcomes, thousands of tiny regions of the brain,
+hundreds of genes — and only reports the ones that "came out
+significant," you should immediately ask: how many things did they check
+in total, and did they account for that?
 
-**How researchers try to fix it** — you don't need the formulas, just the idea:
-- One approach is to say: "we want to be very sure we don't get *even one* false alarm across the whole batch of tests" — and so we make each individual test much stricter to compensate. This is like raising the bar so high on every coin that beating it by luck alone becomes rare even with 20 coins in play.
-- A different, more relaxed approach is to say: "we're going to run a lot of tests, and we accept that some fraction of our 'hits' will turn out to be false alarms — we just want to know roughly what that fraction is, so we're not fooling ourselves." This is common when you're deliberately doing a big fishing expedition (like scanning thousands of genes) and a few false leads are an acceptable cost of casting a wide net.
+**How researchers try to fix it** — you don't need the formulas, just
+the idea: - One approach is to say: "we want to be very sure we don't
+get *even one* false alarm across the whole batch of tests" — and so we
+make each individual test much stricter to compensate. This is like
+raising the bar so high on every coin that beating it by luck alone
+becomes rare even with 20 coins in play. - A different, more relaxed
+approach is to say: "we're going to run a lot of tests, and we accept
+that some fraction of our 'hits' will turn out to be false alarms — we
+just want to know roughly what that fraction is, so we're not fooling
+ourselves." This is common when you're deliberately doing a big fishing
+expedition (like scanning thousands of genes) and a few false leads are
+an acceptable cost of casting a wide net.
 
 ## Researcher degrees of freedom
 
-Here's the twist that trips people up: you don't need to literally run 20 separate, clearly-labeled tests to fall into this trap. It can happen invisibly, inside what looks like a single, honest study.
+Here's the twist that trips people up: you don't need to literally run
+20 separate, clearly-labeled tests to fall into this trap. It can happen
+invisibly, inside what looks like a single, honest study.
 
-Imagine a researcher collects data and now has to make a bunch of small decisions before they get their final result:
+Imagine a researcher collects data and now has to make a bunch of small
+decisions before they get their final result:
 
-- Which of the several things they measured should they report as "the" outcome?
+- Which of the several things they measured should they report as "the"
+  outcome?
 - Should they throw out a few weird data points, and by what rule?
-- Should they check men and women separately? Younger and older participants separately?
-- Should they keep collecting more data and peek at the result every few days, stopping as soon as it looks good?
+- Should they check men and women separately? Younger and older
+  participants separately?
+- Should they keep collecting more data and peek at the result every few
+  days, stopping as soon as it looks good?
 
-None of these choices is dishonest on its own — they can all sound like completely reasonable judgment calls. But each decision point is secretly another coin flip. If the researcher (even without meaning to) tends to make whichever choice makes the result look a little more exciting, they've quietly run something like 20 hidden tests and just shown you the one that worked — without ever calling it "20 tests."
+None of these choices is dishonest on its own — they can all sound like
+completely reasonable judgment calls. But each decision point is
+secretly another coin flip. If the researcher (even without meaning to)
+tends to make whichever choice makes the result look a little more
+exciting, they've quietly run something like 20 hidden tests and just
+shown you the one that worked — without ever calling it "20 tests."
 
-**The fix**, in plain terms: decide your whole plan — what you're measuring, how many people you'll test, which rules you'll use to exclude data — *before* you ever look at the results, and then don't deviate. Write it down publicly in advance (this is called **pre-registration**). It's the equivalent of picking your path through the maze with a blindfold on, before you can see which way looks shiny.
+**The fix**, in plain terms: decide your whole plan — what you're
+measuring, how many people you'll test, which rules you'll use to
+exclude data — *before* you ever look at the results, and then don't
+deviate. Write it down publicly in advance (this is called
+**pre-registration**). It's the equivalent of picking your path through
+the maze with a blindfold on, before you can see which way looks shiny.
 
 ## "Significant" doesn't mean "big" or "important"
 
-Statistical significance and practical importance are two different questions, and a p-value only answers the first one. The p-value tells you how surprising your data would be *if* $H_0$ were exactly true. It says nothing about the magnitude of the effect itself.
+Statistical significance and practical importance are two different
+questions, and a p-value only answers the first one. The p-value tells
+you how surprising your data would be *if* $H_0$ were exactly true. It
+says nothing about the magnitude of the effect itself.
 
-The reason these come apart is sample size. A test statistic (like a t-statistic) is roughly: **(observed effect) / (standard error of that effect)**. Standard error shrinks as sample size grows — usually proportional to $1/\sqrt{n}$. That means as $n$ increases, the denominator keeps getting smaller, so even a fixed, tiny true effect will eventually push the test statistic large enough to cross your significance threshold. With enough data, you can get a significant result for an effect too small to matter in any practical sense. Conversely, with a small $n$, standard error is large, and even a substantial true effect can fail to produce a significant result — a Type II error driven by low power, not by the absence of a real effect.
+The reason these come apart is sample size. A test statistic (like a
+t-statistic) is roughly: **(observed effect) / (standard error of that
+effect)**. Standard error shrinks as sample size grows — usually
+proportional to $1/\sqrt{n}$. That means as $n$ increases, the
+denominator keeps getting smaller, so even a fixed, tiny true effect
+will eventually push the test statistic large enough to cross your
+significance threshold. With enough data, you can get a significant
+result for an effect too small to matter in any practical sense.
+Conversely, with a small $n$, standard error is large, and even a
+substantial true effect can fail to produce a significant result — a
+Type II error driven by low power, not by the absence of a real effect.
 
-This is why researchers report **effect size** alongside significance — a standardized measure of *how large* the effect actually is, independent of sample size. Common ones:
-- **Cohen's $d$**: the difference between two group means, expressed in standard deviation units. A $d$ of 0.2 is conventionally "small," 0.5 "medium," 0.8 "large" — though these benchmarks are field-dependent and shouldn't be applied blindly.
-- **$r$ or $R^2$**: for correlational or regression results, how much of the variance is actually being explained.
+This is why researchers report **effect size** alongside significance —
+a standardized measure of *how large* the effect actually is,
+independent of sample size. Common ones: - **Cohen's** $d$: the
+difference between two group means, expressed in standard deviation
+units. A $d$ of 0.2 is conventionally "small," 0.5 "medium," 0.8 "large"
+— though these benchmarks are field-dependent and shouldn't be applied
+blindly. - $r$ or $R^2$: for correlational or regression results, how
+much of the variance is actually being explained.
 
-A **confidence interval (CI)** carries more information than either a p-value or a point estimate of effect size alone: it's a range of values, computed from the data, such that (under repeated sampling) the procedure would capture the true parameter a specified percentage of the time — typically 95%. A narrow CI reflects a precise estimate; a wide one reflects genuine uncertainty about the effect's magnitude, even if the interval excludes zero. Two studies can report identical p-values with very different CI widths, and the CI is usually the more informative number of the two, since it directly conveys both the estimated magnitude and the precision of that estimate.
+A **confidence interval (CI)** carries more information than either a
+p-value or a point estimate of effect size alone: it's a range of
+values, computed from the data, such that (under repeated sampling) the
+procedure would capture the true parameter a specified percentage of the
+time — typically 95%. A narrow CI reflects a precise estimate; a wide
+one reflects genuine uncertainty about the effect's magnitude, even if
+the interval excludes zero. Two studies can report identical p-values
+with very different CI widths, and the CI is usually the more
+informative number of the two, since it directly conveys both the
+estimated magnitude and the precision of that estimate.
 
 ## Why one significant result isn't the end of the story
 
-A single significant finding is not, on its own, strong evidence of a real effect, for the reasons already covered: it might be one significant result out of many silently-run tests (multiple comparisons), the one path through many researcher degrees of freedom, or a real but practically negligible effect inflated in apparent importance by a large $n$.
+A single significant finding is not, on its own, strong evidence of a
+real effect, for the reasons already covered: it might be one
+significant result out of many silently-run tests (multiple
+comparisons), the one path through many researcher degrees of freedom,
+or a real but practically negligible effect inflated in apparent
+importance by a large $n$.
 
-**Replication** is the mechanism the field relies on to sort signal from noise. If an independent team, using a pre-registered design and new data, reproduces a similar effect size and direction, that's substantially stronger evidence than the original p-value alone — because replication is largely immune to the failure modes above. A fluke from multiple testing or a favorable path through researcher degrees of freedom is very unlikely to reproduce consistently across independent labs; a real effect, even a modest one, tends to.
+**Replication** is the mechanism the field relies on to sort signal from
+noise. If an independent team, using a pre-registered design and new
+data, reproduces a similar effect size and direction, that's
+substantially stronger evidence than the original p-value alone —
+because replication is largely immune to the failure modes above. A
+fluke from multiple testing or a favorable path through researcher
+degrees of freedom is very unlikely to reproduce consistently across
+independent labs; a real effect, even a modest one, tends to.
 
-A closely related issue is **publication bias**: significant, novel findings are systematically more likely to be published than null results, which biases the *visible* literature toward overestimating both the prevalence and size of real effects. This is sometimes called the **file-drawer problem** — the unpublished non-significant studies sit in a file drawer rather than in a journal. Meta-analyses that aggregate results across many studies attempt to correct for this (e.g., by testing for **funnel plot asymmetry**, a signature that small non-significant studies are systematically missing from the published record), but the underlying incentive — journals and researchers both favoring exciting, significant results — remains a structural distortion in how evidence accumulates.
+A closely related issue is **publication bias**: significant, novel
+findings are systematically more likely to be published than null
+results, which biases the *visible* literature toward overestimating
+both the prevalence and size of real effects. This is sometimes called
+the **file-drawer problem** — the unpublished non-significant studies
+sit in a file drawer rather than in a journal. Meta-analyses that
+aggregate results across many studies attempt to correct for this (e.g.,
+by testing for **funnel plot asymmetry**, a signature that small
+non-significant studies are systematically missing from the published
+record), but the underlying incentive — journals and researchers both
+favoring exciting, significant results — remains a structural distortion
+in how evidence accumulates.
 
-**Takeaway:** a p-value alone is a thin basis for belief. A fuller picture requires knowing how many hypotheses were tested, how much analytic flexibility went into the result, the effect size and its confidence interval, and — ideally — whether the finding has been independently replicated.
+**Takeaway:** a p-value alone is a thin basis for belief. A fuller
+picture requires knowing how many hypotheses were tested, how much
+analytic flexibility went into the result, the effect size and its
+confidence interval, and — ideally — whether the finding has been
+independently replicated.
+
+# Discussion
+
+## [CM Bennett, MB Miller, GL Wolford, Neural correlates of interspecies perspective taking in the post-mortem Atlantic Salmon: an argument for multiple comparisons correction.](https://doi.org/10.1016/S1053-8119(09)71202-9)
+
+**Discussion Questions:**
+
+1.  
+2.  
+3.  
+
+## [Bem DJ. Feeling the future: experimental evidence for anomalous retroactive influences on cognition and affect.](https://pubmed.ncbi.nlm.nih.gov/21280961/)
+
+**Discussion Questions:**
+
+1.  
+2.  
+3.  

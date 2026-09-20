@@ -140,7 +140,7 @@ Unlike the discrete distributions above, there's no clean "story" of counting or
 ## Putting It Together: A Quick Comparison
 
 | Distribution | Question it answers | What varies | Mean | Variance |
-|---------------|---------------|---------------|---------------|---------------|
+|----|----|----|----|----|
 | Binomial | How many successes in $n$ fixed trials? | Count of successes | $np$ | $np(1-p)$ |
 | Geometric | How many trials until the 1st success? | Wait time | $1/p$ | $(1-p)/p^2$ |
 | Negative Binomial | How many trials until the $r$-th success? | Wait time | $r/p$ | $r(1-p)/p^2$ |
@@ -181,7 +181,7 @@ Bayes' rule underlies an entire branch of statistical inference (Bayesian statis
 
 **Discussion Questions**
 
-1.  What is the significance of the normal distribution? 
+1.  What is the significance of the normal distribution?
 
 2.  What do we need to do before deciding on a distribution?
 
@@ -194,4 +194,3 @@ Bayes' rule underlies an entire branch of statistical inference (Bayesian statis
 2.  Describe the effect that Kevin Martin and Dwight Howard have when aggregated versus separate. Why is this, and how do the authors work around it?
 
 3.  What sorts of distributions are used? Why are they selected?
-
