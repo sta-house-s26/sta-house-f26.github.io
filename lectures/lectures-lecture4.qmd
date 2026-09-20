@@ -129,7 +129,7 @@ Think of power like a metal detector at the beach.
 - Power is the probability it beeps when there really is a coin buried
   at some depth.
 - A shallow coin (a big, obvious effect) is easy to detect — power near
-  1.
+  1.  
 - A deeply buried coin (a tiny, subtle effect) is hard to detect — power
   might be low even with a good machine.
 - A bigger, more sensitive metal detector (more data, or less noisy
@@ -376,14 +376,45 @@ independently replicated.
 
 **Discussion Questions:**
 
-1.  
-2.  
-3.  
+1.  This study has n = 1. Is that a problem here? What is the paper
+    claiming, and does it require a large sample?
+
+2.  The authors chose a crazy design (a dead fish + social-cognition
+    task). How does this work as a negative control? What would a
+    "positive control" look like in this setting?
+
+3.  The uncorrected threshold used here (p \< 0.001) is much stricter
+    than our classic p \< 0.05. Why can it still produce false positives
+    here?
 
 ## [Bem DJ. Feeling the future: experimental evidence for anomalous retroactive influences on cognition and affect.](https://pubmed.ncbi.nlm.nih.gov/21280961/)
 
 **Discussion Questions:**
 
-1.  
-2.  
-3.  
+1.  The average effect size across the experiments was d = 0.22, with
+    over 1,000 participants total. Many of the results were
+    statistically significant. Does a significant p-value tell us the
+    effect is large or important? What else would you want to know?
+
+    - A significant p-value doesn't tell us the effect is large or
+      important. It only tells us the data would be surprising if H₀
+      were true.
+
+    - The p-value depends on two things: how big the effect is and how
+      much data you have. A tiny effect can be significant with enough
+      data, and a large effect can miss significance with too little. So
+      we'd want to know more about effect size, CI, how many tests were
+      run, whether it replicates, etc.
+
+2.  This paper claims that precognition exists, but most scientists
+    believe it doesn't. If they're right, how is this paper similar to
+    the dead salmon?
+
+    - A dead salmon has no brain activity, and most scientists believe
+      precognition doesn't exist. In both cases any "significant" result
+      is a false positive, so the interesting question is how the
+      analysis produced it.
+
+    - Both used the standard significance threshold without accounting
+      for the number of tests. The salmon's uncorrected p \< 0.001 was
+      applied voxel by voxel; Bem's p \< .05 was applied test by test.
