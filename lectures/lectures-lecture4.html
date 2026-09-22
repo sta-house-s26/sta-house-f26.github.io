@@ -32,6 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../lectures/lectures-lecture3.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -114,7 +115,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">lectures-lecture4</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lectures-lecture1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/lectures-lecture4.html">Lecture 4</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -200,13 +201,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Lectures</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lectures/lectures-lecture1.html" class="sidebar-item-text sidebar-link">
@@ -223,6 +224,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../lectures/lectures-lecture3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/lectures-lecture4.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Lecture 4</span></a>
   </div>
 </li>
       </ul>
@@ -243,7 +250,6 @@ window.Quarto = {
   </ul></li>
   <li><a href="#how-much-can-the-data-even-tell-you-fisher-information" id="toc-how-much-can-the-data-even-tell-you-fisher-information" class="nav-link" data-scroll-target="#how-much-can-the-data-even-tell-you-fisher-information">How much can the data even tell you? — Fisher information</a></li>
   <li><a href="#what-makes-a-test-best-power" id="toc-what-makes-a-test-best-power" class="nav-link" data-scroll-target="#what-makes-a-test-best-power">What makes a test “best”? — Power</a></li>
-  <li><a href="#a-metal-detector-analogy" id="toc-a-metal-detector-analogy" class="nav-link" data-scroll-target="#a-metal-detector-analogy">A metal-detector analogy</a></li>
   <li><a href="#a-summary" id="toc-a-summary" class="nav-link" data-scroll-target="#a-summary">A summary!</a></li>
   <li><a href="#the-problem-with-asking-too-many-questions" id="toc-the-problem-with-asking-too-many-questions" class="nav-link" data-scroll-target="#the-problem-with-asking-too-many-questions">The problem with asking too many questions</a></li>
   <li><a href="#researcher-degrees-of-freedom" id="toc-researcher-degrees-of-freedom" class="nav-link" data-scroll-target="#researcher-degrees-of-freedom">Researcher degrees of freedom</a></li>
@@ -260,7 +266,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lectures-lecture1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/lectures-lecture4.html">Lecture 4</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">lectures-lecture4</h1>
 </div>
@@ -339,20 +345,6 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="what-makes-a-test-best-power">What makes a test “best”? — Power</h2>
 <p>If we fix how many false alarms we’re willing to tolerate (<span class="math inline">\(\alpha\)</span>), the natural next question is: <strong>among all tests with that same false-alarm rate, which one is best at catching real effects when they exist?</strong></p>
 <p>The probability that a test correctly rejects <span class="math inline">\(H_0\)</span> when <span class="math inline">\(H_1\)</span> is actually true is called the test’s <strong>power</strong>. Power isn’t a single number — it typically depends on how far the truth is from <span class="math inline">\(H_0\)</span>. A test might have great power for detecting a huge effect but poor power for detecting a subtle one. This is usually visualized with a <strong>power curve</strong>: power on the vertical axis, “true distance from <span class="math inline">\(H_0\)</span>” on the horizontal axis.</p>
-</section>
-<section id="a-metal-detector-analogy" class="level2">
-<h2 class="anchored" data-anchor-id="a-metal-detector-analogy">A metal-detector analogy</h2>
-<p>Think of power like a metal detector at the beach.</p>
-<ul>
-<li><span class="math inline">\(\alpha\)</span> is how sensitive you’ve set the machine to beep on plain sand (false alarms you’ve agreed to tolerate).</li>
-<li>Power is the probability it beeps when there really is a coin buried at some depth.</li>
-<li>A shallow coin (a big, obvious effect) is easy to detect — power near
-<ol type="1">
-<li></li>
-</ol></li>
-<li>A deeply buried coin (a tiny, subtle effect) is hard to detect — power might be low even with a good machine.</li>
-<li>A bigger, more sensitive metal detector (more data, or less noisy measurements — i.e., <strong>higher Fisher information</strong>) raises the whole power curve.</li>
-</ul>
 </section>
 <section id="a-summary" class="level2">
 <h2 class="anchored" data-anchor-id="a-summary">A summary!</h2>
@@ -832,6 +824,15 @@ window.Quarto = {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../lectures/lectures-lecture3.html" class="pagination-link" aria-label="Lecture 3">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lecture 3</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
