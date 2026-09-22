@@ -120,22 +120,6 @@ detecting a subtle one. This is usually visualized with a **power
 curve**: power on the vertical axis, "true distance from $H_0$" on the
 horizontal axis.
 
-## A metal-detector analogy
-
-Think of power like a metal detector at the beach.
-
-- $\alpha$ is how sensitive you've set the machine to beep on plain sand
-  (false alarms you've agreed to tolerate).
-- Power is the probability it beeps when there really is a coin buried
-  at some depth.
-- A shallow coin (a big, obvious effect) is easy to detect — power near
-  1.  
-- A deeply buried coin (a tiny, subtle effect) is hard to detect — power
-  might be low even with a good machine.
-- A bigger, more sensitive metal detector (more data, or less noisy
-  measurements — i.e., **higher Fisher information**) raises the whole
-  power curve.
-
 ## A summary!
 
 In simple terms, here's what we've talked about today:

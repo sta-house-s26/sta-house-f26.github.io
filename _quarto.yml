@@ -53,6 +53,8 @@ website:
             text: Lecture 2
           - href: lectures/lectures-lecture3.qmd
             text: Lecture 3
+          - href: lectures/lectures-lecture4.qmd
+            text: Lecture 4
             
             
   page-footer:
