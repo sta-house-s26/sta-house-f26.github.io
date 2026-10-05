@@ -55,6 +55,8 @@ website:
             text: Lecture 3
           - href: lectures/lectures-lecture4.qmd
             text: Lecture 4
+          - href: lectures/lectures-lecture5.qmd
+            text: Lecture 5
             
             
   page-footer:

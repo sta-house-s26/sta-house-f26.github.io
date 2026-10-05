@@ -140,7 +140,7 @@ Unlike the discrete distributions above, there's no clean "story" of counting or
 ## Putting It Together: A Quick Comparison
 
 | Distribution | Question it answers | What varies | Mean | Variance |
-|----|----|----|----|----|
+|---------------|---------------|---------------|---------------|---------------|
 | Binomial | How many successes in $n$ fixed trials? | Count of successes | $np$ | $np(1-p)$ |
 | Geometric | How many trials until the 1st success? | Wait time | $1/p$ | $(1-p)/p^2$ |
 | Negative Binomial | How many trials until the $r$-th success? | Wait time | $r/p$ | $r(1-p)/p^2$ |
