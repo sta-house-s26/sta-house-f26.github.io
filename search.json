@@ -121,444 +121,102 @@
     ]
   },
   {
-    "objectID": "lectures/lectures-lecture2.html",
-    "href": "lectures/lectures-lecture2.html",
-    "title": "8/31 Lecture 2",
+    "objectID": "lectures/lectures-lecture6.html",
+    "href": "lectures/lectures-lecture6.html",
+    "title": "lectures-lecture6",
     "section": "",
-    "text": "Today we’re going to explore a few cases where real statistics were computed effectively and correctly on paper, yet completely failed their purpose. Statistics, as with most other things, depends heavily on interpretation – when the interpretation fails, our research is no longer sound.\nCorrelation vs. Causation\nLet’s think about a classic example. Ice cream sales and the number of shark attacks both increase in the summer. Does this mean that eating ice cream causes more people to get chased by sharks? Obviously, this is not what’s going on here – the season itself is causing both of these events independently (more humans in the ocean in the summer = more shark injuries. hotter weather = a greater need for ice cream). Even though ice cream sales and shark attacks are correlated (move together), one does not necessarily cause the other.\nKeep this in mind as you dissect any research paper in the following weeks, and you’ll easily find reason for skepticism everywhere.\nConfounding Variables\nIn the case of the ice cream sales and shark attacks, there was a hidden, confounding third variable that influenced both variables of interest, making them seem related. As we explore these papers, think about what differs between the two groups examined, or other variables that might be at play.\nSample Size and Generalizability\nBefore we trust any findings, and thinking back to our discussion last week, it’s important to consider the sample size of the study. How many people did the survey ask? Which groups of people was this pattern found in? The original marshmallow study we’re about to read was conducted on a small sample of children at a preschool on Stanford’s campus. As you read, consider what impact this may have on the results.\nReplication\nReplication is basically redoing a study, ideally with a bigger, more representative sample. The goal of this is to see if the original result appears once again, to help validate or question the original study’s results. One of today’s readings is a replication attempt of the marshmallow test. Note what differs between replication attempts, not limited to the results! Did the replication increase sample size, or change the population experimented on? How might that impact our interpretations of both studies’ findings?",
-    "crumbs": [
-      "Lectures",
-      "Lecture 2"
-    ]
+    "text": "Last lecture we talked a lot about comparing groups: t-tests, ANOVA, and their categorical and rank-based cousins, all following the same hypothesis-testing recipe. Today we take one more step. Regression is the tool that lets us compare groups while accounting for other differences between them, and it lets the “groups” be replaced by continuous predictors like age or dosage.\nThat’s why regression is everywhere in observational research. In Lecture 2 we saw that observational studies can’t randomize away confounders the way an RCT can. Regression is the main way researchers try to deal with confounding after the fact: measure the confounders and adjust for them. Today’s papers are a case study in how well that works, and in what happens when an important variable is left out.\nIMPORTANT! A regression coefficient tells you how the outcome differs when one variable differs, among observations that look alike on everything else in the model. Most misreadings of regression come from forgetting the words “in the model.”"
   },
   {
-    "objectID": "lectures/lectures-lecture2.html#non-experimental-observational-studies",
-    "href": "lectures/lectures-lecture2.html#non-experimental-observational-studies",
-    "title": "8/31 Lecture 2",
-    "section": "Non-Experimental / Observational Studies",
-    "text": "Non-Experimental / Observational Studies\nIn observational studies, the investigator does not control who is exposed to a risk factor or intervention. Instead, exposures occur naturally, and the researcher measures associations between exposure and outcome. These studies are further divided by their unit of analysis: population-based or individual-based.\n\nPopulation-Based Studies\nThese studies use aggregate, group-level data rather than data on individual subjects.\n\nDescriptive — Health Survey\n\nHealth Survey\n\nDescribes the distribution of health-related states or events in a population, typically in terms of person, place, and time (the “who, where, and when”). It does not test hypotheses about cause and effect — it simply characterizes the burden of disease or health status in a defined population at a point in time.\n\n\n\n\nAnalytic — Ecological Study\n\nEcological Study\n\nCompares exposure and outcome data across groups or populations (e.g., countries, cities, or regions) rather than individuals. It looks for correlations between an exposure rate and a disease rate at the population level. While useful for generating hypotheses, ecological studies are vulnerable to the ecological fallacy — the risk of wrongly inferring individual-level relationships from group-level data.\n\n\n\n\n\nIndividual-Based Studies\nThese studies collect and analyze data on individual subjects rather than groups.\n\nDescriptive — Case Reports and Case Series\n\nCase Report\n\nA detailed description of a single, often unusual or novel, clinical case. Case Series\n\n\nDescribes a group of patients with a similar diagnosis or exposure, without a comparison group.\n\n\nBoth are hypothesis-generating tools that document clinical observations but cannot establish causal relationships due to the absence of a control group.\n\n\nAnalytic Studies - hi\nAnalytic studies test specific hypotheses about the relationship between an exposure and an outcome, typically using a comparison group. There are three main designs:\n\nCross-Sectional Study (Prevalence Study)\n\nMeasures exposure and outcome simultaneously in a population at a single point in time. It estimates the prevalence of disease and can identify associations, but because exposure and outcome are measured at the same time, it cannot establish the temporal sequence needed to infer causation.\n\nCase-Control Study (Case-Reference Study)\n\nStarts with subjects who already have the outcome of interest (cases) and compares them to those without it (controls), looking backward to assess prior exposure. This design is efficient for studying rare diseases and is retrospective in nature.\n\nCohort Study (Follow-Up Study)\n\nBegins with a group of exposed and unexposed individuals who are free of the outcome, then follows them forward in time to compare the incidence of disease between groups. Cohort studies can be prospective or retrospective and provide stronger evidence of temporal sequence than cross-sectional or case-control designs.",
-    "crumbs": [
-      "Lectures",
-      "Lecture 2"
-    ]
-  },
-  {
-    "objectID": "lectures/lectures-lecture2.html#experimental-interventional-studies",
-    "href": "lectures/lectures-lecture2.html#experimental-interventional-studies",
-    "title": "8/31 Lecture 2",
-    "section": "Experimental / Interventional Studies",
-    "text": "Experimental / Interventional Studies\nIn experimental studies, the investigator actively assigns the exposure or intervention, allowing for stronger causal inference than observational designs.\n\nRandomized Control Trial (Clinical Trial)\nParticipants are randomly assigned to receive either the intervention (e.g., a drug or treatment) or a control/placebo. Randomization balances known and unknown confounding factors between groups, making the RCT the gold standard for establishing causality. When conducted in a clinical setting, this is often called a clinical trial.\n\n\nNon-Randomized (Quasi-Experimental) Studies\nWhen randomization is not feasible or ethical, researchers may use non-randomized designs:\n\nQuasi-Experimental Study: An intervention is assigned without random allocation, often using pre-existing groups (e.g., comparing outcomes before and after a policy change).\nField Trial: The intervention is applied to healthy individuals in the community (rather than a clinical setting) who are at risk of developing a disease, often to test preventive measures like vaccines.\nCommunity Trial: The unit of intervention and analysis is an entire community or group, rather than individuals — commonly used to evaluate public health interventions such as water fluoridation or health education campaigns.",
-    "crumbs": [
-      "Lectures",
-      "Lecture 2"
-    ]
-  },
-  {
-    "objectID": "lectures/lectures-lecture2.html#summary-table",
-    "href": "lectures/lectures-lecture2.html#summary-table",
-    "title": "8/31 Lecture 2",
-    "section": "Summary Table",
-    "text": "Summary Table\n\n\n\n\n\n\n\n\nStudy Type\nCategory\nKey Feature\n\n\n\n\nHealth Survey\nObservational — Population\nDescriptive, group-level\n\n\nEcological Study\nObservational — Population\nAnalytic, group-level correlation\n\n\nCase Report / Case Series\nObservational — Individual\nDescriptive, no control group\n\n\nCross-Sectional Study\nObservational — Individual\nExposure & outcome measured simultaneously\n\n\nCase-Control Study\nObservational — Individual\nStarts with outcome, looks back at exposure\n\n\nCohort Study\nObservational — Individual\nStarts with exposure, follows forward\n\n\nRandomized Control Trial\nExperimental\nRandom assignment, gold standard\n\n\nQuasi-Experimental / Field / Community Trial\nExperimental\nNon-random assignment",
-    "crumbs": [
-      "Lectures",
-      "Lecture 2"
-    ]
-  },
-  {
-    "objectID": "lectures/lectures-lecture2.html#the-nature-of-adolescent-competencies-predicted-by-preschool-delay-of-gratification.",
-    "href": "lectures/lectures-lecture2.html#the-nature-of-adolescent-competencies-predicted-by-preschool-delay-of-gratification.",
-    "title": "8/31 Lecture 2",
-    "section": "The nature of adolescent competencies predicted by preschool delay of gratification.",
-    "text": "The nature of adolescent competencies predicted by preschool delay of gratification.\nDiscussion Questions\n\nWhat kind of study is this, and where would you place this study in the summary table above?\nWhat are some potential confounding variables in this study that could explain both their ability to delay gratification and later success?\nThinking back to the premise of the study – it was conducted on children at a preschool on Stanford’s campus. What does this tell us about this particular sample? What implications might this have for the results?",
-    "crumbs": [
-      "Lectures",
-      "Lecture 2"
-    ]
-  },
-  {
-    "objectID": "lectures/lectures-lecture2.html#revisiting-the-marshmallow-test-a-conceptual-replication-investigating-links-between-early-delay-of-gratification-and-later-outcomes",
-    "href": "lectures/lectures-lecture2.html#revisiting-the-marshmallow-test-a-conceptual-replication-investigating-links-between-early-delay-of-gratification-and-later-outcomes",
-    "title": "8/31 Lecture 2",
-    "section": "Revisiting the Marshmallow Test: A Conceptual Replication Investigating Links Between Early Delay of Gratification and Later Outcomes",
-    "text": "Revisiting the Marshmallow Test: A Conceptual Replication Investigating Links Between Early Delay of Gratification and Later Outcomes\nDiscussion Questions\n\nWhat does it mean that this is a conceptual replication rather than an exact replication? What’s the difference, and why might researchers choose one over the other?\nHow did the replication’s sample differ from the original’s, and how does that impact their findings?\nBased on both papers, what would you say is the actual, defensible conclusion about delay of gratification and life outcomes?\nIf you were to conduct your own replication, how might you further improve on this study?",
-    "crumbs": [
-      "Lectures",
-      "Lecture 2"
-    ]
-  },
-  {
-    "objectID": "lectures/lectures-lecture1.html",
-    "href": "lectures/lectures-lecture1.html",
-    "title": "8/24 Lecture 1",
+    "objectID": "lectures/lectures-lecture6.html#last-lecture-recap",
+    "href": "lectures/lectures-lecture6.html#last-lecture-recap",
+    "title": "lectures-lecture6",
     "section": "",
-    "text": "Let’s consider a world where statistics doesn’t exist. What would it look like? People could make random claims without numerical evidence. Your feed would look like a random mess of videos constantly being posted. One could argue that we couldn’t count the number of people enrolled in this course.\nOkay, well that seemed pretty obvious. Of course, the reason for taking this course is likely some form of personal interest, as it’s a random half credit house course. Perhaps you’re a CS major who wants to learn some statistical algorithms to recreate Google’s PageRank. Maybe you’re a pre-med and hope to do a survival analysis to support your research interests. Finally, maybe you’re a sociologist and want to determine a population parameter for the use of AI in the classroom.\nLet’s reflect on what today’s world looks like. A reasonable statement would be: “Statistics exists. Some people know how to use statistics, some other people sort of know what statistics is, and a vast majority of people have heard of it.” The goal of this course is to move from the third group to the second group, in a way that could set you up for self learning to make it to the first group. We also hope that you’ll be able to critically evaluate the quality of a statistical analysis on a paper you’ve never seen before. There is much to learn!",
-    "crumbs": [
-      "Lectures",
-      "Lecture 1"
-    ]
+    "text": "Last lecture we talked a lot about comparing groups: t-tests, ANOVA, and their categorical and rank-based cousins, all following the same hypothesis-testing recipe. Today we take one more step. Regression is the tool that lets us compare groups while accounting for other differences between them, and it lets the “groups” be replaced by continuous predictors like age or dosage.\nThat’s why regression is everywhere in observational research. In Lecture 2 we saw that observational studies can’t randomize away confounders the way an RCT can. Regression is the main way researchers try to deal with confounding after the fact: measure the confounders and adjust for them. Today’s papers are a case study in how well that works, and in what happens when an important variable is left out.\nIMPORTANT! A regression coefficient tells you how the outcome differs when one variable differs, among observations that look alike on everything else in the model. Most misreadings of regression come from forgetting the words “in the model.”"
   },
   {
-    "objectID": "lectures/lectures-lecture1.html#motivating-this-course",
-    "href": "lectures/lectures-lecture1.html#motivating-this-course",
-    "title": "8/24 Lecture 1",
-    "section": "",
-    "text": "Let’s consider a world where statistics doesn’t exist. What would it look like? People could make random claims without numerical evidence. Your feed would look like a random mess of videos constantly being posted. One could argue that we couldn’t count the number of people enrolled in this course.\nOkay, well that seemed pretty obvious. Of course, the reason for taking this course is likely some form of personal interest, as it’s a random half credit house course. Perhaps you’re a CS major who wants to learn some statistical algorithms to recreate Google’s PageRank. Maybe you’re a pre-med and hope to do a survival analysis to support your research interests. Finally, maybe you’re a sociologist and want to determine a population parameter for the use of AI in the classroom.\nLet’s reflect on what today’s world looks like. A reasonable statement would be: “Statistics exists. Some people know how to use statistics, some other people sort of know what statistics is, and a vast majority of people have heard of it.” The goal of this course is to move from the third group to the second group, in a way that could set you up for self learning to make it to the first group. We also hope that you’ll be able to critically evaluate the quality of a statistical analysis on a paper you’ve never seen before. There is much to learn!",
-    "crumbs": [
-      "Lectures",
-      "Lecture 1"
-    ]
+    "objectID": "lectures/lectures-lecture6.html#from-comparing-groups-to-regression",
+    "href": "lectures/lectures-lecture6.html#from-comparing-groups-to-regression",
+    "title": "lectures-lecture6",
+    "section": "From comparing groups to regression",
+    "text": "From comparing groups to regression\nSuppose you’re comparing a treatment group and a control group on a continuous outcome. Define an indicator variable \\(X_i = 1\\) if person \\(i\\) is treated and \\(X_i = 0\\) if not, and fit\n\\[Y_i = \\beta_0 + \\beta_1 X_i + \\varepsilon_i\\]\nFor a control subject, the model predicts \\(\\beta_0\\), so \\(\\beta_0\\) is the control group’s mean. For a treated subject, it predicts \\(\\beta_0 + \\beta_1\\), so \\(\\beta_1\\) is the difference in group means. Testing \\(H_0: \\beta_1 = 0\\) gives exactly the same result as last lecture’s equal-variance (Student’s) t-test, and using indicators for \\(k-1\\) of \\(k\\) groups reproduces one-way ANOVA. (Welch’s and the rank-based tests are only approximately regressions, but the idea carries over.)\nSo the simplest regressions are tests we already know. What regression adds is the ability to swap in continuous predictors and to include many predictors at once."
   },
   {
-    "objectID": "lectures/lectures-lecture1.html#what-is-statistics-what-is-a-statistic",
-    "href": "lectures/lectures-lecture1.html#what-is-statistics-what-is-a-statistic",
-    "title": "8/24 Lecture 1",
-    "section": "What is statistics? What is a statistic?",
-    "text": "What is statistics? What is a statistic?\nStatistics (the field) is a mathematical science pertaining to the collection, analysis, interpretation, and presentation of data.\nA statistic is any quantity computed from values in a sample. That is incredibly broad. During this course, we will primarily focus on two types of statistics (which are not mutually exclusive of one another):\n\n\nDescriptive statistics, which summarize a sample of data\n\n\nTest statistics, which is some number derived from the sample that would be selected or defined in a way that differentiates between the null and alternative hypothesis.\n\nThat’s a lot of jargon right there. No worries – we’ll break it down through this course!",
-    "crumbs": [
-      "Lectures",
-      "Lecture 1"
-    ]
+    "objectID": "lectures/lectures-lecture6.html#simple-linear-regression",
+    "href": "lectures/lectures-lecture6.html#simple-linear-regression",
+    "title": "lectures-lecture6",
+    "section": "Simple linear regression",
+    "text": "Simple linear regression\nWith one predictor \\(X\\) and a continuous outcome \\(Y\\), we model the outcome as a straight line plus noise:\n\\[Y_i = \\beta_0 + \\beta_1 X_i + \\varepsilon_i\\]\n\n\\(\\beta_0\\), the intercept: the expected value of \\(Y\\) when \\(X = 0\\).\n\\(\\beta_1\\), the slope: the expected change in \\(Y\\) for a one-unit increase in \\(X\\).\n\\(\\varepsilon_i\\), the error: everything about observation \\(i\\) the line doesn’t capture.\n\nWe estimate the \\(\\beta\\)’s from data and write the estimates with hats. The standard method is least squares: choose the line that makes the sum of squared residuals (the vertical gaps between each observed \\(y_i\\) and the line’s prediction \\(\\hat y_i\\)) as small as possible.\n\\[SS_{res} = \\sum_{i=1}^{n} (y_i - \\hat y_i)^2\\]\n\nWhat does the slope mean?\n“Is there any relationship between \\(X\\) and \\(Y\\)?” becomes the test \\(H_0: \\beta_1 = 0\\), with the same signal-to-noise form as last lecture’s t-test:\n\\[t = \\frac{\\hat\\beta_1}{SE(\\hat\\beta_1)}\\]\nEverything from our hypothesis testing lecture applies unchanged: report the slope and its confidence interval, not just the p-value, and remember that “not significant” is not the same as “no effect.”\nThe slope describes an association, not the result of an intervention. “Each additional hour of sleep is associated with a 3-point higher mood score” is a description; “sleeping one more hour will raise your mood score 3 points” is a causal claim, and as Lecture 2 showed, that requires a design that supports it.\n\n\nR-squared\nIn our hypothesis testing lecture, \\(R^2\\) came up as an effect size. It measures the share of variation in \\(Y\\) the model explains:\n\\[R^2 = 1 - \\frac{SS_{res}}{SS_{tot}} \\qquad \\text{where } SS_{tot} = \\sum_{i=1}^{n}(y_i - \\bar y)^2\\]\nIt runs from 0 (the line does no better than just predicting the average) to 1 (it explains everything). A low \\(R^2\\) is not automatically bad: rare, noisy outcomes like newborn mortality depend on countless things no dataset captures, so a model can find a real relationship while explaining little of the total variation. And a high \\(R^2\\) says nothing about causation."
   },
   {
-    "objectID": "lectures/lectures-lecture1.html#good-statistics-vs.-bad-statistics",
-    "href": "lectures/lectures-lecture1.html#good-statistics-vs.-bad-statistics",
-    "title": "8/24 Lecture 1",
-    "section": "“Good” statistics vs. “Bad” statistics",
-    "text": "“Good” statistics vs. “Bad” statistics\nWhat is “good” statistics? In this case, we typically will mean rigorous, with clearly defined intentions, acknowledgement of shortcomings, and evaluation of its efficacy in practice. This would make a “good” statistic (singular) one that is appropriate to use in the given scenario.\nA short example. Say you’ve got a bunch of categorical data (ex: survey answers of Yes or No), but then you create some model that only models continuous data (ex: representing Yes as 1 and No as 0, and having statistics in between). That’s not good! You may even get a statistically significant result (we will learn what this really means). Say you even made it past the editors at a publishing house and got published, and some random news reporter picked it up and wrote an article on it. We will see later in this course that this has actually happened many, many times.\nIn this course, we will read some very good and very bad papers. Ideally, you’ll be able to determine why they’re bad, beyond simply “the journal retracted them.”\nWhat good statistics should do\n\nMake data more approachable. A statistic should be well-chosen summary that allows the audience to understand something about, for example, the opinions of 10,000 people without having to look at all 10,000 data points.\nSupport a claim. Statistics should typically have a goal/purpose that they are attempting to explain, or identify some specific finding.\nDisplay relevant information. The statistic chosen should actually speak to the question being asked!\nCommunicate a story. At the end of the day, someone has to be able to view your analysis and understand what it conveys and its implications.\n\nWhat bad statistics may do\n\nUse methods inappropriately. For example, applying a statistical technique to data it wasn’t designed for. We’ll explore lots of papers that do this!\nAdding unnecessary complexity. Sometimes, complexity can obscure the true result. Often times, simple is best.\nCherry-picking or overgeneralizing. Selectively reporting the data points (or the one significant test out of twenty) that support your narrative, or taking a result from a small, biased, or narrow sample and claiming it holds for the larger group.\n\nWhy do we care?\nYou all have probably seen your fair share of misleading or crazy news headlines. From Scientists Say Smelling Farts Might Prevent Cancer to Coffee Consumption May Raise Miscarriage Risk, our world is full of bad statistics. Language like “might” or “may” largely obscure the actual scientific findings of correlation vs. causation.\nAnd beyond clickbait news articles and AI Instagram posts, bad statistics also show up in legitimate, peer-reviewed research. Consider a study on physician age at death by specialty: emergency physicians were reported to have the youngest average age at death (58.7 years!) of any medical specialty. But this estimate was based on only 43 obituaries (compared to primary care physicians, whose average statistic was based on 2,508). A mean built on 43 observations is going to be far noisier than one built on thousands, even though both are presented in the same table, in the same font, with the same weight. This is just one example of the importance of statistical literacy and thinking critically about research.",
-    "crumbs": [
-      "Lectures",
-      "Lecture 1"
-    ]
+    "objectID": "lectures/lectures-lecture6.html#multiple-regression-holding-other-things-constant",
+    "href": "lectures/lectures-lecture6.html#multiple-regression-holding-other-things-constant",
+    "title": "lectures-lecture6",
+    "section": "Multiple regression: “holding other things constant”",
+    "text": "Multiple regression: “holding other things constant”\nReal outcomes depend on many things at once:\n\\[Y_i = \\beta_0 + \\beta_1 X_{1i} + \\beta_2 X_{2i} + \\cdots + \\beta_p X_{pi} + \\varepsilon_i\\]\nNow \\(\\beta_1\\) is the expected change in \\(Y\\) for a one-unit increase in \\(X_1\\), holding all the other predictors in the model fixed. This is what papers mean by “controlled for” or “adjusted for.” If \\(X_1\\) is a treatment indicator and \\(X_2\\) is age, \\(\\beta_1\\) is the difference between treatment and control among people of the same age, something no test from last lecture could give you.\n\nFixed effects\nMany observational studies include fixed effects: one indicator variable for each hospital, each physician, each year, and so on. A hospital fixed effect gives every hospital its own intercept, absorbing anything constant about that hospital (its patient population, equipment, overall quality). The remaining coefficients are then estimated from comparisons within hospitals. Fixed effects adjust for a lot without measuring it individually, but only for things that are constant within the group, not things that vary from patient to patient.\n\n\nInteractions: when one variable’s effect depends on another\nSometimes the question isn’t “does \\(X_1\\) matter?” but “does the effect of \\(X_1\\) depend on \\(X_2\\)?” That’s an interaction, modeled by including the product of the two variables:\n\\[Y_i = \\beta_0 + \\beta_1 X_{1i} + \\beta_2 X_{2i} + \\beta_3 (X_{1i} \\times X_{2i}) + \\varepsilon_i\\]\nIf \\(X_1\\) and \\(X_2\\) are both 0/1 indicators, there are four combinations, and \\(\\beta_3\\) measures how much the combination of both differs from what you’d expect by adding up their separate effects. Today’s papers are built on exactly this structure: “racial concordance” asks whether outcomes differ when physician and patient race match, beyond the separate effects of each one’s race. The concordance effect lives in the interaction coefficient."
   },
   {
-    "objectID": "lectures/lectures-lecture1.html#research-101",
-    "href": "lectures/lectures-lecture1.html#research-101",
-    "title": "8/24 Lecture 1",
-    "section": "Research 101",
-    "text": "Research 101\nTurning now to the second half of our course title, research – where does statistics play a role? How does the research process work?\n\nUnderstand the field: Research usually starts with lots and lots of reading. We want to be able to know what’s already been asked and what answers already exist before we can possibly understand what’s missing.\nFind a new question: A good question is specific, testable, and not already answered! This is where research truly starts.\nFind a way to test the question: We usually want to design a study or analysis that could actually provide evidence for or against your question.\nExamine/analyze the results: Running said test, computing the numbers, reporting findings.\nand finally, write about it and why it matters.\n\nStep 4 is where most think statistics starts and ends.\nBut really, it’s active all the way back in Step 2, before any data has been manipulated. When we are finding our question, we need to define our variables, or subject(s) of interest. What exactly are we measuring? How are we measuring them? Vague variables lead to vague (or unanswerable) questions!\nIn Step 3, when we’re designing a study or analysis to test our question, that design may play a significant impact on the strength of the answer we will get. For example, our question may be about a causal relationship (does X cause Y?), but our study design may only be able to give us a correlational answer (X and Y are/are not related).\nIt’s also tempting to think that statistics ends when we’ve done the analysis, and all that’s left is to write it out in nice sentences. But Step 5 is arguably the most important part. Communication of statistics is extremely important. Vocabulary such as “significant” means something very specific in a statistical context compared to colloquial usage. Additionally, we must make the conclusion as clear as possible to our audience, or else we might end up with a headline as striking as farts preventing cancer.",
-    "crumbs": [
-      "Lectures",
-      "Lecture 1"
-    ]
+    "objectID": "lectures/lectures-lecture6.html#confounding-revisited-omitted-variable-bias",
+    "href": "lectures/lectures-lecture6.html#confounding-revisited-omitted-variable-bias",
+    "title": "lectures-lecture6",
+    "section": "Confounding, revisited: omitted variable bias",
+    "text": "Confounding, revisited: omitted variable bias\nIn Lecture 2 we met confounding through ice cream and shark attacks. Multiple regression is how researchers try to fix confounding in observational data: include the confounder in the model and compare like with like. The catch is that regression can only adjust for what’s in the model. So the real question about any observational regression is: what’s missing, and how much does it matter?\n\nSuppose the true relationship is\n\\[Y = \\beta_0 + \\beta_1 X + \\beta_2 Z + \\varepsilon\\]\nbut \\(Z\\) isn’t measured, so we fit a model with \\(X\\) alone. On average, the slope we get for \\(X\\) will be\n\\[\\tilde\\beta_1 \\approx \\beta_1 + \\beta_2 \\delta\\]\nwhere \\(\\delta\\) is how strongly \\(Z\\) tracks \\(X\\) (the slope from regressing \\(Z\\) on \\(X\\)). The extra term \\(\\beta_2\\delta\\) is omitted variable bias.\nBecause the bias is a product, it gives a two-part test. A missing variable biases your result only if it:\n\naffects the outcome (\\(\\beta_2 \\neq 0\\)), and\nis unevenly distributed across values of the predictor you care about (\\(\\delta \\neq 0\\)).\n\nIf either is zero, leaving it out does no harm. If both are large, the bias can create an effect out of nothing, erase a real one, or flip its sign. This makes Lecture 2’s advice (“think about what differs between the groups”) concrete: name a candidate variable, then check both conditions.\n\nGood controls and bad controls\n“Control for everything” isn’t the answer either.\n\nA good control is determined before the predictor of interest and affects the outcome. That’s a confounder; adjusting for it removes bias.\nA bad control is caused by the predictor of interest, a step along the causal pathway (a mediator). Adjusting for it removes part of the very effect you’re trying to measure.\n\nAsking “when was this variable determined, relative to the treatment?” is often the fastest way to tell them apart."
   },
   {
-    "objectID": "lectures/lectures-lecture1.html#keshav-s.-how-to-read-a-paper",
-    "href": "lectures/lectures-lecture1.html#keshav-s.-how-to-read-a-paper",
-    "title": "8/24 Lecture 1",
-    "section": "Keshav, S. “How to Read a Paper”",
-    "text": "Keshav, S. “How to Read a Paper”\nBefore diving headfirst into research papers (as we will in the rest of this course), it’s important to know how to read one efficiently and effectively, especially if we don’t know much about the topic. “Researchers spend a great deal reading research papers. However this skill is rarely taught, leading to much wasted effort,” Keshav introduces. How to Read a Paper proposes a three-pass method for reading academic research papers:\n\nThe first pass: a quick skim of the title, abstract, introduction, section headings, and conclusions. The goal is to get a general gist of what the paper does, how it does it, and whether it’s worth diving into.\nThe second pass: a more careful read, now looking into figures, diagrams, data, etc., but still not exploring too much detail. The goal is to understand the general content and be able to summarize it with some supporting evidence.\nThe third pass: a full read, where the goal is to “virtually re-implement” the paper, or be able to reconstruct its structure and challenge its assumptions, methods, and results.\n\nClass Discussion Questions:\n\nWhat was your previous method of reading papers? How has this changed your perspective?\n\nAre there any helpful tips/tricks you’ve developed/found on your own when reading articles or papers?\n\nWhy does this method matter? Why should we deeply learn and understand a paper?\nWhy is point 3 (“Doing a Literature Survey”) important in research?\nHow do you think point 4 (“Experience”) develops?",
-    "crumbs": [
-      "Lectures",
-      "Lecture 1"
-    ]
+    "objectID": "lectures/lectures-lecture6.html#binary-outcomes",
+    "href": "lectures/lectures-lecture6.html#binary-outcomes",
+    "title": "lectures-lecture6",
+    "section": "Binary outcomes",
+    "text": "Binary outcomes\nMany outcomes are yes/no: did the patient survive, did the student graduate. As in Lecture 3, each is a Bernoulli trial with some probability \\(p\\), and \\(p\\) is what we want to model.\n\nThe linear probability model\nIn Lecture 1, “code Yes as 1 and No as 0, then fit a model meant for continuous data” was our example of bad statistics. That warning is usually right, but the full story is more nuanced. Running ordinary regression on a 0/1 outcome has a name, the linear probability model, and it’s common in economics because the slope reads directly as a change in probability: “a one-unit increase in \\(X\\) is associated with a 0.2 percentage-point higher probability of death.”\nIts weaknesses are real: a straight line can predict probabilities below 0 or above 1, and the equal-variance assumption fails automatically, because a Bernoulli outcome’s variance, \\(p(1-p)\\), depends on \\(p\\). It can be defensible, especially with many fixed effects and corrected standard errors, but it’s a choice that should be justified.\n\n\nLogistic regression\nThe alternative models the log-odds of the outcome as a line instead:\n\\[\\log\\left(\\frac{p}{1 - p}\\right) = \\beta_0 + \\beta_1 X_1 + \\cdots + \\beta_k X_k\\]\nThe logit function on the left stretches a probability (stuck between 0 and 1) across the whole number line, so the model can never predict an impossible probability. Exponentiating a coefficient gives an odds ratio, the effect size we met with 2×2 tables last lecture, except now it’s adjusted for everything else in the model:\n\\[e^{\\beta_1} = \\text{odds ratio for } X_1\\]\nAn odds ratio of 1 means no association, so a 95% CI including 1 corresponds to a non-significant result. And odds ratios aren’t risk ratios: for common outcomes, they can look much more dramatic than the actual change in probability.\nLogistic regression is fit by maximum likelihood: choose the coefficients that make the observed 0s and 1s most probable. In the language of our hypothesis testing lecture, the estimate is the peak of the log-likelihood, and its precision comes from the Fisher information, i.e., how sharp that peak is."
   },
   {
-    "objectID": "syllabus/syllabus-policies.html",
-    "href": "syllabus/syllabus-policies.html",
-    "title": "Policies",
-    "section": "",
-    "text": "You are enthusiastically encouraged to work together and help one another on assignments/discussions. However, you should not be crassly handing your solutions to others for them to brainlessly copy. This is plagiarism, and all involved will earn a zero on the assignment and be referred to the conduct office, both sharers and recipients alike. The assignments you submit must be your own work.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
+    "objectID": "lectures/lectures-lecture6.html#bias-in-regression",
+    "href": "lectures/lectures-lecture6.html#bias-in-regression",
+    "title": "lectures-lecture6",
+    "section": "Bias in regression",
+    "text": "Bias in regression\nBias is any systematic (not random) error in how a study is designed, conducted, or analyzed that pushes results away from the truth, intentional or not. More data doesn’t fix it; it just gives a more precise wrong answer. Omitted variable bias is one kind. Two others matter especially for observational data like today’s:\n\nSelection bias: the process that sorts observations into groups is related to the outcome. If sicker patients are routed to certain providers, a regression comparing providers partly measures patient sickness. This is the diagram above, and it’s often the central problem in observational health research.\nInformation (measurement) bias: variables are recorded with error, through faulty instruments, inconsistent coding, or human judgment. Administrative data like hospital billing and diagnosis codes reflect what someone chose to record and why, not a clean measurement of the truth. Random error in a predictor tends to shrink its coefficient toward zero; systematic error can push it in any direction.\n\nRegression can’t fix either one by itself. The strongest defenses are design-based: randomization where possible (Lecture 2), careful and standardized measurement, and replication and reanalysis by people who didn’t produce the original result."
   },
   {
-    "objectID": "syllabus/syllabus-policies.html#collaboration",
-    "href": "syllabus/syllabus-policies.html#collaboration",
-    "title": "Policies",
-    "section": "",
-    "text": "You are enthusiastically encouraged to work together and help one another on assignments/discussions. However, you should not be crassly handing your solutions to others for them to brainlessly copy. This is plagiarism, and all involved will earn a zero on the assignment and be referred to the conduct office, both sharers and recipients alike. The assignments you submit must be your own work.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
+    "objectID": "lectures/lectures-lecture6.html#ethics-and-research-misconduct",
+    "href": "lectures/lectures-lecture6.html#ethics-and-research-misconduct",
+    "title": "lectures-lecture6",
+    "section": "Ethics and research misconduct",
+    "text": "Ethics and research misconduct\nOur hypothesis testing lecture covered p-hacking and researcher degrees of freedom. Regression makes these especially easy to fall into, because every model involves choices: which controls to include, which observations to exclude, linear probability or logistic, which fixed effects. Trying many specifications and reporting the one that “works” is specification searching. The flip side: showing that a result holds (or doesn’t) across reasonable alternative specifications is one of the most convincing things a paper can do. Two papers analyzing the same data with different models isn’t misconduct; it’s how science is supposed to check itself.\nThe line into formal research misconduct is crossed with fabrication (making up data or results), falsification (manipulating methods or data, or omitting data, so the record is inaccurate), or plagiarism. Studies using human subjects’ data, even existing hospital records, also go through an Institutional Review Board (IRB), which reviews research to ensure it meets ethical standards and protects participants."
   },
   {
-    "objectID": "syllabus/syllabus-policies.html#use-of-outside-resources-including-ai",
-    "href": "syllabus/syllabus-policies.html#use-of-outside-resources-including-ai",
-    "title": "Policies",
-    "section": "Use of outside resources, including AI",
-    "text": "Use of outside resources, including AI\nThere are at least two reasons you might seek outside resources:\n\nExtra practice/material or alternative instruction: Go crazy. Knock yourself out. Have a ball. The internet is saturated with good (and horrible) resources for learning this material, so if you find something that really resonates with you, have at it;\nDoing the work for you: If you ask a language model to generate a summary, and you copy it down and submit it as your own work, that is plagiarism. If we detect it, you will earn a zero for that part of your write-up.\n\n“Using ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way.” Furthermore, this course is a half-credit, pass-fail course purely for your own interest. As such, outsourcing all of your thinking to an AI will probably end in this entire enterprise being a complete waste of time and energy. To avoid this, we suggest you abstain from using language models to do the reading/thinking for you.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
+    "objectID": "lectures/lectures-lecture6.html#potential-threats-to-regression-coefficients",
+    "href": "lectures/lectures-lecture6.html#potential-threats-to-regression-coefficients",
+    "title": "lectures-lecture6",
+    "section": "Potential Threats to Regression Coefficients",
+    "text": "Potential Threats to Regression Coefficients\n\n\n\n\n\n\n\n\nThreat\nWhat it does to a regression coefficient\nCan adding controls fix it?\n\n\n\n\nOmitted confounder\nBiased by \\(\\beta_2\\delta\\); can create, hide, or flip an effect\nYes, if you can measure it\n\n\nSelection into groups\nPartly reflects who ends up in which group\nPartly, if the drivers of selection are measured\n\n\nMeasurement error\nUsually shrinks the coefficient toward zero\nNo; requires better measurement\n\n\nControlling for a mediator\nRemoves part of the real effect\nNo; it is the bad control\n\n\nSpecification searching\nReported p-value is too optimistic\nNo; requires transparency and robustness checks"
   },
   {
-    "objectID": "syllabus/syllabus-policies.html#communication",
-    "href": "syllabus/syllabus-policies.html#communication",
-    "title": "Policies",
-    "section": "Communication",
-    "text": "Communication\nIf you wish to ask content-related questions in writing, please do not do so via e-mail. Instead, please use the course discussion forum Ed Discussion. That way all members of the teaching team can see your question, and all students can benefit from the ensuing discussion. You are also encouraged to answer one another’s questions.\nIf you have questions about personal matters that may not be appropriate for the public course forum (e.g. illness, accommodations, etc), then please e-mail the instructors directly (cooper.ruffing@duke.edu & liane.ma@duke.edu), and/or the course advisor (john.zito@duke.edu).",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
+    "objectID": "lectures/lectures-lecture6.html#summary",
+    "href": "lectures/lectures-lecture6.html#summary",
+    "title": "lectures-lecture6",
+    "section": "Summary",
+    "text": "Summary\n\nThe simplest regressions are last lecture’s tests; regression adds continuous predictors and adjustment for other variables.\nEach coefficient means “the difference in the outcome among observations alike on everything else in the model.” Fixed effects and interactions extend what “the model” can capture.\nBinary outcomes can be modeled with a linear probability model (easy to interpret, but can predict impossible probabilities) or logistic regression (coefficients become adjusted odds ratios).\nAdjusting for measured confounders doesn’t fix unmeasured ones. Omitted variable bias needs a variable that both affects the outcome and is unevenly distributed across the predictor.\nSelection bias, measurement bias, and specification searching all flow through a regression untouched. Design, transparency, and reanalysis are what catch them."
   },
   {
-    "objectID": "syllabus/syllabus-policies.html#late-work-and-extensions",
-    "href": "syllabus/syllabus-policies.html#late-work-and-extensions",
-    "title": "Policies",
-    "section": "Late work and extensions",
-    "text": "Late work and extensions\nNo late work will be accepted unless you request an extension in advance by e-mailing the instructors directly (cooper.ruffing@duke.edu and liane.ma@duke.edu. All reasonable requests will be entertained, but extensions will not be long.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
+    "objectID": "lectures/lectures-lecture6.html#greenwood-bn-hardeman-rr-huang-l-sojourner-a.-physicianpatient-racial-concordance-and-disparities-in-birthing-mortality-for-newborns.",
+    "href": "lectures/lectures-lecture6.html#greenwood-bn-hardeman-rr-huang-l-sojourner-a.-physicianpatient-racial-concordance-and-disparities-in-birthing-mortality-for-newborns.",
+    "title": "lectures-lecture6",
+    "section": "Greenwood BN, Hardeman RR, Huang L, Sojourner A. Physician–patient racial concordance and disparities in birthing mortality for newborns.",
+    "text": "Greenwood BN, Hardeman RR, Huang L, Sojourner A. Physician–patient racial concordance and disparities in birthing mortality for newborns.\nDiscussion Questions\n\nHow is the dataset cleaned/how is the data collected? Is there anything noteworthy about this?\nWhat is the response variable? What sort of model is used to analyze this? What are the trade-offs of that choice compared to logistic regression?\nUsing the study types from Lecture 2, what kind of study is this? What does that design allow the authors to conclude, and what does it not?\nThe authors include hospital and physician fixed effects and control for the 65 most common newborn comorbidities. What does each of these accomplish? Why might “most common” be a different criterion than “most important for predicting mortality”?\nHow is a newborn assigned to a physician? List at least two ways that assignment might be related to how sick the newborn is, and explain why that matters for the regression."
   },
   {
-    "objectID": "syllabus/syllabus-policies.html#regrade-requests",
-    "href": "syllabus/syllabus-policies.html#regrade-requests",
-    "title": "Policies",
-    "section": "Regrade requests",
-    "text": "Regrade requests\nIf you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by emailing Dr. Zito, who is the sole reviewer of these. Note the following:\n\nYou have one week after you receive a grade to submit a regrade request;\nYou should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;\nRequests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;\nRequests to dispute the number of points deducted for an incorrect response will not be considered;\nNo grades will be changed after the final class period has been occurred on Monday, November 30.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
+    "objectID": "lectures/lectures-lecture6.html#borjas-gj-verbruggen-r.-physicianpatient-racial-concordance-and-newborn-mortality.",
+    "href": "lectures/lectures-lecture6.html#borjas-gj-verbruggen-r.-physicianpatient-racial-concordance-and-newborn-mortality.",
+    "title": "lectures-lecture6",
+    "section": "Borjas GJ, VerBruggen R. Physician–patient racial concordance and newborn mortality.",
+    "text": "Borjas GJ, VerBruggen R. Physician–patient racial concordance and newborn mortality.\nDiscussion Questions\n\nHow does this paper address the first paper?\nIs everything adequately addressed?\nThe added variable is determined before a physician is assigned. Why does that make it a reasonable control? Can you think of a variable in this setting that would be a bad control?\nThe reanalysis finds the concordance effect becomes small and statistically insignificant. Is “not statistically significant” the same as “no effect”? What would you want to see before drawing a conclusion?"
   },
   {
-    "objectID": "syllabus/syllabus-policies.html#attendance",
-    "href": "syllabus/syllabus-policies.html#attendance",
-    "title": "Policies",
-    "section": "Attendance",
-    "text": "Attendance\nDuke requires students to attend at least 11 class sessions. We hope you’ll show up for all 14!",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-policies.html#accommodations",
-    "href": "syllabus/syllabus-policies.html#accommodations",
-    "title": "Policies",
-    "section": "Accommodations",
-    "text": "Accommodations\nIf you need accommodations for this class, you will need to register with the Student Disability Access Office (SDAO) and provide them with documentation related to your needs. SDAO will work with you to determine what accommodations are appropriate for your situation. Please note that accommodations are not retroactive and disability accommodations cannot be provided until a Faculty Accommodation Letter has been given to me. Please contact SDAO for more information: sdao@duke.edu or access.duke.edu.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-policies.html#duke-community-standard",
-    "href": "syllabus/syllabus-policies.html#duke-community-standard",
-    "title": "Policies",
-    "section": "Duke Community Standard",
-    "text": "Duke Community Standard\nDuke University is a community dedicated to scholarship, leadership, and service and to the principles of honesty, fairness, respect, and accountability. Members of this community commit to reflect upon and uphold these principles in all academic and non-academic endeavors, and to protect and promote a culture of integrity.\nDuke University has high expectations for students’ scholarship and conduct. In accepting admission, students indicate their willingness to subscribe to and be governed by the rules and regulations of the university, which flow from the Duke Community Standard (DCS).\nRegardless of course delivery format, it is the responsibility of all students to understand and follow all Duke policies, including but not limited to the academic integrity policy (e.g., completing one’s own work, following proper citation of sources, adhering to guidance around group work projects, and more). Ignoring these requirements is a violation of the DCS.\nStudents can direct any questions or concerns regarding academic integrity to the Office of Student Conduct and Community Standards at conduct@duke.edu and can access the DCS guide at https://dukecommunitystandard.students.duke.edu/.\nIn House Course 59-11 specifically…\n\nIf a conduct violation results in a zero on an assignment/project, that zero will not be dropped;\nIf we discover that students are sharing and copying assignment answers, all students involved will be penalized equally, the sharers the same as the recipients.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-team.html",
-    "href": "syllabus/syllabus-team.html",
-    "title": "Teaching team",
-    "section": "",
-    "text": "Mug\nName\nRole\n\n\n\n\n\nMa, Liane\nInstructor\n\n\n\nRuffing, Cooper\nInstructor\n\n\n\nZito, John\nCourse Advisor & Instructor",
-    "crumbs": [
-      "Syllabus",
-      "Teaching team"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-materials.html",
-    "href": "syllabus/syllabus-materials.html",
-    "title": "Course materials",
-    "section": "",
-    "text": "You are not required to purchase a textbook for this class. Who do we think we are?\nIn the PREPARE column of the course schedule, we will note which papers are reading for next class.\nIn the Lectures tab on the right, we will provide typed copies of lecture notes. Note that the exact topics/discussion in class may deviate from these typed notes – email us if you’d like a better recap!\nNote that here is the signup sheet for the student-led discussion sections.",
-    "crumbs": [
-      "Syllabus",
-      "Materials"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-materials.html#textbooks",
-    "href": "syllabus/syllabus-materials.html#textbooks",
-    "title": "Course materials",
-    "section": "",
-    "text": "You are not required to purchase a textbook for this class. Who do we think we are?\nIn the PREPARE column of the course schedule, we will note which papers are reading for next class.\nIn the Lectures tab on the right, we will provide typed copies of lecture notes. Note that the exact topics/discussion in class may deviate from these typed notes – email us if you’d like a better recap!\nNote that here is the signup sheet for the student-led discussion sections.",
-    "crumbs": [
-      "Syllabus",
-      "Materials"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-materials.html#technology",
-    "href": "syllabus/syllabus-materials.html#technology",
-    "title": "Course materials",
-    "section": "Technology",
-    "text": "Technology\nTechnology use will be limited during class time to encourage active discussion and participation. However, you will need access to a device with internet so that you can use the following:\n\nThis course page that you are on right now;\nCanvas, through which you can access…\nZoom (e.g. for remote office hours as needed).\n\nIf access to technology becomes a concern for you during the semester, contact the instructors immediately to discuss options.",
-    "crumbs": [
-      "Syllabus",
-      "Materials"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "STA HOUSE Statistical Methods in Research",
-    "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nMon, Aug 24\nNone!\nIntroduction to Statistics in Research\nKeshav, S. “How to Read a Paper.” ACM SIGCOMM Computer Communication Review, 2007  In Class Reading Assignment\n\n\n\n\n2\nMon, Aug 31\n\n\nStudy Design\nAPA Introduction  Mischel, W., Shoda, Y., & Peake, P. K. (1988). The nature of adolescent competencies predicted by preschool delay of gratification  Watts, T. W., Duncan, G. J., & Quan, H. (2018). Revisiting the Marshmallow Test: A Conceptual Replication Investigating Links Between Early Delay of Gratification and Later Outcomes\n\n\n\n\n\n\nMon, Sep 7\n\n\n\n\nNo class :)\n\n\n\n\n3\nMon, Sep 14\n\n\nIntroduction to Probability\nYaari, G., Eisenmann, S. (2011). “The Hot (Invisible?) Hand: Can Time Sequence Patterns of Success/Failure in Sports Be Modeled as Repeated Random Independent Trials?.”  Krithikadatta J. (2014). Normal distribution.\n\n\n\n\n4\nMon, Sep 21\n\n\nP-values, Power, and the Logic of Significance Testing\nCM Bennett, MB Miller, GL Wolford, Neural correlates of interspecies perspective taking in the post-mortem Atlantic Salmon: an argument for multiple comparisons correction.  Bem DJ. Feeling the future: experimental evidence for anomalous retroactive influences on cognition and affect.\n\n\n\n\n5\nMon, Sep 28\n\n\nStatistical Methods for Group Comparisons\nC.A. Moss-Racusin, J.F. Dovidio, V.L. Brescoll, M.J. Graham, & J. Handelsman, Science faculty’s subtle gender biases favor male students.  Bertrand, M., & Mullainathan, S. (2004). Are Emily and Greg More Employable than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.\n\n\n\n\n6\nMon, Oct 5\n\n\nRegression\nB.N. Greenwood, R.R. Hardeman, L. Huang, & A. Sojourner, Physician–patient racial concordance and disparities in birthing mortality for newborns.  G.J. Borjas, & R. VerBruggen, Physician–patient racial concordance and newborn mortality.\n\n\n\n\n\n\nMon, Oct 12\n\n\n\n\nNo class :)\nDiscussion 1 Papers & Questions\n\n\n7\nMon, Oct 19\n\n\nStudent-Led Discussion 1\n\n\nMid-Semester Paper Due 10/19 7:00 PM Discussion 2 Papers & Questions\n\n\n8\nMon, Oct 26\n\n\nStudent-Led Discussion 2\n\n\nDiscusson 3 Papers & Questions\n\n\n9\nMon, Nov 2\n\n\nStudent-Led Discussion 3\n\n\nDiscussion 4 Papers & Questions\n\n\n10\nMon, Nov 9\n\n\nStudent-Led Discussion 4\n\n\nDiscussion 5 Papers & Questions\n\n\n11\nMon, Nov 16\n\n\nStudent-Led Discussion 5\n\n\nDiscussion 6 Papers & Questions\n\n\n12\nMon, Nov 23\n\n\nStudent-Led Discussion 6\n\n\nDiscussion 7 Papers & Questions\n\n\n13\nMon, Nov 30\n\n\nStudent-Led Discussion 7 & Wrap Up!",
-    "crumbs": [
-      "Syllabus",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html",
-    "href": "syllabus/syllabus-assignments.html",
-    "title": "Assignments and grading",
-    "section": "",
-    "text": "Your final course grade will be calculated as follows:\nThis course is a Satisfactory/Unsatisfactory course. An honest attempt at all assignments will result in a passing grade. Additionally, attendance in at least 12 out of 14 classes is required, as per Duke University House Courses.",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html#participation-30",
-    "href": "syllabus/syllabus-assignments.html#participation-30",
-    "title": "Assignments and grading",
-    "section": "Participation (30%)",
-    "text": "Participation (30%)\nEach class will involve discussion of several papers that have been selected for relevance/interest. Regular involvement in these discussions will result in a full score. If you need an exact number, try to speak out at least once each discussion. We want to hear your voice and about your interests!\n\n\n\n\n\n\nNoteFor clarification\n\n\n\nThis doesn’t mean that if you don’t speak every class you will get a 0. Non-zero variance is expected! (If you don’t know what that means, hopefully you’ll learn during this course.)",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html#midterm-paper-25-referee-report",
-    "href": "syllabus/syllabus-assignments.html#midterm-paper-25-referee-report",
-    "title": "Assignments and grading",
-    "section": "Midterm Paper (25%) – Referee Report",
-    "text": "Midterm Paper (25%) – Referee Report\nAt this point in the semester, we’ve reviewed many fundamental concepts and models in statistics. Although we still have more to cover, it’s important to reflect on and analyze some statistics on your own, and a write-up will help us accomplish this.\nPaper: Sport and longevity: an observational study of international athletes\nPrompt: Write a referee report evaluating a paper’s use of statistics, as if you were a peer reviewer assessing it for a journal. You may either use the above paper, or choose a different peer-reviewed scientific paper that we have not seen in class and that you are not leading your discussion on.\n\n\n\n\n\n\nNoteHow to Write a Referee Report\n\n\n\nWe recommend following this structure: Harvard/Passalacqua guidelines for how to write a referee report\n(Disregard the page count recommendations though!)\n\n\nRequirements:\n\n650 word minimum.\nMLA formatted citations.\nDue beginning of class Week 8 7:00PM Monday 10/19",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html#student-led-discussions-45",
-    "href": "syllabus/syllabus-assignments.html#student-led-discussions-45",
-    "title": "Assignments and grading",
-    "section": "Student-Led Discussions (45%)",
-    "text": "Student-Led Discussions (45%)\nThroughout the semester, you’ll be exposed to many different methods and models used in research. However, the most important part is being able to understand how others use (or misuse them) in real research.\nFor the last half of the semester 10/19 - 11/23, students will sign up to lead their own journal-club style discussions on a specific statistical topic. This will require several statistical papers, discussion questions, and an optional mini-lecture.\nThere are no limitations to what kind of paper is chosen – feel free to branch out and explore ideas we haven’t touched on or complex topics that are difficult to understand. However, the paper should be able to spark discussion/debate and should relate to your topic.\nPrepare 5-10 potential discussion questions, as well as your own “answers” to guide the class. Post your papers and discussion questions in the designated Canvas discussion one week before your discussion section by the previous Monday at 11:59 PM, so others will have time to review the material and read the paper.\nAdditionally, if you feel that it is necessary to do preliminary research on the topic in case your classmates have questions, or you’d like to provide a brief overview of a subject, that is an option. If you choose to explain a topic during class, you must make minimal use of electronic materials.\nDuring the actual discussion section, you are not expected to ask all the questions, and feel free to come up with questions or discussion points that you have not prepared during the section. These discussion sections will aim to be 45-60 minutes long, so prepare enough content for the time allotted! Our first half of the course should serve as a guide for what a discussion would look like.\n\n\n\n\n\n\nNoteDiscussion Section Sign-Up\n\n\n\nSign up to lead a discussion section here!",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-resources.html",
-    "href": "syllabus/syllabus-resources.html",
-    "title": "University resources",
-    "section": "",
-    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-resources.html#course-costs",
-    "href": "syllabus/syllabus-resources.html#course-costs",
-    "title": "University resources",
-    "section": "",
-    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-resources.html#tech-support",
-    "href": "syllabus/syllabus-resources.html#tech-support",
-    "title": "University resources",
-    "section": "Tech support",
-    "text": "Tech support\nContact the Duke OIT Service Desk at oit.duke.edu/help.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-resources.html#academic-support",
-    "href": "syllabus/syllabus-resources.html#academic-support",
-    "title": "University resources",
-    "section": "Academic support",
-    "text": "Academic support\nThere are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (the ARC) offers services to support students academically during their undergraduate careers at Duke. The ARC can provide support with time management, academic skills and strategies, course-specific tutoring, and more. ARC services are available free to all Duke undergraduate student studying any discipline.\nYou can contact the Academic Resource Center by phone at (919) 684-5917, by email at theARC@duke.edu, or by visiting http://arc.duke.edu/.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-resources.html#accessibility",
-    "href": "syllabus/syllabus-resources.html#accessibility",
-    "title": "University resources",
-    "section": "Accessibility",
-    "text": "Accessibility\nIf any portion of the course is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.\nThe Student Disability Access Office (SDAO) is available to ensure that students can engage with their courses and related assignments. Students should contact the SDAO to request or update accommodations under these circumstances.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-resources.html#mental-health-and-well-being",
-    "href": "syllabus/syllabus-resources.html#mental-health-and-well-being",
-    "title": "University resources",
-    "section": "Mental health and well-being",
-    "text": "Mental health and well-being\nDuke is committed to holistic student wellbeing, which includes one’s mental, emotional, and physical health. The university offers resources to help students manage daily stress, to encourage intentional self-care, and to access just-in-time support. If you find you need support, your mental and/or emotional health concerns are impacting your day-to-day activities, your academic performance, or you need someone to talk to, the resources below are available to you:\n\nDukeReach: DukeReach provides comprehensive outreach services to support students in managing all aspects of wellbeing, including referrals and follow-up services for students who are experiencing significant challenges related to mental health, physical health, social adjustment, and/or a variety of other stressors. You can contact the DukeReach team at dukereach@duke.edu;\nCounseling and Psychological Services (CAPS): CAPS offers counseling services to Duke students including virtual appointments, and referrals in the community. You do not need an appointment for an initial assessment. You may walk in or call 919-660-1000 to get started. Hours: Monday-Friday 9:00am - 4:00pm. After hours counseling services are available at no additional cost to students, you can call: 919-660-1000 Option 2;\nTimelyCare: TimelyCare is an online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling;\nDuke Student Health: Student Health offers a wide range of healthcare services for all Duke students, many of which are covered by the student health fee. To make an appointment call (919) 681-9355. Hours: Monday - Friday, 8am - 4:30pm, Thursday 9am - 4:30pm. Closed from 12-12:30 each day.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-overview.html",
-    "href": "syllabus/syllabus-overview.html",
-    "title": "Course overview",
-    "section": "",
-    "text": "In this course, students will explore the statistical fundamentals necessary for understanding and conducting research in a variety of fields. Students will engage with real-world research papers and datasets across disciplines, exploring how statistics are used (and sometimes misused) in published work. Instead of focusing solely on technical skills, this course emphasizes interpretation, critique, and application of basic statistical tools in research. From misused methods to research bias, Statistical Methods in Research aims to provide students with a deeper understanding of when, why, and how to best utilize statistical methods in their future storytelling. The course culminates in student-led discussion, applying concepts from class. No previous experience is required in statistical science or research.",
-    "crumbs": [
-      "Syllabus",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-overview.html#description",
-    "href": "syllabus/syllabus-overview.html#description",
-    "title": "Course overview",
-    "section": "",
-    "text": "In this course, students will explore the statistical fundamentals necessary for understanding and conducting research in a variety of fields. Students will engage with real-world research papers and datasets across disciplines, exploring how statistics are used (and sometimes misused) in published work. Instead of focusing solely on technical skills, this course emphasizes interpretation, critique, and application of basic statistical tools in research. From misused methods to research bias, Statistical Methods in Research aims to provide students with a deeper understanding of when, why, and how to best utilize statistical methods in their future storytelling. The course culminates in student-led discussion, applying concepts from class. No previous experience is required in statistical science or research.",
-    "crumbs": [
-      "Syllabus",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-overview.html#objectives",
-    "href": "syllabus/syllabus-overview.html#objectives",
-    "title": "Course overview",
-    "section": "Objectives",
-    "text": "Objectives\nIn this course, students will:\n\nCritically analyze and interpret statistical methods in peer-reviewed research papers\nExplore and apply foundational statistical concepts\nDifferentiate between statistical models and critically assess their validity\nExplore the roles of bias, ethics, and equity in research\nEvaluate the use of data visualizations to tell stories\nDesign and lead a research discussion about a specific research paper and its methods\n\nPrerequisites: A vested interest in getting better at critically analyzing papers and learning about statistics!",
-    "crumbs": [
-      "Syllabus",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-overview.html#meetings",
-    "href": "syllabus/syllabus-overview.html#meetings",
-    "title": "Course overview",
-    "section": "Meetings",
-    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLectures\nOld Chem 123\nMondays 7:00 PM - 8:30 PM\nLiane, Cooper, and sometimes Dr. Zito",
-    "crumbs": [
-      "Syllabus",
-      "Overview"
-    ]
+    "objectID": "lectures/lectures-lecture6.html#cnn-black-newborns-more-likely-to-survive-when-cared-for-by-black-doctors-2020",
+    "href": "lectures/lectures-lecture6.html#cnn-black-newborns-more-likely-to-survive-when-cared-for-by-black-doctors-2020",
+    "title": "lectures-lecture6",
+    "section": "CNN: Black newborns more likely to survive when cared for by Black doctors (2020)",
+    "text": "CNN: Black newborns more likely to survive when cared for by Black doctors (2020)\nDiscussion Questions\n\nCompare the article’s framing to what the original paper actually estimated. Where, if anywhere, does it move from association to causation?\nIf you could design a new study to answer the original question more convincingly, what would it look like? Is randomizing physician assignment feasible or ethical?"
   },
   {
     "objectID": "lectures/lectures-lecture3.html",
@@ -693,136 +351,652 @@
     ]
   },
   {
+    "objectID": "syllabus/syllabus-overview.html",
+    "href": "syllabus/syllabus-overview.html",
+    "title": "Course overview",
+    "section": "",
+    "text": "In this course, students will explore the statistical fundamentals necessary for understanding and conducting research in a variety of fields. Students will engage with real-world research papers and datasets across disciplines, exploring how statistics are used (and sometimes misused) in published work. Instead of focusing solely on technical skills, this course emphasizes interpretation, critique, and application of basic statistical tools in research. From misused methods to research bias, Statistical Methods in Research aims to provide students with a deeper understanding of when, why, and how to best utilize statistical methods in their future storytelling. The course culminates in student-led discussion, applying concepts from class. No previous experience is required in statistical science or research.",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-overview.html#description",
+    "href": "syllabus/syllabus-overview.html#description",
+    "title": "Course overview",
+    "section": "",
+    "text": "In this course, students will explore the statistical fundamentals necessary for understanding and conducting research in a variety of fields. Students will engage with real-world research papers and datasets across disciplines, exploring how statistics are used (and sometimes misused) in published work. Instead of focusing solely on technical skills, this course emphasizes interpretation, critique, and application of basic statistical tools in research. From misused methods to research bias, Statistical Methods in Research aims to provide students with a deeper understanding of when, why, and how to best utilize statistical methods in their future storytelling. The course culminates in student-led discussion, applying concepts from class. No previous experience is required in statistical science or research.",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-overview.html#objectives",
+    "href": "syllabus/syllabus-overview.html#objectives",
+    "title": "Course overview",
+    "section": "Objectives",
+    "text": "Objectives\nIn this course, students will:\n\nCritically analyze and interpret statistical methods in peer-reviewed research papers\nExplore and apply foundational statistical concepts\nDifferentiate between statistical models and critically assess their validity\nExplore the roles of bias, ethics, and equity in research\nEvaluate the use of data visualizations to tell stories\nDesign and lead a research discussion about a specific research paper and its methods\n\nPrerequisites: A vested interest in getting better at critically analyzing papers and learning about statistics!",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-overview.html#meetings",
+    "href": "syllabus/syllabus-overview.html#meetings",
+    "title": "Course overview",
+    "section": "Meetings",
+    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLectures\nOld Chem 123\nMondays 7:00 PM - 8:30 PM\nLiane, Cooper, and sometimes Dr. Zito",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-resources.html",
+    "href": "syllabus/syllabus-resources.html",
+    "title": "University resources",
+    "section": "",
+    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-resources.html#course-costs",
+    "href": "syllabus/syllabus-resources.html#course-costs",
+    "title": "University resources",
+    "section": "",
+    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-resources.html#tech-support",
+    "href": "syllabus/syllabus-resources.html#tech-support",
+    "title": "University resources",
+    "section": "Tech support",
+    "text": "Tech support\nContact the Duke OIT Service Desk at oit.duke.edu/help.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-resources.html#academic-support",
+    "href": "syllabus/syllabus-resources.html#academic-support",
+    "title": "University resources",
+    "section": "Academic support",
+    "text": "Academic support\nThere are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (the ARC) offers services to support students academically during their undergraduate careers at Duke. The ARC can provide support with time management, academic skills and strategies, course-specific tutoring, and more. ARC services are available free to all Duke undergraduate student studying any discipline.\nYou can contact the Academic Resource Center by phone at (919) 684-5917, by email at theARC@duke.edu, or by visiting http://arc.duke.edu/.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-resources.html#accessibility",
+    "href": "syllabus/syllabus-resources.html#accessibility",
+    "title": "University resources",
+    "section": "Accessibility",
+    "text": "Accessibility\nIf any portion of the course is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.\nThe Student Disability Access Office (SDAO) is available to ensure that students can engage with their courses and related assignments. Students should contact the SDAO to request or update accommodations under these circumstances.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-resources.html#mental-health-and-well-being",
+    "href": "syllabus/syllabus-resources.html#mental-health-and-well-being",
+    "title": "University resources",
+    "section": "Mental health and well-being",
+    "text": "Mental health and well-being\nDuke is committed to holistic student wellbeing, which includes one’s mental, emotional, and physical health. The university offers resources to help students manage daily stress, to encourage intentional self-care, and to access just-in-time support. If you find you need support, your mental and/or emotional health concerns are impacting your day-to-day activities, your academic performance, or you need someone to talk to, the resources below are available to you:\n\nDukeReach: DukeReach provides comprehensive outreach services to support students in managing all aspects of wellbeing, including referrals and follow-up services for students who are experiencing significant challenges related to mental health, physical health, social adjustment, and/or a variety of other stressors. You can contact the DukeReach team at dukereach@duke.edu;\nCounseling and Psychological Services (CAPS): CAPS offers counseling services to Duke students including virtual appointments, and referrals in the community. You do not need an appointment for an initial assessment. You may walk in or call 919-660-1000 to get started. Hours: Monday-Friday 9:00am - 4:00pm. After hours counseling services are available at no additional cost to students, you can call: 919-660-1000 Option 2;\nTimelyCare: TimelyCare is an online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling;\nDuke Student Health: Student Health offers a wide range of healthcare services for all Duke students, many of which are covered by the student health fee. To make an appointment call (919) 681-9355. Hours: Monday - Friday, 8am - 4:30pm, Thursday 9am - 4:30pm. Closed from 12-12:30 each day.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html",
+    "href": "syllabus/syllabus-assignments.html",
+    "title": "Assignments and grading",
+    "section": "",
+    "text": "Your final course grade will be calculated as follows:\nThis course is a Satisfactory/Unsatisfactory course. An honest attempt at all assignments will result in a passing grade. Additionally, attendance in at least 12 out of 14 classes is required, as per Duke University House Courses.",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html#participation-30",
+    "href": "syllabus/syllabus-assignments.html#participation-30",
+    "title": "Assignments and grading",
+    "section": "Participation (30%)",
+    "text": "Participation (30%)\nEach class will involve discussion of several papers that have been selected for relevance/interest. Regular involvement in these discussions will result in a full score. If you need an exact number, try to speak out at least once each discussion. We want to hear your voice and about your interests!\n\n\n\n\n\n\nNoteFor clarification\n\n\n\nThis doesn’t mean that if you don’t speak every class you will get a 0. Non-zero variance is expected! (If you don’t know what that means, hopefully you’ll learn during this course.)",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html#midterm-paper-25-referee-report",
+    "href": "syllabus/syllabus-assignments.html#midterm-paper-25-referee-report",
+    "title": "Assignments and grading",
+    "section": "Midterm Paper (25%) – Referee Report",
+    "text": "Midterm Paper (25%) – Referee Report\nAt this point in the semester, we’ve reviewed many fundamental concepts and models in statistics. Although we still have more to cover, it’s important to reflect on and analyze some statistics on your own, and a write-up will help us accomplish this.\nPaper: Sport and longevity: an observational study of international athletes\nPrompt: Write a referee report evaluating a paper’s use of statistics, as if you were a peer reviewer assessing it for a journal. You may either use the above paper, or choose a different peer-reviewed scientific paper that we have not seen in class and that you are not leading your discussion on.\n\n\n\n\n\n\nNoteHow to Write a Referee Report\n\n\n\nWe recommend following this structure: Harvard/Passalacqua guidelines for how to write a referee report\n(Disregard the page count recommendations though!)\n\n\nRequirements:\n\n650 word minimum.\nMLA formatted citations.\nDue beginning of class Week 8 7:00PM Monday 10/19",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html#student-led-discussions-45",
+    "href": "syllabus/syllabus-assignments.html#student-led-discussions-45",
+    "title": "Assignments and grading",
+    "section": "Student-Led Discussions (45%)",
+    "text": "Student-Led Discussions (45%)\nThroughout the semester, you’ll be exposed to many different methods and models used in research. However, the most important part is being able to understand how others use (or misuse them) in real research.\nFor the last half of the semester 10/19 - 11/23, students will sign up to lead their own journal-club style discussions on a specific statistical topic. This will require several statistical papers, discussion questions, and an optional mini-lecture.\nThere are no limitations to what kind of paper is chosen – feel free to branch out and explore ideas we haven’t touched on or complex topics that are difficult to understand. However, the paper should be able to spark discussion/debate and should relate to your topic.\nPrepare 5-10 potential discussion questions, as well as your own “answers” to guide the class. Post your papers and discussion questions in the designated Canvas discussion one week before your discussion section by the previous Monday at 11:59 PM, so others will have time to review the material and read the paper.\nAdditionally, if you feel that it is necessary to do preliminary research on the topic in case your classmates have questions, or you’d like to provide a brief overview of a subject, that is an option. If you choose to explain a topic during class, you must make minimal use of electronic materials.\nDuring the actual discussion section, you are not expected to ask all the questions, and feel free to come up with questions or discussion points that you have not prepared during the section. These discussion sections will aim to be 45-60 minutes long, so prepare enough content for the time allotted! Our first half of the course should serve as a guide for what a discussion would look like.\n\n\n\n\n\n\nNoteDiscussion Section Sign-Up\n\n\n\nSign up to lead a discussion section here!",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STA HOUSE Statistical Methods in Research",
+    "section": "",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nMon, Aug 24\nNone!\nIntroduction to Statistics in Research\nKeshav, S. “How to Read a Paper.” ACM SIGCOMM Computer Communication Review, 2007  In Class Reading Assignment\n\n\n\n\n2\nMon, Aug 31\n\n\nStudy Design\nAPA Introduction  Mischel, W., Shoda, Y., & Peake, P. K. (1988). The nature of adolescent competencies predicted by preschool delay of gratification  Watts, T. W., Duncan, G. J., & Quan, H. (2018). Revisiting the Marshmallow Test: A Conceptual Replication Investigating Links Between Early Delay of Gratification and Later Outcomes\n\n\n\n\n\n\nMon, Sep 7\n\n\n\n\nNo class :)\n\n\n\n\n3\nMon, Sep 14\n\n\nIntroduction to Probability\nYaari, G., Eisenmann, S. (2011). “The Hot (Invisible?) Hand: Can Time Sequence Patterns of Success/Failure in Sports Be Modeled as Repeated Random Independent Trials?.”  Krithikadatta J. (2014). Normal distribution.\n\n\n\n\n4\nMon, Sep 21\n\n\nP-values, Power, and the Logic of Significance Testing\nCM Bennett, MB Miller, GL Wolford, Neural correlates of interspecies perspective taking in the post-mortem Atlantic Salmon: an argument for multiple comparisons correction.  Bem DJ. Feeling the future: experimental evidence for anomalous retroactive influences on cognition and affect.\n\n\n\n\n5\nMon, Sep 28\n\n\nStatistical Methods for Group Comparisons\nC.A. Moss-Racusin, J.F. Dovidio, V.L. Brescoll, M.J. Graham, & J. Handelsman, Science faculty’s subtle gender biases favor male students.  Bertrand, M., & Mullainathan, S. (2004). Are Emily and Greg More Employable than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.\n\n\n\n\n6\nMon, Oct 5\n\n\nRegression\nB.N. Greenwood, R.R. Hardeman, L. Huang, & A. Sojourner, Physician–patient racial concordance and disparities in birthing mortality for newborns.  G.J. Borjas, & R. VerBruggen, Physician–patient racial concordance and newborn mortality.\n\n\n\n\n\n\nMon, Oct 12\n\n\n\n\nNo class :)\nDiscussion 1 Papers & Questions\n\n\n7\nMon, Oct 19\n\n\nStudent-Led Discussion 1\n\n\nMid-Semester Paper Due 10/19 7:00 PM Discussion 2 Papers & Questions\n\n\n8\nMon, Oct 26\n\n\nStudent-Led Discussion 2\n\n\nDiscusson 3 Papers & Questions\n\n\n9\nMon, Nov 2\n\n\nStudent-Led Discussion 3\n\n\nDiscussion 4 Papers & Questions\n\n\n10\nMon, Nov 9\n\n\nStudent-Led Discussion 4\n\n\nDiscussion 5 Papers & Questions\n\n\n11\nMon, Nov 16\n\n\nStudent-Led Discussion 5\n\n\nDiscussion 6 Papers & Questions\n\n\n12\nMon, Nov 23\n\n\nStudent-Led Discussion 6\n\n\nDiscussion 7 Papers & Questions\n\n\n13\nMon, Nov 30\n\n\nStudent-Led Discussion 7 & Wrap Up!",
+    "crumbs": [
+      "Syllabus",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-materials.html",
+    "href": "syllabus/syllabus-materials.html",
+    "title": "Course materials",
+    "section": "",
+    "text": "You are not required to purchase a textbook for this class. Who do we think we are?\nIn the PREPARE column of the course schedule, we will note which papers are reading for next class.\nIn the Lectures tab on the right, we will provide typed copies of lecture notes. Note that the exact topics/discussion in class may deviate from these typed notes – email us if you’d like a better recap!\nNote that here is the signup sheet for the student-led discussion sections.",
+    "crumbs": [
+      "Syllabus",
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-materials.html#textbooks",
+    "href": "syllabus/syllabus-materials.html#textbooks",
+    "title": "Course materials",
+    "section": "",
+    "text": "You are not required to purchase a textbook for this class. Who do we think we are?\nIn the PREPARE column of the course schedule, we will note which papers are reading for next class.\nIn the Lectures tab on the right, we will provide typed copies of lecture notes. Note that the exact topics/discussion in class may deviate from these typed notes – email us if you’d like a better recap!\nNote that here is the signup sheet for the student-led discussion sections.",
+    "crumbs": [
+      "Syllabus",
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-materials.html#technology",
+    "href": "syllabus/syllabus-materials.html#technology",
+    "title": "Course materials",
+    "section": "Technology",
+    "text": "Technology\nTechnology use will be limited during class time to encourage active discussion and participation. However, you will need access to a device with internet so that you can use the following:\n\nThis course page that you are on right now;\nCanvas, through which you can access…\nZoom (e.g. for remote office hours as needed).\n\nIf access to technology becomes a concern for you during the semester, contact the instructors immediately to discuss options.",
+    "crumbs": [
+      "Syllabus",
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-team.html",
+    "href": "syllabus/syllabus-team.html",
+    "title": "Teaching team",
+    "section": "",
+    "text": "Mug\nName\nRole\n\n\n\n\n\nMa, Liane\nInstructor\n\n\n\nRuffing, Cooper\nInstructor\n\n\n\nZito, John\nCourse Advisor & Instructor",
+    "crumbs": [
+      "Syllabus",
+      "Teaching team"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-policies.html",
+    "href": "syllabus/syllabus-policies.html",
+    "title": "Policies",
+    "section": "",
+    "text": "You are enthusiastically encouraged to work together and help one another on assignments/discussions. However, you should not be crassly handing your solutions to others for them to brainlessly copy. This is plagiarism, and all involved will earn a zero on the assignment and be referred to the conduct office, both sharers and recipients alike. The assignments you submit must be your own work.",
+    "crumbs": [
+      "Syllabus",
+      "Policies"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-policies.html#collaboration",
+    "href": "syllabus/syllabus-policies.html#collaboration",
+    "title": "Policies",
+    "section": "",
+    "text": "You are enthusiastically encouraged to work together and help one another on assignments/discussions. However, you should not be crassly handing your solutions to others for them to brainlessly copy. This is plagiarism, and all involved will earn a zero on the assignment and be referred to the conduct office, both sharers and recipients alike. The assignments you submit must be your own work.",
+    "crumbs": [
+      "Syllabus",
+      "Policies"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-policies.html#use-of-outside-resources-including-ai",
+    "href": "syllabus/syllabus-policies.html#use-of-outside-resources-including-ai",
+    "title": "Policies",
+    "section": "Use of outside resources, including AI",
+    "text": "Use of outside resources, including AI\nThere are at least two reasons you might seek outside resources:\n\nExtra practice/material or alternative instruction: Go crazy. Knock yourself out. Have a ball. The internet is saturated with good (and horrible) resources for learning this material, so if you find something that really resonates with you, have at it;\nDoing the work for you: If you ask a language model to generate a summary, and you copy it down and submit it as your own work, that is plagiarism. If we detect it, you will earn a zero for that part of your write-up.\n\n“Using ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way.” Furthermore, this course is a half-credit, pass-fail course purely for your own interest. As such, outsourcing all of your thinking to an AI will probably end in this entire enterprise being a complete waste of time and energy. To avoid this, we suggest you abstain from using language models to do the reading/thinking for you.",
+    "crumbs": [
+      "Syllabus",
+      "Policies"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-policies.html#communication",
+    "href": "syllabus/syllabus-policies.html#communication",
+    "title": "Policies",
+    "section": "Communication",
+    "text": "Communication\nIf you wish to ask content-related questions in writing, please do not do so via e-mail. Instead, please use the course discussion forum Ed Discussion. That way all members of the teaching team can see your question, and all students can benefit from the ensuing discussion. You are also encouraged to answer one another’s questions.\nIf you have questions about personal matters that may not be appropriate for the public course forum (e.g. illness, accommodations, etc), then please e-mail the instructors directly (cooper.ruffing@duke.edu & liane.ma@duke.edu), and/or the course advisor (john.zito@duke.edu).",
+    "crumbs": [
+      "Syllabus",
+      "Policies"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-policies.html#late-work-and-extensions",
+    "href": "syllabus/syllabus-policies.html#late-work-and-extensions",
+    "title": "Policies",
+    "section": "Late work and extensions",
+    "text": "Late work and extensions\nNo late work will be accepted unless you request an extension in advance by e-mailing the instructors directly (cooper.ruffing@duke.edu and liane.ma@duke.edu. All reasonable requests will be entertained, but extensions will not be long.",
+    "crumbs": [
+      "Syllabus",
+      "Policies"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-policies.html#regrade-requests",
+    "href": "syllabus/syllabus-policies.html#regrade-requests",
+    "title": "Policies",
+    "section": "Regrade requests",
+    "text": "Regrade requests\nIf you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by emailing Dr. Zito, who is the sole reviewer of these. Note the following:\n\nYou have one week after you receive a grade to submit a regrade request;\nYou should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;\nRequests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;\nRequests to dispute the number of points deducted for an incorrect response will not be considered;\nNo grades will be changed after the final class period has been occurred on Monday, November 30.",
+    "crumbs": [
+      "Syllabus",
+      "Policies"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-policies.html#attendance",
+    "href": "syllabus/syllabus-policies.html#attendance",
+    "title": "Policies",
+    "section": "Attendance",
+    "text": "Attendance\nDuke requires students to attend at least 11 class sessions. We hope you’ll show up for all 14!",
+    "crumbs": [
+      "Syllabus",
+      "Policies"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-policies.html#accommodations",
+    "href": "syllabus/syllabus-policies.html#accommodations",
+    "title": "Policies",
+    "section": "Accommodations",
+    "text": "Accommodations\nIf you need accommodations for this class, you will need to register with the Student Disability Access Office (SDAO) and provide them with documentation related to your needs. SDAO will work with you to determine what accommodations are appropriate for your situation. Please note that accommodations are not retroactive and disability accommodations cannot be provided until a Faculty Accommodation Letter has been given to me. Please contact SDAO for more information: sdao@duke.edu or access.duke.edu.",
+    "crumbs": [
+      "Syllabus",
+      "Policies"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-policies.html#duke-community-standard",
+    "href": "syllabus/syllabus-policies.html#duke-community-standard",
+    "title": "Policies",
+    "section": "Duke Community Standard",
+    "text": "Duke Community Standard\nDuke University is a community dedicated to scholarship, leadership, and service and to the principles of honesty, fairness, respect, and accountability. Members of this community commit to reflect upon and uphold these principles in all academic and non-academic endeavors, and to protect and promote a culture of integrity.\nDuke University has high expectations for students’ scholarship and conduct. In accepting admission, students indicate their willingness to subscribe to and be governed by the rules and regulations of the university, which flow from the Duke Community Standard (DCS).\nRegardless of course delivery format, it is the responsibility of all students to understand and follow all Duke policies, including but not limited to the academic integrity policy (e.g., completing one’s own work, following proper citation of sources, adhering to guidance around group work projects, and more). Ignoring these requirements is a violation of the DCS.\nStudents can direct any questions or concerns regarding academic integrity to the Office of Student Conduct and Community Standards at conduct@duke.edu and can access the DCS guide at https://dukecommunitystandard.students.duke.edu/.\nIn House Course 59-11 specifically…\n\nIf a conduct violation results in a zero on an assignment/project, that zero will not be dropped;\nIf we discover that students are sharing and copying assignment answers, all students involved will be penalized equally, the sharers the same as the recipients.",
+    "crumbs": [
+      "Syllabus",
+      "Policies"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture1.html",
+    "href": "lectures/lectures-lecture1.html",
+    "title": "8/24 Lecture 1",
+    "section": "",
+    "text": "Let’s consider a world where statistics doesn’t exist. What would it look like? People could make random claims without numerical evidence. Your feed would look like a random mess of videos constantly being posted. One could argue that we couldn’t count the number of people enrolled in this course.\nOkay, well that seemed pretty obvious. Of course, the reason for taking this course is likely some form of personal interest, as it’s a random half credit house course. Perhaps you’re a CS major who wants to learn some statistical algorithms to recreate Google’s PageRank. Maybe you’re a pre-med and hope to do a survival analysis to support your research interests. Finally, maybe you’re a sociologist and want to determine a population parameter for the use of AI in the classroom.\nLet’s reflect on what today’s world looks like. A reasonable statement would be: “Statistics exists. Some people know how to use statistics, some other people sort of know what statistics is, and a vast majority of people have heard of it.” The goal of this course is to move from the third group to the second group, in a way that could set you up for self learning to make it to the first group. We also hope that you’ll be able to critically evaluate the quality of a statistical analysis on a paper you’ve never seen before. There is much to learn!",
+    "crumbs": [
+      "Lectures",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture1.html#motivating-this-course",
+    "href": "lectures/lectures-lecture1.html#motivating-this-course",
+    "title": "8/24 Lecture 1",
+    "section": "",
+    "text": "Let’s consider a world where statistics doesn’t exist. What would it look like? People could make random claims without numerical evidence. Your feed would look like a random mess of videos constantly being posted. One could argue that we couldn’t count the number of people enrolled in this course.\nOkay, well that seemed pretty obvious. Of course, the reason for taking this course is likely some form of personal interest, as it’s a random half credit house course. Perhaps you’re a CS major who wants to learn some statistical algorithms to recreate Google’s PageRank. Maybe you’re a pre-med and hope to do a survival analysis to support your research interests. Finally, maybe you’re a sociologist and want to determine a population parameter for the use of AI in the classroom.\nLet’s reflect on what today’s world looks like. A reasonable statement would be: “Statistics exists. Some people know how to use statistics, some other people sort of know what statistics is, and a vast majority of people have heard of it.” The goal of this course is to move from the third group to the second group, in a way that could set you up for self learning to make it to the first group. We also hope that you’ll be able to critically evaluate the quality of a statistical analysis on a paper you’ve never seen before. There is much to learn!",
+    "crumbs": [
+      "Lectures",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture1.html#what-is-statistics-what-is-a-statistic",
+    "href": "lectures/lectures-lecture1.html#what-is-statistics-what-is-a-statistic",
+    "title": "8/24 Lecture 1",
+    "section": "What is statistics? What is a statistic?",
+    "text": "What is statistics? What is a statistic?\nStatistics (the field) is a mathematical science pertaining to the collection, analysis, interpretation, and presentation of data.\nA statistic is any quantity computed from values in a sample. That is incredibly broad. During this course, we will primarily focus on two types of statistics (which are not mutually exclusive of one another):\n\n\nDescriptive statistics, which summarize a sample of data\n\n\nTest statistics, which is some number derived from the sample that would be selected or defined in a way that differentiates between the null and alternative hypothesis.\n\nThat’s a lot of jargon right there. No worries – we’ll break it down through this course!",
+    "crumbs": [
+      "Lectures",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture1.html#good-statistics-vs.-bad-statistics",
+    "href": "lectures/lectures-lecture1.html#good-statistics-vs.-bad-statistics",
+    "title": "8/24 Lecture 1",
+    "section": "“Good” statistics vs. “Bad” statistics",
+    "text": "“Good” statistics vs. “Bad” statistics\nWhat is “good” statistics? In this case, we typically will mean rigorous, with clearly defined intentions, acknowledgement of shortcomings, and evaluation of its efficacy in practice. This would make a “good” statistic (singular) one that is appropriate to use in the given scenario.\nA short example. Say you’ve got a bunch of categorical data (ex: survey answers of Yes or No), but then you create some model that only models continuous data (ex: representing Yes as 1 and No as 0, and having statistics in between). That’s not good! You may even get a statistically significant result (we will learn what this really means). Say you even made it past the editors at a publishing house and got published, and some random news reporter picked it up and wrote an article on it. We will see later in this course that this has actually happened many, many times.\nIn this course, we will read some very good and very bad papers. Ideally, you’ll be able to determine why they’re bad, beyond simply “the journal retracted them.”\nWhat good statistics should do\n\nMake data more approachable. A statistic should be well-chosen summary that allows the audience to understand something about, for example, the opinions of 10,000 people without having to look at all 10,000 data points.\nSupport a claim. Statistics should typically have a goal/purpose that they are attempting to explain, or identify some specific finding.\nDisplay relevant information. The statistic chosen should actually speak to the question being asked!\nCommunicate a story. At the end of the day, someone has to be able to view your analysis and understand what it conveys and its implications.\n\nWhat bad statistics may do\n\nUse methods inappropriately. For example, applying a statistical technique to data it wasn’t designed for. We’ll explore lots of papers that do this!\nAdding unnecessary complexity. Sometimes, complexity can obscure the true result. Often times, simple is best.\nCherry-picking or overgeneralizing. Selectively reporting the data points (or the one significant test out of twenty) that support your narrative, or taking a result from a small, biased, or narrow sample and claiming it holds for the larger group.\n\nWhy do we care?\nYou all have probably seen your fair share of misleading or crazy news headlines. From Scientists Say Smelling Farts Might Prevent Cancer to Coffee Consumption May Raise Miscarriage Risk, our world is full of bad statistics. Language like “might” or “may” largely obscure the actual scientific findings of correlation vs. causation.\nAnd beyond clickbait news articles and AI Instagram posts, bad statistics also show up in legitimate, peer-reviewed research. Consider a study on physician age at death by specialty: emergency physicians were reported to have the youngest average age at death (58.7 years!) of any medical specialty. But this estimate was based on only 43 obituaries (compared to primary care physicians, whose average statistic was based on 2,508). A mean built on 43 observations is going to be far noisier than one built on thousands, even though both are presented in the same table, in the same font, with the same weight. This is just one example of the importance of statistical literacy and thinking critically about research.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture1.html#research-101",
+    "href": "lectures/lectures-lecture1.html#research-101",
+    "title": "8/24 Lecture 1",
+    "section": "Research 101",
+    "text": "Research 101\nTurning now to the second half of our course title, research – where does statistics play a role? How does the research process work?\n\nUnderstand the field: Research usually starts with lots and lots of reading. We want to be able to know what’s already been asked and what answers already exist before we can possibly understand what’s missing.\nFind a new question: A good question is specific, testable, and not already answered! This is where research truly starts.\nFind a way to test the question: We usually want to design a study or analysis that could actually provide evidence for or against your question.\nExamine/analyze the results: Running said test, computing the numbers, reporting findings.\nand finally, write about it and why it matters.\n\nStep 4 is where most think statistics starts and ends.\nBut really, it’s active all the way back in Step 2, before any data has been manipulated. When we are finding our question, we need to define our variables, or subject(s) of interest. What exactly are we measuring? How are we measuring them? Vague variables lead to vague (or unanswerable) questions!\nIn Step 3, when we’re designing a study or analysis to test our question, that design may play a significant impact on the strength of the answer we will get. For example, our question may be about a causal relationship (does X cause Y?), but our study design may only be able to give us a correlational answer (X and Y are/are not related).\nIt’s also tempting to think that statistics ends when we’ve done the analysis, and all that’s left is to write it out in nice sentences. But Step 5 is arguably the most important part. Communication of statistics is extremely important. Vocabulary such as “significant” means something very specific in a statistical context compared to colloquial usage. Additionally, we must make the conclusion as clear as possible to our audience, or else we might end up with a headline as striking as farts preventing cancer.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture1.html#keshav-s.-how-to-read-a-paper",
+    "href": "lectures/lectures-lecture1.html#keshav-s.-how-to-read-a-paper",
+    "title": "8/24 Lecture 1",
+    "section": "Keshav, S. “How to Read a Paper”",
+    "text": "Keshav, S. “How to Read a Paper”\nBefore diving headfirst into research papers (as we will in the rest of this course), it’s important to know how to read one efficiently and effectively, especially if we don’t know much about the topic. “Researchers spend a great deal reading research papers. However this skill is rarely taught, leading to much wasted effort,” Keshav introduces. How to Read a Paper proposes a three-pass method for reading academic research papers:\n\nThe first pass: a quick skim of the title, abstract, introduction, section headings, and conclusions. The goal is to get a general gist of what the paper does, how it does it, and whether it’s worth diving into.\nThe second pass: a more careful read, now looking into figures, diagrams, data, etc., but still not exploring too much detail. The goal is to understand the general content and be able to summarize it with some supporting evidence.\nThe third pass: a full read, where the goal is to “virtually re-implement” the paper, or be able to reconstruct its structure and challenge its assumptions, methods, and results.\n\nClass Discussion Questions:\n\nWhat was your previous method of reading papers? How has this changed your perspective?\n\nAre there any helpful tips/tricks you’ve developed/found on your own when reading articles or papers?\n\nWhy does this method matter? Why should we deeply learn and understand a paper?\nWhy is point 3 (“Doing a Literature Survey”) important in research?\nHow do you think point 4 (“Experience”) develops?",
+    "crumbs": [
+      "Lectures",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture2.html",
+    "href": "lectures/lectures-lecture2.html",
+    "title": "8/31 Lecture 2",
+    "section": "",
+    "text": "Today we’re going to explore a few cases where real statistics were computed effectively and correctly on paper, yet completely failed their purpose. Statistics, as with most other things, depends heavily on interpretation – when the interpretation fails, our research is no longer sound.\nCorrelation vs. Causation\nLet’s think about a classic example. Ice cream sales and the number of shark attacks both increase in the summer. Does this mean that eating ice cream causes more people to get chased by sharks? Obviously, this is not what’s going on here – the season itself is causing both of these events independently (more humans in the ocean in the summer = more shark injuries. hotter weather = a greater need for ice cream). Even though ice cream sales and shark attacks are correlated (move together), one does not necessarily cause the other.\nKeep this in mind as you dissect any research paper in the following weeks, and you’ll easily find reason for skepticism everywhere.\nConfounding Variables\nIn the case of the ice cream sales and shark attacks, there was a hidden, confounding third variable that influenced both variables of interest, making them seem related. As we explore these papers, think about what differs between the two groups examined, or other variables that might be at play.\nSample Size and Generalizability\nBefore we trust any findings, and thinking back to our discussion last week, it’s important to consider the sample size of the study. How many people did the survey ask? Which groups of people was this pattern found in? The original marshmallow study we’re about to read was conducted on a small sample of children at a preschool on Stanford’s campus. As you read, consider what impact this may have on the results.\nReplication\nReplication is basically redoing a study, ideally with a bigger, more representative sample. The goal of this is to see if the original result appears once again, to help validate or question the original study’s results. One of today’s readings is a replication attempt of the marshmallow test. Note what differs between replication attempts, not limited to the results! Did the replication increase sample size, or change the population experimented on? How might that impact our interpretations of both studies’ findings?",
+    "crumbs": [
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture2.html#non-experimental-observational-studies",
+    "href": "lectures/lectures-lecture2.html#non-experimental-observational-studies",
+    "title": "8/31 Lecture 2",
+    "section": "Non-Experimental / Observational Studies",
+    "text": "Non-Experimental / Observational Studies\nIn observational studies, the investigator does not control who is exposed to a risk factor or intervention. Instead, exposures occur naturally, and the researcher measures associations between exposure and outcome. These studies are further divided by their unit of analysis: population-based or individual-based.\n\nPopulation-Based Studies\nThese studies use aggregate, group-level data rather than data on individual subjects.\n\nDescriptive — Health Survey\n\nHealth Survey\n\nDescribes the distribution of health-related states or events in a population, typically in terms of person, place, and time (the “who, where, and when”). It does not test hypotheses about cause and effect — it simply characterizes the burden of disease or health status in a defined population at a point in time.\n\n\n\n\nAnalytic — Ecological Study\n\nEcological Study\n\nCompares exposure and outcome data across groups or populations (e.g., countries, cities, or regions) rather than individuals. It looks for correlations between an exposure rate and a disease rate at the population level. While useful for generating hypotheses, ecological studies are vulnerable to the ecological fallacy — the risk of wrongly inferring individual-level relationships from group-level data.\n\n\n\n\n\nIndividual-Based Studies\nThese studies collect and analyze data on individual subjects rather than groups.\n\nDescriptive — Case Reports and Case Series\n\nCase Report\n\nA detailed description of a single, often unusual or novel, clinical case. Case Series\n\n\nDescribes a group of patients with a similar diagnosis or exposure, without a comparison group.\n\n\nBoth are hypothesis-generating tools that document clinical observations but cannot establish causal relationships due to the absence of a control group.\n\n\nAnalytic Studies - hi\nAnalytic studies test specific hypotheses about the relationship between an exposure and an outcome, typically using a comparison group. There are three main designs:\n\nCross-Sectional Study (Prevalence Study)\n\nMeasures exposure and outcome simultaneously in a population at a single point in time. It estimates the prevalence of disease and can identify associations, but because exposure and outcome are measured at the same time, it cannot establish the temporal sequence needed to infer causation.\n\nCase-Control Study (Case-Reference Study)\n\nStarts with subjects who already have the outcome of interest (cases) and compares them to those without it (controls), looking backward to assess prior exposure. This design is efficient for studying rare diseases and is retrospective in nature.\n\nCohort Study (Follow-Up Study)\n\nBegins with a group of exposed and unexposed individuals who are free of the outcome, then follows them forward in time to compare the incidence of disease between groups. Cohort studies can be prospective or retrospective and provide stronger evidence of temporal sequence than cross-sectional or case-control designs.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture2.html#experimental-interventional-studies",
+    "href": "lectures/lectures-lecture2.html#experimental-interventional-studies",
+    "title": "8/31 Lecture 2",
+    "section": "Experimental / Interventional Studies",
+    "text": "Experimental / Interventional Studies\nIn experimental studies, the investigator actively assigns the exposure or intervention, allowing for stronger causal inference than observational designs.\n\nRandomized Control Trial (Clinical Trial)\nParticipants are randomly assigned to receive either the intervention (e.g., a drug or treatment) or a control/placebo. Randomization balances known and unknown confounding factors between groups, making the RCT the gold standard for establishing causality. When conducted in a clinical setting, this is often called a clinical trial.\n\n\nNon-Randomized (Quasi-Experimental) Studies\nWhen randomization is not feasible or ethical, researchers may use non-randomized designs:\n\nQuasi-Experimental Study: An intervention is assigned without random allocation, often using pre-existing groups (e.g., comparing outcomes before and after a policy change).\nField Trial: The intervention is applied to healthy individuals in the community (rather than a clinical setting) who are at risk of developing a disease, often to test preventive measures like vaccines.\nCommunity Trial: The unit of intervention and analysis is an entire community or group, rather than individuals — commonly used to evaluate public health interventions such as water fluoridation or health education campaigns.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture2.html#summary-table",
+    "href": "lectures/lectures-lecture2.html#summary-table",
+    "title": "8/31 Lecture 2",
+    "section": "Summary Table",
+    "text": "Summary Table\n\n\n\n\n\n\n\n\nStudy Type\nCategory\nKey Feature\n\n\n\n\nHealth Survey\nObservational — Population\nDescriptive, group-level\n\n\nEcological Study\nObservational — Population\nAnalytic, group-level correlation\n\n\nCase Report / Case Series\nObservational — Individual\nDescriptive, no control group\n\n\nCross-Sectional Study\nObservational — Individual\nExposure & outcome measured simultaneously\n\n\nCase-Control Study\nObservational — Individual\nStarts with outcome, looks back at exposure\n\n\nCohort Study\nObservational — Individual\nStarts with exposure, follows forward\n\n\nRandomized Control Trial\nExperimental\nRandom assignment, gold standard\n\n\nQuasi-Experimental / Field / Community Trial\nExperimental\nNon-random assignment",
+    "crumbs": [
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture2.html#the-nature-of-adolescent-competencies-predicted-by-preschool-delay-of-gratification.",
+    "href": "lectures/lectures-lecture2.html#the-nature-of-adolescent-competencies-predicted-by-preschool-delay-of-gratification.",
+    "title": "8/31 Lecture 2",
+    "section": "The nature of adolescent competencies predicted by preschool delay of gratification.",
+    "text": "The nature of adolescent competencies predicted by preschool delay of gratification.\nDiscussion Questions\n\nWhat kind of study is this, and where would you place this study in the summary table above?\nWhat are some potential confounding variables in this study that could explain both their ability to delay gratification and later success?\nThinking back to the premise of the study – it was conducted on children at a preschool on Stanford’s campus. What does this tell us about this particular sample? What implications might this have for the results?",
+    "crumbs": [
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "lectures/lectures-lecture2.html#revisiting-the-marshmallow-test-a-conceptual-replication-investigating-links-between-early-delay-of-gratification-and-later-outcomes",
+    "href": "lectures/lectures-lecture2.html#revisiting-the-marshmallow-test-a-conceptual-replication-investigating-links-between-early-delay-of-gratification-and-later-outcomes",
+    "title": "8/31 Lecture 2",
+    "section": "Revisiting the Marshmallow Test: A Conceptual Replication Investigating Links Between Early Delay of Gratification and Later Outcomes",
+    "text": "Revisiting the Marshmallow Test: A Conceptual Replication Investigating Links Between Early Delay of Gratification and Later Outcomes\nDiscussion Questions\n\nWhat does it mean that this is a conceptual replication rather than an exact replication? What’s the difference, and why might researchers choose one over the other?\nHow did the replication’s sample differ from the original’s, and how does that impact their findings?\nBased on both papers, what would you say is the actual, defensible conclusion about delay of gratification and life outcomes?\nIf you were to conduct your own replication, how might you further improve on this study?",
+    "crumbs": [
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
     "objectID": "lectures/lectures-lecture5.html",
     "href": "lectures/lectures-lecture5.html",
     "title": "lectures-lecture5",
     "section": "",
-    "text": "We have the machinery of hypothesis testing — \\(H_0\\), \\(H_1\\), Type I/II errors, p-values, power, and the Neyman–Pearson logic for building a good test. Lecture 2 added confidence intervals, effect sizes, and a design-stage view of power, and showed how all of it traces back to Fisher information.\nToday’s lecture is about applying that machinery to one of the most common jobs in applied statistics: comparing groups. Is Drug A better than Drug B? Do three different teaching methods produce different test scores? Is a coin-flip outcome associated with which treatment a patient received?\nThe punchline to keep in your back pocket: every test in this lecture is still just a hypothesis test, in the exact sense of Lecture 4 — a null hypothesis, a test statistic, a null distribution, a p-value. What changes from test to test is only: what kind of outcome data you have, and what structural assumptions you’re willing to make. Once you see that, the whole zoo of named tests stops looking like a pile of unrelated recipes and starts looking like one recipe with a few swappable ingredients.\nBefore picking a test, ask: “is my outcome variable continuous (like a measurement) or categorical (like a label)?” This single fork explains most of the test names you’ll see below. A secondary question — “how many groups am I comparing, and are the groups independent or matched/paired?” — determines the rest."
+    "text": "We have the machinery of hypothesis testing — \\(H_0\\), \\(H_1\\), Type I/II errors, p-values, power, and the Neyman–Pearson logic for building a good test. Lecture 2 added confidence intervals, effect sizes, and a design-stage view of power, and showed how all of it traces back to Fisher information.\nToday’s lecture is about applying that machinery to one of the most common jobs in applied statistics: comparing groups. Is Drug A better than Drug B? Do three different teaching methods produce different test scores? Is a coin-flip outcome associated with which treatment a patient received?\nThe punchline to keep in your back pocket: every test in this lecture is still just a hypothesis test, in the exact sense of Lecture 4 — a null hypothesis, a test statistic, a null distribution, a p-value. What changes from test to test is only: what kind of outcome data you have, and what structural assumptions you’re willing to make. Once you see that, the whole zoo of named tests stops looking like a pile of unrelated recipes and starts looking like one recipe with a few swappable ingredients.\nBefore picking a test, ask: “is my outcome variable continuous (like a measurement) or categorical (like a label)?” This single fork explains most of the test names you’ll see below. A secondary question — “how many groups am I comparing, and are the groups independent or matched/paired?” — determines the rest.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   },
   {
     "objectID": "lectures/lectures-lecture5.html#recap-where-we-left-off",
     "href": "lectures/lectures-lecture5.html#recap-where-we-left-off",
     "title": "lectures-lecture5",
     "section": "",
-    "text": "We have the machinery of hypothesis testing — \\(H_0\\), \\(H_1\\), Type I/II errors, p-values, power, and the Neyman–Pearson logic for building a good test. Lecture 2 added confidence intervals, effect sizes, and a design-stage view of power, and showed how all of it traces back to Fisher information.\nToday’s lecture is about applying that machinery to one of the most common jobs in applied statistics: comparing groups. Is Drug A better than Drug B? Do three different teaching methods produce different test scores? Is a coin-flip outcome associated with which treatment a patient received?\nThe punchline to keep in your back pocket: every test in this lecture is still just a hypothesis test, in the exact sense of Lecture 4 — a null hypothesis, a test statistic, a null distribution, a p-value. What changes from test to test is only: what kind of outcome data you have, and what structural assumptions you’re willing to make. Once you see that, the whole zoo of named tests stops looking like a pile of unrelated recipes and starts looking like one recipe with a few swappable ingredients.\nBefore picking a test, ask: “is my outcome variable continuous (like a measurement) or categorical (like a label)?” This single fork explains most of the test names you’ll see below. A secondary question — “how many groups am I comparing, and are the groups independent or matched/paired?” — determines the rest."
+    "text": "We have the machinery of hypothesis testing — \\(H_0\\), \\(H_1\\), Type I/II errors, p-values, power, and the Neyman–Pearson logic for building a good test. Lecture 2 added confidence intervals, effect sizes, and a design-stage view of power, and showed how all of it traces back to Fisher information.\nToday’s lecture is about applying that machinery to one of the most common jobs in applied statistics: comparing groups. Is Drug A better than Drug B? Do three different teaching methods produce different test scores? Is a coin-flip outcome associated with which treatment a patient received?\nThe punchline to keep in your back pocket: every test in this lecture is still just a hypothesis test, in the exact sense of Lecture 4 — a null hypothesis, a test statistic, a null distribution, a p-value. What changes from test to test is only: what kind of outcome data you have, and what structural assumptions you’re willing to make. Once you see that, the whole zoo of named tests stops looking like a pile of unrelated recipes and starts looking like one recipe with a few swappable ingredients.\nBefore picking a test, ask: “is my outcome variable continuous (like a measurement) or categorical (like a label)?” This single fork explains most of the test names you’ll see below. A secondary question — “how many groups am I comparing, and are the groups independent or matched/paired?” — determines the rest.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   },
   {
     "objectID": "lectures/lectures-lecture5.html#the-big-picture-a-map-of-the-territory",
     "href": "lectures/lectures-lecture5.html#the-big-picture-a-map-of-the-territory",
     "title": "lectures-lecture5",
     "section": "The big picture: a map of the territory",
-    "text": "The big picture: a map of the territory\nHere is the decision structure we’ll build up over the rest of the lecture. It’s worth previewing it now so each test has a “home” as we meet it.\n\n\n\n\n\nflowchart TD\n    A[What kind of outcome?] --&gt;|Continuous / numeric| B{How many groups?}\n    A --&gt;|Categorical / counts| F{Comparing what?}\n\n    B --&gt;|2 groups| C{Independent or paired?}\n    B --&gt;|3+ groups| D{Assumptions met?}\n\n    C --&gt;|Independent| C1[\"Assumptions OK: Independent t-test&lt;br/&gt;Violated: Mann-Whitney U\"]\n    C --&gt;|Paired| C2[\"Assumptions OK: Paired t-test&lt;br/&gt;Violated: Wilcoxon signed-rank\"]\n\n    D --&gt;|Normal-ish, equal variance| D1[One-way ANOVA]\n    D --&gt;|Violated| D2[Kruskal-Wallis]\n\n    F --&gt;|Distribution vs. expected shape| F1[Chi-square goodness-of-fit]\n    F --&gt;|Association between two categorical variables| F2{Expected cell counts large?}\n    F2 --&gt;|Yes, generally all &gt;= 5| F3[Chi-square test of independence]\n    F2 --&gt;|No, small samples/sparse table| F4[\"Fisher's exact test\"]\n\n\n\n\n\n\nWe’ll now walk through each branch, always asking the same two questions: what is this test actually measuring, and what is it silently assuming?"
+    "text": "The big picture: a map of the territory\nHere is the decision structure we’ll build up over the rest of the lecture. It’s worth previewing it now so each test has a “home” as we meet it.\n\n\n\n\n\nflowchart TD\n    A[What kind of outcome?] --&gt;|Continuous / numeric| B{How many groups?}\n    A --&gt;|Categorical / counts| F{Comparing what?}\n\n    B --&gt;|2 groups| C{Independent or paired?}\n    B --&gt;|3+ groups| D{Assumptions met?}\n\n    C --&gt;|Independent| C1[\"Assumptions OK: Independent t-test&lt;br/&gt;Violated: Mann-Whitney U\"]\n    C --&gt;|Paired| C2[\"Assumptions OK: Paired t-test&lt;br/&gt;Violated: Wilcoxon signed-rank\"]\n\n    D --&gt;|Normal-ish, equal variance| D1[One-way ANOVA]\n    D --&gt;|Violated| D2[Kruskal-Wallis]\n\n    F --&gt;|Distribution vs. expected shape| F1[Chi-square goodness-of-fit]\n    F --&gt;|Association between two categorical variables| F2{Expected cell counts large?}\n    F2 --&gt;|Yes, generally all &gt;= 5| F3[Chi-square test of independence]\n    F2 --&gt;|No, small samples/sparse table| F4[\"Fisher's exact test\"]\n\n\n\n\n\n\nWe’ll now walk through each branch, always asking the same two questions: what is this test actually measuring, and what is it silently assuming?",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   },
   {
     "objectID": "lectures/lectures-lecture5.html#comparing-two-groups-on-a-continuous-outcome",
     "href": "lectures/lectures-lecture5.html#comparing-two-groups-on-a-continuous-outcome",
     "title": "lectures-lecture5",
     "section": "Comparing two groups on a continuous outcome",
-    "text": "Comparing two groups on a continuous outcome\n\nThe independent-samples t-test\nSetting: You have a continuous outcome (heights, test scores, reaction times) measured on two separate, unrelated groups — e.g., a treatment group and a control group, where each subject belongs to only one group."
+    "text": "Comparing two groups on a continuous outcome\n\nThe independent-samples t-test\nSetting: You have a continuous outcome (heights, test scores, reaction times) measured on two separate, unrelated groups — e.g., a treatment group and a control group, where each subject belongs to only one group.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   },
   {
     "objectID": "lectures/lectures-lecture5.html#the-intuition-signal-versus-noise",
     "href": "lectures/lectures-lecture5.html#the-intuition-signal-versus-noise",
     "title": "lectures-lecture5",
     "section": "The intuition: signal versus noise",
-    "text": "The intuition: signal versus noise\nThe t-test is built on one core idea: is the difference between the two group averages large relative to how much the data naturally jitters around within each group?\nImagine comparing the average height of two basketball teams. If every player on Team A is close to 6’8” and every player on Team B is close to 6’2”, a small sample is enough to convince you the teams really differ — the “noise” (within-group spread) is small relative to the “signal” (between-group gap). But if heights within each team already range wildly from 5’10” to 7’0”, the same 6-inch gap between team averages is much less convincing — it could easily be due to who happened to get measured.\nThis ratio-of-signal-to-noise idea is captured, with only a little math, by the t-statistic:\n\\[t = \\frac{\\bar{x}_1 - \\bar{x}_2}{\\text{standard error of that difference}}\\]\nThe numerator is the signal (how far apart the group averages are); the denominator is essentially the noise, scaled by how much data you have. A t-statistic far from zero means the signal comfortably outpaces the noise."
+    "text": "The intuition: signal versus noise\nThe t-test is built on one core idea: is the difference between the two group averages large relative to how much the data naturally jitters around within each group?\nImagine comparing the average height of two basketball teams. If every player on Team A is close to 6’8” and every player on Team B is close to 6’2”, a small sample is enough to convince you the teams really differ — the “noise” (within-group spread) is small relative to the “signal” (between-group gap). But if heights within each team already range wildly from 5’10” to 7’0”, the same 6-inch gap between team averages is much less convincing — it could easily be due to who happened to get measured.\nThis ratio-of-signal-to-noise idea is captured, with only a little math, by the t-statistic:\n\\[t = \\frac{\\bar{x}_1 - \\bar{x}_2}{\\text{standard error of that difference}}\\]\nThe numerator is the signal (how far apart the group averages are); the denominator is essentially the noise, scaled by how much data you have. A t-statistic far from zero means the signal comfortably outpaces the noise.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   },
   {
     "objectID": "lectures/lectures-lecture5.html#what-the-t-test-assumes",
     "href": "lectures/lectures-lecture5.html#what-the-t-test-assumes",
     "title": "lectures-lecture5",
     "section": "What the t-test assumes",
-    "text": "What the t-test assumes\n\nIndependence: each observation doesn’t influence any other (no repeated measurements on the same subject across groups).\nApproximate normality of the outcome within each group (or a large enough sample size that the Central Limit Theorem bails you out).\nEqual variances across the two groups, in the classic (“Student’s”) version. In practice, most software now defaults to Welch’s t-test, a small modification that doesn’t require equal variances — a strictly safer default with almost no downside, so there’s rarely a reason not to use it.\n\n\nThe paired t-test\nSetting: The same continuous outcome, but now the two measurements are linked — before/after measurements on the same subjects, or matched pairs (twins, matched patients)."
+    "text": "What the t-test assumes\n\nIndependence: each observation doesn’t influence any other (no repeated measurements on the same subject across groups).\nApproximate normality of the outcome within each group (or a large enough sample size that the Central Limit Theorem bails you out).\nEqual variances across the two groups, in the classic (“Student’s”) version. In practice, most software now defaults to Welch’s t-test, a small modification that doesn’t require equal variances — a strictly safer default with almost no downside, so there’s rarely a reason not to use it.\n\n\nThe paired t-test\nSetting: The same continuous outcome, but now the two measurements are linked — before/after measurements on the same subjects, or matched pairs (twins, matched patients).",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   },
   {
     "objectID": "lectures/lectures-lecture5.html#the-intuition-cancel-out-what-you-cant-control-for",
     "href": "lectures/lectures-lecture5.html#the-intuition-cancel-out-what-you-cant-control-for",
     "title": "lectures-lecture5",
     "section": "The intuition: cancel out what you can’t control for",
-    "text": "The intuition: cancel out what you can’t control for\nIf you measure the same 20 people’s blood pressure before and after a new medication, each person is their own built-in control — a naturally high-blood-pressure person will likely still be somewhat high after treatment, regardless of whether the drug worked. The paired t-test exploits this by working with the 20 within-person differences rather than the raw before/after numbers, which cancels out person-to-person variability that has nothing to do with the treatment.\nThis is why pairing (when available) is so powerful: it strips out a whole source of noise before the comparison even starts, which — recalling Lecture 1’s Fisher information idea — effectively sharpens the “signal peak” the test has to work with.\nMechanically, a paired t-test is just a one-sample t-test performed on the differences, testing whether the average difference is zero.\n\nMann-Whitney U test (Wilcoxon rank-sum test)\nSetting: Same two-independent-groups situation as the independent t-test — but you’re worried the normality assumption is badly violated (e.g., strongly skewed data, obvious outliers, or an outcome that’s only ordinal — ranked categories like “mild / moderate / severe” rather than a true continuous measurement)."
+    "text": "The intuition: cancel out what you can’t control for\nIf you measure the same 20 people’s blood pressure before and after a new medication, each person is their own built-in control — a naturally high-blood-pressure person will likely still be somewhat high after treatment, regardless of whether the drug worked. The paired t-test exploits this by working with the 20 within-person differences rather than the raw before/after numbers, which cancels out person-to-person variability that has nothing to do with the treatment.\nThis is why pairing (when available) is so powerful: it strips out a whole source of noise before the comparison even starts, which — recalling Lecture 1’s Fisher information idea — effectively sharpens the “signal peak” the test has to work with.\nMechanically, a paired t-test is just a one-sample t-test performed on the differences, testing whether the average difference is zero.\n\nMann-Whitney U test (Wilcoxon rank-sum test)\nSetting: Same two-independent-groups situation as the independent t-test — but you’re worried the normality assumption is badly violated (e.g., strongly skewed data, obvious outliers, or an outcome that’s only ordinal — ranked categories like “mild / moderate / severe” rather than a true continuous measurement).",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   },
   {
     "objectID": "lectures/lectures-lecture5.html#the-intuition-forget-the-exact-numbers-just-look-at-the-ranking",
     "href": "lectures/lectures-lecture5.html#the-intuition-forget-the-exact-numbers-just-look-at-the-ranking",
     "title": "lectures-lecture5",
     "section": "The intuition: forget the exact numbers, just look at the ranking",
-    "text": "The intuition: forget the exact numbers, just look at the ranking\nInstead of comparing averages, the Mann-Whitney U test throws all the data (both groups combined) into one pile, ranks every observation from smallest to largest, and then asks: “if I hadn’t looked at group labels, would the ranks from Group A tend to be systematically higher or lower than the ranks from Group B?”\nConcretely: pick one random observation from Group A and one from Group B — what’s the probability the one from Group A is larger? Under \\(H_0\\) (no difference), that probability should be exactly 50/50, like a fair coin flip. The Mann-Whitney U statistic essentially counts, across every possible A-vs-B pairing, how often A “wins,” and checks whether that win rate is suspiciously far from 50%.\nBecause this test only uses the ordering of the data, not the exact numeric gaps, it’s far less sensitive to outliers or skewed distributions than the t-test — you’re trading a little bit of statistical power (when the t-test’s assumptions genuinely hold) for a lot of robustness (when they don’t). It also formally tests a slightly different, more general hypothesis than the t-test — roughly “are the two distributions shifted relative to one another?” rather than specifically “do the two means differ?” — which is part of why it works even for ordinal (ranked) rather than truly numeric data.\n\nWilcoxon signed-rank test\nThe nonparametric counterpart to the paired t-test: instead of averaging the raw within-pair differences, it ranks the absolute sizes of the differences, re-attaches the original + / − signs, and asks whether the positive-ranked and negative-ranked differences are roughly balanced (as they should be under \\(H_0\\): no systematic before/after change) or lopsided."
+    "text": "The intuition: forget the exact numbers, just look at the ranking\nInstead of comparing averages, the Mann-Whitney U test throws all the data (both groups combined) into one pile, ranks every observation from smallest to largest, and then asks: “if I hadn’t looked at group labels, would the ranks from Group A tend to be systematically higher or lower than the ranks from Group B?”\nConcretely: pick one random observation from Group A and one from Group B — what’s the probability the one from Group A is larger? Under \\(H_0\\) (no difference), that probability should be exactly 50/50, like a fair coin flip. The Mann-Whitney U statistic essentially counts, across every possible A-vs-B pairing, how often A “wins,” and checks whether that win rate is suspiciously far from 50%.\nBecause this test only uses the ordering of the data, not the exact numeric gaps, it’s far less sensitive to outliers or skewed distributions than the t-test — you’re trading a little bit of statistical power (when the t-test’s assumptions genuinely hold) for a lot of robustness (when they don’t). It also formally tests a slightly different, more general hypothesis than the t-test — roughly “are the two distributions shifted relative to one another?” rather than specifically “do the two means differ?” — which is part of why it works even for ordinal (ranked) rather than truly numeric data.\n\nWilcoxon signed-rank test\nThe nonparametric counterpart to the paired t-test: instead of averaging the raw within-pair differences, it ranks the absolute sizes of the differences, re-attaches the original + / − signs, and asks whether the positive-ranked and negative-ranked differences are roughly balanced (as they should be under \\(H_0\\): no systematic before/after change) or lopsided.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   },
   {
     "objectID": "lectures/lectures-lecture5.html#comparing-three-or-more-groups-on-a-continuous-outcome",
     "href": "lectures/lectures-lecture5.html#comparing-three-or-more-groups-on-a-continuous-outcome",
     "title": "lectures-lecture5",
     "section": "Comparing three or more groups on a continuous outcome",
-    "text": "Comparing three or more groups on a continuous outcome\n\nOne-way ANOVA (Analysis of Variance)\nSetting: A continuous outcome, three or more independent groups — e.g., comparing test scores across three different teaching methods.\nYou might reasonably ask: “why not just run a t-test on every pair of groups?” The answer is one of the most important intuitions in this lecture."
+    "text": "Comparing three or more groups on a continuous outcome\n\nOne-way ANOVA (Analysis of Variance)\nSetting: A continuous outcome, three or more independent groups — e.g., comparing test scores across three different teaching methods.\nYou might reasonably ask: “why not just run a t-test on every pair of groups?” The answer is one of the most important intuitions in this lecture.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   },
   {
     "objectID": "lectures/lectures-lecture5.html#why-not-just-run-lots-of-t-tests-the-multiple-comparisons-problem",
     "href": "lectures/lectures-lecture5.html#why-not-just-run-lots-of-t-tests-the-multiple-comparisons-problem",
     "title": "lectures-lecture5",
     "section": "Why not just run lots of t-tests? The multiple-comparisons problem",
-    "text": "Why not just run lots of t-tests? The multiple-comparisons problem\nEvery individual t-test carries some false-alarm risk (\\(\\alpha\\), say 5%). If you compare 3 groups pairwise, that’s 3 separate tests; with 10 groups, it’s 45 tests. Even if no real differences exist anywhere, running enough separate 5%-risk tests makes it increasingly likely that at least one of them will show “significance” purely by chance — like rolling enough dice that someone eventually rolls a run of sixes.\nANOVA solves this by asking one single, combined question first — “is there evidence that any of the group means differ, considered all at once?” — controlling the overall false-alarm rate at your chosen \\(\\alpha\\) for that one big question, rather than letting it balloon across many small ones."
+    "text": "Why not just run lots of t-tests? The multiple-comparisons problem\nEvery individual t-test carries some false-alarm risk (\\(\\alpha\\), say 5%). If you compare 3 groups pairwise, that’s 3 separate tests; with 10 groups, it’s 45 tests. Even if no real differences exist anywhere, running enough separate 5%-risk tests makes it increasingly likely that at least one of them will show “significance” purely by chance — like rolling enough dice that someone eventually rolls a run of sixes.\nANOVA solves this by asking one single, combined question first — “is there evidence that any of the group means differ, considered all at once?” — controlling the overall false-alarm rate at your chosen \\(\\alpha\\) for that one big question, rather than letting it balloon across many small ones.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   },
   {
     "objectID": "lectures/lectures-lecture5.html#the-intuition-comparing-two-kinds-of-spread",
     "href": "lectures/lectures-lecture5.html#the-intuition-comparing-two-kinds-of-spread",
     "title": "lectures-lecture5",
     "section": "The intuition: comparing two kinds of “spread”",
-    "text": "The intuition: comparing two kinds of “spread”\nANOVA’s core trick is right there in the name: it works by comparing two different ways of measuring variance in the data.\n\nBetween-group variance: how much do the group averages differ from the overall grand average? (If the teaching methods really matter, group averages should scatter widely around the overall mean.)\nWithin-group variance: how much do individual data points differ from their own group’s average? (This is just natural noise/spread that exists no matter what.)\n\nIf the groups are truly different, the between-group variance should be large relative to the within-group variance — the group averages should stand out clearly above the background noise. If the groups don’t really differ, both kinds of variance should be roughly comparable, because any apparent differences between group averages are just what you’d expect from random noise alone.\nThis ratio is the F-statistic:\n\\[F = \\frac{\\text{between-group variance}}{\\text{within-group variance}}\\]\nAn F-statistic much larger than 1 says “the groups are more spread out from each other than random noise alone would explain” — evidence against \\(H_0\\) (all group means equal)."
+    "text": "The intuition: comparing two kinds of “spread”\nANOVA’s core trick is right there in the name: it works by comparing two different ways of measuring variance in the data.\n\nBetween-group variance: how much do the group averages differ from the overall grand average? (If the teaching methods really matter, group averages should scatter widely around the overall mean.)\nWithin-group variance: how much do individual data points differ from their own group’s average? (This is just natural noise/spread that exists no matter what.)\n\nIf the groups are truly different, the between-group variance should be large relative to the within-group variance — the group averages should stand out clearly above the background noise. If the groups don’t really differ, both kinds of variance should be roughly comparable, because any apparent differences between group averages are just what you’d expect from random noise alone.\nThis ratio is the F-statistic:\n\\[F = \\frac{\\text{between-group variance}}{\\text{within-group variance}}\\]\nAn F-statistic much larger than 1 says “the groups are more spread out from each other than random noise alone would explain” — evidence against \\(H_0\\) (all group means equal).",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   },
   {
     "objectID": "lectures/lectures-lecture5.html#anova-only-tells-you-that-something-differs-not-what",
     "href": "lectures/lectures-lecture5.html#anova-only-tells-you-that-something-differs-not-what",
     "title": "lectures-lecture5",
     "section": "ANOVA only tells you that something differs, not what",
-    "text": "ANOVA only tells you that something differs, not what\nA significant ANOVA result means “not all group means are equal” — full stop. It doesn’t say which group(s) differ from which. Follow-up post-hoc tests (which we won’t be covering) are then used to compare specific pairs of groups, while still controlling the overall false-alarm rate across all those follow-up comparisons — same multiple-comparisons logic as above, just applied one level down.\nANOVA carries the same core assumptions as the t-test (normality within groups, roughly equal variances across groups, independence) — which should feel natural, since a two-group ANOVA and an independent t-test are actually mathematically equivalent (in that special case, \\(F = t^2\\)).\n\nKruskal-Wallis test\nThe natural extension of the Mann-Whitney U idea to three-or-more groups, and the nonparametric counterpart to one-way ANOVA: pool all observations across every group, rank them, and ask whether the average rank differs suspiciously across groups — without requiring normality or equal variances. Use it exactly when you’d want ANOVA but its assumptions are badly violated."
+    "text": "ANOVA only tells you that something differs, not what\nA significant ANOVA result means “not all group means are equal” — full stop. It doesn’t say which group(s) differ from which. Follow-up post-hoc tests (which we won’t be covering) are then used to compare specific pairs of groups, while still controlling the overall false-alarm rate across all those follow-up comparisons — same multiple-comparisons logic as above, just applied one level down.\nANOVA carries the same core assumptions as the t-test (normality within groups, roughly equal variances across groups, independence) — which should feel natural, since a two-group ANOVA and an independent t-test are actually mathematically equivalent (in that special case, \\(F = t^2\\)).\n\nKruskal-Wallis test\nThe natural extension of the Mann-Whitney U idea to three-or-more groups, and the nonparametric counterpart to one-way ANOVA: pool all observations across every group, rank them, and ask whether the average rank differs suspiciously across groups — without requiring normality or equal variances. Use it exactly when you’d want ANOVA but its assumptions are badly violated.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   },
   {
     "objectID": "lectures/lectures-lecture5.html#comparing-categorical-outcomes",
     "href": "lectures/lectures-lecture5.html#comparing-categorical-outcomes",
     "title": "lectures-lecture5",
     "section": "Comparing categorical outcomes",
-    "text": "Comparing categorical outcomes\nSo far, every test has assumed a continuous (or at least ordered) outcome. Now suppose your outcome is a category with no natural numeric scale — recovered/not recovered, voted yes/no/abstain, defective/not defective.\n\nChi-square test (two flavors)\nThe chi-square test is really a single unifying idea used to answer two different-sounding questions."
+    "text": "Comparing categorical outcomes\nSo far, every test has assumed a continuous (or at least ordered) outcome. Now suppose your outcome is a category with no natural numeric scale — recovered/not recovered, voted yes/no/abstain, defective/not defective.\n\nChi-square test (two flavors)\nThe chi-square test is really a single unifying idea used to answer two different-sounding questions.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   },
   {
     "objectID": "lectures/lectures-lecture5.html#the-intuition-compare-what-you-counted-to-what-you-expected",
     "href": "lectures/lectures-lecture5.html#the-intuition-compare-what-you-counted-to-what-you-expected",
     "title": "lectures-lecture5",
     "section": "The intuition: compare what you counted to what you expected",
-    "text": "The intuition: compare what you counted to what you expected\nIn both flavors, the logic is the same: compute how many observations you’d expect to see in each category if \\(H_0\\) were exactly true, then compare that to what you actually counted. Cells where the observed count is way off from the expected count contribute a lot of “surprise”; cells that land close to expectations contribute little. Add up the surprise, cell by cell, and you get the chi-square statistic:\n\\[\\chi^2 = \\sum \\frac{(\\text{observed} - \\text{expected})^2}{\\text{expected}}\\]\nSquaring the gaps means both “way more than expected” and “way less than expected” count as equally surprising, and dividing by the expected count keeps a given raw gap from mattering more just because that cell happened to have a bigger expected count to begin with.\nType 1 — goodness-of-fit: does a single categorical variable follow some hypothesized distribution? (E.g., “are these dice fair?” — expecting roughly 1/6 of rolls in each face.)\nType 2 — test of independence (or association): are two categorical variables related, or independent of one another? (E.g., “is smoking status associated with disease outcome?”) Here, the “expected counts” are calculated as if the two variables had no relationship at all (using each variable’s own marginal totals), and the test asks whether the actual cross-tabulated counts deviate from that no-relationship baseline."
+    "text": "The intuition: compare what you counted to what you expected\nIn both flavors, the logic is the same: compute how many observations you’d expect to see in each category if \\(H_0\\) were exactly true, then compare that to what you actually counted. Cells where the observed count is way off from the expected count contribute a lot of “surprise”; cells that land close to expectations contribute little. Add up the surprise, cell by cell, and you get the chi-square statistic:\n\\[\\chi^2 = \\sum \\frac{(\\text{observed} - \\text{expected})^2}{\\text{expected}}\\]\nSquaring the gaps means both “way more than expected” and “way less than expected” count as equally surprising, and dividing by the expected count keeps a given raw gap from mattering more just because that cell happened to have a bigger expected count to begin with.\nType 1 — goodness-of-fit: does a single categorical variable follow some hypothesized distribution? (E.g., “are these dice fair?” — expecting roughly 1/6 of rolls in each face.)\nType 2 — test of independence (or association): are two categorical variables related, or independent of one another? (E.g., “is smoking status associated with disease outcome?”) Here, the “expected counts” are calculated as if the two variables had no relationship at all (using each variable’s own marginal totals), and the test asks whether the actual cross-tabulated counts deviate from that no-relationship baseline.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   },
   {
     "objectID": "lectures/lectures-lecture5.html#when-the-chi-square-test-breaks-down",
     "href": "lectures/lectures-lecture5.html#when-the-chi-square-test-breaks-down",
     "title": "lectures-lecture5",
     "section": "When the chi-square test breaks down",
-    "text": "When the chi-square test breaks down\nThe chi-square statistic’s connection to a clean reference (chi-square) distribution is itself only an approximation, and that approximation gets shaky when expected cell counts are small — a common rule of thumb is that it becomes unreliable if any expected count drops below about 5. This is precisely the gap that Fisher’s exact test fills.\n\nFisher’s exact test\nSetting: Comparing two categorical variables (most commonly summarized in a 2×2 table), especially with a small sample size or sparse cells — exactly the situation where the chi-square approximation gets shaky."
+    "text": "When the chi-square test breaks down\nThe chi-square statistic’s connection to a clean reference (chi-square) distribution is itself only an approximation, and that approximation gets shaky when expected cell counts are small — a common rule of thumb is that it becomes unreliable if any expected count drops below about 5. This is precisely the gap that Fisher’s exact test fills.\n\nFisher’s exact test\nSetting: Comparing two categorical variables (most commonly summarized in a 2×2 table), especially with a small sample size or sparse cells — exactly the situation where the chi-square approximation gets shaky.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   },
   {
     "objectID": "lectures/lectures-lecture5.html#the-intuition-count-every-possible-table-exactly",
     "href": "lectures/lectures-lecture5.html#the-intuition-count-every-possible-table-exactly",
     "title": "lectures-lecture5",
     "section": "The intuition: count every possible table, exactly",
-    "text": "The intuition: count every possible table, exactly\nRather than relying on a large-sample approximation, Fisher’s exact test does something wonderfully literal: holding the row and column totals fixed at what you actually observed, it enumerates every single possible 2×2 table consistent with those totals, computes the exact probability of each one occurring by chance alone (using combinatorics — literally counting arrangements, the way you’d count hands of cards), and then adds up the probabilities of your observed table and every table at least as extreme.\nThis is the same “counting arrangements” logic behind the classic motivating story for the test — the “Lady Tasting Tea” experiment, where Ronald Fisher tested whether a woman could really distinguish, by taste, whether milk or tea was poured into the cup first, by working out the exact probability of her getting her observed number of correct guesses purely by chance.\nBecause it computes an exact probability rather than leaning on a large-sample approximation, Fisher’s exact test remains valid even with tiny samples or sparse tables — the cost is that it’s more computationally intensive (historically a real constraint, though a non-issue for modern software) and, with very small samples, can be somewhat conservative (less powerful than you might hope, since only a limited number of “at least as extreme” tables are even possible to compare against)."
+    "text": "The intuition: count every possible table, exactly\nRather than relying on a large-sample approximation, Fisher’s exact test does something wonderfully literal: holding the row and column totals fixed at what you actually observed, it enumerates every single possible 2×2 table consistent with those totals, computes the exact probability of each one occurring by chance alone (using combinatorics — literally counting arrangements, the way you’d count hands of cards), and then adds up the probabilities of your observed table and every table at least as extreme.\nThis is the same “counting arrangements” logic behind the classic motivating story for the test — the “Lady Tasting Tea” experiment, where Ronald Fisher tested whether a woman could really distinguish, by taste, whether milk or tea was poured into the cup first, by working out the exact probability of her getting her observed number of correct guesses purely by chance.\nBecause it computes an exact probability rather than leaning on a large-sample approximation, Fisher’s exact test remains valid even with tiny samples or sparse tables — the cost is that it’s more computationally intensive (historically a real constraint, though a non-issue for modern software) and, with very small samples, can be somewhat conservative (less powerful than you might hope, since only a limited number of “at least as extreme” tables are even possible to compare against).",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   },
   {
     "objectID": "lectures/lectures-lecture5.html#putting-it-all-together-a-decision-checklist",
     "href": "lectures/lectures-lecture5.html#putting-it-all-together-a-decision-checklist",
     "title": "lectures-lecture5",
     "section": "Putting it all together: a decision checklist",
-    "text": "Putting it all together: a decision checklist\n\n\n\n\n\n\n\n\nQuestion to ask\nIf yes →\nIf no →\n\n\n\n\nIs the outcome continuous/numeric?\nGo to the t-test / ANOVA family\nGo to the chi-square / Fisher’s family\n\n\n(Continuous) Exactly 2 groups?\nt-test family\nANOVA family\n\n\n(Continuous, 2 groups) Are the groups paired/matched?\nPaired t-test (or Wilcoxon signed-rank)\nIndependent t-test (or Mann-Whitney U)\n\n\n(Continuous) Is normality/equal-variance reasonable (or n large)?\nUse the parametric test (t-test / ANOVA)\nUse the rank-based alternative (Mann-Whitney U / Kruskal-Wallis)\n\n\n(Categorical) Testing one variable against a hypothesized distribution?\nChi-square goodness-of-fit\nGo to the next row\n\n\n(Categorical) Testing association between two variables, with reasonably large expected cell counts (generally ≳5)?\nChi-square test of independence\nFisher’s exact test"
+    "text": "Putting it all together: a decision checklist\n\n\n\n\n\n\n\n\nQuestion to ask\nIf yes →\nIf no →\n\n\n\n\nIs the outcome continuous/numeric?\nGo to the t-test / ANOVA family\nGo to the chi-square / Fisher’s family\n\n\n(Continuous) Exactly 2 groups?\nt-test family\nANOVA family\n\n\n(Continuous, 2 groups) Are the groups paired/matched?\nPaired t-test (or Wilcoxon signed-rank)\nIndependent t-test (or Mann-Whitney U)\n\n\n(Continuous) Is normality/equal-variance reasonable (or n large)?\nUse the parametric test (t-test / ANOVA)\nUse the rank-based alternative (Mann-Whitney U / Kruskal-Wallis)\n\n\n(Categorical) Testing one variable against a hypothesized distribution?\nChi-square goodness-of-fit\nGo to the next row\n\n\n(Categorical) Testing association between two variables, with reasonably large expected cell counts (generally ≳5)?\nChi-square test of independence\nFisher’s exact test",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   },
   {
     "objectID": "lectures/lectures-lecture5.html#how-this-connects-to-hypothesis-testing",
     "href": "lectures/lectures-lecture5.html#how-this-connects-to-hypothesis-testing",
     "title": "lectures-lecture5",
     "section": "How this connects to Hypothesis Testing",
-    "text": "How this connects to Hypothesis Testing\nIt’s worth being explicit that nothing new is philosophically happening here — we’re just plugging different data structures into the same engine:\n\nEvery test above still produces a p-value, interpreted exactly as in Lecture 1: “how surprising would this data be if \\(H_0\\) (no group difference / no association) were true?”\nEvery test above has a matching effect size, and reporting it is just as important here as it was in Lecture 2: Cohen’s \\(d\\) for t-tests, \\(\\eta^2\\) (eta-squared) for ANOVA, and Cramér’s V or an odds ratio for chi-square/Fisher’s tables. A “highly significant” chi-square result from a huge sample can still reflect a trivially small association — the same lesson from Lecture 2, just wearing a categorical-data costume.\nPower analysis still applies to every test here — before running a study, you’d still ask “given my expected effect size and my planned sample size, is my chosen test even likely to detect a real difference if one exists?” The four-dial power picture from Lecture 2 (sample size, effect size, \\(\\alpha\\), noise) governs a chi-square test or an ANOVA exactly as much as it governs a simple two-sample t-test.\nThe parametric/nonparametric split you saw today (t-test vs. Mann-Whitney, ANOVA vs. Kruskal-Wallis) is really a Fisher-information trade-off: parametric tests squeeze out more information — and thus more power — if their assumptions hold, because they use the full numeric structure of the data rather than just its ranks. Nonparametric tests deliberately throw away some of that structure (keeping only the ranks) in exchange for working correctly under a much wider range of real-world conditions."
+    "text": "How this connects to Hypothesis Testing\nIt’s worth being explicit that nothing new is philosophically happening here — we’re just plugging different data structures into the same engine:\n\nEvery test above still produces a p-value, interpreted exactly as in Lecture 1: “how surprising would this data be if \\(H_0\\) (no group difference / no association) were true?”\nEvery test above has a matching effect size, and reporting it is just as important here as it was in Lecture 2: Cohen’s \\(d\\) for t-tests, \\(\\eta^2\\) (eta-squared) for ANOVA, and Cramér’s V or an odds ratio for chi-square/Fisher’s tables. A “highly significant” chi-square result from a huge sample can still reflect a trivially small association — the same lesson from Lecture 2, just wearing a categorical-data costume.\nPower analysis still applies to every test here — before running a study, you’d still ask “given my expected effect size and my planned sample size, is my chosen test even likely to detect a real difference if one exists?” The four-dial power picture from Lecture 2 (sample size, effect size, \\(\\alpha\\), noise) governs a chi-square test or an ANOVA exactly as much as it governs a simple two-sample t-test.\nThe parametric/nonparametric split you saw today (t-test vs. Mann-Whitney, ANOVA vs. Kruskal-Wallis) is really a Fisher-information trade-off: parametric tests squeeze out more information — and thus more power — if their assumptions hold, because they use the full numeric structure of the data rather than just its ranks. Nonparametric tests deliberately throw away some of that structure (keeping only the ranks) in exchange for working correctly under a much wider range of real-world conditions.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   },
   {
     "objectID": "lectures/lectures-lecture5.html#summary",
     "href": "lectures/lectures-lecture5.html#summary",
     "title": "lectures-lecture5",
     "section": "Summary",
-    "text": "Summary\n\nThe single biggest fork in choosing a group-comparison test is continuous vs. categorical outcome — that decision alone points you toward the t-test/ANOVA family or the chi-square/Fisher’s family.\nWithin the continuous-outcome family, further ask how many groups, paired or independent, and are parametric assumptions reasonable — these three answers select among t-test, paired t-test, ANOVA, Mann-Whitney U, Wilcoxon signed-rank, and Kruskal-Wallis.\nWithin the categorical-outcome family, ask one variable against a hypothesized shape, or association between two variables — and if the latter, whether your expected cell counts are large enough to trust the chi-square approximation, or small enough that you need Fisher’s exact test instead.\nAll of these are hypothesis tests in the Lecture 1 sense, all deserve an accompanying effect size as in Lecture 2, and all are subject to the same power-analysis logic — the “zoo” of named tests is really one underlying idea, repeatedly adapted to different data shapes."
+    "text": "Summary\n\nThe single biggest fork in choosing a group-comparison test is continuous vs. categorical outcome — that decision alone points you toward the t-test/ANOVA family or the chi-square/Fisher’s family.\nWithin the continuous-outcome family, further ask how many groups, paired or independent, and are parametric assumptions reasonable — these three answers select among t-test, paired t-test, ANOVA, Mann-Whitney U, Wilcoxon signed-rank, and Kruskal-Wallis.\nWithin the categorical-outcome family, ask one variable against a hypothesized shape, or association between two variables — and if the latter, whether your expected cell counts are large enough to trust the chi-square approximation, or small enough that you need Fisher’s exact test instead.\nAll of these are hypothesis tests in the Lecture 1 sense, all deserve an accompanying effect size as in Lecture 2, and all are subject to the same power-analysis logic — the “zoo” of named tests is really one underlying idea, repeatedly adapted to different data shapes.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 5"
+    ]
   }
 ]
